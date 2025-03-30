@@ -19,4 +19,7 @@
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
 	</modDependencies>
+	<forceLoadAfter>
+		<li>vanillaracesexpanded.sanguophage</li>
+	</forceLoadAfter>
 </ModMetaData>
