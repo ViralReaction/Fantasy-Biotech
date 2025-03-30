@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="FurnitureWithQualityBase">
+		<defName>VR_BasicDeathRestCasket</defName>
+		<label>basic deathrest casket</label>
+		<description>An enclosed med-casket that accelerates the process of deathrest. It can connect to other devices which confer additional bonuses on the deathrester. The number of devices that can connect depends on the person's deathrest capacity, which can be seen by selecting them.\n\nOnly those with the deathrest gene can use the deathrest casket.</description>
+		<thingClass>Building_Bed</thingClass>
+		<tickerType>Rare</tickerType>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>false</canOverlapZones>
+		<passability>PassThroughOnly</passability>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<thingCategories Inherit="False">
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Building/Misc/BasicDeathrestCasket/BasicDeathrestCasket</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,4)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<building>
+			<bed_showSleeperBody>true</bed_showSleeperBody>
+			<ai_chillDestination>false</ai_chillDestination>
+			<bed_healPerDay>4</bed_healPerDay>
+			<bed_canBeMedical>false</bed_canBeMedical>
+			<bed_DisplayOwnerType>false</bed_DisplayOwnerType>
+			<bed_DisplayOwnersInInspectString>false</bed_DisplayOwnersInInspectString>
+			<bed_countsForBedroomOrBarracks>false</bed_countsForBedroomOrBarracks>
+			<buildingTags>
+				<li>Bed</li>
+				<li>Biotech</li>
+			</buildingTags>
+			<relatedBuildCommands>
+				<li>DeathrestAccelerator</li>
+				<li>Hemopump</li>
+				<li>HemogenAmplifier</li>
+				<li>GlucosoidPump</li>
+				<li>PsychofluidPump</li>
+			</relatedBuildCommands>
+		</building>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>1999</uiOrder>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>2500</WorkToBuild>
+			<Mass>50</Mass>
+			<Flammability>0.5</Flammability>
+			<Beauty>5</Beauty>
+			<BedRestEffectiveness>1</BedRestEffectiveness>
+			<Comfort>0.75</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		<size>(1,2)</size>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+				<li>Stony</li>
+				<li>Woody</li>
+				<li>Metallic</li>
+		</stuffCategories>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_DeathrestCasket</compClass>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_DeathrestBindable">
+				<stackLimit>1</stackLimit>
+				<countsTowardsBuildingLimit>false</countsTowardsBuildingLimit>
+				<deathrestEffectivenessFactor>1.1</deathrestEffectivenessFactor>
+				<mustBeLayingInToBind>true</mustBeLayingInToBind>
+				<displayTimeActive>false</displayTimeActive>
+				<soundStart>DeathrestCasket_Enter</soundStart>
+				<soundEnd>DeathrestCasket_Exit</soundEnd>
+			</li>
+		</comps>
+		<researchPrerequisites><li>Deathrest</li></researchPrerequisites>
+		<placeWorkers>
+			<li>PlaceWorker_DrawLinesToDeathrestBuildings</li>
+		</placeWorkers>
+	</ThingDef>
+
+</Defs>
