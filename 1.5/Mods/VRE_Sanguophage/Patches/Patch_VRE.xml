@@ -14,6 +14,22 @@
 			<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/techLevel</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/techLevel</xpath>
+			<value>
+				<techLevel>Medieval</techLevel>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]</xpath>
+			<value>
+				<techLevel>Medieval</techLevel>
+			</value>
+		</nomatch>
+	</Operation>
 
 	<!-- Hemogen Amplifier -->
 	<Operation Class="PatchOperationReplace">
@@ -98,6 +114,16 @@
 			<size>(1,1)</size>
 		</value>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/rotatable</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/rotatable</xpath>
+			<value>
+				<rotatable>true</rotatable>
+			</value>
+		</match>
+	</Operation>
 
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]</xpath>
@@ -116,14 +142,14 @@
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/costList/Steel</xpath>
 		<match Class="PatchOperationRemove">
-			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump"]/costList/Steel</xpath>
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/costList/Steel</xpath>
 		</match>
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/costList/ComponentIndustrial</xpath>
 		<match Class="PatchOperationRemove">
-			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump"]/costList/ComponentIndustrial</xpath>
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/costList/ComponentIndustrial</xpath>
 		</match>
 	</Operation>
 
@@ -297,6 +323,36 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
+			
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/comps/li[@Class="CompProperties_Power"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/comps/li[@Class="CompProperties_Power"]</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+					</match>
+				</li>
+				
+				<Operation Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/techLevel</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/techLevel</xpath>
+						<value>
+							<techLevel>Medieval</techLevel>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]</xpath>
+						<value>
+							<techLevel>Medieval</techLevel>
+						</value>
+					</nomatch>
+				</Operation>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/graphicClass</xpath>

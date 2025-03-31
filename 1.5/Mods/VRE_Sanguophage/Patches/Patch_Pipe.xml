@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenVat" or defName="VRE_Draincasket"]/constructEffect</xpath>
+	</Operation>
+
+	<!-- Hemogen Vat -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenVat"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Building/VRE_HemogenVat/VRE_HemogenVat_Full</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenVat"]/graphicData/graphicClass</xpath>
+		<value>
+			<graphicClass>Graphic_Single</graphicClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenVat"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4,4)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenVat"]/costList/Steel</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="VRE_HemogenVat"]/costList/Steel</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenVat"]</xpath>
+		<value>
+			<costStuffCount>180</costStuffCount>
+			<stuffCategories>
+				<li>Stony</li>
+				<li>Metallic</li>
+			</stuffCategories>
+		</value>
+	</Operation>
+
+	<!-- <Operation Class="PatchOperationAdd"> -->
+		<!-- <xpath>Defs/ThingDef[defName="VRE_HemogenVat"]</xpath> -->
+		<!-- <value> -->
+			<!-- <thingClass Inherit="False">FantasyBiotech.BloodVat</thingClass> -->
+		<!-- </value> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="PatchOperationAdd"> -->
+		<!-- <xpath>Defs/ThingDef[defName="VRE_HemogenVat"]/comps/li[@Class="PipeSystem.CompProperties_ResourceStorage"]</xpath> -->
+		<!-- <value> -->
+			<!-- <compClass>FantasyBiotech.CompResourceStorage_Blood</compClass> -->
+		<!-- </value> -->
+	<!-- </Operation> -->
+
+	<!-- Hemogen Tap -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenTap"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Building/VRE_HemogenTap/VRE_HemogenTap</texPath>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2.5,2.5)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenTap"]/costList/Steel</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="VRE_HemogenTap"]/costList/Steel</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenTap"]</xpath>
+		<value>
+			<costStuffCount>50</costStuffCount>
+			<stuffCategories>
+				<li>Stony</li>
+				<li>Metallic</li>
+			</stuffCategories>
+		</value>
+	</Operation>
+
+	<!-- Hemogen Drain -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenDrain"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Building/VRE_HemogenDrain/VRE_HemogenDrain</texPath>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2.5,2.5)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenDrain"]/costList/Steel</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="VRE_HemogenDrain"]/costList/Steel</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenDrain"]</xpath>
+		<value>
+			<costStuffCount>45</costStuffCount>
+			<stuffCategories>
+				<li>Stony</li>
+				<li>Metallic</li>
+			</stuffCategories>
+		</value>
+	</Operation>
+	
+	<!-- Drain Casket -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4,4)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/costList/Steel</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/costList/Steel</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/costList/ComponentIndustrial</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/costList/ComponentIndustrial</xpath>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VRE_Draincasket"]</xpath>
+		<value>
+			<costStuffCount>240</costStuffCount>
+			<stuffCategories>
+				<li>Stony</li>
+				<li>Metallic</li>
+			</stuffCategories>
+		</value>
+	</Operation>
+
+</Patch>
