@@ -338,7 +338,7 @@
 					</match>
 				</li>
 				
-				<Operation Class="PatchOperationConditional">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/techLevel</xpath>
 					<match Class="PatchOperationReplace">
 						<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/techLevel</xpath>
@@ -352,7 +352,7 @@
 							<techLevel>Medieval</techLevel>
 						</value>
 					</nomatch>
-				</Operation>
+				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/graphicClass</xpath>
