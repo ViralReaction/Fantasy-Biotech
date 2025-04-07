@@ -43,8 +43,23 @@
 		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/graphicClass</xpath>
 		<value>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
 		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/shaderType</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/shaderType</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</nomatch>
 	</Operation>
 	
 	<Operation Class="PatchOperationRemove">
@@ -106,6 +121,22 @@
 			<drawSize>(3,3)</drawSize>
 			<shaderType>CutoutComplex</shaderType>
 		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData/shaderType</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData/shaderType</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</nomatch>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
@@ -192,8 +223,23 @@
 		<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/drawSize</xpath>
 		<value>
 			<drawSize>(4,3)</drawSize>
-			<shaderType>CutoutComplex</shaderType>
 		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/shaderType</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/shaderType</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</nomatch>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
@@ -358,8 +404,23 @@
 					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/graphicClass</xpath>
 					<value>
 						<graphicClass>Graphic_Single</graphicClass>
-						<shaderType>CutoutComplex</shaderType>
 					</value>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/shaderType</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/shaderType</xpath>
+						<value>
+							<shaderType>CutoutComplex</shaderType>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData</xpath>
+						<value>
+							<shaderType>CutoutComplex</shaderType>
+						</value>
+					</nomatch>
 				</li>
 
 				<li Class="PatchOperationConditional">

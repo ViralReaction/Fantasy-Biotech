@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CompResourceStorage_Blood.cs" />
+    <Compile Include="Fantasy Biotech\Harmony\CompGenepackContainer_PowerOn.cs" />
     <Compile Include="Fantasy Biotech\Harmony\Building_GeneAssembler_PowerOn.cs" />
     <Compile Include="Fantasy Biotech\Harmony\Building_GeneAssembler_Tick_Patch.cs" />
     <Compile Include="Fantasy Biotech\Harmony\HarmonyPatches.cs" />
