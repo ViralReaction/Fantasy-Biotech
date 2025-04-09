@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
 
-namespace FantasyBiotech.Fantasy_Biotech.Harmony
+namespace FantasyBiotech
 {
     [HarmonyPatch(typeof(Building_GeneAssembler), nameof(Building_GeneAssembler.PowerOn), MethodType.Getter)]
     public static class Building_GeneAssembler_PowerOn

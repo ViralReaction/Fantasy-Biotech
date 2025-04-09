@@ -1,6 +1,5 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using System.Collections.Generic;
 using Verse;
 
 namespace FantasyBiotech
@@ -10,11 +9,11 @@ namespace FantasyBiotech
     {
         public static bool Prefix(CompGenepackContainer __instance, ref bool __result)
         {
-            var thing = __instance.parent;
-            if (!cachedRefuelComps.TryGetValue(thing, out var comp))
+            Thing thing = __instance.parent;
+            if (!DictionaryUtility.cachedRefuelComps.TryGetValue(thing, out var comp))
             {
                 comp = thing.TryGetComp<CompRefuelable>();
-                cachedRefuelComps[thing] = comp;
+                DictionaryUtility.cachedRefuelComps[thing] = comp;
             }
             if (comp != null)
             {
@@ -23,7 +22,7 @@ namespace FantasyBiotech
             }
             return true;
         }
-        private static readonly Dictionary<Thing, CompRefuelable> cachedRefuelComps = [];
+        
     }
 
 }

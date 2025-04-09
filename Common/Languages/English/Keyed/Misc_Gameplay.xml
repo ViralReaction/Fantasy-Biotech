@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<Fantasy_AlertGenebankUnfueled>Gene bank needs fuel</Fantasy_AlertGenebankUnfueled>
+	<Fantasy_AlertGenebankUnfueledDesc>A gene bank is unfueled, so the genepacks inside it are slowly deteriorating. Refuel the gene bank to prevent the genepacks from deteriorating.\n\nOnce the gene bank is fueled, it will slowly reverse the deterioration of the genepacks inside it.</Fantasy_AlertGenebankUnfueledDesc>
+
+</LanguageData>
