@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef>
+		<defName>VR_Steam</defName>
+		<label>steam</label>
+		<description>steam</description>
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<drawerType>MapMeshOnly</drawerType>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<selectable>true</selectable>
+		<stackLimit>200</stackLimit>
+		<tickerType>Never</tickerType>
+		<allowedArchonexusCount>0</allowedArchonexusCount>
+		<resourceReadoutPriority>Last</resourceReadoutPriority>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<graphicData>
+			<texPath>Things/Item/Resource/HemogenPack/HemogenPack_c</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>0</MarketValue>
+			<Mass>0.01</Mass>
+		</statBases>
+		<thingCategories/>
+		<destroyOnDrop>True</destroyOnDrop>
+		<canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+		<tradeability>None</tradeability>
+	</ThingDef>
+
+	<PipeSystem.PipeNetDef>
+		<defName>VR_SteamNet</defName>
+		<resource>
+			<name>Steam</name>
+			<unit>gas</unit>
+			<color>(193, 152, 70)</color>
+			<onlyShowStored>True</onlyShowStored>
+			<offTexPath>Things/Item/Resource/HemogenPack/HemogenPack_c</offTexPath>
+		</resource>
+		<noStorageAlert>true</noStorageAlert>
+		<pipeDefs>
+			<li>VR_SteamPipe</li>
+			<li>VR_UndergroundSteamPipe</li>
+		</pipeDefs>
+		<designator>
+			<deconstructIconPath>UI/Gizmos/SteamPipesDeconstruct</deconstructIconPath>
+			<designationCategoryDef>Biotech</designationCategoryDef>
+		</designator>
+		<overlayOptions>
+			<overlayColor>(255, 210, 85)</overlayColor>
+		</overlayOptions>
+		<linkToRefuelables>
+			<li>
+				<thing>VR_Steam</thing>
+				<ratio>1</ratio>
+			</li>
+		</linkToRefuelables>
+	</PipeSystem.PipeNetDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_SteamPipe</defName>
+		<label>steam pipe</label>
+		<description>A pipe that’s used to transport steam between generators, storage tanks, and steam-fueled structures.</description>
+		<thingClass>PipeSystem.Building_Pipe</thingClass>
+		<category>Building</category>
+		<tickerType>Rare</tickerType>
+		<graphicData>
+			<texPath>Things/Building/Linked/SteamPipes_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Custom7</li>
+			</linkFlags>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/SteamPipes</uiIconPath>
+		<uiIconScale>0.7</uiIconScale>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/SteamPipes_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+		</building>
+		<drawerType>MapMeshOnly</drawerType>
+		<altitudeLayer>Conduits</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>35</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>3</Steel>
+			<Gold>1</Gold>
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VR_SteamNet</pipeNet>
+			</li>
+			<li Class="PipeSystem.CompProperties_SpillWhenDamaged">
+				<spillEachTicks>600</spillEachTicks>
+				<startAtHitPointsPercent>0.333</startAtHitPointsPercent>
+				<amountToDraw>1</amountToDraw>
+				<filthMaxSpawnRadius>1</filthMaxSpawnRadius>
+				<chooseFilthFrom>
+					<li>Filth_Blood</li>
+				</chooseFilthFrom>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PipeSystem.PlaceWorker_Pipe</li>
+		</placeWorkers>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Biotech</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<researchPrerequisites>
+			<li>Deathrest</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_UndergroundSteamPipe</defName>
+		<label>hidden steam pipe</label>
+		<description>Hidden pipe that’s used to transport steam between generators, storage tanks, and steam-fueled structures.</description>
+		<thingClass>PipeSystem.Building_Pipe</thingClass>
+		<category>Building</category>
+		<tickerType>Rare</tickerType>
+		<graphicData>
+			<texPath>UI/CSG/IConduit</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Custom7</li>
+			</linkFlags>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/SteamPipes</uiIconPath>
+		<uiIconScale>0.7</uiIconScale>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/SteamPipes_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+			<ai_neverTrashThis>true</ai_neverTrashThis>
+			<isTargetable>false</isTargetable>
+			<expandHomeArea>false</expandHomeArea>
+			<canBeDamagedByAttacks>false</canBeDamagedByAttacks>
+		</building>
+		<drawerType>MapMeshOnly</drawerType>
+		<altitudeLayer>Conduits</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>48</MaxHitPoints>
+			<WorkToBuild>280</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+			<Steel>6</Steel>
+			<Gold>2</Gold>
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VR_SteamNet</pipeNet>
+			</li>
+			<li Class="PipeSystem.CompProperties_SpillWhenDamaged">
+				<spillEachTicks>1200</spillEachTicks>
+				<startAtHitPointsPercent>0.333</startAtHitPointsPercent>
+				<amountToDraw>1</amountToDraw>
+				<filthMaxSpawnRadius>1</filthMaxSpawnRadius>
+				<chooseFilthFrom>
+					<li>Filth_Blood</li>
+				</chooseFilthFrom>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PipeSystem.PlaceWorker_Pipe</li>
+		</placeWorkers>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Biotech</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<researchPrerequisites>
+			<li>Deathrest</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_SteamTank</defName>
+		<label>steam tank</label>
+		<description>A storage tank meant for storing pressurized steam delivered via a pipe network.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Power/SteamTank/SteamTank</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>1</uiIconScale>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.2</staticSunShadowHeight>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>0.40</fillPercent>
+		<rotatable>true</rotatable>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>800</WorkToBuild>
+			<Mass>20</Mass>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<size>(1,2)</size>
+		<costList>
+			<Steel>180</Steel>
+			<Gold>20</Gold>
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceStorage">
+				<pipeNet>VR_SteamNet</pipeNet>
+				<storageCapacity>200</storageCapacity>
+				<barSize>(0.75, 0.20)</barSize>
+				<margin>0.05</margin>
+				<centerOffset>(0, 0, -0.6)</centerOffset>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Biotech</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<canOverlapZones>false</canOverlapZones>
+		<researchPrerequisites>
+			<li>Deathrest</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_SteamTank_Large</defName>
+		<label>large steam tank</label>
+		<description>A large storage tank meant for storing pressurized steam delivered via a pipe network.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Power/SteamTank/SteamTank</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>1</uiIconScale>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.2</staticSunShadowHeight>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>0.40</fillPercent>
+		<rotatable>true</rotatable>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>800</WorkToBuild>
+			<Mass>20</Mass>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<size>(2,4)</size>
+		<costList>
+			<Steel>180</Steel>
+			<Gold>20</Gold>
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceStorage">
+				<pipeNet>VR_SteamNet</pipeNet>
+				<storageCapacity>600</storageCapacity>
+				<barSize>(0.75, 0.20)</barSize>
+				<margin>0.05</margin>
+				<centerOffset>(0, 0, -0.6)</centerOffset>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>6</explosiveRadius>
+				<explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Biotech</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<canOverlapZones>false</canOverlapZones>
+		<researchPrerequisites>
+			<li>Deathrest</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_SteamGenerator</defName>
+		<label>steam generator</label>
+		<description>Produces steam by consuming wood. Must be periodically loaded with wood fuel by hand.</description>
+		<thingClass>FantasyBiotech.Building_SteamGenerator</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Power/SteamGenerator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<shadowData>
+				<volume>(1.93,1,1.69)</volume>
+				<offset>(-0.03,0,-0.1)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.9</fillPercent>
+		<pathCost>50</pathCost>
+		<rotatable>false</rotatable>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>2500</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>-20</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(2,2)</size>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+		</building>
+		<costList>
+			<Steel>100</Steel>
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>-1</consumptionPerTick>
+				<soundAmbientReceivingResource>ChemfuelFiredGenerator_Ambience</soundAmbientReceivingResource>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>4.5</fuelConsumptionRate>
+				<fuelCapacity>30.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>6</heatPerSecond>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Biotech</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_GeyserHarvester</defName>
+		<label>geothermal plant</label>
+		<description>Collects steam from geothermal steam geysers. Must be placed on a steam geyser</description>
+		<thingClass>FantasyBiotech.Building_SteamGenerator</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Power/GeothermalPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(6,6)</drawSize>
+			<shadowData>
+				<volume>(6.03,1.0,5.25)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.3,0,5.4,6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<Beauty>-30</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(6,6)</size>
+		<costList>
+			<Steel>300</Steel>
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>-5</consumptionPerTick>
+				<soundAmbientReceivingResource>ChemfuelFiredGenerator_Ambience</soundAmbientReceivingResource>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>20</heatPerSecond>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>8</explosiveRadius>
+				<explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>Biotech</designationCategory>
+		<placeWorkers>
+			<li>PlaceWorker_OnSteamGeyser</li>
+		</placeWorkers>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationHotKey>Misc6</designationHotKey>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	</ThingDef>
+
+</Defs>
