@@ -97,7 +97,7 @@
 				</west>
 			</barDrawData>
 			<formingGraphicData>
-				<texPath>Things/Pawn/Mechanoid/HalfGestatedMechSmall</texPath>
+				<texPath>Things/Pawn/Mechanoid/HalfGestatedConstructSmall</texPath>
 				<graphicClass>Graphic_Single</graphicClass>
 				<drawSize>(1,1)</drawSize>
 			</formingGraphicData>
@@ -195,7 +195,7 @@
 				</west>
 			</barDrawData>
 			<formingGraphicData>
-				<texPath>Things/Pawn/Mechanoid/HalfGestatedMechLarge</texPath>
+				<texPath>Things/Pawn/Mechanoid/HalfGestatedConstructLarge</texPath>
 				<graphicClass>Graphic_Single</graphicClass>
 				<drawSize>(1.65,1.65)</drawSize>
 			</formingGraphicData>
