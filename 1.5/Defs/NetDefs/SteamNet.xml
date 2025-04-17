@@ -150,7 +150,7 @@
 				<rect>(0,0.35,1,0.3)</rect>
 			</damageData>
 		</graphicData>
-		<uiIconPath>Things/Building/SteamPipes</uiIconPath>
+		<uiIconPath>Things/Building/SteamPipes_Hidden</uiIconPath>
 		<uiIconScale>0.7</uiIconScale>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
@@ -246,9 +246,15 @@
 			<Gold>20</Gold>
 		</costList>
 		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>0</consumptionPerTick>
+				<idleConsumptionPerTick>0</idleConsumptionPerTick>
+			</li>
 			<li Class="PipeSystem.CompProperties_ResourceStorage">
 				<pipeNet>VR_SteamNet</pipeNet>
-				<storageCapacity>200</storageCapacity>
+				<storageCapacity>3000</storageCapacity>
 				<barSize>(0.75, 0.20)</barSize>
 				<margin>0.05</margin>
 				<centerOffset>(0, 0, -0.6)</centerOffset>
@@ -311,7 +317,7 @@
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceStorage">
 				<pipeNet>VR_SteamNet</pipeNet>
-				<storageCapacity>600</storageCapacity>
+				<storageCapacity>15000</storageCapacity>
 				<barSize>(0.75, 0.20)</barSize>
 				<margin>0.05</margin>
 				<centerOffset>(0, 0, -0.6)</centerOffset>
@@ -374,7 +380,7 @@
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>VR_SteamNet</pipeNet>
-				<consumptionPerTick>-1</consumptionPerTick>
+				<consumptionPerTick>-6</consumptionPerTick>
 				<soundAmbientReceivingResource>ChemfuelFiredGenerator_Ambience</soundAmbientReceivingResource>
 			</li>
 			<li Class="CompProperties_Flickable"/>

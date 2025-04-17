@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Mech gestators -->
+	<ThingDef Abstract="True" Name="VR_MechGestatorBase" ParentName="BuildingBase">
+		<thingClass>FantasyBiotech.Building_ConstructGestator</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.5</fillPercent>
+		<hasInteractionCell>true</hasInteractionCell>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>42</pathCost>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<buildingTags>
+				<li>Production</li>
+				<li>Biotech</li>
+			</buildingTags>
+		</building>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2400</uiOrder>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<placeWorkers>
+			<li>PlaceWorker_MechGestatorTop</li>
+		</placeWorkers>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+	
+	<ThingDef ParentName="MechGestatorBase">
+		<defName>VR_MechGestator_Steam</defName>
+		<label>mech gestator</label>
+		<description>A tank of mechanite-rich fluid with support tubes for feeding in materials and nutrients. Mechanitors can use it to produce new mechanoids or to resurrect dead mechanoids. This basic type of mech gestator is only capable of generating light-weight mechs.\n\nThe process uses harsh chemicals which are stored in toxic wastepacks. Haulers must remove the wastepacks from time to time.</description>
+		<graphicData>
+			<texPath>Things/Building/Production/MechGestatorStandard</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5.6,4)</drawSize>
+			<shadowData>
+				<volume>(3, 2, 1.9)</volume>
+			</shadowData>
+		</graphicData>
+		<uiIconPath>Things/Building/Production/MechGestatorStandard_MenuIcon</uiIconPath>
+		<uiIconScale>1.85</uiIconScale>
+		<interactionCellOffset>(1,0,2)</interactionCellOffset>
+		<recipes>
+			<li>Militor</li>
+			<li>Lifter</li>
+			<li>Constructoid</li>
+			<li>Agrihand</li>
+			<li>Cleansweeper</li>
+			<li>Fabricor</li>
+			<li>Paramedic</li>
+			<li>ResurrectLightMech</li>
+		</recipes>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>8000</WorkToBuild>
+			<Mass>25</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<size>(3,2)</size>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<researchPrerequisites>
+			<li>BasicMechtech</li>
+		</researchPrerequisites>
+		<building>
+			<barDrawData>
+				<north>
+					<preRotationOffset>(-1.06, 0.91)</preRotationOffset>
+					<size>(0.7, 0.13)</size>
+				</north>
+				<south>
+					<preRotationOffset>(-1.06, 0.82)</preRotationOffset>
+					<size>(0.7, 0.13)</size>
+				</south>
+				<east>
+					<preRotationOffset>(1.06, -0.97)</preRotationOffset>
+					<size>(0.7, 0.13)</size>
+				</east>
+				<west>
+					<preRotationOffset>(-1.06, -0.97)</preRotationOffset>
+					<size>(0.7, 0.13)</size>
+				</west>
+			</barDrawData>
+			<formingGraphicData>
+				<texPath>Things/Pawn/Mechanoid/HalfGestatedMechSmall</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<drawSize>(1,1)</drawSize>
+			</formingGraphicData>
+			<formingMechPerRotationOffset>
+				<li>(0, 0, 0.45)</li>
+				<li>(0, 0, 0.45)</li>
+				<li>(0, 0, 0.45)</li>
+				<li>(0, 0, 0.45)</li>
+			</formingMechPerRotationOffset>
+			<mechGestatorCylinderGraphic>
+				<texPath>Things/Building/Production/MechGestatorStandardGlass</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(5.6,4)</drawSize>
+				<shaderType>Transparent</shaderType>
+			</mechGestatorCylinderGraphic>
+			<mechGestatorTopGraphic>
+				<texPath>Things/Building/Production/MechGestatorStandardTop</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(5.6,4)</drawSize>
+			</mechGestatorTopGraphic>
+			<gestatorFormingMote>
+				<north>MechGestatorForming_North</north>
+				<east>MechGestatorForming_East</east>
+				<west>MechGestatorForming_East</west>
+				<south>MechGestatorForming_South</south>
+			</gestatorFormingMote>
+			<gestatorCycleCompleteMote>
+				<north>MechGestatorCycleComplete_North</north>
+				<east>MechGestatorCycleComplete_East</east>
+				<west>MechGestatorCycleComplete_East</west>
+				<south>MechGestatorCycleComplete_South</south>
+			</gestatorCycleCompleteMote>
+			<gestatorFormedMote>
+				<north>MechGestatorFormed_North</north>
+				<east>MechGestatorFormed_East</east>
+				<west>MechGestatorFormed_East</west>
+				<south>MechGestatorFormed_South</south>
+			</gestatorFormedMote>
+		</building>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>350</basePowerConsumption>
+				<idlePowerDraw>50</idlePowerDraw>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="MechGestatorBase">
+		<defName>VR_LargeMechGestator_Steam</defName>
+		<label>large construct gestator</label>
+		<description>A tank of mechanite-rich fluid with support tubes for feeding in materials and nutrients. Mechanitors can use it to produce new mechanoids or to resurrect dead mechanoids. This tier of mech gestator is capable of generating medium, heavy, and ultraheavy mechs.\n\nThe process uses harsh chemicals which are stored in toxic wastepacks. Haulers must remove the wastepacks from time to time.</description>
+		<graphicData>
+			<texPath>Things/Building/Production/MechGestatorLarge_Steam</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(6, 5)</drawSize>
+			<shadowData>
+				<volume>(3.8, 3, 2.7)</volume>
+			</shadowData>
+		</graphicData>
+		<uiIconPath>Things/Building/Production/MechGestatorLarge_MenuIcon</uiIconPath>
+		<uiIconScale>1.5</uiIconScale>
+		<interactionCellOffset>(2,0,2)</interactionCellOffset>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>16000</WorkToBuild>
+			<Mass>35</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<size>(4,3)</size>
+		<costList>
+			<Steel>300</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		<researchPrerequisites>
+			<li>StandardMechtech</li>
+		</researchPrerequisites>
+		<building>
+			<barDrawData>
+				<north>
+					<preRotationOffset>(-1.59, 1.4)</preRotationOffset>
+					<size>(0.72, 0.12)</size>
+				</north>
+				<south>
+					<preRotationOffset>(-1.59, 1.33)</preRotationOffset>
+					<size>(0.72, 0.12)</size>
+				</south>
+				<east>
+					<preRotationOffset>(1.59, -1.4)</preRotationOffset>
+					<size>(0.72, 0.12)</size>
+				</east>
+				<west>
+					<preRotationOffset>(-1.59, -1.4)</preRotationOffset>
+					<size>(0.72, 0.12)</size>
+				</west>
+			</barDrawData>
+			<formingGraphicData>
+				<texPath>Things/Pawn/Mechanoid/HalfGestatedMechLarge</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<drawSize>(1.65,1.65)</drawSize>
+			</formingGraphicData>
+			<formingMechBobSpeed>0.0005</formingMechBobSpeed>
+			<formingMechYBobDistance>0.08</formingMechYBobDistance>
+			<formingMechPerRotationOffset>
+				<li>(0, 0, 0.225)</li>
+				<li>(-0.15, 0, 0.225)</li>
+				<li>(0, 0, 0.225)</li>
+				<li>(0.15, 0, 0.225)</li>
+			</formingMechPerRotationOffset>
+			<mechGestatorCylinderGraphic>
+				<texPath>Things/Building/Production/MechGestatorLargeGlass_Steam</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(6, 5)</drawSize>
+				<shaderType>Transparent</shaderType>
+			</mechGestatorCylinderGraphic>
+			<mechGestatorTopGraphic>
+				<texPath>Things/Building/Production/MechGestatorLargeTop_Steam</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(6, 5)</drawSize>
+			</mechGestatorTopGraphic>
+			<gestatorFormingMote>
+				<north>VR_MechGestatorFormingLarge_North</north>
+				<east>VR_MechGestatorFormingLarge_East</east>
+				<west>VR_MechGestatorFormingLarge_West</west>
+				<south>VR_MechGestatorFormingLarge_South</south>
+			</gestatorFormingMote>
+			<gestatorCycleCompleteMote>
+				<north>MechGestatorCycleCompleteLarge_North</north>
+				<east>MechGestatorCycleCompleteLarge_East</east>
+				<west>MechGestatorCycleCompleteLarge_West</west>
+				<south>MechGestatorCycleCompleteLarge_South</south>
+			</gestatorCycleCompleteMote>
+			<gestatorFormedMote>
+				<north>MechGestatorFormedLarge_North</north>
+				<east>MechGestatorFormedLarge_East</east>
+				<west>MechGestatorFormedLarge_West</west>
+				<south>MechGestatorFormedLarge_South</south>
+			</gestatorFormedMote>
+		</building>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<recipes>
+			<li>Pikeman</li>
+			<li>Scorcher</li>
+			<li>Scyther</li>
+			<li>Tunneler</li>
+			<li>Lancer</li>
+			<li>Tesseron</li>
+			<li>Legionary</li>
+			<li>CentipedeGunner</li>
+			<li>CentipedeBurner</li>
+			<li>CentipedeBlaster</li>
+			<li>Diabolus</li>
+			<li>Centurion</li>
+			<li>Warqueen</li>
+			<li>ResurrectMediumMech</li>
+			<li>ResurrectHeavyMech</li>
+			<li>ResurrectUltraheavyMech</li>
+		</recipes>
+		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>12</consumptionPerTick>
+				<idleConsumptionPerTick>2</idleConsumptionPerTick>
+			</li>
+			<li Class="CompProperties_Power">
+				<transmitsPower>false</transmitsPower>
+				<!-- Specify the comp class -->
+				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

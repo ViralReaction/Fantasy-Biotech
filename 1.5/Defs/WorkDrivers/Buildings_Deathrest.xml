@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>VR_DoBillsMechGestator</defName>
+		<label>make construct</label>
+		<giverClass>FantasyBiotech.WorkGiver_DoGestate_Construct</giverClass>
+		<workType>Smithing</workType>
+		<priorityInType>210</priorityInType>
+		<fixedBillGiverDefs>
+			<li>VR_MechGestator_Steam</li>
+			<li>VR_LargeMechGestator_Steam</li>
+		</fixedBillGiverDefs>
+		<verb>work at</verb>
+		<gerund>working at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+</Defs>

@@ -4,26 +4,25 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63521998-24D0-4187-9D32-FAB8236FAA0C}</ProjectGuid>
+    <ProjectGuid>{00DE61BB-203D-456E-8324-AF5DAA5DE5CE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FantasyBiotech</RootNamespace>
     <AssemblyName>FantasyBiotech</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <LangVersion>latest</LangVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <LangVersion>latest</LangVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\1.5\Assemblies\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>none</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -35,37 +34,51 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CompResourceStorage_Blood.cs" />
-    <Compile Include="Fantasy Biotech\DictionaryUtility.cs" />
-    <Compile Include="Fantasy Biotech\Harmony\CompGenepackContainer_PowerOn.cs" />
-    <Compile Include="Fantasy Biotech\Harmony\Building_GeneAssembler_PowerOn.cs" />
-    <Compile Include="Fantasy Biotech\Harmony\Building_GeneAssembler_Tick_Patch.cs" />
-    <Compile Include="Fantasy Biotech\Harmony\Alert_GenebankUnpowered_Patch.cs" />
-    <Compile Include="Fantasy Biotech\Harmony\CompGenepackContainer_PostDestroy.cs" />
-    <Compile Include="Fantasy Biotech\Harmony\CompGenepackContainer_PostDeSpawn.cs" />
-    <Compile Include="Fantasy Biotech\Harmony\HarmonyPatches.cs" />
-    <Compile Include="Fantasy Biotech\ThingClass\Building_SteamGenerator.cs" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PipeSystem">
+      <HintPath>..\..\2023507013\1.5\Assemblies\PipeSystem.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FantasyBiotech\Comps\CompResourceTrader_Steam.cs" />
+    <Compile Include="FantasyBiotech\Comps\CompPowerPlantNeedResource_Steam.cs" />
+    <Compile Include="FantasyBiotech\Harmony\Alert_GenebankUnpowered_Patch.cs" />
+    <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_PowerOn.cs" />
+    <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_Tick_Patch.cs" />
+    <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_CanPawnChargeCurrently - Copy.cs" />
+    <Compile Include="FantasyBiotech\Harmony\CompGenepackContainer_PostDeSpawn.cs" />
+    <Compile Include="FantasyBiotech\Harmony\CompGenepackContainer_PostDestroy.cs" />
+    <Compile Include="FantasyBiotech\Harmony\CompGenepackContainer_PowerOn.cs" />
+    <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_CanPawnChargeCurrently.cs" />
+    <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_DeSpawn.cs" />
+    <Compile Include="FantasyBiotech\Harmony\JobGiver_GetEnergy_Charger_GetClosestCharger.cs" />
+    <Compile Include="FantasyBiotech\Harmony\HarmonyPatches.cs" />
+    <Compile Include="FantasyBiotech\MapComponent\RechargerMapComponent.cs" />
+    <Compile Include="FantasyBiotech\ThingClasses\Building_SteamGenerator.cs" />
+    <Compile Include="FantasyBiotech\ThingClasses\Building_MechCharger_Steam.cs" />
+    <Compile Include="FantasyBiotech\ThingClasses\Building_ConstructGestator.cs" />
+    <Compile Include="FantasyBiotech\Utility\DictionaryUtility.cs" />
+    <Compile Include="FantasyBiotech\Utility\MechUtility.cs" />
+    <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_DoGestate_Construct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Publicize Include="Assembly-CSharp" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">
-      <Version>2.2.1</Version>
+      <Version>2.*</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.5.4063</Version>
+      <Version>1.*-*</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
+      <Version>2.*</Version>
       <ExcludeAssets>runtime</ExcludeAssets>
-      <Version>2.3.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="PipeSystem">
-      <HintPath>..\..\2023507013\1.5\Assemblies\PipeSystem.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

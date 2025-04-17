@@ -22,7 +22,7 @@ namespace FantasyBiotech
             }
             return true;
         }
-        
+
     }
 
 }
