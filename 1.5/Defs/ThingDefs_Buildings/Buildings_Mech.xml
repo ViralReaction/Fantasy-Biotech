@@ -138,10 +138,17 @@
 			</gestatorFormedMote>
 		</building>
 		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>6</consumptionPerTick>
+				<idleConsumptionPerTick>0</idleConsumptionPerTick>
+			</li>
 			<li Class="CompProperties_Power">
-				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>350</basePowerConsumption>
-				<idlePowerDraw>50</idlePowerDraw>
+				<transmitsPower>false</transmitsPower>
+				<!-- Specify the comp class -->
+				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
 		</comps>
 	</ThingDef>
@@ -261,7 +268,7 @@
 				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
 				<consumptionPerTick>12</consumptionPerTick>
-				<idleConsumptionPerTick>2</idleConsumptionPerTick>
+				<idleConsumptionPerTick>0</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>false</transmitsPower>

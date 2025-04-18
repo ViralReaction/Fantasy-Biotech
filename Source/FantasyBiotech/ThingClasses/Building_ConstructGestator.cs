@@ -3,6 +3,7 @@ using Verse.Sound;
 using Verse;
 using UnityEngine;
 using PipeSystem;
+using System.Collections.Generic;
 
 
 namespace FantasyBiotech
@@ -14,10 +15,11 @@ namespace FantasyBiotech
         public override void Tick()
         {
             innerContainer.ThingOwnerTick();
+           
+
             if (activeBill == null || !PoweredOn)
             {
                 Power.UsedLastTick = false;
-
                 if (workingSound != null)
                 {
                     workingSound.End();
@@ -28,7 +30,6 @@ namespace FantasyBiotech
             if (BoundPawnStateAllowsForming)
             {
                 activeBill.BillTick();
-
                 ThingDef thingDef = null;
                 switch (ActiveMechBill.State)
                 {
@@ -38,12 +39,10 @@ namespace FantasyBiotech
                         break;
 
                     case FormingState.Preparing when ActiveMechBill.GestationCyclesCompleted > 0:
-                        Power.Notify_UsedThisTick();
                         thingDef = def.building.gestatorCycleCompleteMote.GetForRotation(Rotation);
                         break;
 
                     case FormingState.Formed:
-                        Power.UsedLastTick = false;
                         thingDef = def.building.gestatorFormedMote.GetForRotation(Rotation);
                         break;
                 }
@@ -65,6 +64,71 @@ namespace FantasyBiotech
             innerContainer.ClearAndDestroyContents();
             innerContainer.TryAdd(pawn);
             SoundDefOf.MechGestatorBill_Completed.PlayOneShot(this);
+        }
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            if (comps == null)
+            {
+                yield break;
+            }
+            for (int i = 0; i < comps.Count; i++)
+            {
+                foreach (Gizmo item in comps[i].CompGetGizmosExtra())
+                {
+                    yield return item;
+                }
+            }
+            ColorInt? glowerColorOverride = null;
+            CompGlower comp;
+            if ((comp = GetComp<CompGlower>()) != null && comp.HasGlowColorOverride)
+            {
+                glowerColorOverride = comp.GlowColor;
+            }
+            if (!def.building.neverBuildable)
+            {
+                Command command = BuildCopyCommandUtility.BuildCopyCommand(def, base.Stuff, base.StyleSourcePrecept as Precept_Building, StyleDef, styleOverridden: true, glowerColorOverride);
+                if (command != null)
+                {
+                    yield return command;
+                }
+            }
+            if (base.Faction == Faction.OfPlayer || def.building.alwaysShowRelatedBuildCommands)
+            {
+                foreach (Command item in BuildRelatedCommandUtility.RelatedBuildCommands(def))
+                {
+                    yield return item;
+                }
+            }
+            Bill_Autonomous bill_Autonomous = ActiveBill;
+            if (bill_Autonomous != null && bill_Autonomous.State == FormingState.Forming)
+            {
+                yield return new Command_Action
+                {
+                    action = delegate
+                    {
+                        ActiveBill.formingTicks -= (float)ActiveBill.recipe.formingTicks * 0.25f;
+                    },
+                    defaultLabel = "DEV: Forming cycle +25%"
+                };
+                yield return new Command_Action
+                {
+                    action = delegate
+                    {
+                        ActiveBill.formingTicks = 0f;
+                    },
+                    defaultLabel = "DEV: Complete cycle"
+                };
+            }
+            if (DebugSettings.ShowDevGizmos)
+            {
+                if (ActiveMechBill != null && ActiveMechBill.State != 0 && ActiveMechBill.State != FormingState.Formed)
+                {
+                    Command_Action command_Action2 = new Command_Action();
+                    command_Action2.action = ActiveMechBill.ForceCompleteAllCycles;
+                    command_Action2.defaultLabel = "DEV: Complete all cycles";
+                    yield return command_Action2;
+                }
+            }
         }
     }
 }
