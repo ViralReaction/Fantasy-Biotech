@@ -246,18 +246,15 @@
 			<Gold>20</Gold>
 		</costList>
 		<comps>
-			<li Class="PipeSystem.CompProperties_ResourceTrader">
-				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
-				<pipeNet>VR_SteamNet</pipeNet>
-				<consumptionPerTick>0</consumptionPerTick>
-				<idleConsumptionPerTick>0</idleConsumptionPerTick>
-			</li>
-			<li Class="PipeSystem.CompProperties_ResourceStorage">
+			<li Class="FantasyBiotech.CompProperties_SteamTank">
+				<compClass>FantasyBiotech.CompResourceStorage_SteamTank</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
 				<storageCapacity>3000</storageCapacity>
-				<barSize>(0.75, 0.20)</barSize>
+				<barSize>(0.50, 0.10)</barSize>
 				<margin>0.05</margin>
-				<centerOffset>(0, 0, -0.6)</centerOffset>
+				<centerOffset>(0, 0, 0.5)</centerOffset>
+				<horizontalBarSize>(0.50, 0.10)</horizontalBarSize>
+				<horizontalCenterOffset>(-0.2, 0, 0.15)</horizontalCenterOffset>
 			</li>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>3</explosiveRadius>
@@ -315,12 +312,14 @@
 			<Gold>20</Gold>
 		</costList>
 		<comps>
-			<li Class="PipeSystem.CompProperties_ResourceStorage">
+			<li Class="FantasyBiotech.CompProperties_SteamTank">
 				<pipeNet>VR_SteamNet</pipeNet>
 				<storageCapacity>15000</storageCapacity>
 				<barSize>(0.75, 0.20)</barSize>
 				<margin>0.05</margin>
-				<centerOffset>(0, 0, -0.6)</centerOffset>
+				<centerOffset>(0, 0, 1)</centerOffset>
+				<horizontalBarSize>(0.75, 0.20)</horizontalBarSize>
+				<horizontalCenterOffset>(-0.4, 0, 0.3)</horizontalCenterOffset>
 			</li>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>6</explosiveRadius>

@@ -6,15 +6,13 @@ namespace FantasyBiotech
 {
     public class CompPowerPlantNeedResource_Steam : CompPowerPlantNeedResource
     {
-        private List<CompResourceTrader> compResourceTraders;
-
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             this.compResourceTraders = this.parent.GetComps<CompResourceTrader>().ToList<CompResourceTrader>();
             base.PostSpawnSetup(respawningAfterLoad);
         }
 
-        protected override float DesiredPowerOutput
+        public override float DesiredPowerOutput
         {
             get
             {

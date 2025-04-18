@@ -33,7 +33,7 @@ namespace FantasyBiotech
                 switch (ActiveMechBill.State)
                 {
                     case FormingState.Forming:
-                        Power.UsedLastTick = false;
+                        Power.Notify_UsedThisTick();
                         thingDef = def.building.gestatorFormingMote.GetForRotation(Rotation);
                         break;
 

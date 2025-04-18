@@ -40,8 +40,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_SteamTank.cs" />
     <Compile Include="FantasyBiotech\Comps\CompResourceTrader_Steam.cs" />
     <Compile Include="FantasyBiotech\Comps\CompPowerPlantNeedResource_Steam.cs" />
+    <Compile Include="FantasyBiotech\Comps\CompResourceStorage_SteamTank.cs" />
     <Compile Include="FantasyBiotech\Harmony\Alert_GenebankUnpowered_Patch.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_PowerOn.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_Tick_Patch.cs" />
@@ -51,6 +53,7 @@
     <Compile Include="FantasyBiotech\Harmony\CompGenepackContainer_PowerOn.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_CanPawnChargeCurrently.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_DeSpawn.cs" />
+    <Compile Include="FantasyBiotech\Harmony\BillMech_BillTick_Patch.cs" />
     <Compile Include="FantasyBiotech\Harmony\JobGiver_GetEnergy_Charger_GetClosestCharger.cs" />
     <Compile Include="FantasyBiotech\Harmony\HarmonyPatches.cs" />
     <Compile Include="FantasyBiotech\MapComponent\RechargerMapComponent.cs" />
@@ -64,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Publicize Include="Assembly-CSharp" />
+    <Publicize Include="PipeSystem" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">
