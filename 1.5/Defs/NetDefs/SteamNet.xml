@@ -35,9 +35,9 @@
 		<defName>VR_SteamNet</defName>
 		<resource>
 			<name>Steam</name>
-			<unit>gas</unit>
+			<unit>SPU</unit>
 			<color>(193, 152, 70)</color>
-			<onlyShowStored>True</onlyShowStored>
+			<onlyShowStored>false</onlyShowStored>
 			<offTexPath>Things/Item/Resource/HemogenPack/HemogenPack_c</offTexPath>
 		</resource>
 		<noStorageAlert>true</noStorageAlert>
@@ -249,7 +249,7 @@
 			<li Class="FantasyBiotech.CompProperties_SteamTank">
 				<compClass>FantasyBiotech.CompResourceStorage_SteamTank</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
-				<storageCapacity>3000</storageCapacity>
+				<storageCapacity>240000</storageCapacity>
 				<barSize>(0.50, 0.10)</barSize>
 				<margin>0.05</margin>
 				<centerOffset>(0, 0, 0.5)</centerOffset>
@@ -314,7 +314,7 @@
 		<comps>
 			<li Class="FantasyBiotech.CompProperties_SteamTank">
 				<pipeNet>VR_SteamNet</pipeNet>
-				<storageCapacity>15000</storageCapacity>
+				<storageCapacity>1200000</storageCapacity>
 				<barSize>(0.75, 0.20)</barSize>
 				<margin>0.05</margin>
 				<centerOffset>(0, 0, 1)</centerOffset>
@@ -378,8 +378,9 @@
 		</costList>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
-				<consumptionPerTick>-6</consumptionPerTick>
+				<consumptionPerTick>-15</consumptionPerTick>
 				<soundAmbientReceivingResource>ChemfuelFiredGenerator_Ambience</soundAmbientReceivingResource>
 			</li>
 			<li Class="CompProperties_Flickable"/>
@@ -450,8 +451,9 @@
 		</costList>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
-				<consumptionPerTick>-5</consumptionPerTick>
+				<consumptionPerTick>-50</consumptionPerTick>
 				<soundAmbientReceivingResource>ChemfuelFiredGenerator_Ambience</soundAmbientReceivingResource>
 			</li>
 			<li Class="CompProperties_HeatPusher">

@@ -141,8 +141,8 @@
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
-				<consumptionPerTick>6</consumptionPerTick>
-				<idleConsumptionPerTick>0</idleConsumptionPerTick>
+				<consumptionPerTick>7</consumptionPerTick>
+				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>false</transmitsPower>
@@ -267,8 +267,8 @@
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
-				<consumptionPerTick>12</consumptionPerTick>
-				<idleConsumptionPerTick>0</idleConsumptionPerTick>
+				<consumptionPerTick>10</consumptionPerTick>
+				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>false</transmitsPower>

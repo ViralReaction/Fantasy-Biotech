@@ -3,8 +3,7 @@ using RimWorld;
 using static Verse.GenDraw;
 using UnityEngine;
 using Verse;
-using HarmonyLib;
-using System;
+using System.Text;
 
 
 namespace FantasyBiotech
@@ -141,7 +140,29 @@ namespace FantasyBiotech
                 DrawFillableBar(request);
             }
         }
+        public override string CompInspectStringExtra()
+        {
+            StringBuilder sb = new StringBuilder();
+            if (Props.addStorageInfo)
+            {
+                // Convert SPU-ticks to SPU-days
+                float storedSPUd = amountStored / GenDate.TicksPerDay;
+                float maxSPUd = Props.storageCapacity / GenDate.TicksPerDay;
+                sb.AppendInNewLine("PowerBatteryStored".Translate() + ": " + storedSPUd.ToString("F1") + " / " + maxSPUd.ToString("F0") + " SPUd");
+            }
+            if (markedForTransfer)
+            {
+                sb.AppendInNewLine("PipeSystem_MarkedToTransferContent".Translate());
+            }
+            var net = PipeNet;
+            sb.AppendInNewLine("FantasyBiotech_SteamNetExcess".Translate((net.Production - net.Consumption).ToString("F0"), (net.Stored / GenDate.TicksPerDay).ToString("F1")));
+            if (DebugSettings.godMode)
+            {
+                sb.AppendInNewLine(net.ToString());
+            }
+            return sb.ToString().TrimEndNewlines();
+        }
 
-        
+
     }
 }

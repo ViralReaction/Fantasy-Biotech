@@ -3,5 +3,8 @@
 
 	<Fantasy_AlertGenebankUnfueled>Gene bank needs fuel</Fantasy_AlertGenebankUnfueled>
 	<Fantasy_AlertGenebankUnfueledDesc>A gene bank is unfueled, so the genepacks inside it are slowly deteriorating. Refuel the gene bank to prevent the genepacks from deteriorating.\n\nOnce the gene bank is fueled, it will slowly reverse the deterioration of the genepacks inside it.</Fantasy_AlertGenebankUnfueledDesc>
+	
+	<FantasyBiotech_SteamNetExcess>Excess: {0} SPU ({1} SPUd Stored)</FantasyBiotech_SteamNetExcess>
+	<FantasyBiotech_PipeSystem_NotConnected>Not enough steam in network.</FantasyBiotech_PipeSystem_NotConnected>
 
 </LanguageData>
