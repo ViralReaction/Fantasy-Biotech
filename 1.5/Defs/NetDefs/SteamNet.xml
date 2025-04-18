@@ -250,11 +250,11 @@
 				<compClass>FantasyBiotech.CompResourceStorage_SteamTank</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
 				<storageCapacity>240000</storageCapacity>
-				<barSize>(0.50, 0.10)</barSize>
-				<margin>0.05</margin>
-				<centerOffset>(0, 0, 0.5)</centerOffset>
+				<barSize>(0.45, 0.12)</barSize>
+				<margin>0.0</margin>
+				<centerOffset>(-0.005, 0, 0.51)</centerOffset>
 				<horizontalBarSize>(0.50, 0.10)</horizontalBarSize>
-				<horizontalCenterOffset>(-0.2, 0, 0.15)</horizontalCenterOffset>
+				<horizontalCenterOffset>(-0.22, 0, 0.28)</horizontalCenterOffset>
 			</li>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>3</explosiveRadius>
@@ -315,11 +315,11 @@
 			<li Class="FantasyBiotech.CompProperties_SteamTank">
 				<pipeNet>VR_SteamNet</pipeNet>
 				<storageCapacity>1200000</storageCapacity>
-				<barSize>(0.75, 0.20)</barSize>
-				<margin>0.05</margin>
-				<centerOffset>(0, 0, 1)</centerOffset>
-				<horizontalBarSize>(0.75, 0.20)</horizontalBarSize>
-				<horizontalCenterOffset>(-0.4, 0, 0.3)</horizontalCenterOffset>
+				<barSize>(0.90, 0.25)</barSize>
+				<margin>0.0</margin>
+				<centerOffset>(-0.01, 0, 1.02)</centerOffset>
+				<horizontalBarSize>(1.05, 0.24)</horizontalBarSize>
+				<horizontalCenterOffset>(-0.45, 0, 0.55)</horizontalCenterOffset>
 			</li>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>6</explosiveRadius>

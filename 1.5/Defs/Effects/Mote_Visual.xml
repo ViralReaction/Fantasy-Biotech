@@ -74,9 +74,6 @@
 			</shaderParameters>
 			<drawSize>(5.7, 4.275)</drawSize>
 		</graphicData>
-		<mote>
-			<attachedDrawOffset>(0,0,0.15)</attachedDrawOffset>
-		</mote>
 	</ThingDef>
 
 	<ThingDef Name="VR_MechGestatorFormingLargeEast" ParentName="VR_MechGestatorFormingBase">
