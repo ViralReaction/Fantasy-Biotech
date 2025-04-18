@@ -50,7 +50,7 @@
 				<volume>(3, 2, 1.9)</volume>
 			</shadowData>
 		</graphicData>
-		<uiIconPath>Things/Building/Production/MechGestatorStandard_MenuIcon</uiIconPath>
+		<uiIconPath>Things/Building/Production/MechGestatorStandard_Steam_MenuIcon</uiIconPath>
 		<uiIconScale>1.85</uiIconScale>
 		<interactionCellOffset>(1,0,2)</interactionCellOffset>
 		<recipes>
@@ -165,7 +165,7 @@
 				<volume>(3.8, 3, 2.7)</volume>
 			</shadowData>
 		</graphicData>
-		<uiIconPath>Things/Building/Production/MechGestatorLarge_MenuIcon</uiIconPath>
+		<uiIconPath>Things/Building/Production/MechGestatorLarge_Steam_MenuIcon</uiIconPath>
 		<uiIconScale>1.5</uiIconScale>
 		<interactionCellOffset>(2,0,2)</interactionCellOffset>
 		<statBases>
