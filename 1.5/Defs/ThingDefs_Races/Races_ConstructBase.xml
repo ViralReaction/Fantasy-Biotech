@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BasePawn" Name="VR_BaseConstruct" Abstract="True">
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<statBases>
+			<MarketValue>1200</MarketValue>
+			<PsychicSensitivity>0.5</PsychicSensitivity>
+			<ToxicResistance>1</ToxicResistance>
+			<Flammability>0</Flammability>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>250</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<ArmorRating_Heat>2.00</ArmorRating_Heat>
+			<BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">1</BandwidthCost>
+			<ControlTakingTime MayRequire="Ludeon.RimWorld.Biotech">12</ControlTakingTime>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+			<MechEnergyLossPerHP MayRequire="Ludeon.RimWorld.Biotech">0.33</MechEnergyLossPerHP>
+			<WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">5</WastepacksPerRecharge>
+			<WorkSpeedGlobal MayRequire="Ludeon.RimWorld.Biotech">0.5</WorkSpeedGlobal>
+		</statBases>
+		<receivesSignals>true</receivesSignals>
+		<tradeability>None</tradeability>
+		<race>
+			<fleshType>Mechanoid</fleshType>
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<foodType>None</foodType>
+			<lifeExpectancy>2500</lifeExpectancy>
+			<bloodDef>Filth_MachineBits</bloodDef>
+			<nameGenerator MayRequire="Ludeon.RimWorld.Biotech">NamerMech</nameGenerator>
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<soundCallIntervalFriendlyFactor>2</soundCallIntervalFriendlyFactor>
+			<thinkTreeConstant MayRequire="Ludeon.RimWorld.Biotech">MechConstant</thinkTreeConstant>
+		</race>
+		<comps>
+			<li Class="CompProperties_CanBeDormant"/>
+			<li Class="CompProperties_WakeUpDormant">
+				<wakeUpOnDamage>true</wakeUpOnDamage>
+				<wakeUpCheckRadius>30</wakeUpCheckRadius>
+				<wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="CompProperties_OverseerSubject">
+				<needsOverseerEffect>MechUncontrolled</needsOverseerEffect>
+				<delayUntilFeralCheck>60000</delayUntilFeralCheck>
+				<feralMtbDays>10</feralMtbDays>
+				<feralCascadeRadialDistance>25</feralCascadeRadialDistance>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="CompProperties_MechRepairable"/>
+		</comps>
+	</ThingDef>
+	
+	<!-- Light Constructs (Militor/Helper Constructs) -->
+	<ThingDef Name="VR_LightConstruct" ParentName="VR_BaseConstruct" Abstract="True">
+		<statBases>
+			<MarketValue>800</MarketValue>
+			<MoveSpeed>3.4</MoveSpeed>
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+			<MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<body>Mech_Light</body>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>0.7</baseBodySize>
+			<mechWeightClass>Light</mechWeightClass>
+		</race>
+		<butcherProducts>
+			<Steel>10</Steel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- Walker (lancer/scyther) base -->
+	<ThingDef Name="VR_BaseConstructWalker" ParentName="VR_BaseConstruct" Abstract="True">
+		<statBases>
+			<MoveSpeed>4.7</MoveSpeed>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+		</statBases>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>1.0</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+					<soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+		<butcherProducts>
+			<Steel>15</Steel>
+		</butcherProducts>
+	</ThingDef>
+
+	<!-- Heavy Construct Bases -->
+	<ThingDef Name="VR_HeavyConstruct" ParentName="VR_BaseConstruct" Abstract="True">
+		<statBases>
+			<MoveSpeed>1.9</MoveSpeed>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+			<ControlTakingTime>24</ControlTakingTime>
+			<MechEnergyLossPerHP>0.2</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<mechWeightClass>Heavy</mechWeightClass>
+		</race>
+		<butcherProducts>
+			<Steel>20</Steel>
+			<Plasteel>10</Plasteel>
+		</butcherProducts>
+	</ThingDef>
+
+	<!-- PawnKind Bases -->
+	<PawnKindDef Name="VR_BaseConstructKind" Abstract="True">
+		<defaultFactionType>Mechanoid</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<canStrip>false</canStrip>
+		<minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<weaponMoney>9999~9999</weaponMoney>
+	</PawnKindDef>
+
+	<PawnKindDef Name="VR_LightConstructKind" ParentName="VR_BaseConstructKind" Abstract="True">
+		<combatPower>10</combatPower>
+		<weaponTags/>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+		<controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+	</PawnKindDef>
+
+	<PawnKindDef Name="VR_NonCombatLightConstructKind" ParentName="VR_LightConstructKind" Abstract="True">
+		<isFighter>false</isFighter>
+	</PawnKindDef>
+	
+	<!-- Heavy/Superheavy Construct Base -->
+	<PawnKindDef Name="VR_HeavyConstructKind" ParentName="BaseMechanoidKind" Abstract="True">
+		<combatPower>400</combatPower>
+		<weaponTags/>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+		<controlGroupPortraitZoom>0.8</controlGroupPortraitZoom>
+	</PawnKindDef>
+
+</Defs>

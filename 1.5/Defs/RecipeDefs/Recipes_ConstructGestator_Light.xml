@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="VR_BaseConstructRecipe" Abstract="True">
+		<jobString>Gestating mech.</jobString>
+		<workAmount>1800</workAmount>
+		<gestationCycles>1</gestationCycles>
+		<formingTicks>120000</formingTicks><!-- 2 days -->
+		<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
+		<workSpeedStat>MechFormingSpeed</workSpeedStat>
+		<soundWorking>MechGestatorCycle_Initiating</soundWorking>
+	</RecipeDef>
+
+	<RecipeDef Name="VR_LightConstructRecipe" ParentName="VR_BaseConstructRecipe" Abstract="True">
+		<researchPrerequisite>BasicMechtech</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SubcoreBasic</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_LightConstructRecipe">
+		<defName>VR_MakeConstruct_Militor</defName>
+		<label>gestate militor</label>
+		<description>Gestate a militor mechanoid.</description>
+		<products>
+			<VR_Construct_Militor>1</VR_Construct_Militor>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Militor</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_LightConstructRecipe">
+		<defName>VR_MakeConstruct_Lifter</defName>
+		<label>gestate lifter</label>
+		<description>Gestate a lifter mechanoid.</description>
+		<products>
+			<VR_Construct_Lifter>1</VR_Construct_Lifter>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Lifter</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_LightConstructRecipe">
+		<defName>VR_MakeConstruct_Constructoid</defName>
+		<label>gestate constructoid</label>
+		<description>Gestate a constructoid mechanoid.</description>
+		<products>
+			<VR_Construct_Constructoid>1</VR_Construct_Constructoid>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Constructoid</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_LightConstructRecipe">
+		<defName>VR_MakeConstruct_Agrihand</defName>
+		<label>gestate agrihand</label>
+		<description>Gestate an agrihand mechanoid.</description>
+		<researchPrerequisite>BasicMechtech</researchPrerequisite>
+		<products>
+			<VR_Construct_Agrihand>1</VR_Construct_Agrihand>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Agrihand</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_LightConstructRecipe">
+		<defName>VR_MakeConstruct_Cleansweeper</defName>
+		<label>gestate cleansweeper</label>
+		<description>Gestate a cleansweeper mechanoid.</description>
+		<researchPrerequisite>BasicMechtech</researchPrerequisite>
+		<products>
+			<VR_Construct_Cleansweeper>1</VR_Construct_Cleansweeper>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Cleansweeper</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+</Defs>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Abstract="True" Name="VR_SuperHeavyConstruct" ParentName="VR_HeavyConstruct">
+		<statBases>
+			<MarketValue>1600</MarketValue>
+			<ControlTakingTime>30</ControlTakingTime>
+			<BandwidthCost>5</BandwidthCost>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<PsychicSensitivity>0.75</PsychicSensitivity>
+			<MechEnergyLossPerHP>0.15</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<baseHealthScale>4.5</baseHealthScale>
+			<mechWeightClass>UltraHeavy</mechWeightClass>
+		</race>
+		<butcherProducts Inherit="False">
+			<Steel>50</Steel>
+			<Plasteel>20</Plasteel>
+		</butcherProducts>
+	</ThingDef>
+
+	<!-- Diabolus -->
+	<ThingDef Name="VR_ConstructColossus" ParentName="VR_SuperHeavyConstruct">
+		<defName>VR_Construct_Colossus</defName>
+		<label>colossus</label>
+		<description>An ultra-heavy mechanoid with an ultra-powerful hellsphere cannon. Made for siegebreaking, its hellsphere cannon takes time to charge up a shot, but can melt concrete and vaporize bone. The diabolus dissipates the hellsphere cannon's waste power in a heat column mounted on its back, which can pulse to ignite flammable objects nearby.\n\nThis mech's name comes from a thousand-year-old poem written by a Haspian monk who survived the erasure of his monastery. His religiously-tinged work describes a razor-bodied fiend pulsing with flesh-searing heat as it crushed scorched bodies under massive claws. The few who have faced a diabolus and survived tend to agree with this depiction.</description>
+		<race>
+			<body>Mech_Diabolus</body>
+			<baseBodySize>4</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
+					<soundCall>Pawn_Mech_Diabolus_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>4.5</baseHealthScale>
+			<detritusLeavings>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>3</texOverrideIndex>
+					<spawnChance>0.75</spawnChance>
+				</li>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>17</texOverrideIndex>
+					<spawnChance>0.75</spawnChance>
+				</li>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>1</texOverrideIndex>
+					<spawnChance>0.75</spawnChance>
+				</li>
+			</detritusLeavings>
+		</race>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_TargetingBeam"/>
+		</comps>
+		<statBases>
+			<BandwidthCost>5</BandwidthCost>
+			<EMPResistance>0.6</EMPResistance>
+			<MoveSpeed>2.4</MoveSpeed>
+		</statBases>
+		<killedLeavingsPlayerHostile>
+			<SignalChip>1</SignalChip>
+		</killedLeavingsPlayerHostile>
+	</ThingDef>
+    
+	<PawnKindDef Name="VR_ConstructColossusKind" ParentName="VR_HeavyConstructKind">
+		<defName>VR_Construct_Colossus</defName>
+		<label>colossus</label>
+		<race>VR_Construct_Colossus</race>
+		<combatPower>500</combatPower>
+		<maxPerGroup>3</maxPerGroup>
+		<isBoss>true</isBoss>
+		<allowInMechClusters>false</allowInMechClusters>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Colossus</texPath>
+					<!-- <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Diablo</maskPath> -->
+					<!-- <shaderType>CutoutWithOverlay</shaderType> -->
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>Construct_GiantTeslaCannon</li>
+		</weaponTags>
+		<abilities>
+			<li>FireBurst</li>
+		</abilities>
+	</PawnKindDef>
+
+</Defs>

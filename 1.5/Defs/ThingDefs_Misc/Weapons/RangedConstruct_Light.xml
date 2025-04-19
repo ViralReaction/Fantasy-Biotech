@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="VR_LightConstructGun" ParentName="BaseGun" Abstract="True">
+		<tradeability>None</tradeability>
+		<techLevel>Medieval</techLevel>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+		<graphicData>
+			<drawSize>0.65</drawSize>
+		</graphicData>
+		<equippedDistanceOffset>-0.14</equippedDistanceOffset>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- Ranged -->
+	<ThingDef Name="LightConstructGunRanged" ParentName="VR_LightConstructGun" Abstract="True">
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+	</ThingDef>
+
+	<ThingDef ParentName="LightConstructGunRanged">
+		<defName>VR_ConstructGun_MiniBlunderbuss</defName>
+		<label>mini-shotgun</label>
+		<description>A compact, short-range shotgun designed to be mounted on a light combat mechanoid.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MiniBlunderbuss</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<Mass>1.5</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.87</AccuracyShort>
+			<AccuracyMedium>0.7</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>ConstructGunShortRange</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MiniShotgun</defaultProjectile>
+				<warmupTime>1.2</warmupTime>
+				<range>12.9</range>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>6</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_MiniBlunderbuss</defName>
+		<label>blunderbuss blast</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_MiniShotgun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<stoppingPower>2.5</stoppingPower>
+			<armorPenetrationBase>0.12</armorPenetrationBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+</Defs>

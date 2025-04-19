@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="VR_ConstructMeleeWeapon" ParentName="BaseWeapon" Abstract="True">
+		<weaponClasses>
+			<li>Melee</li>
+		</weaponClasses>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+		<graphicData>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VFECore.ThingDefExtension">
+				<weaponDraftedDrawOffsets>
+					<north>
+						<drawOffset>(-0.15,0.0,0.10)</drawOffset>
+						<angleOffset>160</angleOffset>
+					</north>
+					<east>
+						<drawOffset>(-0.10,0.00,0.10)</drawOffset>
+						<angleOffset>-60</angleOffset>
+					</east>
+					<south>
+						<drawOffset>(0.15,0.00,0.10)</drawOffset>
+						<angleOffset>-60</angleOffset>
+					</south>
+					<west>
+						<drawOffset>(0.10,0.0,0.10)</drawOffset>
+						<angleOffset>60</angleOffset>
+					</west>
+				</weaponDraftedDrawOffsets>
+				<usableWithShields>true</usableWithShields>
+			</li>
+		</modExtensions>
+	</ThingDef>
+ 
+	<!-- Scyther Blade -->
+	<ThingDef ParentName="VR_ConstructMeleeWeapon">
+		<defName>VR_Construct_SteamSword</defName>
+		<label>steam sword</label>
+		<description>steam blade</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/SteamSword</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>14000</WorkToMake>
+			<Mass>2.5</Mass>
+		</statBases>
+		<weaponTags>
+			<li>VR_Construct_SteamSword</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>edge</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+	</ThingDef>
+	
+	<ThingDef ParentName="VR_ConstructMeleeWeapon">
+		<defName>VR_Construct_SteamHammer</defName>
+		<label>steam hammer</label>
+		<description>steam hammer</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/SteamHammer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>14000</WorkToMake>
+			<Mass>2.5</Mass>
+		</statBases>
+		<weaponTags>
+			<li>VR_Construct_SteamHammer</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>edge</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+	</ThingDef>
+	
+	<ThingDef ParentName="VR_ConstructMeleeWeapon">
+		<defName>VR_Construct_SteamLance</defName>
+		<label>steam lance</label>
+		<description>steam lance</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/SteamLance</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>14000</WorkToMake>
+			<Mass>2.5</Mass>
+		</statBases>
+		<weaponTags>
+			<li>VR_Construct_SteamLance</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>edge</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<labelNoLocation>blade</labelNoLocation>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+	</ThingDef>
+
+</Defs>

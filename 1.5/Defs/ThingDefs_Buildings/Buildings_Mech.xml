@@ -54,13 +54,11 @@
 		<uiIconScale>1.85</uiIconScale>
 		<interactionCellOffset>(1,0,2)</interactionCellOffset>
 		<recipes>
-			<li>Militor</li>
-			<li>Lifter</li>
-			<li>Constructoid</li>
-			<li>Agrihand</li>
-			<li>Cleansweeper</li>
-			<li>Fabricor</li>
-			<li>Paramedic</li>
+			<li>VR_MakeConstruct_Militor</li>
+			<li>VR_MakeConstruct_Lifter</li>
+			<li>VR_MakeConstruct_Constructoid</li>
+			<li>VR_MakeConstruct_Agrihand</li>
+			<li>VR_MakeConstruct_Cleansweeper</li>
 			<li>ResurrectLightMech</li>
 		</recipes>
 		<statBases>
@@ -72,7 +70,6 @@
 		<size>(3,2)</size>
 		<costList>
 			<Steel>150</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
 			<li>BasicMechtech</li>
@@ -177,7 +174,6 @@
 		<size>(4,3)</size>
 		<costList>
 			<Steel>300</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 		<researchPrerequisites>
 			<li>StandardMechtech</li>
