@@ -17,7 +17,7 @@
 		<resourceReadoutPriority>Last</resourceReadoutPriority>
 		<drawGUIOverlay>true</drawGUIOverlay>
 		<graphicData>
-			<texPath>Things/Item/Resource/HemogenPack/HemogenPack_c</texPath>
+			<texPath>Things/Item/Resource/SteamPower</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.85</drawSize>
 		</graphicData>
@@ -38,7 +38,7 @@
 			<unit>SPU</unit>
 			<color>(193, 152, 70)</color>
 			<onlyShowStored>false</onlyShowStored>
-			<offTexPath>Things/Item/Resource/HemogenPack/HemogenPack_c</offTexPath>
+			<offTexPath>Things/Item/Resource/SteamPower</offTexPath>
 		</resource>
 		<noStorageAlert>true</noStorageAlert>
 		<pipeDefs>
