@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>VR_HarmonicSickness</defName>
+		<label>Harmonic sampling sickness</label>
+		<description>This person underwent harmonic sampling to produce a dynamo core. Minor tonal dissonance lingers in the mind, but the essence remains intact.</description>
+		<initialSeverity>4</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1</severityPerDay>
+				<mechanitorFactor>2</mechanitorFactor>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<vomitMtbDays>1.5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.75</postFactor>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.75</postFactor>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<postFactor>0.75</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

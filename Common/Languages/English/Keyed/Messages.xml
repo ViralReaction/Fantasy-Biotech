@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<FantasyBiotech_MessagePawnKilledRipscanner>{PAWN_nameDef}'s body dissolved as their essence was transferred by the </FantasyBiotech_MessagePawnKilledRipscanner>
+	<FantasyBiotech_MessageSubcoreSoftscannerCompleted>Harmonic sampling completed for {PAWN_nameDef}.</FantasyBiotech_MessageSubcoreSoftscannerCompleted>
+
+</LanguageData>

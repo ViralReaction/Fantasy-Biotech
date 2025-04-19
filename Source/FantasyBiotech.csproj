@@ -60,6 +60,7 @@
     <Compile Include="FantasyBiotech\ThingClasses\Building_SteamGenerator.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_MechCharger_Steam.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_ConstructGestator.cs" />
+    <Compile Include="FantasyBiotech\ThingClasses\Building_DynamoCore.cs" />
     <Compile Include="FantasyBiotech\Utility\DictionaryUtility.cs" />
     <Compile Include="FantasyBiotech\Utility\MechUtility.cs" />
     <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_DoGestate_Construct.cs" />

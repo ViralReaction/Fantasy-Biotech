@@ -37,7 +37,7 @@
 		</comps>
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="VR_MechGestatorBase">
 		<defName>VR_MechGestator_Steam</defName>
 		<label>mech gestator</label>
@@ -152,7 +152,7 @@
 			</li>
 		</comps>
 	</ThingDef>
-  
+
 	<ThingDef ParentName="VR_MechGestatorBase">
 		<defName>VR_LargeMechGestator_Steam</defName>
 		<label>large construct gestator</label>
@@ -277,6 +277,216 @@
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
 		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BenchBase">
+		<defName>VR_SubcoreEncoder_Steam</defName>
+		<label>soulcore encoder</label>
+		<description>A work station where a mechanitor can produce basic-tier subcores. Subcores are the brains of mechanoids, and one is required to produce any mechanoid. Basic subcores can only be used in simple basic-tier mechs.\n\nHigher tier subcores can be created by building a subcore softscanner or a subcore ripscanner.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<canOverlapZones>false</canOverlapZones>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.3</fillPercent>
+		<graphicData>
+			<texPath>Things/Building/Production/SubcoreEncoder_Steam</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,2)</drawSize>
+			<shadowData>
+				<volume>(3, 2, 1.9)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<buildingTags>
+				<li>Biotech</li>
+			</buildingTags>
+		</building>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2430</uiOrder>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>8000</WorkToBuild>
+			<Mass>25</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<size>(3,2)</size>
+		<costList>
+			<Steel>100</Steel>
+		</costList>
+		<researchPrerequisites>
+			<li>BasicMechtech</li>
+		</researchPrerequisites>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_MoteEmitter">
+				<perRotationMotes>
+					<li>Mote_SubcoreEncoderNorth</li>
+					<li>Mote_SubcoreEncoderEast</li>
+					<li>Mote_SubcoreEncoderSouth</li>
+					<li>Mote_SubcoreEncoderEast</li>
+				</perRotationMotes>
+				<offsetNorth>(0, 0, -0.34)</offsetNorth>
+				<offsetSouth>(0, 0, 0.66)</offsetSouth>
+				<offsetWest>(0.575, 0, 0.24)</offsetWest>
+				<offsetEast>(-0.575, 0, 0.24)</offsetEast>
+				<useParentRotation>true</useParentRotation>
+			</li>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>1</consumptionPerTick>
+				<idleConsumptionPerTick>1</idleConsumptionPerTick>
+			</li>
+			<li Class="CompProperties_Power">
+				<transmitsPower>false</transmitsPower>
+				<!-- Specify the comp class -->
+				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<techLevel>Medieval</techLevel>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+	</ThingDef>
+
+	<ThingDef Abstract="True" Name="VR_SubcoreScannerSteamBase" ParentName="BuildingBase">
+		<thingClass>FantasyBiotech.Building_DynamoCoreScanner</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.3</fillPercent>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,2)</drawSize>
+			<shadowData>
+				<volume>(3, 2, 1.9)</volume>
+			</shadowData>
+		</graphicData>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<buildingTags>
+				<li>Biotech</li>
+			</buildingTags>
+			<subcoreScannerFixedIngredients>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Steel</li>
+						</thingDefs>
+					</filter>
+					<count>50</count>
+				</li>
+			</subcoreScannerFixedIngredients>
+		</building>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2430</uiOrder>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(3,2)</size>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<statBases>
+			<Mass>25</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+	</ThingDef>
+
+	<ThingDef ParentName="VR_SubcoreScannerSteamBase">
+		<defName>VR_SubcoreSoftscanner_Steam</defName>
+		<label>dynamo harmonic sampler</label>
+		<description>A pod with thousands of tiny tissue probes and a high-energy brain scanner. Once a person is inserted, the system uses the probes and scanner to sense a neuro-psychic pattern that it can analog-transfer to a new standard-tier mechanoid subcore. The person will be left temporarily sick, but unharmed.\n\nSubcores are mechanoid brains and producing any mechanoid requires one. Standard-tier subcores produced by this softscanner can only power standard-tier mechanoids.\n\nHigher tier subcores can be created by building a subcore ripscanner.</description>
+		<graphicData>
+			<texPath>Things/Building/Production/SubcoreSoftscanner_Steam</texPath>
+		</graphicData>
+		<statBases>
+			<WorkToBuild>8000</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+			<Plasteel>50</Plasteel>
+		</costList>
+		<researchPrerequisites>
+			<li>StandardMechtech</li>
+		</researchPrerequisites>
+		<building>
+			<subcoreScannerOutputDef>VR_DynamoCoreRegular</subcoreScannerOutputDef>
+			<subcoreScannerStartEffect>SubcoreSoftscanner_Start</subcoreScannerStartEffect>
+			<subcoreScannerWorking>SubcoreSoftscanner_Working</subcoreScannerWorking>
+			<subcoreScannerComplete>SubcoreSoftscanner_Complete</subcoreScannerComplete>
+			<subcoreScannerHediff>VR_HarmonicSickness</subcoreScannerHediff>
+			<subcoreScannerTicks>15000</subcoreScannerTicks>
+		</building>
+		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>4</consumptionPerTick>
+				<idleConsumptionPerTick>2</idleConsumptionPerTick>
+			</li>
+			<li Class="CompProperties_Power">
+				<transmitsPower>false</transmitsPower>
+				<!-- Specify the comp class -->
+				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="VR_SubcoreScannerSteamBase">
+		<defName>VR_SubcoreRipscanner_Steam</defName>
+		<label>dynamo tonal transcriber</label>
+		<description>A pod with thousands of tissue probe injectors and an ultra-high-power vaporizing brain scanner. Once a person is inserted, the device will insert the probes into their body through the skin while the ripscanner chews through the brain, reading the reflected radiation and destroying the brain in the process. Ripscanning the mind generates a neuro-psychic pattern that the scanner can analog-transfer to a new high-tier mechanoid subcore.\n\nSubcores are mechanoid brains and producing any mechanoid requires one. High-tier subcores produced by this ripscanner can only power high-tier mechanoids.</description>
+		<graphicData>
+			<texPath>Things/Building/Production/SubcoreRipscanner_Steam</texPath>
+		</graphicData>
+		<statBases>
+			<WorkToBuild>1200</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+			<Plasteel>150</Plasteel>
+		</costList>
+		<researchPrerequisites>
+			<li>HighMechtech</li>
+		</researchPrerequisites>
+		<building>
+			<subcoreScannerOutputDef>VR_DynamoCoreHigh</subcoreScannerOutputDef>
+			<subcoreScannerStartEffect>SubcoreRipscanner_Start</subcoreScannerStartEffect>
+			<destroyBrain>true</destroyBrain>
+			<subcoreScannerWorking>SubcoreRipscanner_Working</subcoreScannerWorking>
+			<subcoreScannerComplete>SubcoreRipscanner_Complete</subcoreScannerComplete>
+			<subcoreScannerTicks>30000</subcoreScannerTicks>
+		</building>
+		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>6</consumptionPerTick>
+				<idleConsumptionPerTick>4</idleConsumptionPerTick>
+			</li>
+			<li Class="CompProperties_Power">
+				<transmitsPower>false</transmitsPower>
+				<!-- Specify the comp class -->
+				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</ThingDef>
 
 </Defs>

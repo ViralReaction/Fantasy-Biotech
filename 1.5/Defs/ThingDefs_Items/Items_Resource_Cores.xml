@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Name="VR_DynamoCoreBase" ParentName="ResourceBase" Abstract="True">
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>10</stackLimit>
+		<graphicData>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>200</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0.6</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+		<intricate>true</intricate>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="VR_DynamoCoreBase">
+		<defName>VR_DynamoCoreBasic</defName>
+		<label>basic dynamo core</label>
+		<description>The simplest possible mechanoid brain, this is a tiny psychodynamic substrate unit housing a dull subpersona. Since this is only a basic-tier subcore, it can only drive the simplest of mechanoids.\n\nLike all mechanoid subcores, it contains a subpersona with a psychic presence, albeit a very faint one.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/SubcoreBasicSteam</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techHediffsTags>
+			<li>SubcoreBasic</li>
+		</techHediffsTags>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>BasicMechtech</researchPrerequisite>
+			<workSpeedStat>SubcoreEncodingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>VR_SubcoreEncoder_Steam</li>
+			</recipeUsers>
+			<mechanitorOnlyRecipe>true</mechanitorOnlyRecipe>
+			<unfinishedThingDef>UnfinishedSubcore</unfinishedThingDef>
+			<soundWorking>SubcoreEncoder_Working</soundWorking>
+		</recipeMaker>
+		<costList>
+			<Steel>50</Steel>
+		</costList>
+	</ThingDef>
+
+	<ThingDef ParentName="VR_DynamoCoreBase">
+		<defName>VR_DynamoCoreRegular</defName>
+		<label>standard dynamo core</label>
+		<description>A standard-tier mechanoid brain, this is a psychodynamic substrate unit supporting a thinking subpersona. This particular subcore is strong enough to drive standard-tier mechanoids.\n\nMechanoids are more than robots, and this is more than a silicon computer. Its thinking, psychically-present subpersona makes it more adaptable than silicon systems. However, this also means it can only be produced by analog pattern transfer from another thinking mind.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/SubcoreRegularSteam</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>300</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="VR_DynamoCoreBase">
+		<defName>VR_DynamoCoreHigh</defName>
+		<label>high dynamo core</label>
+		<description>A high-tier mechanoid brain, this is a psychodynamic substrate unit which supports a sophisticated subpersona. This particular subcore is of the strongest tier, and can power complex ultra-heavy mechanoids.\n\nThe subpersona inside this core approaches a live human in its complexity, though it is of a very different nature. Like any such mind, it has a noticeable psychic presence.\n\nThis subcore could only have been produced by rich pattern transfer from another sophisticated mind. The only way to do this without huge facilities is to ripscan a living person's brain, killing them in the process.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/SubcoreHighSteam</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+		</statBases>
+	</ThingDef>
+
+</Defs>
