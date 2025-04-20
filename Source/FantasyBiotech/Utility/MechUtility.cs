@@ -1,15 +1,11 @@
 ﻿using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse.AI;
 using Verse;
 
 namespace FantasyBiotech
 {
-    internal class MechUtility
+    [StaticConstructorOnStartup]
+    public static class MechUtility
     {
 
         public static Building_MechCharger GetClosestCharger(Pawn carrier, Pawn mech, bool forced)
@@ -71,5 +67,24 @@ namespace FantasyBiotech
 
             return closestCharger;
         }
+
+
+        public static bool ConstructSuitableForCluster(PawnKindDef def)
+        {
+            if (!def.RaceProps.IsMechanoid || def.isGoodBreacher || !def.isFighter || !def.allowInMechClusters)
+            {
+                return false;
+            }
+            if (ModsConfig.BiotechActive && Find.BossgroupManager.ReservedByBossgroup(def))
+            {
+                return false;
+            }
+            if (def.GetModExtension<ConstructExtension>()?.isConstruct == false)
+            {
+                return false;
+            }
+            return true;
+        }
+
     }
 }

@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<!-- Scyther Equivalent -->
 	<ThingDef ParentName="VR_BaseConstructWalker">
 		<defName>VR_Construct_Sphere</defName>
 		<label>sphere</label>
 		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
 		<tools>
+			<li>
+				<label>left fist</label>
+				<labelNoLocation>fist</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<labelNoLocation>fist</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
 			<li>
 				<label>head</label>
 				<capacities>
@@ -19,7 +42,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Scyther</body>
+			<body>Lancer</body>
 			<baseHealthScale>1.32</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
@@ -38,7 +61,7 @@
 			</detritusLeavings>
 		</race>
 		<statBases>
-			<BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">2</BandwidthCost>
+			<BandwidthCost>2</BandwidthCost>
 		</statBases>
 	</ThingDef>
 
@@ -69,93 +92,329 @@
 		</weaponTags>
 		<techHediffsChance>1</techHediffsChance>
 		<techHediffsMoney>9999~9999</techHediffsMoney>
+		<modExtensions>
+			<li Class="FantasyBiotech.ConstructExtension">
+				<isConstruct>true</isConstruct>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- Lancer Equivalent -->
+	<ThingDef Name="VR_LancerConstructWalker" ParentName="VR_BaseConstructWalker">
+		<defName>VR_Construct_Sphere_Range</defName>
+		<label>sphere</label>
+		<description>Fast human-sized combat mechanoids built for medium and long-range combat. Their bodies are light, making them vulnerable targets at close range - especially in melee combat.</description>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<labelNoLocation>fist</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<labelNoLocation>fist</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Lancer</body>
+			<baseHealthScale>0.72</baseHealthScale>
+			<detritusLeavings>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>11</texOverrideIndex>
+					<spawnChance>0.1</spawnChance>
+				</li>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>12</texOverrideIndex>
+					<spawnChance>0.1</spawnChance>
+				</li>
+			</detritusLeavings>
+		</race>
+		<statBases>
+			<BandwidthCost>3</BandwidthCost>
+		</statBases>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_BaseConstructKind">
+		<defName>VR_Construct_Sphere_Range</defName>
+		<label>lancer</label>
+		<race>VR_Construct_Sphere_Range</race>
+		<combatPower>180</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/ConstructSphereRange</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ConstructSphereRange</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>VR_ConstructGun_Crossbow</li>
+		</weaponTags>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+	</PawnKindDef>
+
+	<!-- Ballistae == Pikeman Alternative -->
+	<ThingDef ParentName="VR_BaseConstructWalker">
+		<defName>VR_Construct_Ballistae</defName>
+		<label>ballistae</label>
+		<description>A clunky multi-legged combat mechanoid specialized as a long-range weapons platform. While effective at distance, it is weak in close-range fights and in melee combat.\n\nVeterans of mechanoid wars know that often, the safest place to be around a pikeman is touching it.</description>
+		<statBases>
+			<MoveSpeed>2.5</MoveSpeed>
+			<BandwidthCost>2</BandwidthCost>
+		</statBases>
+		<tools>
+			<li>
+				<label>front left leg</label>
+				<labelNoLocation>leg</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>front right leg</label>
+				<labelNoLocation>leg</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>0.60</accuracyTouch>
+				<accuracyShort>0.80</accuracyShort>
+				<accuracyMedium>0.90</accuracyMedium>
+				<accuracyLong>1.05</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>VR_Construct_BallistaShot</defaultProjectile>
+				<warmupTime>2.5</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<range>44.9</range>
+				<soundCast>Shot_NeedleGun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<label>construct ballista</label>
+				<commonality>10</commonality>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>construct ballista</label>
+						<description>Shoots target with steam powered ballista</description>
+						<canBeToggled>false</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+								<cooldownTime>2.1</cooldownTime>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+		<race>
+			<body>Pikeman</body>
+			<baseHealthScale>0.85</baseHealthScale>
+			<lifeStageAges Inherit="False">
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+					<soundCall>Pawn_Mech_Pikeman_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<detritusLeavings>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>11</texOverrideIndex>
+					<spawnChance>0.1</spawnChance>
+				</li>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>16</texOverrideIndex>
+					<spawnChance>0.1</spawnChance>
+				</li>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>1</texOverrideIndex>
+					<spawnChance>0.1</spawnChance>
+				</li>
+			</detritusLeavings>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_BaseConstructKind">
+		<defName>VR_Construct_Ballistae</defName>
+		<label>ballistae</label>
+		<labelPlural>ballistae</labelPlural>
+		<race>VR_Construct_Ballistae</race>
+		<combatPower>110</combatPower>
+		<lifeStages>
+			<li MayRequire="Ludeon.RimWorld.Biotech">
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Ballista</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Ballista</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.4</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney/>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+	</PawnKindDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>VR_Construct_BallistaShot</defName>
+		<label>ballistae shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/Needle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.3</drawSize>
+		</graphicData>
+		<projectile>
+			 <damageDef>Bullet</damageDef>
+			 <damageAmountBase>15</damageAmountBase>
+			 <armorPenetrationBase>0.35</armorPenetrationBase>
+			 <stoppingPower>1.5</stoppingPower>
+			 <speed>90</speed>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Scorcher Equivalent -->
+	<ThingDef ParentName="VR_LancerConstructWalker">
+		<defName>VR_Construct_Scorcher</defName>
+		<label>scorcher</label>
+		<description>Fast human-sized combat mechanoids built for medium and long-range combat. Their bodies are light, making them vulnerable targets at close range - especially in melee combat.</description>
+		<statBases>
+			<BandwidthCost>1</BandwidthCost>
+		</statBases>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_BaseConstructKind">
+		<defName>VR_Construct_Scorcher</defName>
+		<label>scorcher</label>
+		<race>VR_Construct_Scorcher</race>
+		<combatPower>180</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/ConstructSphereRange</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ConstructSphereRange</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>VR_Construct_Flamer</li>
+		</weaponTags>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
 	</PawnKindDef>
 	
-	<ThingDef Name="VR_LancerConstructWalker" ParentName="VR_BaseConstructWalker">
-    <defName>VR_Construct_Sphere_Range</defName>
-    <label>lancer</label>
-    <description>Fast human-sized combat mechanoids built for medium and long-range combat. Their bodies are light, making them vulnerable targets at close range - especially in melee combat.</description>
-    <tools>
-      <li>
-        <label>left fist</label>
-        <labelNoLocation>fist</labelNoLocation>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right fist</label>
-        <labelNoLocation>fist</labelNoLocation>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>Lancer</body>
-      <baseHealthScale>0.72</baseHealthScale>
-      <detritusLeavings>
-        <li>
-          <def>ChunkMechanoidSlag</def>
-          <texOverrideIndex>11</texOverrideIndex>
-          <spawnChance>0.1</spawnChance>
-        </li>
-        <li>
-          <def>ChunkMechanoidSlag</def>
-          <texOverrideIndex>12</texOverrideIndex>
-          <spawnChance>0.1</spawnChance>
-        </li>
-      </detritusLeavings>
-    </race>
-    <statBases>
-      <BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">3</BandwidthCost>
-    </statBases>
-  </ThingDef>
+	<!-- Tesseron Equivalent -->
+	<ThingDef ParentName="VR_LancerConstructWalker">
+		<defName>VR_Construct_Tesseron</defName>
+		<label>tesseron</label>
+		<description>Fast human-sized combat mechanoids built for medium and long-range combat. Their bodies are light, making them vulnerable targets at close range - especially in melee combat.</description>
+		<statBases>
+			<BandwidthCost>3</BandwidthCost>
+		</statBases>
+	</ThingDef>
 
-  <PawnKindDef ParentName="VR_BaseConstructKind">
-    <defName>VR_Construct_Sphere_Range</defName>
-    <label>lancer</label>
-    <race>VR_Construct_Sphere_Range</race>
-    <combatPower>180</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Mechanoid/ConstructSphereRange</texPath>
-          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ConstructSphereRange</maskPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>9999~9999</weaponMoney>
-    <weaponTags>
-      <li>VR_ConstructGun_Crossbow</li>
-    </weaponTags>
-    <techHediffsChance>1</techHediffsChance>
-    <techHediffsMoney>9999~9999</techHediffsMoney>
-  </PawnKindDef>
-
+	<PawnKindDef ParentName="VR_BaseConstructKind">
+		<defName>VR_Construct_Tesseron</defName>
+		<label>tesseron</label>
+		<race>VR_Construct_Tesseron</race>
+		<combatPower>180</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/ConstructSphereRange</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ConstructSphereRange</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>VR_ConstructGun_LightningGun</li>
+		</weaponTags>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+	</PawnKindDef>
+	
+	
 </Defs>

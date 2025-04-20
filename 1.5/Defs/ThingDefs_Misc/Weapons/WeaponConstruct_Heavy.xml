@@ -1,43 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef Name="VR_ConstructMeleeWeapon" ParentName="BaseWeapon" Abstract="True">
-		<weaponClasses>
-			<li>Melee</li>
-		</weaponClasses>
-		<tradeability>None</tradeability>
-		<destroyOnDrop>true</destroyOnDrop>
-		<relicChance>0</relicChance>
+	<ThingDef Name="VR_ConstructMeleeWeaponHeavy" ParentName="VR_ConstructMeleeWeapon" Abstract="True">
 		<graphicData>
-			<drawSize>1.0</drawSize>
+			<drawSize>2.0</drawSize>
 		</graphicData>
-		<modExtensions>
-			<li Class="VFECore.ThingDefExtension">
-				<weaponCarryDrawOffsets>
-					<north>
-						<drawOffset>(-0.15,0.0,0.10)</drawOffset>
-						<angleOffset>160</angleOffset>
-					</north>
-					<east>
-						<drawOffset>(-0.10,0.00,0.10)</drawOffset>
-						<angleOffset>-60</angleOffset>
-					</east>
-					<south>
-						<drawOffset>(0.15,0.00,0.10)</drawOffset>
-						<angleOffset>-60</angleOffset>
-					</south>
-					<west>
-						<drawOffset>(0.10,0.0,0.10)</drawOffset>
-						<angleOffset>60</angleOffset>
-					</west>
-				</weaponCarryDrawOffsets>
-			</li>
-		</modExtensions>
 	</ThingDef>
 
 	<!-- Scyther Blade -->
-	<ThingDef ParentName="VR_ConstructMeleeWeapon">
-		<defName>VR_Construct_SteamSword</defName>
+	<ThingDef ParentName="VR_ConstructMeleeWeaponHeavy">
+		<defName>VR_Construct_SteamSword_Heavy</defName>
 		<label>steam sword</label>
 		<description>steam blade</description>
 		<graphicData>
@@ -49,7 +21,7 @@
 			<Mass>2.5</Mass>
 		</statBases>
 		<weaponTags>
-			<li>VR_Construct_SteamSword</li>
+			<li>VR_Construct_SteamSword_Heavy</li>
 		</weaponTags>
 		<tools>
 			<li>
@@ -84,8 +56,8 @@
 		<relicChance>0</relicChance>
 	</ThingDef>
 
-	<ThingDef ParentName="VR_ConstructMeleeWeapon">
-		<defName>VR_Construct_SteamHammer</defName>
+	<ThingDef ParentName="VR_ConstructMeleeWeaponHeavy">
+		<defName>VR_Construct_SteamHammer_Heavy</defName>
 		<label>steam hammer</label>
 		<description>steam hammer</description>
 		<graphicData>
@@ -97,7 +69,7 @@
 			<Mass>2.5</Mass>
 		</statBases>
 		<weaponTags>
-			<li>VR_Construct_SteamHammer</li>
+			<li>VR_Construct_SteamHammer_Heavy</li>
 		</weaponTags>
 		<tools>
 			<li>
@@ -132,12 +104,12 @@
 		<relicChance>0</relicChance>
 	</ThingDef>
 
-	<ThingDef ParentName="VR_ConstructMeleeWeapon">
-		<defName>VR_Construct_SteamLance</defName>
-		<label>steam lance</label>
-		<description>steam lance</description>
+	<ThingDef ParentName="VR_ConstructMeleeWeaponHeavy">
+		<defName>VR_Construct_StakeDriver_Heavy</defName>
+		<label>stake driver</label>
+		<description>stake driver</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponMelee/SteamLance</texPath>
+			<texPath>Things/Item/Equipment/WeaponMelee/Stakedriver</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -145,7 +117,7 @@
 			<Mass>2.5</Mass>
 		</statBases>
 		<weaponTags>
-			<li>VR_Construct_SteamLance</li>
+			<li>VR_Construct_StakeDriver_Heavy</li>
 		</weaponTags>
 		<tools>
 			<li>

@@ -138,6 +138,11 @@
 		<minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
 		<forceNormalGearQuality>true</forceNormalGearQuality>
 		<weaponMoney>9999~9999</weaponMoney>
+		<modExtensions>
+			<li Class="FantasyBiotech.ConstructExtension">
+				<isConstruct>true</isConstruct>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
 
 	<PawnKindDef Name="VR_LightConstructKind" ParentName="VR_BaseConstructKind" Abstract="True">
@@ -153,9 +158,10 @@
 	</PawnKindDef>
 	
 	<!-- Heavy/Superheavy Construct Base -->
-	<PawnKindDef Name="VR_HeavyConstructKind" ParentName="BaseMechanoidKind" Abstract="True">
+	<PawnKindDef Name="VR_HeavyConstructKind" ParentName="VR_BaseConstructKind" Abstract="True">
 		<combatPower>400</combatPower>
 		<weaponTags/>
+		<weaponMoney>9999~9999</weaponMoney>
 		<techHediffsChance>1</techHediffsChance>
 		<techHediffsMoney>9999~9999</techHediffsMoney>
 		<controlGroupPortraitZoom>0.8</controlGroupPortraitZoom>

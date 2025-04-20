@@ -3,6 +3,59 @@
 
 	<!-- Hellsphere cannon -->
 	<ThingDef ParentName="BaseGun">
+		<defName>VR_ConstructGun_HeavyFlamer</defName>
+		<label>heavy flame cannon</label>
+		<description>A ultra-high-power energy pulse projector designed for siegebreaking. The hellsphere cannon must hold a bead on its target for several seconds while charging, before it releases a devastating tsunami of power. The explosion is capable of melting concrete in its blast radius. The heat of the explosion will ignite anything nearby. It cannot fire at close-up targets.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Flamer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MarketValue>1400</MarketValue>
+			<Mass>20</Mass>
+			<AccuracyTouch>0.40</AccuracyTouch>
+			<AccuracyShort>0.48</AccuracyShort>
+			<AccuracyMedium>0.35</AccuracyMedium>
+			<AccuracyLong>0.26</AccuracyLong>
+			<RangedWeapon_Cooldown>6.0</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>VR_Construct_HeavyFlamer</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>FantasyBiotech.Verb_ConstructFlame</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<warmupTime>1</warmupTime>
+				<range>6.9</range>
+				<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>Shot_MiniFlameblaster</soundCast>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<meleeDamageBaseAmount>4</meleeDamageBaseAmount> 
+				<meleeArmorPenetrationBase>0.2</meleeArmorPenetrationBase>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- Hellsphere cannon -->
+	<ThingDef ParentName="BaseGun">
 		<defName>VR_ConstructGun_HellsphereCannon</defName>
 		<label>hellsphere cannon</label>
 		<description>A ultra-high-power energy pulse projector designed for siegebreaking. The hellsphere cannon must hold a bead on its target for several seconds while charging, before it releases a devastating tsunami of power. The explosion is capable of melting concrete in its blast radius. The heat of the explosion will ignite anything nearby. It cannot fire at close-up targets.</description>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RuleDef/resolvers/li[@Class="SymbolResolver_RandomMechanoidGroup"]</xpath>
+		<value>
+			<li Class="FantasyBiotech.SymbolResolver_RandomConstructGroup"/>
+		</value>
+	</Operation>
+
+</Patch>

@@ -97,7 +97,7 @@
 					<!-- <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Diablo</maskPath> -->
 					<!-- <shaderType>CutoutWithOverlay</shaderType> -->
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>3</drawSize>
+					<drawSize>3.5</drawSize>
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
