@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<RulePackDef>
+		<defName>VR_NamerFactionConstruct</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[fsyl][msyl][lsyl] [forge]</li>
+				<li>r_name->[fsyl][lsyl] [forge]</li>
+				<li>r_name->[fsyl][msyl] [forge]</li>
+
+				<li>forge->forge</li>
+				<li>forge->anvil</li>
+				<li>forge->crucible</li>
+				<li>forge->manufactoria</li>
+				<li>forge->foundry</li>
+
+				<li>fsyl->ark</li>
+				<li>fsyl->bthu</li>
+				<li>fsyl->bthar</li>
+				<li>fsyl->chul</li>
+				<li>fsyl->dahrk</li>
+				<li>fsyl->dum</li>
+				<li>fsyl->dwem</li>
+				<li>fsyl->kag</li>
+				<li>fsyl->krag</li>
+				<li>fsyl->mez</li>
+				<li>fsyl->mz</li>
+				<li>fsyl->mul</li>
+				<li>fsyl->nch</li>
+				<li>fsyl->ral</li>
+				<li>fsyl->rad</li>
+				<li>fsyl->rour</li>
+				<li>fsyl->stung</li>
+				<li>fsyl->yag</li>
+				<li>fsyl->zel</li>
+
+				<li>msyl->ngth</li>
+				<li>msyl->ar</li>
+				<li>msyl->amz</li>
+				<li>msyl->and</li>
+				<li>msyl->aul</li>
+				<li>msyl->arn</li>
+				<li>msyl->uth</li>
+				<li>msyl->orn</li>
+				<li>msyl->zul</li>
+				<li>msyl->an</li>
+				<li>msyl->ahr</li>
+
+				<li>lsyl->chn</li>
+				<li>lsyl->mz</li>
+				<li>lsyl->thar</li>
+				<li>lsyl->thamz</li>
+				<li>lsyl->nd</li>
+				<li>lsyl->zulf</li>
+				<li>lsyl->thumz</li>
+				<li>lsyl->kai</li>
+				<li>lsyl->zen</li>
+				<li>lsyl->vek</li>
+				<li>lsyl->rin</li>
+				<li>lsyl->kor</li>
+
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+</Defs>
