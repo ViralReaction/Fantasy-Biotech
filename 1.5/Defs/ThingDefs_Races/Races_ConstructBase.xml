@@ -131,7 +131,7 @@
 
 	<!-- PawnKind Bases -->
 	<PawnKindDef Name="VR_BaseConstructKind" Abstract="True">
-		<defaultFactionType>Mechanoid</defaultFactionType>
+		<defaultFactionType>VR_Construct</defaultFactionType>
 		<aiAvoidCover>true</aiAvoidCover>
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<canStrip>false</canStrip>
