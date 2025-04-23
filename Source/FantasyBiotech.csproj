@@ -40,11 +40,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantasyBiotech\ComplexThreats\FileName.cs" />
     <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_SteamTank.cs" />
     <Compile Include="FantasyBiotech\Comps\CompResourceTrader_Steam.cs" />
     <Compile Include="FantasyBiotech\Comps\CompPowerPlantNeedResource_Steam.cs" />
     <Compile Include="FantasyBiotech\Comps\CompResourceStorage_SteamTank.cs" />
     <Compile Include="FantasyBiotech\Defs\ConstructExtension.cs" />
+    <Compile Include="FantasyBiotech\Defs\FantasyBiotechDefOf.cs" />
     <Compile Include="FantasyBiotech\Harmony\Alert_GenebankUnpowered_Patch.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_PowerOn.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_Tick_Patch.cs" />
@@ -55,6 +57,13 @@
     <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_CanPawnChargeCurrently.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_DeSpawn.cs" />
     <Compile Include="FantasyBiotech\Harmony\BillMech_BillTick_Patch.cs" />
+    <Compile Include="FantasyBiotech\Harmony\ComplexThreatWorker_SleepingMechanoids_CanResolveInt.cs" />
+    <Compile Include="FantasyBiotech\Harmony\ComplexThreatWorker_SleepingMechanoids_MechKindSuitableForComplex.cs" />
+    <Compile Include="FantasyBiotech\Harmony\ComplexThreatWorker_Ambush_CanResolveInt.cs" />
+    <Compile Include="FantasyBiotech\Harmony\GenStep_SleepingMechanoids_GeneratePawns.cs" />
+    <Compile Include="FantasyBiotech\Harmony\GenStep_SleepingMechanoids_Generate.cs" />
+    <Compile Include="FantasyBiotech\Harmony\SitePartWorker_SleepingMechanoids_GetMechanoidsCount.cs" />
+    <Compile Include="FantasyBiotech\Harmony\SignalAction_Ambush_GenerateAmbushPawns.cs" />
     <Compile Include="FantasyBiotech\Harmony\JobGiver_GetEnergy_Charger_GetClosestCharger.cs" />
     <Compile Include="FantasyBiotech\Harmony\HarmonyPatches.cs" />
     <Compile Include="FantasyBiotech\MapComponent\RechargerMapComponent.cs" />

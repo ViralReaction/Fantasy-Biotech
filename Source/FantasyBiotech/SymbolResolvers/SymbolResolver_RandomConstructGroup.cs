@@ -17,7 +17,7 @@ namespace FantasyBiotech
             if (lord == null && num > 0)
             {
                 Map map = BaseGen.globalSettings.map;
-                lord = LordMaker.MakeNewLord(lordJob: (!Rand.Bool || !rp.rect.Cells.Where((IntVec3 x) => !x.Impassable(map)).TryRandomElement(out var result)) ? ((LordJob)new LordJob_AssaultColony(Faction.OfMechanoids, canKidnap: false, canTimeoutOrFlee: false, sappers: false, useAvoidGridSmart: false, canSteal: false)) : ((LordJob)new LordJob_DefendPoint(result)), faction: Faction.OfMechanoids, map: map);
+                lord = LordMaker.MakeNewLord(lordJob: (!Rand.Bool || !rp.rect.Cells.Where((IntVec3 x) => !x.Impassable(map)).TryRandomElement(out var result)) ? ((LordJob)new LordJob_AssaultColony(MechUtility.ConstructFaction(), canKidnap: false, canTimeoutOrFlee: false, sappers: false, useAvoidGridSmart: false, canSteal: false)) : ((LordJob)new LordJob_DefendPoint(result)), faction: MechUtility.ConstructFaction(), map: map);
             }
             for (int i = 0; i < num; i++)
             {
@@ -26,7 +26,7 @@ namespace FantasyBiotech
                 ResolveParams resolveParams = rp;
                 resolveParams.singlePawnKindDef = pawnKindDef;
                 resolveParams.singlePawnLord = lord;
-                resolveParams.faction = Faction.OfMechanoids;
+                resolveParams.faction = MechUtility.ConstructFaction();
                 BaseGen.symbolStack.Push("pawn", resolveParams);
             }
         }

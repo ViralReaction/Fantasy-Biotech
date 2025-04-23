@@ -85,6 +85,24 @@ namespace FantasyBiotech
             }
             return true;
         }
+        private static Faction cachedConstructFaction;
+        public static Faction ConstructFaction()
+        {
+            if (cachedConstructFaction != null)
+            {
+                return cachedConstructFaction;
+            }
+
+            foreach (var findFaction in Find.FactionManager.AllFactionsListForReading)
+            {
+                if (findFaction.def == FantasyBiotechDefOf.VR_Construct)
+                {
+                    cachedConstructFaction = findFaction;
+                    return cachedConstructFaction;
+                }
+            }
+            return Faction.OfMechanoids;
+        }
 
     }
 }
