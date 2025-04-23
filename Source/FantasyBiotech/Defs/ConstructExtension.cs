@@ -4,6 +4,6 @@ namespace FantasyBiotech
 {
     public class ConstructExtension : DefModExtension
     {
-        public bool isConstruct = true;
+        public bool isConstruct = false;
     }
 }
