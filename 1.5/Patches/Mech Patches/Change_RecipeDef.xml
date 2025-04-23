@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="ButcherCorpseMechanoid"]/label</xpath>
+		<value>
+			<label>shred constructs</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="ButcherCorpseMechanoid"]/description</xpath>
+		<value>
+			<description>Shred a dead construct to try to salvage usable material.</description>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="ButcherCorpseMechanoid"]/jobString</xpath>
+		<value>
+			<jobString>Shredding construct.</jobString>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="SmashCorpseMechanoid"]/label</xpath>
+		<value>
+			<label>smash constructs</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="SmashCorpseMechanoid"]/description</xpath>
+		<value>
+			<description>Smash a dead construct with simple hand tools to salvage usable material.</description>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="SmashCorpseMechanoid"]/jobString</xpath>
+		<value>
+			<jobString>Smashing construct.</jobString>
+		</value>
+	</Operation>
+
+</Patch>

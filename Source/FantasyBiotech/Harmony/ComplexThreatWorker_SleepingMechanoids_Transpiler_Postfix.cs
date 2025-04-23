@@ -1,13 +1,15 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection.Emit;
+using System.Linq;
+using Verse;
 
 namespace FantasyBiotech
 {
-    [HarmonyPatch(typeof(GenStep_SleepingMechanoids), nameof(GenStep_SleepingMechanoids.GeneratePawns))]
-    public static class GenStep_SleepingMechanoids_GeneratePawns
+
+    [HarmonyPatch(typeof(ComplexThreatWorker_SleepingMechanoids), nameof(ComplexThreatWorker_SleepingMechanoids.CanResolveInt))]
+    public static class ComplexThreatWorker_SleepingMechanoids_CanResolveInt
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
@@ -25,5 +27,17 @@ namespace FantasyBiotech
             return code;
 
         }
+    }
+    [HarmonyPatch(typeof(ComplexThreatWorker_SleepingMechanoids), nameof(ComplexThreatWorker_SleepingMechanoids.MechKindSuitableForComplex))]
+    public static class ComplexThreatWorker_SleepingMechanoids_MechKindSuitableForComplex
+    {
+        public static void Postfix(PawnKindDef def, ref bool __result)
+        {
+            if (__result)
+            {
+                __result = def.GetModExtension<ConstructExtension>()?.isConstruct ?? false;
+            }
+        }
+
     }
 }

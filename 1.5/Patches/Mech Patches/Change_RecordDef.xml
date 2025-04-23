@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecordDef[defName="KillsMechanoids"]/label</xpath>
+		<value>
+			<label>kills (constructs)</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecordDef[defName="KillsMechanoids"]/description</xpath>
+		<value>
+			<description>The number of constructs I have destroyed.</description>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecordDef[defName="PawnsDownedMechanoids"]/label</xpath>
+		<value>
+			<label>enemies downed (constructs)</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecordDef[defName="PawnsDownedMechanoids"]/description</xpath>
+		<value>
+			<description>The number of constructs I have downed.</description>
+		</value>
+	</Operation>
+
+</Patch>

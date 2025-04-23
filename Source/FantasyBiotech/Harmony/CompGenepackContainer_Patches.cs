@@ -4,6 +4,14 @@ using Verse;
 
 namespace FantasyBiotech
 {
+    [HarmonyPatch(typeof(CompGenepackContainer), nameof(CompGenepackContainer.PostDeSpawn))]
+    public static class CompGenepackContainer_PostDeSpawn
+    {
+        public static void Postfix(CompGenepackContainer __instance)
+        {
+            DictionaryUtility.cachedRefuelComps.Remove(__instance.parent);
+        }
+    }
     [HarmonyPatch(typeof(CompGenepackContainer), nameof(CompGenepackContainer.PowerOn), MethodType.Getter)]
     public static class CompGenepackContainer_PowerOn
     {
@@ -24,5 +32,13 @@ namespace FantasyBiotech
         }
 
     }
-
+    [HarmonyPatch(typeof(CompGenepackContainer), nameof(CompGenepackContainer.PostDestroy))]
+    public static class CompGenepackContainer_PostDestroy
+    {
+        public static bool Prefix(CompGenepackContainer __instance)
+        {
+            DictionaryUtility.cachedRefuelComps.Remove(__instance.parent);
+            return true;
+        }
+    }
 }

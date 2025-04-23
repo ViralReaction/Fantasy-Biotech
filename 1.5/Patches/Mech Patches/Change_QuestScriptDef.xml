@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/QuestScriptDef[defName="Util_GenerateSite"]/root/singleSitePartRules/rulesStrings/li[contains(text(), 'sitePart==SleepingMechanoids,count==1')]</xpath>
+		<value>
+			<li>root(priority=1,sitePart==SleepingMechanoids,count==1)->(*Threat)a construct(/Threat) is sleeping nearby</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/QuestScriptDef[defName="Util_GenerateSite"]/root/singleSitePartRules/rulesStrings/li[contains(text(), 'sitePart==SleepingMechanoids,count&gt;1')]</xpath>
+		<value>
+			<li>root(priority=1,sitePart==SleepingMechanoids,count&gt;1)->(*Threat)[count] constructs(/Threat) are sleeping nearby</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/QuestScriptDef[defName="Util_GenerateSite"]/root/singleSitePartRules/rulesStrings/li[contains(text(), 'sitePart==MechCluster')]</xpath>
+		<value>
+			<li>root(priority=1,sitePart==MechCluster)->there's (*Threat)a cluster of hostile construct structures(/Threat)</li>
+		</value>
+	</Operation>
+
+</Patch>
