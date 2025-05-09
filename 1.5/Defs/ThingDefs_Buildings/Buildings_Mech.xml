@@ -58,6 +58,11 @@
 			<li>VR_MakeConstruct_Lifter</li>
 			<li>VR_MakeConstruct_Constructoid</li>
 			<li>VR_MakeConstruct_Agrihand</li>
+			<li>VR_Construct_Sphere_Melee</li>
+			<li>VR_Construct_Sphere_Range</li>
+			<li>VR_Construct_Ballistae</li>
+			<li>VR_Construct_Scorcher</li>
+			<li>VR_Construct_Tesseron</li>
 			<li>ResurrectLightMech</li>
 		</recipes>
 		<statBases>

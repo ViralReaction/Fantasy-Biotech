@@ -3,7 +3,7 @@
 
 	<!-- Scyther Equivalent -->
 	<ThingDef ParentName="VR_BaseConstructWalker">
-		<defName>VR_Construct_Sphere</defName>
+		<defName>VR_Construct_Sphere_Melee</defName>
 		<label>sphere</label>
 		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
 		<tools>
@@ -68,7 +68,7 @@
 	<PawnKindDef ParentName="VR_BaseConstructKind">
 		<defName>VR_Construct_Sphere_Melee</defName>
 		<label>scyther</label>
-		<race>VR_Construct_Sphere</race>
+		<race>VR_Construct_Sphere_Melee</race>
 		<combatPower>150</combatPower>
 		<lifeStages>
 			<li>

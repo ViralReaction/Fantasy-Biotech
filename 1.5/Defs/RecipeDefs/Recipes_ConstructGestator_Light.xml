@@ -25,7 +25,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SubcoreBasic</li>
+						<li>VR_DynamoCoreBasic</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -73,7 +73,6 @@
 		<defName>VR_MakeConstruct_Agrihand</defName>
 		<label>gestate agrihand</label>
 		<description>Gestate an agrihand mechanoid.</description>
-		<researchPrerequisite>BasicMechtech</researchPrerequisite>
 		<products>
 			<VR_Construct_Agrihand>1</VR_Construct_Agrihand>
 		</products>
