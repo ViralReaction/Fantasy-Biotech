@@ -21,7 +21,7 @@ namespace FantasyBiotech
             }
             for (int i = 0; i < num; i++)
             {
-                PawnKindDef pawnKindDef = rp.singlePawnKindDef;
+                var pawnKindDef = rp.singlePawnKindDef;
                 pawnKindDef ??= DefDatabase<PawnKindDef>.AllDefsListForReading.Where(MechUtility.ConstructSuitableForCluster).RandomElementByWeight((PawnKindDef kind) => 1f / kind.combatPower);
                 ResolveParams resolveParams = rp;
                 resolveParams.singlePawnKindDef = pawnKindDef;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Reflection;
 
-namespace FantasyBiotech.FantasyBiotech.Harmony
+namespace FantasyBiotech
 {
     [HarmonyPatch(typeof(MechClusterGenerator), nameof(MechClusterGenerator.GenerateClusterSketch))]
     public static class MechClusterGenerator_GenerateClusterSketch

@@ -22,85 +22,54 @@ namespace FantasyBiotech
                 return null;
             }
 
-            Danger danger = forced ? Danger.Deadly : Danger.Some;
+            var danger = forced ? Danger.Deadly : Danger.Some;
             Building_MechCharger closestCharger = null;
-            float closestDist = float.MaxValue;
+            var closestDist = float.MaxValue;
 
             var potentialChargers = mech.Map.GetComponent<RechargerMapComponent>()?.allChargers;
-            if (potentialChargers == null || potentialChargers.Count == 0)
-            {
-                return null;
-            }
+            if (potentialChargers == null || potentialChargers.Count == 0) return null;
 
             var reservationManager = mech.Map.reservationManager;
 
-            foreach (Building_MechCharger_Steam charger in potentialChargers)
+            for (var i = 0; i < potentialChargers.Count; i++)
             {
-                if (!carrier.CanReach(charger, PathEndMode.InteractionCell, danger, false, false, TraverseMode.ByPawn))
-                {
-                    continue;
-                }
-
-                bool isReserved = reservationManager.ReservedBy(charger, carrier, null);
-                if ((!forced && isReserved) || (forced && KeyBindingDefOf.QueueOrder.IsDownEvent && isReserved))
-                {
-                    continue;
-                }
-
-                if (charger.IsForbidden(carrier) || !carrier.CanReserve(charger, 1, -1, null, forced))
-                {
-                    continue;
-                }
-
-                if (!charger.CanPawnChargeCurrently(mech))
-                {
-                    continue;
-                }
-
+                var charger = potentialChargers[i];
+                if (!carrier.CanReach(charger, PathEndMode.InteractionCell, danger)) continue;
+                bool isReserved = reservationManager.ReservedBy(charger, carrier);
+                if ((!forced && isReserved) || (forced && KeyBindingDefOf.QueueOrder.IsDownEvent && isReserved)) continue;
+                if (charger.IsForbidden(carrier) || !carrier.CanReserve(charger, 1, -1, null, forced)) continue;
+                if (!charger.CanPawnChargeCurrently(mech)) continue;
                 float dist = (charger.Position - mech.Position).LengthHorizontalSquared;
-                if (dist < closestDist)
-                {
-                    closestDist = dist;
-                    closestCharger = charger;
-                }
+                if (!(dist < closestDist)) continue;
+                closestDist = dist;
+                closestCharger = charger;
             }
 
             return closestCharger;
         }
-
-
+        
         public static bool ConstructSuitableForCluster(PawnKindDef def)
         {
-            if (!def.RaceProps.IsMechanoid || def.isGoodBreacher || !def.isFighter || !def.allowInMechClusters)
-            {
-                return false;
-            }
-            if (ModsConfig.BiotechActive && Find.BossgroupManager.ReservedByBossgroup(def))
-            {
-                return false;
-            }
-            if (def.GetModExtension<ConstructExtension>()?.isConstruct == false)
-            {
-                return false;
-            }
-            return true;
+            if (!def.RaceProps.IsMechanoid || def.isGoodBreacher || !def.isFighter || !def.allowInMechClusters) return false;
+            if (ModsConfig.BiotechActive && Find.BossgroupManager.ReservedByBossgroup(def)) return false;
+            return def.GetModExtension<ConstructExtension>()?.isConstruct != false;
         }
-        private static Faction cachedConstructFaction;
+        
+        private static Faction _cachedConstructFaction;
         public static Faction ConstructFaction()
         {
-            if (cachedConstructFaction != null)
+            if (_cachedConstructFaction != null) return _cachedConstructFaction;
+
+            // ReSharper disable once TooWideLocalVariableScope
+            Faction findFaction;
+            for (var i = 0; i < Find.FactionManager.AllFactionsListForReading.Count; i++)
             {
-                return cachedConstructFaction;
+                findFaction = Find.FactionManager.AllFactionsListForReading[i];
+                if (findFaction.def != FantasyBiotechDefOf.VR_Construct) continue;
+                _cachedConstructFaction = findFaction;
+                return _cachedConstructFaction;
             }
 
-            foreach (var findFaction in Find.FactionManager.AllFactionsListForReading)
-            {
-                if (findFaction.def == FantasyBiotechDefOf.VR_Construct)
-                {
-                    cachedConstructFaction = findFaction;
-                    return cachedConstructFaction;
-                }
-            }
             return Faction.OfMechanoids;
         }
 

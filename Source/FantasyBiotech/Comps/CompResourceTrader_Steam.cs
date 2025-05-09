@@ -9,7 +9,7 @@ namespace FantasyBiotech
     {
         public override string CompInspectStringExtra()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             if (this.Consumption >= 0f)
             {
                 sb.AppendFormat("{0} {1:##0} {2}", "PipeSystem_ResourceNeeded".Translate(this.Resource.name), (this.Consumption), this.Resource.unit);

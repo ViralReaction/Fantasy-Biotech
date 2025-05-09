@@ -2,7 +2,6 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Reflection.Emit;
-using Verse;
 using System.Linq;
 
 namespace FantasyBiotech

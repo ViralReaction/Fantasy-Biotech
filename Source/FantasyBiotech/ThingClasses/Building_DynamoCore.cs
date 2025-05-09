@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using RimWorld;
 using UnityEngine;
@@ -34,22 +33,20 @@ namespace FantasyBiotech
                         return "SubcoreScannerNotInit".Translate();
                     case SubcoreScannerState.WaitingForIngredients:
                         {
-                            StringBuilder stringBuilder = new StringBuilder("SubcoreScannerRequiresIngredients".Translate() + ": ");
-                            bool flag = false;
-                            for (int i = 0; i < def.building.subcoreScannerFixedIngredients.Count; i++)
+                            var stringBuilder = new StringBuilder("SubcoreScannerRequiresIngredients".Translate() + ": ");
+                            var flag = false;
+                            for (var i = 0; i < def.building.subcoreScannerFixedIngredients.Count; i++)
                             {
-                                IngredientCount ingredientCount = def.building.subcoreScannerFixedIngredients[i];
+                                var ingredientCount = def.building.subcoreScannerFixedIngredients[i];
                                 int num = innerContainer.TotalStackCountOfDef(ingredientCount.FixedIngredient);
-                                int num2 = (int)ingredientCount.GetBaseCount();
-                                if (num < num2)
+                                var num2 = (int)ingredientCount.GetBaseCount();
+                                if (num >= num2) continue;
+                                if (flag)
                                 {
-                                    if (flag)
-                                    {
-                                        stringBuilder.Append(", ");
-                                    }
-                                    stringBuilder.Append($"{ingredientCount.FixedIngredient.LabelCap} x{num2 - num}");
-                                    flag = true;
+                                    stringBuilder.Append(", ");
                                 }
+                                stringBuilder.Append($"{ingredientCount.FixedIngredient.LabelCap} x{num2 - num}");
+                                flag = true;
                             }
                             return stringBuilder.ToString();
                         }
@@ -77,31 +74,29 @@ namespace FantasyBiotech
 
         public override void TryAcceptPawn(Pawn pawn)
         {
-            if ((bool)CanAcceptPawn(pawn))
+            if (!CanAcceptPawn(pawn)) return;
+            bool num = pawn.DeSpawnOrDeselect();
+            if (pawn.holdingOwner != null)
             {
-                bool num = pawn.DeSpawnOrDeselect();
-                if (pawn.holdingOwner != null)
-                {
-                    pawn.holdingOwner.TryTransferToContainer(pawn, innerContainer);
-                }
-                else
-                {
-                    innerContainer.TryAdd(pawn);
-                }
-                if (num)
-                {
-                    Find.Selector.Select(pawn, playSound: false, forceDesignatorDeselect: false);
-                }
-                fabricationTicksLeft = def.building.subcoreScannerTicks;
+                pawn.holdingOwner.TryTransferToContainer(pawn, innerContainer);
             }
+            else
+            {
+                innerContainer.TryAdd(pawn);
+            }
+            if (num)
+            {
+                Find.Selector.Select(pawn, playSound: false, forceDesignatorDeselect: false);
+            }
+            fabricationTicksLeft = def.building.subcoreScannerTicks;
         }
 
-        public void EjectBuildingContents()
+        private void EjectBuildingContents()
         {
-            Pawn occupant = Occupant;
+            var occupant = Occupant;
             if (occupant == null)
             {
-                innerContainer.TryDropAll(InteractionCell, base.Map, ThingPlaceMode.Near);
+                innerContainer.TryDropAll(InteractionCell, Map, ThingPlaceMode.Near);
             }
             else
             {
@@ -118,7 +113,7 @@ namespace FantasyBiotech
                 {
                     if (innerContainer[i] is Pawn || innerContainer[i] is Corpse)
                     {
-                        innerContainer.TryDrop(innerContainer[i], InteractionCell, base.Map, ThingPlaceMode.Near, 1, out var _);
+                        innerContainer.TryDrop(innerContainer[i], InteractionCell, Map, ThingPlaceMode.Near, 1, out var _);
                     }
                 }
                 innerContainer.ClearAndDestroyContents();
@@ -129,8 +124,8 @@ namespace FantasyBiotech
 
         private void DestroyOccupant()
         {
-            Pawn occupant = Occupant;
-            DamageInfo dinfo = new DamageInfo(DamageDefOf.ExecutionCut, 9999f, 999f, -1f, null, occupant.health.hediffSet.GetBrain());
+            var occupant = Occupant;
+            var dinfo = new DamageInfo(DamageDefOf.ExecutionCut, 9999f, 999f, -1f, null, occupant.health.hediffSet.GetBrain());
             dinfo.SetIgnoreInstantKillProtection(ignore: true);
             dinfo.SetAllowDamagePropagation(val: false);
             occupant.forceNoDeathNotification = true;
@@ -145,7 +140,7 @@ namespace FantasyBiotech
         {
             if (comps != null)
             {
-                int i = 0;
+                var i = 0;
                 for (int count = comps.Count; i < count; i++)
                 {
                     comps[i].CompTick();
@@ -192,7 +187,7 @@ namespace FantasyBiotech
                 }
             };
             }
-            SubcoreScannerState state = State;
+            var state = State;
             if (state == SubcoreScannerState.Occupied)
             {
                 fabricationTicksLeft--;
@@ -203,7 +198,7 @@ namespace FantasyBiotech
                         Messages.Message("FantasyBiotech_MessageSubcoreSoftscannerCompleted".Translate(Occupant.Named("PAWN")), Occupant, MessageTypeDefOf.PositiveEvent);
                     }
                     EjectBuildingContents();
-                    GenPlace.TryPlaceThing(ThingMaker.MakeThing(def.building.subcoreScannerOutputDef), InteractionCell, base.Map, ThingPlaceMode.Near);
+                    GenPlace.TryPlaceThing(ThingMaker.MakeThing(def.building.subcoreScannerOutputDef), InteractionCell, Map, ThingPlaceMode.Near);
                     if (def.building.subcoreScannerComplete != null)
                     {
                         def.building.subcoreScannerComplete.PlayOneShot(this);
@@ -211,24 +206,18 @@ namespace FantasyBiotech
                 }
                 if (workingMote == null || workingMote.Destroyed)
                 {
-                    workingMote = MoteMaker.MakeAttachedOverlay(this, DestroyOccupantBrain ? MotePerRotationRip[base.Rotation] : MotePerRotation[base.Rotation], Vector3.zero);
+                    workingMote = MoteMaker.MakeAttachedOverlay(this, DestroyOccupantBrain ? MotePerRotationRip[Rotation] : MotePerRotation[Rotation], Vector3.zero);
                 }
                 workingMote.Maintain();
                 if (DestroyOccupantBrain)
                 {
-                    if (effectHusk == null)
-                    {
-                        effectHusk = EffecterDefOf.RipScannerHeadGlow.Spawn(this, base.MapHeld, HuskEffectOffsets[base.Rotation]);
-                    }
+                    effectHusk ??= EffecterDefOf.RipScannerHeadGlow.Spawn(this, MapHeld, HuskEffectOffsets[Rotation]);
                     effectHusk.EffectTick(this, this);
                 }
-                if (progressBarEffecter == null)
-                {
-                    progressBarEffecter = EffecterDefOf.ProgressBar.Spawn();
-                }
+                progressBarEffecter ??= EffecterDefOf.ProgressBar.Spawn();
                 progressBarEffecter.EffectTick(this, TargetInfo.Invalid);
-                MoteProgressBar mote = ((SubEffecter_ProgressBar)progressBarEffecter.children[0]).mote;
-                mote.progress = 1f - (float)fabricationTicksLeft / (float)def.building.subcoreScannerTicks;
+                var mote = ((SubEffecter_ProgressBar)progressBarEffecter.children[0]).mote;
+                mote.progress = 1f - fabricationTicksLeft / (float)def.building.subcoreScannerTicks;
                 mote.offsetZ = -0.8f;
                 if (def.building.subcoreScannerWorking != null)
                 {
@@ -251,15 +240,13 @@ namespace FantasyBiotech
             }
             if (state == SubcoreScannerState.Occupied)
             {
-                if (def.building.subcoreScannerStartEffect != null)
+                if (def.building.subcoreScannerStartEffect == null) return;
+                if (effectStart == null)
                 {
-                    if (effectStart == null)
-                    {
-                        effectStart = def.building.subcoreScannerStartEffect.Spawn();
-                        effectStart.Trigger(this, new TargetInfo(InteractionCell, base.Map));
-                    }
-                    effectStart.EffectTick(this, new TargetInfo(InteractionCell, base.Map));
+                    effectStart = def.building.subcoreScannerStartEffect.Spawn();
+                    effectStart.Trigger(this, new TargetInfo(InteractionCell, Map));
                 }
+                effectStart.EffectTick(this, new TargetInfo(InteractionCell, Map));
             }
             else
             {
@@ -272,100 +259,113 @@ namespace FantasyBiotech
         {
             if (!initScanner)
             {
-                Command_Action command_Action = new Command_Action();
-                command_Action.defaultLabel = "SubcoreScannerStart".Translate();
-                StringBuilder stringBuilder = new StringBuilder();
+                var commandAction = new Command_Action
+                {
+                    defaultLabel = "SubcoreScannerStart".Translate()
+                };
+                var stringBuilder = new StringBuilder();
                 stringBuilder.Append("SubcoreScannerProduces".Translate() + " " + def.building.subcoreScannerOutputDef.label + ".");
                 stringBuilder.Append("\n\n");
                 stringBuilder.Append("DurationHours".Translate() + ": " + def.building.subcoreScannerTicks.ToStringTicksToPeriod());
                 stringBuilder.Append("\n\n");
-                string text = def.building.subcoreScannerFixedIngredients.Select((IngredientCount i) => i.Summary).ToCommaList(useAnd: true);
+                List<string> summaries = [];
+                for (var i = 0; i < def.building.subcoreScannerFixedIngredients.Count; i++)
+                {
+                    var ingredient = def.building.subcoreScannerFixedIngredients[i];
+                    summaries.Add(ingredient.Summary);
+                }
+
+                string text = summaries.ToCommaList(useAnd: true);
                 stringBuilder.Append("SubcoreScannerStartDesc".Translate(def.label, text));
-                command_Action.defaultDesc = stringBuilder.ToString();
-                command_Action.icon = InitScannerIcon.Texture;
-                command_Action.action = delegate
+                commandAction.defaultDesc = stringBuilder.ToString();
+                commandAction.icon = InitScannerIcon.Texture;
+                commandAction.action = delegate
                 {
                     initScanner = true;
                 };
-                command_Action.activateSound = SoundDefOf.Tick_Tiny;
-                yield return command_Action;
+                commandAction.activateSound = SoundDefOf.Tick_Tiny;
+                yield return commandAction;
             }
-            else if (base.SelectedPawn == null)
+            else if (SelectedPawn == null)
             {
-                Command_Action command_Action2 = new Command_Action();
-                command_Action2.defaultLabel = "InsertPerson".Translate() + "...";
-                command_Action2.defaultDesc = "InsertPersonSubcoreScannerDesc".Translate(def.label);
-                command_Action2.icon = InsertPersonIcon.Texture;
-                command_Action2.action = delegate
+                var commandAction2 = new Command_Action
                 {
-                    List<FloatMenuOption> list = new List<FloatMenuOption>();
-                    IReadOnlyList<Pawn> allPawnsSpawned = base.Map.mapPawns.AllPawnsSpawned;
-                    for (int j = 0; j < allPawnsSpawned.Count; j++)
+                    defaultLabel = "InsertPerson".Translate() + "...",
+                    defaultDesc = "InsertPersonSubcoreScannerDesc".Translate(def.label),
+                    icon = InsertPersonIcon.Texture,
+                    action = delegate
                     {
-                        Pawn pawn = allPawnsSpawned[j];
-                        AcceptanceReport acceptanceReport = CanAcceptPawn(pawn);
-                        if (!acceptanceReport.Accepted)
+                        var list = new List<FloatMenuOption>();
+                        var allPawnsSpawned = Map.mapPawns.AllPawnsSpawned;
+                        for (var j = 0; j < allPawnsSpawned.Count; j++)
                         {
-                            if (!acceptanceReport.Reason.NullOrEmpty())
+                            var pawn = allPawnsSpawned[j];
+                            var acceptanceReport = CanAcceptPawn(pawn);
+                            if (!acceptanceReport.Accepted)
                             {
-                                list.Add(new FloatMenuOption(pawn.LabelShortCap + ": " + acceptanceReport.Reason, null, pawn, Color.white));
-                            }
-                        }
-                        else
-                        {
-                            list.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
-                            {
-                                if (def.building.destroyBrain)
+                                if (!acceptanceReport.Reason.NullOrEmpty())
                                 {
-                                    Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmRipscanPawn".Translate(pawn.Named("PAWN")), delegate
+                                    list.Add(new FloatMenuOption(pawn.LabelShortCap + ": " + acceptanceReport.Reason, null, pawn, Color.white));
+                                }
+                            }
+                            else
+                            {
+                                list.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
+                                {
+                                    if (def.building.destroyBrain)
+                                    {
+                                        Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmRipscanPawn".Translate(pawn.Named("PAWN")), delegate
+                                        {
+                                            SelectPawn(pawn);
+                                        }, destructive: true));
+                                    }
+                                    else
                                     {
                                         SelectPawn(pawn);
-                                    }, destructive: true));
-                                }
-                                else
-                                {
-                                    SelectPawn(pawn);
-                                }
-                            }, pawn, Color.white));
+                                    }
+                                }, pawn, Color.white));
+                            }
                         }
+                        if (!list.Any())
+                        {
+                            list.Add(new FloatMenuOption("NoExtractablePawns".Translate(), null));
+                        }
+                        Find.WindowStack.Add(new FloatMenu(list));
                     }
-                    if (!list.Any())
-                    {
-                        list.Add(new FloatMenuOption("NoExtractablePawns".Translate(), null));
-                    }
-                    Find.WindowStack.Add(new FloatMenu(list));
                 };
                 if (!PowerOn)
                 {
-                    command_Action2.Disable("NoPower".Translate().CapitalizeFirst());
+                    commandAction2.Disable("NoPower".Translate().CapitalizeFirst());
                 }
                 else if (State == SubcoreScannerState.WaitingForIngredients)
                 {
-                    StringBuilder stringBuilder2 = new StringBuilder("SubcoreScannerWaitingForIngredientsDesc".Translate().CapitalizeFirst() + ":\n");
+                    var stringBuilder2 = new StringBuilder("SubcoreScannerWaitingForIngredientsDesc".Translate().CapitalizeFirst() + ":\n");
                     AppendIngredientsList(stringBuilder2);
-                    command_Action2.Disable(stringBuilder2.ToString());
+                    commandAction2.Disable(stringBuilder2.ToString());
                 }
-                yield return command_Action2;
+                yield return commandAction2;
             }
             if (initScanner)
             {
-                Command_Action command_Action3 = new Command_Action();
-                command_Action3.defaultLabel = ((State == SubcoreScannerState.Occupied) ? "CommandCancelSubcoreScan".Translate() : "CommandCancelLoad".Translate());
-                command_Action3.defaultDesc = ((State == SubcoreScannerState.Occupied) ? "CommandCancelSubcoreScanDesc".Translate() : "CommandCancelLoadDesc".Translate());
-                command_Action3.icon = CancelLoadingIcon;
-                command_Action3.action = delegate
+                var commandAction3 = new Command_Action
                 {
-                    if (State == SubcoreScannerState.Occupied && DestroyOccupantBrain)
+                    defaultLabel = ((State == SubcoreScannerState.Occupied) ? "CommandCancelSubcoreScan".Translate() : "CommandCancelLoad".Translate()),
+                    defaultDesc = ((State == SubcoreScannerState.Occupied) ? "CommandCancelSubcoreScanDesc".Translate() : "CommandCancelLoadDesc".Translate()),
+                    icon = CancelLoadingIcon,
+                    action = delegate
                     {
-                        Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmCancelRipscan".Translate(Occupant.Named("PAWN")), EjectContents, destructive: true));
-                    }
-                    else
-                    {
-                        EjectContents();
-                    }
+                        if (State == SubcoreScannerState.Occupied && DestroyOccupantBrain)
+                        {
+                            Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmCancelRipscan".Translate(Occupant.Named("PAWN")), EjectContents, destructive: true));
+                        }
+                        else
+                        {
+                            EjectContents();
+                        }
+                    },
+                    activateSound = SoundDefOf.Designate_Cancel
                 };
-                command_Action3.activateSound = SoundDefOf.Designate_Cancel;
-                yield return command_Action3;
+                yield return commandAction3;
             }
             if (!DebugSettings.ShowDevGizmos)
             {
@@ -373,27 +373,31 @@ namespace FantasyBiotech
             }
             if (State == SubcoreScannerState.Occupied)
             {
-                Command_Action command_Action4 = new Command_Action();
-                command_Action4.defaultLabel = "DEV: Complete";
-                command_Action4.action = delegate
+                var commandAction4 = new Command_Action
                 {
-                    fabricationTicksLeft = 0;
+                    defaultLabel = "DEV: Complete",
+                    action = delegate
+                    {
+                        fabricationTicksLeft = 0;
+                    }
                 };
-                yield return command_Action4;
+                yield return commandAction4;
             }
-            Command_Action command_Action5 = new Command_Action();
-            command_Action5.defaultLabel = (debugDisableNeedForIngredients ? "DEV: Enable Ingredients" : "DEV: Disable Ingredients");
-            command_Action5.action = delegate
+            var commandAction5 = new Command_Action
             {
-                debugDisableNeedForIngredients = !debugDisableNeedForIngredients;
+                defaultLabel = (debugDisableNeedForIngredients ? "DEV: Enable Ingredients" : "DEV: Disable Ingredients"),
+                action = delegate
+                {
+                    debugDisableNeedForIngredients = !debugDisableNeedForIngredients;
+                }
             };
-            yield return command_Action5;
+            yield return commandAction5;
         }
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref initScanner, "initScanner", defaultValue: false);
-            Scribe_Values.Look(ref fabricationTicksLeft, "fabricationTicksLeft", 0);
+            Scribe_Values.Look(ref fabricationTicksLeft, "fabricationTicksLeft");
         }
         
     }

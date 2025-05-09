@@ -7,17 +7,11 @@ namespace FantasyBiotech
     {
         public static IEnumerable<Pawn> GetPawnsInRadius(IntVec3 center, Map map, float radius)
         {
-            if (map == null)
+            if (map == null) yield break;
+            float checkRadius = radius * radius;
+            foreach (var pawn in map.mapPawns.AllPawnsSpawned)
             {
-                yield break;
-            }
-            var checkRadius = radius * radius;
-            foreach (Thing thing in map.mapPawns.AllPawnsSpawned)
-            {
-                if (thing is Pawn pawn && pawn.Position.DistanceToSquared(center) <= checkRadius)
-                {
-                    yield return pawn;
-                }
+                if (pawn.Position.DistanceToSquared(center) <= checkRadius) yield return pawn;
             }
         }
 

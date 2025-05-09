@@ -10,12 +10,9 @@ namespace FantasyBiotech
     {
         public static bool Prefix(Building_MechCharger __instance, ref IEnumerable<Gizmo> __result)
         {
-            if (__instance is Building_MechCharger_Steam)
-            {
-                __result = SteamChargerGizmo(__instance);
-                return false;
-            }
-            return true;
+            if (__instance is not Building_MechCharger_Steam) return true;
+            __result = SteamChargerGizmo(__instance);
+            return false;
         }
 
         public static IEnumerable<Gizmo> SteamChargerGizmo(Building_MechCharger __instance)

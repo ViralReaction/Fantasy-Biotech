@@ -23,12 +23,9 @@ namespace FantasyBiotech
                 comp = thing.TryGetComp<CompRefuelable>();
                 DictionaryUtility.cachedRefuelComps[thing] = comp;
             }
-            if (comp != null)
-            {
-                __result = comp.HasFuel;
-                return false;
-            }
-            return true;
+            if (comp == null) return true;
+            __result = comp.HasFuel;
+            return false;
         }
 
     }

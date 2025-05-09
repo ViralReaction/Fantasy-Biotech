@@ -2,10 +2,6 @@
 using Verse;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
-using static UnityEngine.GraphicsBuffer;
-using Verse.Noise;
-using System;
 
 namespace FantasyBiotech
 {
@@ -13,10 +9,10 @@ namespace FantasyBiotech
     {
         private const int MaxBounces = 3;
         private const float SearchRadius = 10f;
-        private int numBounces = 0;
-        private List<Thing> hitThings = [];
+        private int _numBounces;
+        private List<Thing> _hitThings = [];
 #nullable enable
-        private Thing? previousProjectile;
+        private Thing? _previousProjectile;
 #nullable disable
 
         public override void Impact(Thing hitThing, bool blockedByShield = false)
@@ -28,10 +24,10 @@ namespace FantasyBiotech
                 Log.Warning("Chain Lightning: Launcher is not a Pawn or map is null.");
                 return;
             }
-            IntVec3 strikePos = hitThing?.Position ?? base.Position;
+            var strikePos = hitThing?.Position ?? Position;
             if (hitThing != null)
             {
-                hitThings.Add(hitThing);
+                _hitThings.Add(hitThing);
                 DamageInfo dinfo = new(
                     def.projectile.damageDef,
                     def.projectile.GetDamageAmount(launcher),
@@ -42,7 +38,7 @@ namespace FantasyBiotech
                     equipmentDef
                 );
                 hitThing.TakeDamage(dinfo);
-                if (numBounces < MaxBounces)
+                if (_numBounces < MaxBounces)
                 {
                     Pawn nextTarget = FindNextTarget(strikePos, caster);
                     if (nextTarget != null)
@@ -54,13 +50,13 @@ namespace FantasyBiotech
             }
         }
 #nullable enable
-        private Pawn? FindNextTarget(IntVec3 origin, Pawn caster)
+        private Pawn? FindNextTarget(IntVec3 originCell, Pawn caster)
         {
-            foreach (Pawn t in RadialUtility.GetPawnsInRadius(origin, caster.Map, SearchRadius))
+            foreach (var pawn in RadialUtility.GetPawnsInRadius(originCell, caster.Map, SearchRadius))
             {
-                if (IsValidTarget(t))
+                if (IsValidTarget(pawn))
                 {
-                    return t;
+                    return pawn;
                 }
             }
             return null;
@@ -69,14 +65,14 @@ namespace FantasyBiotech
 
         private bool IsValidTarget(Pawn pawn)
         {
-            return !hitThings.Contains(pawn) &&
+            return !_hitThings.Contains(pawn) &&
                    pawn.Spawned && !pawn.Dead && !pawn.Downed &&
                    pawn.HostileTo(launcher);
         }
 
         public override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            var vec1 = (previousProjectile ?? launcher).TrueCenter();
+            var vec1 = (_previousProjectile ?? launcher).TrueCenter();
             var vec2 = this.DrawPos;
             if (vec2.magnitude > vec1.magnitude)
             {
@@ -93,19 +89,19 @@ namespace FantasyBiotech
             IntVec3 launchPos = hitThing.Position;
 
             var newProj = (Projectile_Bouncing)GenSpawn.Spawn(def, launchPos, hitThing.Map);
-            newProj.numBounces = this.numBounces + 1;
-            newProj.hitThings = new List<Thing>(hitThings);
+            newProj._numBounces = this._numBounces + 1;
+            newProj._hitThings = new List<Thing>(_hitThings);
             newProj.Launch(launcher, newTarget, newTarget, ProjectileHitFlags.IntendedTarget);
-            newProj.previousProjectile = this;
+            newProj._previousProjectile = this;
         }
 
 
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref numBounces, "numBounces", 0);
-            Scribe_Collections.Look(ref hitThings, "hitThings", LookMode.Reference);
-            Scribe_References.Look(ref previousProjectile, "previousProjectile");
+            Scribe_Values.Look(ref _numBounces, "numBounces");
+            Scribe_Collections.Look(ref _hitThings, "hitThings", LookMode.Reference);
+            Scribe_References.Look(ref _previousProjectile, "previousProjectile");
         }
     }
 }

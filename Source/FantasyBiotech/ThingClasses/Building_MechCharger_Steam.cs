@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -8,8 +6,6 @@ using RimWorld;
 using PipeSystem;
 using System.Text;
 using Verse.AI.Group;
-using Mono.Unix.Native;
-using System.Reflection;
 
 namespace FantasyBiotech
 {
@@ -17,20 +13,14 @@ namespace FantasyBiotech
     public class Building_MechCharger_Steam : Building_MechCharger
     {
         // 12 hours
-        public const float ChargeRate = 0.0033333333f;
-        public new CompResourceTrader Power => this.TryGetComp<CompResourceTrader>();
+        private const float ChargeRate = 0.0033333333f;
+        private new CompResourceTrader Power => this.TryGetComp<CompResourceTrader>();
 
-        public new bool IsPowered
-        {
-            get
-            {
-                return Power.ResourceOn;
-            }
-        }
+        private new bool IsPowered => Power.ResourceOn;
 
         private new CompWasteProducer WasteProducer => null;
 
-        public RechargerMapComponent chargerMapComp;
+        private RechargerMapComponent chargerMapComp;
         private List<CompResourceTrader> traders = [];
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -71,7 +61,7 @@ namespace FantasyBiotech
 
                 if (moteCablePulse == null || moteCablePulse.Destroyed)
                 {
-                    moteCablePulse = MoteMaker.MakeInteractionOverlay(ThingDefOf.Mote_ChargingCablesPulse, this, new TargetInfo(InteractionCell, base.Map));
+                    moteCablePulse = MoteMaker.MakeInteractionOverlay(ThingDefOf.Mote_ChargingCablesPulse, this, new TargetInfo(InteractionCell, Map));
                 }
                 moteCablePulse?.Maintain();
 
@@ -123,25 +113,25 @@ namespace FantasyBiotech
             {
                 yield return selectMonumentMarkerGizmo;
             }
-            if (this.def.Minifiable && base.Faction == Faction.OfPlayer)
+            if (this.def.Minifiable && Faction == Faction.OfPlayer)
             {
                 yield return InstallationDesignatorDatabase.DesignatorFor(this.def);
             }
             ColorInt? glowerColorOverride = null;
             CompGlower comp;
-            if ((comp = base.GetComp<CompGlower>()) != null && comp.HasGlowColorOverride)
+            if ((comp = GetComp<CompGlower>()) != null && comp.HasGlowColorOverride)
             {
                 glowerColorOverride = new ColorInt?(comp.GlowColor);
             }
             if (!this.def.building.neverBuildable)
             {
-                Command command = BuildCopyCommandUtility.BuildCopyCommand(this.def, base.Stuff, base.StyleSourcePrecept as Precept_Building, this.StyleDef, true, glowerColorOverride);
+                Command command = BuildCopyCommandUtility.BuildCopyCommand(this.def, Stuff, StyleSourcePrecept as Precept_Building, this.StyleDef, true, glowerColorOverride);
                 if (command != null)
                 {
                     yield return command;
                 }
             }
-            if (base.Faction == Faction.OfPlayer || this.def.building.alwaysShowRelatedBuildCommands)
+            if (Faction == Faction.OfPlayer || this.def.building.alwaysShowRelatedBuildCommands)
             {
                 foreach (Command command2 in BuildRelatedCommandUtility.RelatedBuildCommands(this.def))
                 {
@@ -162,27 +152,29 @@ namespace FantasyBiotech
             }
             if (currentlyChargingMech != null)
             {
-                Command_Action command_Action5 = new Command_Action();
-                command_Action5.action = delegate
+                var commandAction5 = new Command_Action
                 {
-                    currentlyChargingMech.needs.TryGetNeed<Need_MechEnergy>().CurLevelPercentage = 1f;
+                    action = delegate
+                    {
+                        currentlyChargingMech.needs.TryGetNeed<Need_MechEnergy>().CurLevelPercentage = 1f;
+                    },
+                    defaultLabel = "DEV: Charge 100%"
                 };
-                command_Action5.defaultLabel = "DEV: Charge 100%";
-                yield return command_Action5;
+                yield return commandAction5;
             }
         }
         public override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if (this.def.drawerType == DrawerType.RealtimeOnly || !this.Spawned)
             {
-                this.Graphic.Draw(drawLoc, flip ? this.Rotation.Opposite : this.Rotation, this, 0f);
+                this.Graphic.Draw(drawLoc, flip ? this.Rotation.Opposite : this.Rotation, this);
             }
             SilhouetteUtility.DrawGraphicSilhouette(this, drawLoc);
             this.Comps_PostDraw();
             GenDraw.FillableBarRequest barDrawData = BarDrawData;
             GenDraw.DrawFillableBar(barDrawData);
             Vector3 a = drawLoc;
-            float num = EaseInOutQuart((float)wireExtensionTicks / 70f);
+            float num = EaseInOutQuart(wireExtensionTicks / 70f);
             if (currentlyChargingMech == null)
             {
                 num = 1f - num;
@@ -215,9 +207,45 @@ namespace FantasyBiotech
 
         public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
         {
-            IEnumerable<PawnKindDef> source = DefDatabase<PawnKindDef>.AllDefs.Where((PawnKindDef pk) => IsCompatibleWithCharger(pk));
-            string text = source.Select((PawnKindDef pk) => pk.LabelCap.Resolve()).ToLineList(" - ");
-            yield return new StatDrawEntry(StatCategoryDefOf.Basics, "StatsReport_RechargerWeightClass".Translate(), def.building.requiredMechWeightClasses.Select((MechWeightClass w) => w.ToStringHuman()).ToCommaList().CapitalizeFirst(), "StatsReport_RechargerWeightClass_Desc".Translate() + ": " + "\n\n" + text, 99999, null, source.Select((PawnKindDef pk) => new Dialog_InfoCard.Hyperlink(pk.race)));
+            List<PawnKindDef> source = [];
+            foreach (var pk in DefDatabase<PawnKindDef>.AllDefs)
+            {
+                if (IsCompatibleWithCharger(pk))
+                {
+                    source.Add(pk);
+                }
+            }
+            StringBuilder sb = new StringBuilder();
+            foreach (var pk in source)
+            {
+                sb.AppendLine(" - " + pk.LabelCap.Resolve());
+            }
+            var text = sb.ToString();
+            List<string> weightClassNames = [];
+            for (var i = 0; i < def.building.requiredMechWeightClasses.Count; i++)
+            {
+                var w = def.building.requiredMechWeightClasses[i];
+                weightClassNames.Add(w.ToStringHuman());
+            }
+
+            string weightClassList = weightClassNames.ToCommaList().CapitalizeFirst();
+            
+            List<Dialog_InfoCard.Hyperlink> hyperlinks = [];
+            for (var i = 0; i < source.Count; i++)
+            {
+                var pk = source[i];
+                hyperlinks.Add(new Dialog_InfoCard.Hyperlink(pk.race));
+            }
+
+            yield return new StatDrawEntry(
+                StatCategoryDefOf.Basics,
+                "StatsReport_RechargerWeightClass".Translate(),
+                weightClassList,
+                "StatsReport_RechargerWeightClass_Desc".Translate() + ": " + "\n\n" + text,
+                99999,
+                null,
+                hyperlinks
+            );
         }
 
         public bool CanPawnChargeCurrentlySteam(Pawn pawn)

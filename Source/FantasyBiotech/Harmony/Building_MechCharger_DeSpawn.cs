@@ -2,7 +2,6 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Reflection.Emit;
-using System.Reflection;
 using System.Linq;
 using UnityEngine;
 
@@ -33,10 +32,7 @@ namespace FantasyBiotech
 
         public static void WasteProducerCheck(Building_MechCharger charger)
         {
-            if (charger is Building_MechCharger_Steam)
-            {
-                return;
-            }
+            if (charger is Building_MechCharger_Steam) return;
             charger.WasteProducer.ProduceWaste(Mathf.CeilToInt(charger.wasteProduced));
         }
     }

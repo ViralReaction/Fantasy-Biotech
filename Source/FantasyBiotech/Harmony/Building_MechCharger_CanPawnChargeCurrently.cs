@@ -9,13 +9,9 @@ namespace FantasyBiotech
     {
         public static bool Prefix(ref bool __result, Building_MechCharger __instance, Pawn pawn)
         {
-            if (__instance is Building_MechCharger_Steam steamCharger)
-            {
-                __result = steamCharger.CanPawnChargeCurrentlySteam(pawn);
-                return false;
-
-            }
-            return true;
+            if (__instance is not Building_MechCharger_Steam steamCharger) return true;
+            __result = steamCharger.CanPawnChargeCurrentlySteam(pawn);
+            return false;
         }
     }
 }

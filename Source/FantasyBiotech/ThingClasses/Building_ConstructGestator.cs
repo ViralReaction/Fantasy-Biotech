@@ -10,8 +10,8 @@ namespace FantasyBiotech
 {
     public class Building_ConstructGestator : Building_MechGestator
     {
-        public new CompResourceTrader Power => this.TryGetComp<CompResourceTrader>();
-        public new bool PoweredOn => Power.ResourceOn;
+        private new CompResourceTrader Power => this.TryGetComp<CompResourceTrader>();
+        private new bool PoweredOn => Power.ResourceOn;
         public override void Tick()
         {
             innerContainer.ThingOwnerTick();
@@ -59,7 +59,7 @@ namespace FantasyBiotech
         }
         public override void Notify_FormingCompleted()
         {
-            Pawn pawn = activeBill.CreateProducts() as Pawn;
+            if (activeBill.CreateProducts() is not Pawn pawn) return;
             Messages.Message("GestationComplete".Translate() + ": " + pawn.kindDef.LabelCap, this, MessageTypeDefOf.PositiveEvent);
             innerContainer.ClearAndDestroyContents();
             innerContainer.TryAdd(pawn);
@@ -86,27 +86,27 @@ namespace FantasyBiotech
             }
             if (!def.building.neverBuildable)
             {
-                Command command = BuildCopyCommandUtility.BuildCopyCommand(def, base.Stuff, base.StyleSourcePrecept as Precept_Building, StyleDef, styleOverridden: true, glowerColorOverride);
+                var command = BuildCopyCommandUtility.BuildCopyCommand(def, Stuff, StyleSourcePrecept as Precept_Building, StyleDef, styleOverridden: true, glowerColorOverride);
                 if (command != null)
                 {
                     yield return command;
                 }
             }
-            if (base.Faction == Faction.OfPlayer || def.building.alwaysShowRelatedBuildCommands)
+            if (Faction == Faction.OfPlayer || def.building.alwaysShowRelatedBuildCommands)
             {
-                foreach (Command item in BuildRelatedCommandUtility.RelatedBuildCommands(def))
+                foreach (var item in BuildRelatedCommandUtility.RelatedBuildCommands(def))
                 {
                     yield return item;
                 }
             }
-            Bill_Autonomous bill_Autonomous = ActiveBill;
-            if (bill_Autonomous != null && bill_Autonomous.State == FormingState.Forming)
+            var billAutonomous = ActiveBill;
+            if (billAutonomous is { State: FormingState.Forming })
             {
                 yield return new Command_Action
                 {
                     action = delegate
                     {
-                        ActiveBill.formingTicks -= (float)ActiveBill.recipe.formingTicks * 0.25f;
+                        ActiveBill.formingTicks -= ActiveBill.recipe.formingTicks * 0.25f;
                     },
                     defaultLabel = "DEV: Forming cycle +25%"
                 };
@@ -119,16 +119,15 @@ namespace FantasyBiotech
                     defaultLabel = "DEV: Complete cycle"
                 };
             }
-            if (DebugSettings.ShowDevGizmos)
+
+            if (!DebugSettings.ShowDevGizmos) yield break;
+            if (ActiveMechBill == null || ActiveMechBill.State == 0 || ActiveMechBill.State == FormingState.Formed) yield break;
+            var commandAction2 = new Command_Action
             {
-                if (ActiveMechBill != null && ActiveMechBill.State != 0 && ActiveMechBill.State != FormingState.Formed)
-                {
-                    Command_Action command_Action2 = new Command_Action();
-                    command_Action2.action = ActiveMechBill.ForceCompleteAllCycles;
-                    command_Action2.defaultLabel = "DEV: Complete all cycles";
-                    yield return command_Action2;
-                }
-            }
+                action = ActiveMechBill.ForceCompleteAllCycles,
+                defaultLabel = "DEV: Complete all cycles"
+            };
+            yield return commandAction2;
         }
     }
 }

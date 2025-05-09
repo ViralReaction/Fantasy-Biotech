@@ -82,7 +82,7 @@ namespace FantasyBiotech
                 };
             }
             // Refill gizmo
-            if (Props.refillOptions != null && !Props.refillOptions.alwaysRefill)
+            if (Props.refillOptions is { alwaysRefill: false })
             {
                 refillGizmo = new Command_Toggle()
                 {
@@ -100,7 +100,7 @@ namespace FantasyBiotech
                 if (markedForRefill) PipeNetManager.UpdateRefillableWith(parent);
             }
             // Always refill: update refillables
-            else if (Props.refillOptions != null && Props.refillOptions.alwaysRefill)
+            else if (Props.refillOptions is { alwaysRefill: true })
             {
                 PipeNetManager.UpdateRefillableWith(parent);
             }

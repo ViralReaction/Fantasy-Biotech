@@ -15,7 +15,7 @@ namespace FantasyBiotech
         /// The original method instructions are still emitted (for reference),
         /// but are unreachable due to the early return.
         /// </summary>
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             var code = instructions.ToList();
             yield return new CodeInstruction(OpCodes.Ldc_I4_1);
