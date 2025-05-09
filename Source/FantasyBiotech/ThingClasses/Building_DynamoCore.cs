@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HarmonyLib;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -115,11 +113,12 @@ namespace FantasyBiotech
                 {
                     DestroyOccupant();
                 }
-                for (int num = innerContainer.Count - 1; num >= 0; num--)
+                
+                for (int i = innerContainer.Count - 1; i >= 0; i--)
                 {
-                    if (innerContainer[num] is Pawn || innerContainer[num] is Corpse)
+                    if (innerContainer[i] is Pawn || innerContainer[i] is Corpse)
                     {
-                        innerContainer.TryDrop(innerContainer[num], InteractionCell, base.Map, ThingPlaceMode.Near, 1, out var _);
+                        innerContainer.TryDrop(innerContainer[i], InteractionCell, base.Map, ThingPlaceMode.Near, 1, out var _);
                     }
                 }
                 innerContainer.ClearAndDestroyContents();

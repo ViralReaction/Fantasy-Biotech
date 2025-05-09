@@ -57,6 +57,10 @@
     <Compile Include="FantasyBiotech\Harmony\BillMech_BillTick_Patch.cs" />
     <Compile Include="FantasyBiotech\Harmony\ComplexThreatWorker_SleepingMechanoids_Transpiler_Postfix.cs" />
     <Compile Include="FantasyBiotech\Harmony\ComplexThreatWorker_Ambush_CanResolveInt.cs" />
+    <Compile Include="FantasyBiotech\Harmony\MechClusterGenerator_MechKindSuitableForCluster.cs" />
+    <Compile Include="FantasyBiotech\Harmony\MechClusterUtility_SpawnCluster.cs" />
+    <Compile Include="FantasyBiotech\Harmony\MechClusterGenerator_GenerateClusterSketch.cs" />
+    <Compile Include="FantasyBiotech\Harmony\QuestNode_SpawnMechCluster_TestRunInt.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_SleepingMechanoids_Transpilers.cs" />
     <Compile Include="FantasyBiotech\Harmony\GenStep_SleepingMechanoids_Transpiler.cs" />
     <Compile Include="FantasyBiotech\Harmony\SitePartWorker_SleepingMechanoids_GetMechanoidsCount.cs" />
