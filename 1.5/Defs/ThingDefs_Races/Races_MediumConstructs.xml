@@ -42,7 +42,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Lancer</body>
+			<body>VR_ConstructBipedal</body>
 			<baseHealthScale>1.32</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
@@ -140,7 +140,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Lancer</body>
+			<body>VR_ConstructBipedal</body>
 			<baseHealthScale>0.72</baseHealthScale>
 			<detritusLeavings>
 				<li>

@@ -60,7 +60,7 @@
 			<MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
 		</statBases>
 		<race>
-			<body>Mech_Light</body>
+			<body>VR_Construct_Workers</body>
 			<intelligence>ToolUser</intelligence>
 			<thinkTreeMain>Mechanoid</thinkTreeMain>
 			<baseBodySize>0.7</baseBodySize>
@@ -81,6 +81,15 @@
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			</li>
 		</tools>
+	</ThingDef>
+	
+	<ThingDef Name="VR_LightSphereConstruct" ParentName="VR_LightConstruct" Abstract="True">
+		<statBases>
+			<MoveSpeed>3.4</MoveSpeed>
+		</statBases>
+		<race>
+			<body>VR_Construct_Light</body>
+		</race>
 	</ThingDef>
 
 	<!-- Walker (lancer/scyther) base -->

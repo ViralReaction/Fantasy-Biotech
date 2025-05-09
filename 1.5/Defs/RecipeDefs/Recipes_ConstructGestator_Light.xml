@@ -82,17 +82,4 @@
 		</descriptionHyperlinks>
 	</RecipeDef>
 
-	<RecipeDef ParentName="VR_LightConstructRecipe">
-		<defName>VR_MakeConstruct_Cleansweeper</defName>
-		<label>gestate cleansweeper</label>
-		<description>Gestate a cleansweeper mechanoid.</description>
-		<researchPrerequisite>BasicMechtech</researchPrerequisite>
-		<products>
-			<VR_Construct_Cleansweeper>1</VR_Construct_Cleansweeper>
-		</products>
-		<descriptionHyperlinks>
-			<ThingDef>VR_Construct_Cleansweeper</ThingDef>
-		</descriptionHyperlinks>
-	</RecipeDef>
-
 </Defs>

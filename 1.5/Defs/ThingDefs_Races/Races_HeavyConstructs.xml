@@ -20,7 +20,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Scyther</body>
+			<body>VR_ConstructBipedal</body>
 			<baseHealthScale>1.32</baseHealthScale>
 			<lifeStageAges>
 				<li>

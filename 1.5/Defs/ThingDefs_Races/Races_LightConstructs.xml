@@ -2,7 +2,7 @@
 <Defs>
 
     <!-- Militor -->    
-    <ThingDef ParentName="VR_LightConstruct">
+    <ThingDef ParentName="VR_LightSphereConstruct">
       <defName>VR_Construct_Militor</defName>
       <label>militor</label>
       <description>A small combat mechanoid armed with a low-power mini-shotgun. Roughly four feet tall, militors lack the power, range, and toughness of more senior combat mechs. However, it is cheap to gestate and maintain, and so is often used as a rear guard or swarm attacker.\n\nIn war, mech armies are known to send militors into urban ruins to hunt down survivors after breaking the human defenses. For this reason, they are considered by some to be the most cruel of all mechanoid patterns.</description>
@@ -21,7 +21,7 @@
         </lifeStageAges>
       </race>
     </ThingDef>
-  
+
     <PawnKindDef ParentName="VR_LightConstructKind">
       <defName>VR_Construct_Militor</defName>
       <label>militor</label>
@@ -46,7 +46,7 @@
         <li>ConstructGunShortRange</li>
       </weaponTags>
     </PawnKindDef>
-    
+
     <!-- Lifter -->  
     <ThingDef ParentName="VR_LightConstruct">
       <defName>VR_Construct_Lifter</defName>
@@ -58,6 +58,7 @@
       <race>
         <mechEnabledWorkTypes>
           <li>Hauling</li>
+		  <li>Cleaning</li>
         </mechEnabledWorkTypes>
         <lifeStageAges>
           <li>
@@ -70,7 +71,7 @@
         </lifeStageAges>
       </race>
     </ThingDef>
-    
+
     <PawnKindDef ParentName="VR_NonCombatLightConstructKind">
       <defName>VR_Construct_Lifter</defName>
       <label>lifter</label>
@@ -123,7 +124,7 @@
         </li>
       </tools>
     </ThingDef>
-    
+
     <PawnKindDef ParentName="VR_NonCombatLightConstructKind">
       <defName>VR_Construct_Constructoid</defName>
       <label>constructoid</label>
@@ -183,7 +184,7 @@
         </lifeStageAges>
       </race>
     </ThingDef>
-    
+
     <PawnKindDef ParentName="VR_NonCombatLightConstructKind">
       <defName>VR_Construct_Agrihand</defName>
       <label>agrihand</label>
@@ -201,48 +202,6 @@
       </lifeStages>      
     </PawnKindDef>
 
-    <!-- Cleansweeper -->  
-    <ThingDef ParentName="VR_LightConstruct">
-      <defName>VR_Construct_Cleansweeper</defName>
-      <label>cleansweeper</label>
-      <description>A light mechanoid designed for cleaning. Lacking a ranged weapon, it can make only weak melee attacks.</description>
-      <statBases>
-        <CleaningSpeed>0.5</CleaningSpeed>
-      </statBases>
-      <race>
-        <mechEnabledWorkTypes>
-          <li>Cleaning</li>
-        </mechEnabledWorkTypes>
-        <lifeStageAges>
-          <li>
-            <def>MechanoidFullyFormed</def>
-            <minAge>0</minAge>
-            <soundWounded>Pawn_Mech_Cleansweeper_Wounded</soundWounded>
-            <soundDeath>Pawn_Mech_Cleansweeper_Death</soundDeath>
-            <soundCall>Pawn_Mech_Cleansweeper_Call</soundCall>
-          </li>
-        </lifeStageAges>
-        <baseBodySize>0.3</baseBodySize>
-      </race>
-    </ThingDef>
-    
-    <PawnKindDef ParentName="VR_NonCombatLightConstructKind">
-      <defName>VR_ConstructCleansweeper</defName>
-      <label>cleansweeper</label>
-      <race>VR_Construct_Cleansweeper</race>
-      <lifeStages>
-        <li>
-          <bodyGraphicData>
-            <texPath>Things/Pawn/Mechanoid/ConstructSpider</texPath>
-            <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Cleansweeper</maskPath>
-            <shaderType>CutoutWithOverlay</shaderType>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>1.1</drawSize>
-          </bodyGraphicData>
-        </li>
-      </lifeStages>
-    </PawnKindDef>
-
     <!-- WarUrchin -->  
     <ThingDef ParentName="VR_LightConstruct">
       <defName>VR_Construct_WarUrchin</defName>
@@ -256,13 +215,6 @@
           <li>
             <def>MechanoidFullyFormed</def>
             <minAge>0</minAge>
-            <soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
-            <soundDeath>Pawn_Mech_WarUrchin_Death</soundDeath>
-            <soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
-          </li>
-          <li>
-            <def>MechanoidFullyFormed</def>
-            <minAge>100</minAge>
             <soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
             <soundDeath>Pawn_Mech_WarUrchin_Death</soundDeath>
             <soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
@@ -304,19 +256,7 @@
             </shadowData>
           </bodyGraphicData>
         </li>
-        <li>
-          <bodyGraphicData>
-            <texPath>Things/Pawn/Mechanoid/WarUrchinAncient</texPath>
-            <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/MechMinimech</maskPath>
-            <shaderType>CutoutWithOverlay</shaderType>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>1.1</drawSize>
-            <shadowData>
-              <volume>(0.2, 0.3, 0.2)</volume>
-            </shadowData>
-          </bodyGraphicData>
-        </li>
-      </lifeStages>      
+      </lifeStages>
       <weaponTags>
         <li>MechanoidGunSpiner</li>
       </weaponTags>

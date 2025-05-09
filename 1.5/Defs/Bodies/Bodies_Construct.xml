@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BodyDef>
+		<defName>VR_Construct_Workers</defName>
+		<label>light construct</label>
+		<corePart>
+			<def>VR_ConstructTorsoCanManipulate</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>Torso</li>
+			</groups>
+			<parts>
+				<li>
+					<def>MechanicalNeck</def>
+					<coverage>0.10</coverage>
+					<height>Top</height>
+					<parts>
+						<li>
+							<def>MechanicalHead</def>
+							<coverage>0.80</coverage>
+							<groups>
+								<li>HeadAttackTool</li>
+							</groups>
+							<parts>
+								<li>
+									<def>VR_ClockworkBrain</def>
+									<coverage>0.10</coverage>
+									<depth>Inside</depth>
+								</li>
+								<li>
+									<def>VR_BrassOcular</def>
+									<coverage>0.13</coverage>
+								</li>
+								<li>
+									<def>VR_HarmonicListener</def>
+									<coverage>0.10</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+				  <def>SmallMechanicalLeg</def>
+				  <customLabel>left front leg</customLabel>
+				  <coverage>0.10</coverage>
+				  <height>Bottom</height>
+				  <parts>
+					<li>
+					  <def>SmallMechanicalFoot</def>
+					  <customLabel>left front foot</customLabel>
+					  <coverage>0.10</coverage>
+					</li>
+				  </parts>
+				</li>
+				<li>
+				  <def>SmallMechanicalLeg</def>
+				  <customLabel>right front leg</customLabel>
+				  <coverage>0.10</coverage>
+				  <height>Bottom</height>
+				  <parts>
+					<li>
+					  <def>SmallMechanicalFoot</def>
+					  <customLabel>right front foot</customLabel>
+					  <coverage>0.10</coverage>
+					</li>
+				  </parts>
+				</li>
+				<li>
+				  <def>SmallMechanicalLeg</def>
+				  <customLabel>left middle leg</customLabel>
+				  <coverage>0.10</coverage>
+				  <height>Bottom</height>
+				  <parts>
+					<li>
+					  <def>SmallMechanicalFoot</def>
+					  <customLabel>left middle foot</customLabel>
+					  <coverage>0.10</coverage>
+					</li>
+				  </parts>
+				</li>
+				<li>
+				  <def>SmallMechanicalLeg</def>
+				  <customLabel>right middle leg</customLabel>
+				  <coverage>0.10</coverage>
+				  <height>Bottom</height>
+				  <parts>
+					<li>
+					  <def>SmallMechanicalFoot</def>
+					  <customLabel>right middle foot</customLabel>
+					  <coverage>0.10</coverage>
+					</li>
+				  </parts>
+				</li>
+				<li>
+				  <def>SmallMechanicalLeg</def>
+				  <customLabel>left rear leg</customLabel>
+				  <coverage>0.10</coverage>
+				  <height>Bottom</height>
+				  <parts>
+					<li>
+					  <def>SmallMechanicalFoot</def>
+					  <customLabel>left rear foot</customLabel>
+					  <coverage>0.10</coverage>
+					</li>
+				  </parts>
+				</li>
+				<li>
+				  <def>SmallMechanicalLeg</def>
+				  <customLabel>right rear leg</customLabel>
+				  <coverage>0.10</coverage>
+				  <height>Bottom</height>
+				  <parts>
+					<li>
+					  <def>SmallMechanicalFoot</def>
+					  <customLabel>right rear foot</customLabel>
+					  <coverage>0.10</coverage>
+					</li>
+				  </parts>
+				</li>
+				<li>
+					<def>VR_DynamoCore</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>VR_SteamCirculator</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+
+	<BodyDef>
+		<defName>VR_Construct_Light</defName>
+		<label>light construct</label>
+		<corePart>
+			<def>VR_ConstructTorsoCanManipulate</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>Torso</li>
+			</groups>
+			<parts>
+				<li>
+					<def>MechanicalNeck</def>
+					<coverage>0.10</coverage>
+					<height>Top</height>
+					<parts>
+						<li>
+							<def>MechanicalHead</def>
+							<coverage>0.80</coverage>
+							<groups>
+								<li>HeadAttackTool</li>
+							</groups>
+							<parts>
+								<li>
+									<def>VR_ClockworkBrain</def>
+									<coverage>0.10</coverage>
+									<depth>Inside</depth>
+								</li>
+								<li>
+									<def>VR_BrassOcular</def>
+									<coverage>0.13</coverage>
+								</li>
+								<li>
+									<def>VR_HarmonicListener</def>
+									<coverage>0.10</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>VR_ConstructSphere_Small</def>
+					<coverage>0.4</coverage>
+					<height>Bottom</height>
+				</li>
+				<li>
+					<def>VR_DynamoCore</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>VR_SteamCirculator</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+
+	<BodyDef>
+		<defName>VR_ConstructBipedal</defName>
+		<label>construct</label>
+		<corePart>
+			<def>VR_ConstructTorso</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<parts>
+				<li>
+					<def>MechanicalNeck</def>
+					<coverage>0.10</coverage>
+					<height>Top</height>
+					<parts>
+						<li>
+							<def>MechanicalHead</def>
+							<coverage>0.80</coverage>
+							<groups>
+								<li>HeadAttackTool</li>
+							</groups>
+							<parts>
+								<li>
+									<def>VR_ClockworkBrain</def>
+									<coverage>0.10</coverage>
+									<depth>Inside</depth>
+								</li>
+								<li>
+									<def>VR_BrassOcular</def>
+									<customLabel>left brass ocular</customLabel>
+									<coverage>0.13</coverage>
+								</li>
+								<li>
+									<def>VR_BrassOcular</def>
+									<customLabel>right brass ocular</customLabel>
+									<coverage>0.13</coverage>
+								</li>
+								<li>
+									<def>VR_HarmonicListener</def>
+									<customLabel>left harmonic listener</customLabel>
+									<coverage>0.10</coverage>
+								</li>
+								<li>
+									<def>VR_HarmonicListener</def>
+									<customLabel>right harmonic listener</customLabel>
+									<coverage>0.10</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalShoulder</def>
+					<customLabel>left shoulder</customLabel>
+					<coverage>0.17</coverage>
+					<parts>
+						<li>
+							<def>MechanicalArm</def>
+							<customLabel>left arm</customLabel>
+							<coverage>0.85</coverage>
+							<parts>
+								<li>
+									<def>MechanicalHand</def>
+									<customLabel>left hand</customLabel>
+									<coverage>0.2</coverage>
+									<height>Bottom</height>
+									<parts>
+										<li>
+											<def>MechanicalFinger</def>
+											<customLabel>left pinky</customLabel>
+											<coverage>0.15</coverage>
+											<groups>
+												<li>LeftHand</li>
+											</groups>
+										</li>
+										<li>
+											<def>MechanicalFinger</def>
+											<customLabel>left middle finger</customLabel>
+											<coverage>0.15</coverage>
+											<groups>
+												<li>LeftHand</li>
+												<li>MiddleFingers</li>
+											</groups>
+										</li>
+										<li>
+											<def>MechanicalFinger</def>
+											<customLabel>left index finger</customLabel>
+											<coverage>0.15</coverage>
+											<groups>
+												<li>LeftHand</li>
+											</groups>
+										</li>
+										<li>
+											<def>MechanicalFinger</def>
+											<customLabel>left thumb</customLabel>
+											<coverage>0.15</coverage>
+											<groups>
+												<li>LeftHand</li>
+											</groups>
+										</li>
+									</parts>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalShoulder</def>
+					<customLabel>right shoulder</customLabel>
+					<coverage>0.17</coverage>
+					<parts>
+						<li>
+							<def>MechanicalArm</def>
+							<customLabel>right arm</customLabel>
+							<coverage>0.85</coverage>
+							<parts>
+								<li>
+									<def>MechanicalHand</def>
+									<customLabel>right hand</customLabel>
+									<coverage>0.2</coverage>
+									<height>Bottom</height>
+									<parts>
+										<li>
+											<def>MechanicalFinger</def>
+											<customLabel>right pinky</customLabel>
+											<coverage>0.15</coverage>
+											<groups>
+												<li>RightHand</li>
+											</groups>
+										</li>
+										<li>
+											<def>MechanicalFinger</def>
+											<customLabel>right middle finger</customLabel>
+											<coverage>0.15</coverage>
+											<groups>
+												<li>RightHand</li>
+												<li>MiddleFingers</li>
+											</groups>
+										</li>
+										<li>
+											<def>MechanicalFinger</def>
+											<customLabel>right index finger</customLabel>
+											<coverage>0.15</coverage>
+											<groups>
+												<li>RightHand</li>
+											</groups>
+										</li>
+										<li>
+											<def>MechanicalFinger</def>
+											<customLabel>right thumb</customLabel>
+											<coverage>0.15</coverage>
+											<groups>
+												<li>RightHand</li>
+											</groups>
+										</li>
+									</parts>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>VR_ConstructSphere</def>
+					<coverage>0.4</coverage>
+					<height>Bottom</height>
+				</li>
+				<li>
+					<def>VR_DynamoCore</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>VR_SteamCirculator</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>VR_SteamCirculator</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+
+</Defs>

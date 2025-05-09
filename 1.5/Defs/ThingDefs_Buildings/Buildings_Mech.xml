@@ -58,7 +58,6 @@
 			<li>VR_MakeConstruct_Lifter</li>
 			<li>VR_MakeConstruct_Constructoid</li>
 			<li>VR_MakeConstruct_Agrihand</li>
-			<li>VR_MakeConstruct_Cleansweeper</li>
 			<li>ResurrectLightMech</li>
 		</recipes>
 		<statBases>
