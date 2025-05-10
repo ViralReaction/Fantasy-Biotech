@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>VR_SteamPower</defName>
+		<label>steam power</label>
+		<description>Allows for the collection, production, and storage of steam. This steam can than be used to power other buildings.</description>
+		<techLevel>Medieval</techLevel>
+		<tab>VR_BiotechResearchTab</tab>
+		<baseCost>1200</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+		<prerequisites>
+			<li>Smithing</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->steam power</li>
+
+				<li>subject_story->excavated archite genes from the transcendent moon of Ix</li>
+				<li>subject_story->made a good living as an archite gene trader</li>
+				<li>subject_story->led a research expedition to an ancient monolith and returned changed</li>
+
+				<li>subject_gerund->assembling archite genes</li>
+				<li>subject_gerund->creating seemingly impossible genes</li>
+
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+</Defs>
