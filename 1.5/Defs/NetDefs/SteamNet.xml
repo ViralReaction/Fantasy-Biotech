@@ -124,11 +124,11 @@
 		<neverMultiSelect>true</neverMultiSelect>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>Power</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<clearBuildingArea>false</clearBuildingArea>
 		<researchPrerequisites>
-			<li>Deathrest</li>
+			<li>VR_SteamPower</li>
 		</researchPrerequisites>
 	</ThingDef>
 
@@ -200,11 +200,11 @@
 		<neverMultiSelect>true</neverMultiSelect>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>Power</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<clearBuildingArea>false</clearBuildingArea>
 		<researchPrerequisites>
-			<li>Deathrest</li>
+			<li>VR_SteamPower</li>
 		</researchPrerequisites>
 	</ThingDef>
 
@@ -266,11 +266,11 @@
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>Power</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<canOverlapZones>false</canOverlapZones>
 		<researchPrerequisites>
-			<li>Deathrest</li>
+			<li>VR_SteamPower</li>
 		</researchPrerequisites>
 	</ThingDef>
 
@@ -331,11 +331,11 @@
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>Power</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<canOverlapZones>false</canOverlapZones>
 		<researchPrerequisites>
-			<li>Deathrest</li>
+			<li>VR_SteamPower</li>
 		</researchPrerequisites>
 	</ThingDef>
 
@@ -408,8 +408,11 @@
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>Power</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>VR_SteamPower</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -419,7 +422,7 @@
 		<thingClass>FantasyBiotech.Building_SteamGenerator</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Building/Power/GeothermalPlant</texPath>
+			<texPath>Things/Building/Power/GeothermalSteamPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(6,6)</drawSize>
 			<shadowData>
@@ -471,7 +474,7 @@
 		</comps>
 		<rotatable>false</rotatable>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>Power</designationCategory>
 		<placeWorkers>
 			<li>PlaceWorker_OnSteamGeyser</li>
 		</placeWorkers>
@@ -483,6 +486,9 @@
 		<constructEffect>ConstructMetal</constructEffect>
 		<designationHotKey>Misc6</designationHotKey>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>VR_SteamPower</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 </Defs>

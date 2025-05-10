@@ -70,7 +70,7 @@
 			<Steel>125</Steel>
 		</costList>
 		<researchPrerequisites>
-			<li>BasicMechtech</li>
+			<li>VR_BasicConstructTech</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
@@ -139,7 +139,7 @@
 			<Steel>250</Steel>
 		</costList>
 		<researchPrerequisites>
-			<li>StandardMechtech</li>
+			<li>VR_StandardConstructTech</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">

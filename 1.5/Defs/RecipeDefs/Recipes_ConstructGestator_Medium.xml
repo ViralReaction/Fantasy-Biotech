@@ -3,7 +3,7 @@
 
 	<RecipeDef Name="VR_MediumConstructRecipe" ParentName="VR_BaseConstructRecipe" Abstract="True">
 		<gestationCycles>2</gestationCycles>
-		<researchPrerequisite>StandardMechtech</researchPrerequisite>
+		<researchPrerequisite>VR_StandardConstructTech</researchPrerequisite>
 	</RecipeDef>
 
 	<RecipeDef ParentName="VR_MediumConstructRecipe">

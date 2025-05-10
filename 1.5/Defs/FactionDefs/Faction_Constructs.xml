@@ -61,7 +61,7 @@
 					<VR_Construct_Militor>20</VR_Construct_Militor>
 					<!-- <Mech_Centurion MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Centurion> -->
 					<!-- <Mech_Warqueen MayRequire="Ludeon.RimWorld.Biotech">1</Mech_Warqueen> -->
-					<!-- <Mech_Apocriton MayRequire="Ludeon.RimWorld.Biotech">1</Mech_Apocriton> -->
+					<VR_Construct_Apocriton>1</VR_Construct_Apocriton>
 				</options>
 			</li>
 			<li>

@@ -9,7 +9,7 @@
 		<defName>VR_Construct_Centurion</defName>
 		<label>gestate tunneler</label>
 		<description>Gestate a tunneler mechanoid.</description>
-		<researchPrerequisite>StandardMechtech</researchPrerequisite>
+		<researchPrerequisite>VR_StandardConstructTech</researchPrerequisite>
 		<ingredients Inherit="False">
 			<li>
 				<filter>
@@ -48,7 +48,7 @@
 		<defName>VR_Construct_Centurion_Ranged</defName>
 		<label>gestate tunneler</label>
 		<description>Gestate a tunneler mechanoid.</description>
-		<researchPrerequisite>StandardMechtech</researchPrerequisite>
+		<researchPrerequisite>VR_StandardConstructTech</researchPrerequisite>
 		<ingredients Inherit="False">
 			<li>
 				<filter>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+	<!-- Remove Power Comps -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DeathrestCasket" or defName="DeathrestAccelerator"]/comps/li[@Class="CompProperties_Power"]</xpath>
 		<match Class="PatchOperationRemove">
@@ -27,6 +28,23 @@
 		<match Class="PatchOperationRemove">
 			<xpath>Defs/ThingDef[@Name="DeathrestBuildingHemogenFueled"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
 		</match>
+	</Operation>
+	
+	<!-- Set Tech Level -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DeathrestCasket"]/techLevel</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DeathrestCasket"]/techLevel</xpath>
+			<value>
+				<techLevel>Medieval</techLevel>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DeathrestCasket"]</xpath>
+			<value>
+				<techLevel>Medieval</techLevel>
+			</value>
+		</nomatch>
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">

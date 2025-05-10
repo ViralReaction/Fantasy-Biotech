@@ -17,6 +17,7 @@
 			<DeteriorationRate>2.0</DeteriorationRate>
 		</statBases>
 		<intricate>true</intricate>
+		<techLevel>Medieval</techLevel>
 		<thingCategories>
 			<li>Manufactured</li>
 		</thingCategories>

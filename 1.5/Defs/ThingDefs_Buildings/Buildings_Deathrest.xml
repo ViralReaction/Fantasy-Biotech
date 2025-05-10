@@ -82,6 +82,7 @@
 		<placeWorkers>
 			<li>PlaceWorker_DrawLinesToDeathrestBuildings</li>
 		</placeWorkers>
+		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
 </Defs>

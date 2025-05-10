@@ -71,7 +71,7 @@
 			<Steel>150</Steel>
 		</costList>
 		<researchPrerequisites>
-			<li>BasicMechtech</li>
+			<li>VR_BasicConstructTech</li>
 		</researchPrerequisites>
 		<building>
 			<barDrawData>
@@ -175,7 +175,7 @@
 			<Steel>300</Steel>
 		</costList>
 		<researchPrerequisites>
-			<li>StandardMechtech</li>
+			<li>VR_StandardConstructTech</li>
 		</researchPrerequisites>
 		<building>
 			<barDrawData>
@@ -305,7 +305,7 @@
 			<Steel>100</Steel>
 		</costList>
 		<researchPrerequisites>
-			<li>BasicMechtech</li>
+			<li>VR_BasicConstructTech</li>
 		</researchPrerequisites>
 		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -408,7 +408,7 @@
 			<Plasteel>50</Plasteel>
 		</costList>
 		<researchPrerequisites>
-			<li>StandardMechtech</li>
+			<li>VR_StandardConstructTech</li>
 		</researchPrerequisites>
 		<building>
 			<subcoreScannerOutputDef>VR_DynamoCoreRegular</subcoreScannerOutputDef>
@@ -451,7 +451,7 @@
 			<Plasteel>150</Plasteel>
 		</costList>
 		<researchPrerequisites>
-			<li>HighMechtech</li>
+			<li>VR_HighConstructTech</li>
 		</researchPrerequisites>
 		<building>
 			<subcoreScannerOutputDef>VR_DynamoCoreHigh</subcoreScannerOutputDef>

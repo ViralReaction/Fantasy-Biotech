@@ -12,7 +12,7 @@
 	</RecipeDef>
 
 	<RecipeDef Name="VR_LightConstructRecipe" ParentName="VR_BaseConstructRecipe" Abstract="True">
-		<researchPrerequisite>BasicMechtech</researchPrerequisite>
+		<researchPrerequisite>VR_BasicConstructTech</researchPrerequisite>
 		<ingredients>
 			<li>
 				<filter>
