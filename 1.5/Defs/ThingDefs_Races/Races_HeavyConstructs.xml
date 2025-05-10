@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- Scyther Equivalent -->
-	<ThingDef ParentName="VR_HeavyConstruct">
+	<ThingDef ParentName="VR_HeavyConstruct" Name="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion</defName>
 		<label>centurion</label>
 		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
@@ -81,10 +81,16 @@
 		<techHediffsMoney>9999~9999</techHediffsMoney>
 	</PawnKindDef>
 	
+	<ThingDef ParentName="VR_Construct_Centurion">
+		<defName>VR_Construct_Centurion_Ranged</defName>
+		<label>centurion</label>
+		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
+	</ThingDef>
+	
 	<PawnKindDef ParentName="VR_HeavyConstructKind">
 		<defName>VR_Construct_Centurion_Ranged</defName>
 		<label>centurion ranged</label>
-		<race>VR_Construct_Centurion</race>
+		<race>VR_Construct_Centurion_Ranged</race>
 		<combatPower>150</combatPower>
 		<lifeStages>
 			<li>

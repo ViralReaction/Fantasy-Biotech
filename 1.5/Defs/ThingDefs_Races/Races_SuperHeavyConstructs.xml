@@ -20,6 +20,118 @@
 			<Plasteel>20</Plasteel>
 		</butcherProducts>
 	</ThingDef>
+	
+	<!-- Apocriton -->
+	<ThingDef ParentName="VR_BaseConstructWalker">
+		<defName>VR_Construct_Apocriton</defName>
+		<label>apocriton</label>
+		<description>A mechanoid commander designed to coordinate and motivate other mechs during long extermination campaigns. Its most obvious power is its ability to resurrect recently-killed mechs by supercharging their self-repair processes. Less obviously, it is intelligent and psychically present, radiating hatred into the minds of anyone in a wide radius. It can also move quickly with its built-in jump launcher.\n\nWhile all mechanoids have a dim psychically-present intelligence, only the apocriton and a few others truly feel hatred for their victims and understand the suffering they inflict.</description>
+		<statBases>
+			<MarketValue>1600</MarketValue>
+			<MoveSpeed>3.2</MoveSpeed>
+			<EnergyShieldRechargeRate>0.25</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>
+			<BandwidthCost>2</BandwidthCost>
+			<ControlTakingTime>18</ControlTakingTime>
+			<EMPResistance>0.8</EMPResistance>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+		</statBases>
+		<race>
+			<body>Apocriton</body>
+			<mechWeightClass>UltraHeavy</mechWeightClass>
+			<lifeStageAges Inherit="False">
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Apocriton_Wounded</soundWounded>
+					<soundAngry>Pawn_Mech_Apocriton_Call</soundAngry>
+					<soundDeath>Pawn_Mech_Apocriton_Death</soundDeath>
+					<soundCall>Pawn_Mech_Apocriton_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>5.2</baseHealthScale>
+			<soundAmbience>Pawn_Mech_Apocriton_Ambience</soundAmbience>
+			<detritusLeavings>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>15</texOverrideIndex>
+					<spawnChance>0.1</spawnChance>
+				</li>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>8</texOverrideIndex>
+					<spawnChance>0.1</spawnChance>
+				</li>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>13</texOverrideIndex>
+					<spawnChance>0.1</spawnChance>
+				</li>
+			</detritusLeavings>
+		</race>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<killedLeavingsPlayerHostile>
+			<NanostructuringChip>1</NanostructuringChip>
+		</killedLeavingsPlayerHostile>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<wickTicks>0</wickTicks>
+				<explosiveRadius>30.9</explosiveRadius>
+				<explodeOnKilled>true</explodeOnKilled>
+				<explosiveDamageType>MechBandShockwave</explosiveDamageType>
+				<propagationSpeed>0.5</propagationSpeed>
+				<chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage>
+				<extraInspectStringKey>MechStunPulseWarning</extraInspectStringKey>
+			</li>
+			<li Class="CompProperties_Effecter">
+				<effecterDef>ApocrionAttached</effecterDef>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>VR_Construct_Apocriton</defName>
+		<label>apocriton</label>
+		<race>VR_Construct_Apocriton</race>
+		<combatPower>600</combatPower>
+		<maxPerGroup>3</maxPerGroup>
+		<isBoss>true</isBoss>
+		<allowInMechClusters>false</allowInMechClusters>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/ApocritonSteam</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Apocriton</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>VR_ConstructGun_HeavyBowGun</li>
+		</weaponTags>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+		<abilities>
+			<!-- <li>LongjumpMech</li> -->
+			<li>ResurrectionMech</li>
+		</abilities>
+		<skipResistant>true</skipResistant>
+	</PawnKindDef>
 
 	<!-- Diabolus -->
 	<ThingDef Name="VR_ConstructColossus" ParentName="VR_SuperHeavyConstruct">

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="VR_HeavyConstructRecipe" ParentName="VR_BaseConstructRecipe" Abstract="True">
+		<gestationCycles>4</gestationCycles>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_HeavyConstructRecipe">
+		<defName>VR_Construct_Centurion</defName>
+		<label>gestate tunneler</label>
+		<description>Gestate a tunneler mechanoid.</description>
+		<researchPrerequisite>StandardMechtech</researchPrerequisite>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>150</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VR_DynamoCoreRegular</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<VR_Construct_Centurion>1</VR_Construct_Centurion>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Centurion</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="VR_HeavyConstructRecipe">
+		<defName>VR_Construct_Centurion_Ranged</defName>
+		<label>gestate tunneler</label>
+		<description>Gestate a tunneler mechanoid.</description>
+		<researchPrerequisite>StandardMechtech</researchPrerequisite>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>150</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VR_DynamoCoreRegular</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<VR_Construct_Centurion_Ranged>1</VR_Construct_Centurion_Ranged>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Centurion_Ranged</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	
+</Defs>

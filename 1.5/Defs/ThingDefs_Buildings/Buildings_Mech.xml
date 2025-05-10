@@ -58,11 +58,6 @@
 			<li>VR_MakeConstruct_Lifter</li>
 			<li>VR_MakeConstruct_Constructoid</li>
 			<li>VR_MakeConstruct_Agrihand</li>
-			<li>VR_Construct_Sphere_Melee</li>
-			<li>VR_Construct_Sphere_Range</li>
-			<li>VR_Construct_Ballistae</li>
-			<li>VR_Construct_Scorcher</li>
-			<li>VR_Construct_Tesseron</li>
 			<li>ResurrectLightMech</li>
 		</recipes>
 		<statBases>
@@ -246,19 +241,13 @@
 		</building>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 		<recipes>
-			<li>Pikeman</li>
-			<li>Scorcher</li>
-			<li>Scyther</li>
-			<li>Tunneler</li>
-			<li>Lancer</li>
-			<li>Tesseron</li>
-			<li>Legionary</li>
-			<li>CentipedeGunner</li>
-			<li>CentipedeBurner</li>
-			<li>CentipedeBlaster</li>
-			<li>Diabolus</li>
-			<li>Centurion</li>
-			<li>Warqueen</li>
+			<li>VR_Construct_Sphere_Melee</li>
+			<li>VR_Construct_Sphere_Range</li>
+			<li>VR_Construct_Ballistae</li>
+			<li>VR_Construct_Scorcher</li>
+			<li>VR_Construct_Tesseron</li>
+			<li>VR_Construct_Centurion</li>
+			<li>VR_Construct_Centurion_Ranged</li>
 			<li>ResurrectMediumMech</li>
 			<li>ResurrectHeavyMech</li>
 			<li>ResurrectUltraheavyMech</li>
