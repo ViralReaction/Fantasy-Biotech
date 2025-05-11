@@ -51,6 +51,7 @@
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_PowerOn.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_Tick_Patch.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_GetGizmos.cs" />
+    <Compile Include="FantasyBiotech\Harmony\Compatibility\WorldTechLevel.cs" />
     <Compile Include="FantasyBiotech\Harmony\CompGenepackContainer_Patches.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_CanPawnChargeCurrently.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_DeSpawn.cs" />
@@ -99,6 +100,5 @@
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
