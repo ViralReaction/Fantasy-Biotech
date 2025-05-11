@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BossDef>
+		<defName>VR_Construct_Apocriton</defName>
+		<kindDef>VR_Construct_Apocriton</kindDef>
+		<appearAfterTicks>21600000</appearAfterTicks><!-- 6 years -->
+	</BossDef>
+
+	<BossgroupDef ParentName="BaseBossgroup">
+		<defName>VR_Construct_Apocriton</defName>
+		<boss>VR_Construct_Apocriton</boss>
+		<waves>
+			<li><!-- 0 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>6</VR_Construct_Militor>
+					<VR_Construct_Sphere_Melee>5</VR_Construct_Sphere_Melee>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 1 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>6</VR_Construct_Militor>
+					<VR_Construct_Sphere_Melee>4</VR_Construct_Sphere_Melee>
+					<VR_Construct_Tesseron>4</VR_Construct_Tesseron>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 2 - Repeat starts here -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>10</VR_Construct_Militor>
+					<VR_Construct_Sphere_Melee>6</VR_Construct_Sphere_Melee>
+					<VR_Construct_Colossus>1</VR_Construct_Colossus>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 3 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>10</VR_Construct_Militor>
+					<VR_Construct_Centurion>2</VR_Construct_Centurion>
+					<VR_Construct_Colossus>2</VR_Construct_Colossus>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 4 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>10</VR_Construct_Militor>
+					<VR_Construct_Centurion>1</VR_Construct_Centurion>
+					<VR_Construct_Centurion_Ranged>2</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Colossus>2</VR_Construct_Colossus>
+					<!-- <Mech_Centurion>1</Mech_Centurion> -->
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 5 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>10</VR_Construct_Militor>
+					<VR_Construct_Sphere_Melee>5</VR_Construct_Sphere_Melee>
+					<VR_Construct_Centurion_Ranged>2</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Colossus>3</VR_Construct_Colossus>
+					<!-- <Mech_Centurion>1</Mech_Centurion> -->
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 6 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>12</VR_Construct_Militor>
+					<VR_Construct_Sphere_Range>10</VR_Construct_Sphere_Range>
+					<VR_Construct_Centurion>5</VR_Construct_Centurion>
+					<VR_Construct_Centurion_Ranged>4</VR_Construct_Centurion_Ranged>
+					<!-- <Mech_Warqueen>1</Mech_Warqueen> -->
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 7 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>15</VR_Construct_Militor>
+					<VR_Construct_Sphere_Melee>10</VR_Construct_Sphere_Melee>
+					<VR_Construct_Centurion_Ranged>8</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Colossus>2</VR_Construct_Colossus>
+					<!-- <Mech_Warqueen>1</Mech_Warqueen> -->
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+		</waves>
+		<leaderDescription>The {LEADERKIND_label} is a psychically-present mechanoid commander who can resurrect recently-killed mechs and jump long distances. It carries a long-range toxic needle gun.</leaderDescription>
+		<rewardDef>NanostructuringChip</rewardDef>
+	</BossgroupDef>
+
+</Defs>

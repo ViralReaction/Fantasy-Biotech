@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BossDef>
+		<defName>VR_Construct_Colossus</defName>
+		<kindDef>VR_Construct_Colossus</kindDef>
+		<appearAfterTicks>7200000</appearAfterTicks><!-- 2 years -->
+	</BossDef>
+
+	<BossgroupDef ParentName="BaseBossgroup">
+		<defName>VR_Construct_Colossus</defName>
+		<boss>VR_Construct_Colossus</boss>
+		<waves>
+			<li><!-- 0 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>3</VR_Construct_Militor>
+				</escorts>
+			</li>
+			<li><!-- 1 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>4</VR_Construct_Militor>
+					<VR_Construct_Ballistae>2</VR_Construct_Ballistae>
+				</escorts>
+			</li>
+			<li><!-- 2 - Repeat starts here -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>7</VR_Construct_Militor>
+					<VR_Construct_Ballistae>2</VR_Construct_Ballistae>
+					<VR_Construct_Tesseron>1</VR_Construct_Tesseron>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 3 -->
+				<bossCount>2</bossCount>
+				<escorts>
+					<VR_Construct_Militor>10</VR_Construct_Militor>
+					<VR_Construct_Centurion_Ranged>3</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Scorcher>2</VR_Construct_Scorcher>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 4 -->
+				<bossCount>2</bossCount>
+				<escorts>
+					<VR_Construct_Militor>10</VR_Construct_Militor>
+					<VR_Construct_Sphere_Melee>5</VR_Construct_Sphere_Melee>
+					<VR_Construct_Centurion_Ranged>3</VR_Construct_Centurion_Ranged>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 5 -->
+				<bossCount>2</bossCount>
+				<escorts>
+					<VR_Construct_Militor>15</VR_Construct_Militor>
+					<VR_Construct_Ballistae>8</VR_Construct_Ballistae>
+					<VR_Construct_Centurion_Ranged>3</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Centurion>1</VR_Construct_Centurion>
+					<!-- <Mech_Centurion>1</Mech_Centurion> -->
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 6 -->
+				<bossCount>2</bossCount>
+				<escorts>
+					<VR_Construct_Militor>15</VR_Construct_Militor>
+					<VR_Construct_Sphere_Range>10</VR_Construct_Sphere_Range>
+					<VR_Construct_Centurion_Ranged>3</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Centurion>2</VR_Construct_Centurion>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 7 -->
+				<bossCount>3</bossCount>
+				<escorts>
+					<VR_Construct_Militor>15</VR_Construct_Militor>
+					<VR_Construct_Tesseron>10</VR_Construct_Tesseron>
+					<VR_Construct_Centurion_Ranged>6</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Centurion>3</VR_Construct_Centurion>
+					<!-- <Mech_Centurion>1</Mech_Centurion> -->
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+		</waves>
+		<leaderDescription>The {LEADERKIND_label} is equipped with a concrete-melting hellsphere cannon. It is slow to charge, but when it fires it will annihilate anything in the blast circle.</leaderDescription>
+		<rewardDef>SignalChip</rewardDef>
+	</BossgroupDef>
+
+</Defs>

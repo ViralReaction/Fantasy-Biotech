@@ -116,7 +116,7 @@
 				<floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
 			</li>
 			<li Class="CompProperties_Useable_CallBossgroup">
-				<bossgroupDef>Apocriton</bossgroupDef>
+				<bossgroupDef>VR_Construct_Apocriton</bossgroupDef>
 				<effecterDef>MechbandDishUsed</effecterDef>
 				<prepareEffecterDef>MechBandDishPrepared</prepareEffecterDef>
 				<unlockedLetterLabelKey>LetterLabelBossgroupCallerUnlocked</unlockedLetterLabelKey>
