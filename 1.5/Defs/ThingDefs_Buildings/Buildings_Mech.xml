@@ -477,7 +477,7 @@
 		</comps>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BuildingBase">
 		<defName>VR_ConstructBandNode</defName>
 		<label>construct band node</label>

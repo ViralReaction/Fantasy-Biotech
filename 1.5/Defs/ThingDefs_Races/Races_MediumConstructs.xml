@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!-- Scyther Equivalent -->
-	<ThingDef ParentName="VR_BaseConstructWalker">
-		<defName>VR_Construct_Sphere_Melee</defName>
-		<label>sphere</label>
-		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
+	<!-- Sphere Base -->
+	<ThingDef ParentName="VR_BaseConstructWalker" Name="VR_SphereBase" Abstract="True">
 		<tools>
 			<li>
 				<label>left fist</label>
@@ -60,6 +57,13 @@
 				</li>
 			</detritusLeavings>
 		</race>
+	</ThingDef>
+
+	<!-- Scyther Equivalent -->
+	<ThingDef ParentName="VR_SphereBase">
+		<defName>VR_Construct_Sphere_Melee</defName>
+		<label>sphere (melee)</label>
+		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
 		<statBases>
 			<BandwidthCost>2</BandwidthCost>
 		</statBases>
@@ -67,7 +71,7 @@
 
 	<PawnKindDef ParentName="VR_BaseConstructKind">
 		<defName>VR_Construct_Sphere_Melee</defName>
-		<label>scyther</label>
+		<label>sphere (melee)</label>
 		<race>VR_Construct_Sphere_Melee</race>
 		<combatPower>150</combatPower>
 		<lifeStages>
@@ -100,61 +104,10 @@
 	</PawnKindDef>
 
 	<!-- Lancer Equivalent -->
-	<ThingDef Name="VR_LancerConstructWalker" ParentName="VR_BaseConstructWalker">
+	<ThingDef Name="VR_LancerConstructWalker" ParentName="VR_SphereBase">
 		<defName>VR_Construct_Sphere_Range</defName>
-		<label>sphere</label>
+		<label>sphere (ranged)</label>
 		<description>Fast human-sized combat mechanoids built for medium and long-range combat. Their bodies are light, making them vulnerable targets at close range - especially in melee combat.</description>
-		<tools>
-			<li>
-				<label>left fist</label>
-				<labelNoLocation>fist</labelNoLocation>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>12.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-				<label>right fist</label>
-				<labelNoLocation>fist</labelNoLocation>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>12.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-				<label>head</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8.5</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.2</chanceFactor>
-			</li>
-		</tools>
-		<race>
-			<body>VR_ConstructBipedal</body>
-			<baseHealthScale>0.72</baseHealthScale>
-			<detritusLeavings>
-				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>11</texOverrideIndex>
-					<spawnChance>0.1</spawnChance>
-				</li>
-				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>12</texOverrideIndex>
-					<spawnChance>0.1</spawnChance>
-				</li>
-			</detritusLeavings>
-		</race>
 		<statBases>
 			<BandwidthCost>3</BandwidthCost>
 		</statBases>
@@ -162,7 +115,7 @@
 
 	<PawnKindDef ParentName="VR_BaseConstructKind">
 		<defName>VR_Construct_Sphere_Range</defName>
-		<label>lancer</label>
+		<label>sphere (ranged)</label>
 		<race>VR_Construct_Sphere_Range</race>
 		<combatPower>180</combatPower>
 		<lifeStages>

@@ -30,6 +30,14 @@
 			<li>
 				<filter>
 					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
 						<li>VR_DynamoCoreRegular</li>
 					</thingDefs>
 				</filter>
@@ -64,6 +72,14 @@
 					</thingDefs>
 				</filter>
 				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -170,6 +186,14 @@
 					</thingDefs>
 				</filter>
 				<count>110</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
 			</li>
 			<li>
 				<filter>

@@ -50,6 +50,7 @@
 		</recipeMaker>
 		<costList>
 			<Steel>50</Steel>
+			<Uranium>8</Uranium>
 		</costList>
 	</ThingDef>
 
