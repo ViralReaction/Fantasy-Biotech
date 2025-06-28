@@ -22,6 +22,7 @@ namespace FantasyBiotech
         {
             List<CodeInstruction> code = instructions.ToList();
             MethodInfo targetMethod = AccessTools.Method(typeof(Gen), nameof(Gen.IsHashIntervalTick), new[] { typeof(Thing), typeof(int) });
+            bool foundInjection = false;
             for (int i = 0; i < code.Count - 3; i++)
             {
                 if (
@@ -34,8 +35,13 @@ namespace FantasyBiotech
                     Label skipLabel = (Label)code[i + 3].operand;
                     code.RemoveRange(i, 4);
                     code.Insert(i, new CodeInstruction(OpCodes.Br_S, skipLabel));
+                    foundInjection = true;
                     break;
                 }
+            }
+            if (!foundInjection)
+            {
+                Log.Error($"Fantasy Biotech :: Failed to find injection point in patch: {GenericUtility.GetClassName(MethodBase.GetCurrentMethod()?.DeclaringType)}");
             }
             foreach (CodeInstruction c in code) yield return c;
         }

@@ -191,17 +191,15 @@ namespace FantasyBiotech
             StringBuilder stringBuilder = new StringBuilder();
             if (this.currentlyChargingMech != null)
             {
-                stringBuilder.Append("MB_SteamCharger_CurrentlyCharging".Translate(this.currentlyChargingMech.Label));
+                stringBuilder.Append("FantasyBiotech_SteamCharger_CurrentlyCharging".Translate(this.currentlyChargingMech.Label));
             }
             string text = this.InspectStringPartsFromComps();
-            if (!text.NullOrEmpty())
+            if (text.NullOrEmpty()) return stringBuilder.ToString();
+            if (stringBuilder.Length > 0)
             {
-                if (stringBuilder.Length > 0)
-                {
-                    stringBuilder.AppendLine();
-                }
-                stringBuilder.Append(text);
+                stringBuilder.AppendLine();
             }
+            stringBuilder.Append(text);
             return stringBuilder.ToString();
         }
 

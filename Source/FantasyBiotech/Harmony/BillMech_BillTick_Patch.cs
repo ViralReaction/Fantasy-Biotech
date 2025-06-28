@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Linq;
 using System.Reflection;
+using Verse;
 
 namespace FantasyBiotech
 {
@@ -16,18 +17,21 @@ namespace FantasyBiotech
             MethodInfo getGestator = AccessTools.PropertyGetter(typeof(Bill_Mech), "Gestator");
             MethodInfo originalCall = AccessTools.Method(typeof(Building_WorkTableAutonomous), "Notify_FormingCompleted");
             MethodInfo newMethod = AccessTools.Method(typeof(BillMech_BillTick_Patch), nameof(CustomNotify));
+            bool foundInjection = false;
 
-            for (int i = 0; i < code.Count - 2; i++)
+            for (int i = 2; i < code.Count; i++)
             {
-                if (code[i].opcode == OpCodes.Ldarg_0 &&
-                    code[i + 1].Calls(getGestator) &&
-                    code[i + 2].Calls(originalCall))
+                if (code[i - 2].opcode == OpCodes.Ldarg_0 && code[i - 1].Calls(getGestator) && code[i].Calls(originalCall))
                 {
-                    code[i + 2] = new CodeInstruction(OpCodes.Call, newMethod);
+                    code[i] = new CodeInstruction(OpCodes.Call, newMethod);
+                    foundInjection = true;
                     break;
                 }
             }
-
+            if (!foundInjection)
+            {
+                Log.Error($"Fantasy Biotech :: Failed to find injection point in patch: {GenericUtility.GetClassName(MethodBase.GetCurrentMethod()?.DeclaringType)}");
+            }
             return code;
         }
 

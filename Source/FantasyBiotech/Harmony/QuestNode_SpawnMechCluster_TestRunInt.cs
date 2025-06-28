@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using Verse;
 
 namespace FantasyBiotech
 {
@@ -16,6 +17,7 @@ namespace FantasyBiotech
             List<CodeInstruction> code = instructions.ToList();
             MethodInfo target = AccessTools.PropertyGetter(typeof(Faction), nameof(Faction.OfMechanoids));
             MethodInfo newMethod = AccessTools.Method(typeof(MechUtility), nameof(MechUtility.ConstructFaction));
+            bool foundInjection = false;
 
             for (int i = 0; i < code.Count; i++)
             {
@@ -27,9 +29,13 @@ namespace FantasyBiotech
                     };
                     code[i].labels = [];
                     code[i] = replacement;
+                    foundInjection = true;
                 }
             }
-
+            if (!foundInjection)
+            {
+                Log.Error($"Fantasy Biotech :: Failed to find injection point in patch: {GenericUtility.GetClassName(MethodBase.GetCurrentMethod()?.DeclaringType)}");
+            }
             return code;
         }
     }

@@ -77,6 +77,7 @@
     <Compile Include="FantasyBiotech\ThingClasses\Building_ConstructGestator.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_DynamoCore.cs" />
     <Compile Include="FantasyBiotech\Utility\DictionaryUtility.cs" />
+    <Compile Include="FantasyBiotech\Utility\GenericUtility.cs" />
     <Compile Include="FantasyBiotech\Utility\RadialUtility.cs" />
     <Compile Include="FantasyBiotech\Utility\MechUtility.cs" />
     <Compile Include="FantasyBiotech\Verbs\Verb_ConstructFlame.cs" />

@@ -15,7 +15,7 @@ namespace FantasyBiotech
             return false;
         }
 
-        public static IEnumerable<Gizmo> SteamChargerGizmo(Building_MechCharger __instance)
+        private static IEnumerable<Gizmo> SteamChargerGizmo(Building_MechCharger __instance)
         {
             foreach (Gizmo gizmo in __instance.GetGizmos())
             {

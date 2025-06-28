@@ -6,5 +6,6 @@
 	
 	<FantasyBiotech_SteamNetExcess>Excess: {0} SPU ({1} SPUd Stored)</FantasyBiotech_SteamNetExcess>
 	<FantasyBiotech_PipeSystem_NotConnected>Not enough steam in network.</FantasyBiotech_PipeSystem_NotConnected>
+	<FantasyBiotech_SteamCharger_CurrentlyCharging>Currently charging {0}</FantasyBiotech_SteamCharger_CurrentlyCharging>
 
 </LanguageData>

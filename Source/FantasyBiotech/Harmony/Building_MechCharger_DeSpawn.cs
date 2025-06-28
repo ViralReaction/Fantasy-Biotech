@@ -5,6 +5,7 @@ using System.Reflection.Emit;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
+using Verse;
 
 namespace FantasyBiotech
 {
@@ -17,6 +18,7 @@ namespace FantasyBiotech
 
             MethodInfo getWasteProducer = AccessTools.PropertyGetter(typeof(Building_MechCharger), nameof(Building_MechCharger.WasteProducer));
             MethodInfo newMethod = AccessTools.Method(typeof(Building_MechCharger_DeSpawn), nameof(WasteProducerCheck));
+            bool foundInjection = false;
 
             for (int i = 0; i < code.Count - 4; i++)
             {
@@ -24,10 +26,14 @@ namespace FantasyBiotech
                 {
                     code.RemoveRange(i + 1, 5);
                     code.Insert(i + 1, new CodeInstruction(OpCodes.Call, newMethod));
+                    foundInjection = true;
                     break;
                 }
             }
-
+            if (!foundInjection)
+            {
+                Log.Error($"Fantasy Biotech :: Failed to find injection point in patch: {GenericUtility.GetClassName(MethodBase.GetCurrentMethod()?.DeclaringType)}");
+            }
             return code;
         }
 
