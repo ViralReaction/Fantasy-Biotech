@@ -9,7 +9,7 @@ namespace FantasyBiotech
         {
             if (map == null) yield break;
             float checkRadius = radius * radius;
-            foreach (var pawn in map.mapPawns.AllPawnsSpawned)
+            foreach (Pawn pawn in map.mapPawns.AllPawnsSpawned)
             {
                 if (pawn.Position.DistanceToSquared(center) <= checkRadius) yield return pawn;
             }

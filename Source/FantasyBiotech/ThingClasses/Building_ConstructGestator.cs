@@ -14,48 +14,37 @@ namespace FantasyBiotech
         private new bool PoweredOn => Power.ResourceOn;
         public override void Tick()
         {
-            innerContainer.ThingOwnerTick();
-           
-
             if (activeBill == null || !PoweredOn)
             {
                 Power.UsedLastTick = false;
-                if (workingSound != null)
-                {
-                    workingSound.End();
-                    workingSound = null;
-                }
+                if (workingSound == null) return;
+                workingSound.End();
+                workingSound = null;
                 return;
             }
-            if (BoundPawnStateAllowsForming)
+            if (!BoundPawnStateAllowsForming) return;
+            activeBill.BillTick();
+            ThingDef thingDef = null;
+            switch (ActiveMechBill.State)
             {
-                activeBill.BillTick();
-                ThingDef thingDef = null;
-                switch (ActiveMechBill.State)
-                {
-                    case FormingState.Forming:
-                        Power.Notify_UsedThisTick();
-                        thingDef = def.building.gestatorFormingMote.GetForRotation(Rotation);
-                        break;
-
-                    case FormingState.Preparing when ActiveMechBill.GestationCyclesCompleted > 0:
-                        thingDef = def.building.gestatorCycleCompleteMote.GetForRotation(Rotation);
-                        break;
-
-                    case FormingState.Formed:
-                        thingDef = def.building.gestatorFormedMote.GetForRotation(Rotation);
-                        break;
-                }
-
-                if (thingDef != null)
-                {
-                    if (workingMote == null || workingMote.Destroyed || workingMote.def != thingDef)
-                    {
-                        workingMote = MoteMaker.MakeAttachedOverlay(this, thingDef, Vector3.zero);
-                    }
-                    workingMote.Maintain();
-                }
+                case FormingState.Forming:
+                    Power.Notify_UsedThisTick();
+                    thingDef = def.building.gestatorFormingMote.GetForRotation(Rotation);
+                    break;
+                case FormingState.Preparing when ActiveMechBill.GestationCyclesCompleted > 0:
+                    thingDef = def.building.gestatorCycleCompleteMote.GetForRotation(Rotation);
+                    break;
+                case FormingState.Formed:
+                    thingDef = def.building.gestatorFormedMote.GetForRotation(Rotation);
+                    break;
             }
+
+            if (thingDef == null) return;
+            if (workingMote == null || workingMote.Destroyed || workingMote.def != thingDef)
+            {
+                workingMote = MoteMaker.MakeAttachedOverlay(this, thingDef, Vector3.zero);
+            }
+            workingMote.Maintain();
         }
         public override void Notify_FormingCompleted()
         {
@@ -86,7 +75,7 @@ namespace FantasyBiotech
             }
             if (!def.building.neverBuildable)
             {
-                var command = BuildCopyCommandUtility.BuildCopyCommand(def, Stuff, StyleSourcePrecept as Precept_Building, StyleDef, styleOverridden: true, glowerColorOverride);
+                Command command = BuildCopyCommandUtility.BuildCopyCommand(def, Stuff, StyleSourcePrecept as Precept_Building, StyleDef, styleOverridden: true, glowerColorOverride);
                 if (command != null)
                 {
                     yield return command;
@@ -94,12 +83,12 @@ namespace FantasyBiotech
             }
             if (Faction == Faction.OfPlayer || def.building.alwaysShowRelatedBuildCommands)
             {
-                foreach (var item in BuildRelatedCommandUtility.RelatedBuildCommands(def))
+                foreach (Command item in BuildRelatedCommandUtility.RelatedBuildCommands(def))
                 {
                     yield return item;
                 }
             }
-            var billAutonomous = ActiveBill;
+            Bill_Autonomous billAutonomous = ActiveBill;
             if (billAutonomous is { State: FormingState.Forming })
             {
                 yield return new Command_Action
@@ -122,7 +111,7 @@ namespace FantasyBiotech
 
             if (!DebugSettings.ShowDevGizmos) yield break;
             if (ActiveMechBill == null || ActiveMechBill.State == 0 || ActiveMechBill.State == FormingState.Formed) yield break;
-            var commandAction2 = new Command_Action
+            Command_Action commandAction2 = new Command_Action
             {
                 action = ActiveMechBill.ForceCompleteAllCycles,
                 defaultLabel = "DEV: Complete all cycles"

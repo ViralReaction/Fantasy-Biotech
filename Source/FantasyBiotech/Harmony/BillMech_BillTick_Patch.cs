@@ -3,6 +3,7 @@ using RimWorld;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Linq;
+using System.Reflection;
 
 namespace FantasyBiotech
 {
@@ -11,10 +12,10 @@ namespace FantasyBiotech
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            var code = instructions.ToList();
-            var getGestator = AccessTools.PropertyGetter(typeof(Bill_Mech), "Gestator");
-            var originalCall = AccessTools.Method(typeof(Building_WorkTableAutonomous), "Notify_FormingCompleted");
-            var newMethod = AccessTools.Method(typeof(BillMech_BillTick_Patch), nameof(CustomNotify));
+            List<CodeInstruction> code = instructions.ToList();
+            MethodInfo getGestator = AccessTools.PropertyGetter(typeof(Bill_Mech), "Gestator");
+            MethodInfo originalCall = AccessTools.Method(typeof(Building_WorkTableAutonomous), "Notify_FormingCompleted");
+            MethodInfo newMethod = AccessTools.Method(typeof(BillMech_BillTick_Patch), nameof(CustomNotify));
 
             for (int i = 0; i < code.Count - 2; i++)
             {

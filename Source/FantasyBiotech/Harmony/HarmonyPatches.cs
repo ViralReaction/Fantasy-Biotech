@@ -10,7 +10,7 @@ namespace FantasyBiotech
     {
         static HarmonyPatches()
         {
-            var harmony = new Harmony("VR.Fantasy.Biotech");
+            Harmony harmony = new Harmony("VR.Fantasy.Biotech");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
     }

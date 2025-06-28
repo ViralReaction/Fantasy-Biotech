@@ -12,7 +12,7 @@ namespace FantasyBiotech
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            var code = instructions.ToList();
+            List<CodeInstruction> code = instructions.ToList();
             for (int i = 0; i < code.Count; i++)
             {
                 if (code[i].opcode == OpCodes.Ldstr && code[i].operand is string str)
@@ -24,7 +24,7 @@ namespace FantasyBiotech
                 }
 
             }
-            foreach (var c in code) yield return c;
+            foreach (CodeInstruction c in code) yield return c;
         }
     }
 }

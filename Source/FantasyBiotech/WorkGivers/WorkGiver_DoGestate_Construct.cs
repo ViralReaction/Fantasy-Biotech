@@ -142,7 +142,7 @@ namespace FantasyBiotech
             {
                 return null;
             }
-            if (thing.def.hasInteractionCell && !pawn.CanReserveSittableOrSpot_NewTemp(thing.InteractionCell, thing, forced))
+            if (thing.def.hasInteractionCell && !pawn.CanReserveSittableOrSpot(thing.InteractionCell, thing, forced))
             {
                 return null;
             }
@@ -358,27 +358,21 @@ namespace FantasyBiotech
                 {
                     return true;
                 }
-                if (def.billGiversAllAnimals && pawn.IsNonMutantAnimal)
+                if (def.billGiversAllAnimals && pawn.IsAnimal)
                 {
                     return true;
                 }
             }
-            if (corpse != null && pawn2 != null)
+            if (corpse == null || pawn2 == null) return false;
+            if (def.billGiversAllHumanlikesCorpses && pawn2.RaceProps.Humanlike)
             {
-                if (def.billGiversAllHumanlikesCorpses && pawn2.RaceProps.Humanlike)
-                {
-                    return true;
-                }
-                if (def.billGiversAllMechanoidsCorpses && pawn2.RaceProps.IsMechanoid)
-                {
-                    return true;
-                }
-                if (def.billGiversAllAnimalsCorpses && pawn2.IsNonMutantAnimal)
-                {
-                    return true;
-                }
+                return true;
             }
-            return false;
+            if (def.billGiversAllMechanoidsCorpses && pawn2.RaceProps.IsMechanoid)
+            {
+                return true;
+            }
+            return def.billGiversAllAnimalsCorpses && pawn2.IsAnimal;
         }
 
         private static bool IsUsableIngredient(Thing t, Bill bill)

@@ -17,11 +17,11 @@ namespace FantasyBiotech
             if (lord == null && num > 0)
             {
                 Map map = BaseGen.globalSettings.map;
-                lord = LordMaker.MakeNewLord(lordJob: (!Rand.Bool || !rp.rect.Cells.Where((IntVec3 x) => !x.Impassable(map)).TryRandomElement(out var result)) ? ((LordJob)new LordJob_AssaultColony(MechUtility.ConstructFaction(), canKidnap: false, canTimeoutOrFlee: false, sappers: false, useAvoidGridSmart: false, canSteal: false)) : ((LordJob)new LordJob_DefendPoint(result)), faction: MechUtility.ConstructFaction(), map: map);
+                lord = LordMaker.MakeNewLord(lordJob: (!Rand.Bool || !rp.rect.Cells.Where((IntVec3 x) => !x.Impassable(map)).TryRandomElement(out IntVec3 result)) ? ((LordJob)new LordJob_AssaultColony(MechUtility.ConstructFaction(), canKidnap: false, canTimeoutOrFlee: false, sappers: false, useAvoidGridSmart: false, canSteal: false)) : ((LordJob)new LordJob_DefendPoint(result)), faction: MechUtility.ConstructFaction(), map: map);
             }
             for (int i = 0; i < num; i++)
             {
-                var pawnKindDef = rp.singlePawnKindDef;
+                PawnKindDef pawnKindDef = rp.singlePawnKindDef;
                 pawnKindDef ??= DefDatabase<PawnKindDef>.AllDefsListForReading.Where(MechUtility.ConstructSuitableForCluster).RandomElementByWeight((PawnKindDef kind) => 1f / kind.combatPower);
                 ResolveParams resolveParams = rp;
                 resolveParams.singlePawnKindDef = pawnKindDef;

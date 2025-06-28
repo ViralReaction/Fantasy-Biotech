@@ -18,7 +18,7 @@
 			</li>
 		</tools>
 		<modExtensions>
-			<li Class="VFECore.ThingDefExtension">
+			<li Class="VEF.Things.ThingDefExtension">
 				<weaponDraftedDrawOffsets>
 					<north>
 						<drawOffset>(-0.15,0.0,0.10)</drawOffset>
@@ -191,7 +191,7 @@
 			<speed>60</speed>
 		</projectile>
 		<modExtensions>
-			<li Class="VFEMech.TeslaChainingProps">
+			<li Class="VEF.Weapons.TeslaChainingProps">
 				<maxBounceCount>3</maxBounceCount>
 				<damageDef>Beam</damageDef>
 				<targetFriendly>false</targetFriendly>

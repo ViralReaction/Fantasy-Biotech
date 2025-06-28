@@ -2,6 +2,7 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 
 namespace FantasyBiotech
@@ -11,9 +12,9 @@ namespace FantasyBiotech
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            var code = instructions.ToList();
-            var target = AccessTools.PropertyGetter(typeof(Faction), nameof(Faction.OfMechanoids));
-            var newMethod = AccessTools.Method(typeof(MechUtility), nameof(MechUtility.ConstructFaction));
+            List<CodeInstruction> code = instructions.ToList();
+            MethodInfo target = AccessTools.PropertyGetter(typeof(Faction), nameof(Faction.OfMechanoids));
+            MethodInfo newMethod = AccessTools.Method(typeof(MechUtility), nameof(MechUtility.ConstructFaction));
 
             for (int i = 0; i < code.Count; i++)
             {

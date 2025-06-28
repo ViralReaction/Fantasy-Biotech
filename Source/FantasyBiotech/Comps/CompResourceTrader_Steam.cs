@@ -9,7 +9,7 @@ namespace FantasyBiotech
     {
         public override string CompInspectStringExtra()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             if (this.Consumption >= 0f)
             {
                 sb.AppendFormat("{0} {1:##0} {2}", "PipeSystem_ResourceNeeded".Translate(this.Resource.name), (this.Consumption), this.Resource.unit);
@@ -28,7 +28,7 @@ namespace FantasyBiotech
                 sb.AppendInNewLine("FantasyBiotech_PipeSystem_NotConnected".Translate());
                 return sb.ToString().Trim();
             }
-            var net = PipeNet;
+            PipeNet net = PipeNet;
             sb.AppendInNewLine("FantasyBiotech_SteamNetExcess".Translate((net.Production - net.Consumption).ToString("F0"), (net.Stored / GenDate.TicksPerDay).ToString("F1")));
             if (DebugSettings.ShowDevGizmos)
                 sb.AppendInNewLine(this.DebugString);

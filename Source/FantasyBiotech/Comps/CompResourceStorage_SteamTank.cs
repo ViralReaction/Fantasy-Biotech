@@ -154,7 +154,7 @@ namespace FantasyBiotech
             {
                 sb.AppendInNewLine("PipeSystem_MarkedToTransferContent".Translate());
             }
-            var net = PipeNet;
+            PipeNet net = PipeNet;
             sb.AppendInNewLine("FantasyBiotech_SteamNetExcess".Translate((net.Production - net.Consumption).ToString("F0"), (net.Stored / GenDate.TicksPerDay).ToString("F1")));
             if (DebugSettings.godMode)
             {

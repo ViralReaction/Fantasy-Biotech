@@ -3,6 +3,7 @@ using RimWorld;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Linq;
+using System.Reflection;
 using UnityEngine;
 
 namespace FantasyBiotech
@@ -12,10 +13,10 @@ namespace FantasyBiotech
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            var code = instructions.ToList();
+            List<CodeInstruction> code = instructions.ToList();
 
-            var getWasteProducer = AccessTools.PropertyGetter(typeof(Building_MechCharger), nameof(Building_MechCharger.WasteProducer));
-            var newMethod = AccessTools.Method(typeof(Building_MechCharger_DeSpawn), nameof(WasteProducerCheck));
+            MethodInfo getWasteProducer = AccessTools.PropertyGetter(typeof(Building_MechCharger), nameof(Building_MechCharger.WasteProducer));
+            MethodInfo newMethod = AccessTools.Method(typeof(Building_MechCharger_DeSpawn), nameof(WasteProducerCheck));
 
             for (int i = 0; i < code.Count - 4; i++)
             {

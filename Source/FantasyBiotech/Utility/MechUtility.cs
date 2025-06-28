@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
+using RimWorld;
 using Verse.AI;
 using Verse;
 
@@ -22,18 +23,18 @@ namespace FantasyBiotech
                 return null;
             }
 
-            var danger = forced ? Danger.Deadly : Danger.Some;
+            Danger danger = forced ? Danger.Deadly : Danger.Some;
             Building_MechCharger closestCharger = null;
-            var closestDist = float.MaxValue;
+            float closestDist = float.MaxValue;
 
-            var potentialChargers = mech.Map.GetComponent<RechargerMapComponent>()?.allChargers;
+            List<Building_MechCharger_Steam> potentialChargers = mech.Map.GetComponent<RechargerMapComponent>()?.allChargers;
             if (potentialChargers == null || potentialChargers.Count == 0) return null;
 
-            var reservationManager = mech.Map.reservationManager;
+            ReservationManager reservationManager = mech.Map.reservationManager;
 
-            for (var i = 0; i < potentialChargers.Count; i++)
+            for (int i = 0; i < potentialChargers.Count; i++)
             {
-                var charger = potentialChargers[i];
+                Building_MechCharger_Steam charger = potentialChargers[i];
                 if (!carrier.CanReach(charger, PathEndMode.InteractionCell, danger)) continue;
                 bool isReserved = reservationManager.ReservedBy(charger, carrier);
                 if ((!forced && isReserved) || (forced && KeyBindingDefOf.QueueOrder.IsDownEvent && isReserved)) continue;
@@ -62,7 +63,7 @@ namespace FantasyBiotech
 
             // ReSharper disable once TooWideLocalVariableScope
             Faction findFaction;
-            for (var i = 0; i < Find.FactionManager.AllFactionsListForReading.Count; i++)
+            for (int i = 0; i < Find.FactionManager.AllFactionsListForReading.Count; i++)
             {
                 findFaction = Find.FactionManager.AllFactionsListForReading[i];
                 if (findFaction.def != FantasyBiotechDefOf.VR_Construct) continue;

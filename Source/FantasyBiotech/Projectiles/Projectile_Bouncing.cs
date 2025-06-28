@@ -24,7 +24,7 @@ namespace FantasyBiotech
                 Log.Warning("Chain Lightning: Launcher is not a Pawn or map is null.");
                 return;
             }
-            var strikePos = hitThing?.Position ?? Position;
+            IntVec3 strikePos = hitThing?.Position ?? Position;
             if (hitThing != null)
             {
                 _hitThings.Add(hitThing);
@@ -52,7 +52,7 @@ namespace FantasyBiotech
 #nullable enable
         private Pawn? FindNextTarget(IntVec3 originCell, Pawn caster)
         {
-            foreach (var pawn in RadialUtility.GetPawnsInRadius(originCell, caster.Map, SearchRadius))
+            foreach (Pawn? pawn in RadialUtility.GetPawnsInRadius(originCell, caster.Map, SearchRadius))
             {
                 if (IsValidTarget(pawn))
                 {
@@ -72,8 +72,8 @@ namespace FantasyBiotech
 
         public override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            var vec1 = (_previousProjectile ?? launcher).TrueCenter();
-            var vec2 = this.DrawPos;
+            Vector3 vec1 = (_previousProjectile ?? launcher).TrueCenter();
+            Vector3 vec2 = this.DrawPos;
             if (vec2.magnitude > vec1.magnitude)
             {
                 (vec2, vec1) = (vec1, vec2);
@@ -88,7 +88,7 @@ namespace FantasyBiotech
         {
             IntVec3 launchPos = hitThing.Position;
 
-            var newProj = (Projectile_Bouncing)GenSpawn.Spawn(def, launchPos, hitThing.Map);
+            Projectile_Bouncing newProj = (Projectile_Bouncing)GenSpawn.Spawn(def, launchPos, hitThing.Map);
             newProj._numBounces = this._numBounces + 1;
             newProj._hitThings = new List<Thing>(_hitThings);
             newProj.Launch(launcher, newTarget, newTarget, ProjectileHitFlags.IntendedTarget);

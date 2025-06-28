@@ -15,7 +15,7 @@ namespace FantasyBiotech
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            var compResourceTrader = this.GetComps<CompResourceTrader>();
+            IEnumerable<CompResourceTrader> compResourceTrader = this.GetComps<CompResourceTrader>();
             this._traders = new List<CompResourceTrader>(compResourceTrader);
             this._tradersCount = this._traders.Count;
             this._compRefuelable = this.GetComp<CompRefuelable>();

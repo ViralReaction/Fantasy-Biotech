@@ -28,7 +28,7 @@ namespace FantasyBiotech
             base.SpawnSetup(map, respawningAfterLoad);
             chargerMapComp = this.Map.GetComponent<RechargerMapComponent>();
             chargerMapComp.RegisterCharger(this);
-            var comps = this.GetComps<CompResourceTrader>();
+            IEnumerable<CompResourceTrader> comps = this.GetComps<CompResourceTrader>();
         }
 
         public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
@@ -152,7 +152,7 @@ namespace FantasyBiotech
             }
             if (currentlyChargingMech != null)
             {
-                var commandAction5 = new Command_Action
+                Command_Action commandAction5 = new Command_Action
                 {
                     action = delegate
                     {
@@ -205,48 +205,48 @@ namespace FantasyBiotech
             return stringBuilder.ToString();
         }
 
-        public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
-        {
-            List<PawnKindDef> source = [];
-            foreach (var pk in DefDatabase<PawnKindDef>.AllDefs)
-            {
-                if (IsCompatibleWithCharger(pk))
-                {
-                    source.Add(pk);
-                }
-            }
-            StringBuilder sb = new StringBuilder();
-            foreach (var pk in source)
-            {
-                sb.AppendLine(" - " + pk.LabelCap.Resolve());
-            }
-            var text = sb.ToString();
-            List<string> weightClassNames = [];
-            for (var i = 0; i < def.building.requiredMechWeightClasses.Count; i++)
-            {
-                var w = def.building.requiredMechWeightClasses[i];
-                weightClassNames.Add(w.ToStringHuman());
-            }
-
-            string weightClassList = weightClassNames.ToCommaList().CapitalizeFirst();
-            
-            List<Dialog_InfoCard.Hyperlink> hyperlinks = [];
-            for (var i = 0; i < source.Count; i++)
-            {
-                var pk = source[i];
-                hyperlinks.Add(new Dialog_InfoCard.Hyperlink(pk.race));
-            }
-
-            yield return new StatDrawEntry(
-                StatCategoryDefOf.Basics,
-                "StatsReport_RechargerWeightClass".Translate(),
-                weightClassList,
-                "StatsReport_RechargerWeightClass_Desc".Translate() + ": " + "\n\n" + text,
-                99999,
-                null,
-                hyperlinks
-            );
-        }
+        // public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
+        // {
+        //     List<PawnKindDef> source = [];
+        //     foreach (PawnKindDef pk in DefDatabase<PawnKindDef>.AllDefs)
+        //     {
+        //         if (IsCompatibleWithCharger(pk))
+        //         {
+        //             source.Add(pk);
+        //         }
+        //     }
+        //     StringBuilder sb = new StringBuilder();
+        //     foreach (PawnKindDef pk in source)
+        //     {
+        //         sb.AppendLine(" - " + pk.LabelCap.Resolve());
+        //     }
+        //     string text = sb.ToString();
+        //     List<string> weightClassNames = [];
+        //     for (int i = 0; i < def.building.requiredMechWeightClasses.Count; i++)
+        //     {
+        //         MechWeightClassDef w = def.building.requiredMechWeightClasses[i];
+        //         weightClassNames.Add(w.ToString());
+        //     }
+        //
+        //     string weightClassList = weightClassNames.ToCommaList().CapitalizeFirst();
+        //
+        //     List<Dialog_InfoCard.Hyperlink> hyperlinks = [];
+        //     for (int i = 0; i < source.Count; i++)
+        //     {
+        //         PawnKindDef pk = source[i];
+        //         hyperlinks.Add(new Dialog_InfoCard.Hyperlink(pk.race));
+        //     }
+        //
+        //     yield return new StatDrawEntry(
+        //         StatCategoryDefOf.Basics,
+        //         "StatsReport_RechargerWeightClass".Translate(),
+        //         weightClassList,
+        //         "StatsReport_RechargerWeightClass_Desc".Translate() + ": " + "\n\n" + text,
+        //         99999,
+        //         null,
+        //         hyperlinks
+        //     );
+        // }
 
         public bool CanPawnChargeCurrentlySteam(Pawn pawn)
         {

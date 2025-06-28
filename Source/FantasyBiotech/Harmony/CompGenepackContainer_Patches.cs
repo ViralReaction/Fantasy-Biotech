@@ -18,7 +18,7 @@ namespace FantasyBiotech
         public static bool Prefix(CompGenepackContainer __instance, ref bool __result)
         {
             Thing thing = __instance.parent;
-            if (!DictionaryUtility.cachedRefuelComps.TryGetValue(thing, out var comp))
+            if (!DictionaryUtility.cachedRefuelComps.TryGetValue(thing, out CompRefuelable comp))
             {
                 comp = thing.TryGetComp<CompRefuelable>();
                 DictionaryUtility.cachedRefuelComps[thing] = comp;

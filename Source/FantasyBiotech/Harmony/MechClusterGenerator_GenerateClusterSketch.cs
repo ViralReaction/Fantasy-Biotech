@@ -12,7 +12,7 @@ namespace FantasyBiotech
     {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            var code = instructions.ToList();
+            List<CodeInstruction> code = instructions.ToList();
             MethodInfo target = AccessTools.Method(typeof(MechClusterGenerator), "MechKindSuitableForCluster");
             MethodInfo replace = AccessTools.Method(typeof(MechUtility), "ConstructSuitableForCluster");
 

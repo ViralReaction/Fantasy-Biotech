@@ -33,13 +33,13 @@ namespace FantasyBiotech
                         return "SubcoreScannerNotInit".Translate();
                     case SubcoreScannerState.WaitingForIngredients:
                         {
-                            var stringBuilder = new StringBuilder("SubcoreScannerRequiresIngredients".Translate() + ": ");
-                            var flag = false;
-                            for (var i = 0; i < def.building.subcoreScannerFixedIngredients.Count; i++)
+                            StringBuilder stringBuilder = new StringBuilder("SubcoreScannerRequiresIngredients".Translate() + ": ");
+                            bool flag = false;
+                            for (int i = 0; i < def.building.subcoreScannerFixedIngredients.Count; i++)
                             {
-                                var ingredientCount = def.building.subcoreScannerFixedIngredients[i];
+                                IngredientCount ingredientCount = def.building.subcoreScannerFixedIngredients[i];
                                 int num = innerContainer.TotalStackCountOfDef(ingredientCount.FixedIngredient);
-                                var num2 = (int)ingredientCount.GetBaseCount();
+                                int num2 = (int)ingredientCount.GetBaseCount();
                                 if (num >= num2) continue;
                                 if (flag)
                                 {
@@ -93,7 +93,7 @@ namespace FantasyBiotech
 
         private void EjectBuildingContents()
         {
-            var occupant = Occupant;
+            Pawn occupant = Occupant;
             if (occupant == null)
             {
                 innerContainer.TryDropAll(InteractionCell, Map, ThingPlaceMode.Near);
@@ -113,7 +113,7 @@ namespace FantasyBiotech
                 {
                     if (innerContainer[i] is Pawn || innerContainer[i] is Corpse)
                     {
-                        innerContainer.TryDrop(innerContainer[i], InteractionCell, Map, ThingPlaceMode.Near, 1, out var _);
+                        innerContainer.TryDrop(innerContainer[i], InteractionCell, Map, ThingPlaceMode.Near, 1, out Thing _);
                     }
                 }
                 innerContainer.ClearAndDestroyContents();
@@ -124,8 +124,8 @@ namespace FantasyBiotech
 
         private void DestroyOccupant()
         {
-            var occupant = Occupant;
-            var dinfo = new DamageInfo(DamageDefOf.ExecutionCut, 9999f, 999f, -1f, null, occupant.health.hediffSet.GetBrain());
+            Pawn occupant = Occupant;
+            DamageInfo dinfo = new DamageInfo(DamageDefOf.ExecutionCut, 9999f, 999f, -1f, null, occupant.health.hediffSet.GetBrain());
             dinfo.SetIgnoreInstantKillProtection(ignore: true);
             dinfo.SetAllowDamagePropagation(val: false);
             occupant.forceNoDeathNotification = true;
@@ -140,7 +140,7 @@ namespace FantasyBiotech
         {
             if (comps != null)
             {
-                var i = 0;
+                int i = 0;
                 for (int count = comps.Count; i < count; i++)
                 {
                     comps[i].CompTick();
@@ -187,7 +187,7 @@ namespace FantasyBiotech
                 }
             };
             }
-            var state = State;
+            SubcoreScannerState state = State;
             if (state == SubcoreScannerState.Occupied)
             {
                 fabricationTicksLeft--;
@@ -216,7 +216,7 @@ namespace FantasyBiotech
                 }
                 progressBarEffecter ??= EffecterDefOf.ProgressBar.Spawn();
                 progressBarEffecter.EffectTick(this, TargetInfo.Invalid);
-                var mote = ((SubEffecter_ProgressBar)progressBarEffecter.children[0]).mote;
+                MoteProgressBar mote = ((SubEffecter_ProgressBar)progressBarEffecter.children[0]).mote;
                 mote.progress = 1f - fabricationTicksLeft / (float)def.building.subcoreScannerTicks;
                 mote.offsetZ = -0.8f;
                 if (def.building.subcoreScannerWorking != null)
@@ -259,19 +259,19 @@ namespace FantasyBiotech
         {
             if (!initScanner)
             {
-                var commandAction = new Command_Action
+                Command_Action commandAction = new Command_Action
                 {
                     defaultLabel = "SubcoreScannerStart".Translate()
                 };
-                var stringBuilder = new StringBuilder();
+                StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append("SubcoreScannerProduces".Translate() + " " + def.building.subcoreScannerOutputDef.label + ".");
                 stringBuilder.Append("\n\n");
                 stringBuilder.Append("DurationHours".Translate() + ": " + def.building.subcoreScannerTicks.ToStringTicksToPeriod());
                 stringBuilder.Append("\n\n");
                 List<string> summaries = [];
-                for (var i = 0; i < def.building.subcoreScannerFixedIngredients.Count; i++)
+                for (int i = 0; i < def.building.subcoreScannerFixedIngredients.Count; i++)
                 {
-                    var ingredient = def.building.subcoreScannerFixedIngredients[i];
+                    IngredientCount ingredient = def.building.subcoreScannerFixedIngredients[i];
                     summaries.Add(ingredient.Summary);
                 }
 
@@ -288,19 +288,19 @@ namespace FantasyBiotech
             }
             else if (SelectedPawn == null)
             {
-                var commandAction2 = new Command_Action
+                Command_Action commandAction2 = new Command_Action
                 {
                     defaultLabel = "InsertPerson".Translate() + "...",
                     defaultDesc = "InsertPersonSubcoreScannerDesc".Translate(def.label),
                     icon = InsertPersonIcon.Texture,
                     action = delegate
                     {
-                        var list = new List<FloatMenuOption>();
-                        var allPawnsSpawned = Map.mapPawns.AllPawnsSpawned;
-                        for (var j = 0; j < allPawnsSpawned.Count; j++)
+                        List<FloatMenuOption> list = new List<FloatMenuOption>();
+                        IReadOnlyList<Pawn> allPawnsSpawned = Map.mapPawns.AllPawnsSpawned;
+                        for (int j = 0; j < allPawnsSpawned.Count; j++)
                         {
-                            var pawn = allPawnsSpawned[j];
-                            var acceptanceReport = CanAcceptPawn(pawn);
+                            Pawn pawn = allPawnsSpawned[j];
+                            AcceptanceReport acceptanceReport = CanAcceptPawn(pawn);
                             if (!acceptanceReport.Accepted)
                             {
                                 if (!acceptanceReport.Reason.NullOrEmpty())
@@ -339,7 +339,7 @@ namespace FantasyBiotech
                 }
                 else if (State == SubcoreScannerState.WaitingForIngredients)
                 {
-                    var stringBuilder2 = new StringBuilder("SubcoreScannerWaitingForIngredientsDesc".Translate().CapitalizeFirst() + ":\n");
+                    StringBuilder stringBuilder2 = new StringBuilder("SubcoreScannerWaitingForIngredientsDesc".Translate().CapitalizeFirst() + ":\n");
                     AppendIngredientsList(stringBuilder2);
                     commandAction2.Disable(stringBuilder2.ToString());
                 }
@@ -347,7 +347,7 @@ namespace FantasyBiotech
             }
             if (initScanner)
             {
-                var commandAction3 = new Command_Action
+                Command_Action commandAction3 = new Command_Action
                 {
                     defaultLabel = ((State == SubcoreScannerState.Occupied) ? "CommandCancelSubcoreScan".Translate() : "CommandCancelLoad".Translate()),
                     defaultDesc = ((State == SubcoreScannerState.Occupied) ? "CommandCancelSubcoreScanDesc".Translate() : "CommandCancelLoadDesc".Translate()),
@@ -373,7 +373,7 @@ namespace FantasyBiotech
             }
             if (State == SubcoreScannerState.Occupied)
             {
-                var commandAction4 = new Command_Action
+                Command_Action commandAction4 = new Command_Action
                 {
                     defaultLabel = "DEV: Complete",
                     action = delegate
@@ -383,7 +383,7 @@ namespace FantasyBiotech
                 };
                 yield return commandAction4;
             }
-            var commandAction5 = new Command_Action
+            Command_Action commandAction5 = new Command_Action
             {
                 defaultLabel = (debugDisableNeedForIngredients ? "DEV: Enable Ingredients" : "DEV: Disable Ingredients"),
                 action = delegate

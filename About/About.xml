@@ -3,8 +3,7 @@
 	<name>Fantasy Biotech</name>
 	<author>Viral Reaction</author>
 	<supportedVersions>
-		<li>1.4</li>
-		<li>1.5</li>
+		<li>1.6</li>
 	</supportedVersions>
 	<packageId>vr.fantasy.biotech</packageId>
 	<modDependencies>

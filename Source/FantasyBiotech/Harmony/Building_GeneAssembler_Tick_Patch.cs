@@ -3,6 +3,7 @@ using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 using Verse;
 
@@ -19,8 +20,8 @@ namespace FantasyBiotech
         /// </summary>
         private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            var code = instructions.ToList();
-            var targetMethod = AccessTools.Method(typeof(Gen), nameof(Gen.IsHashIntervalTick), new[] { typeof(Thing), typeof(int) });
+            List<CodeInstruction> code = instructions.ToList();
+            MethodInfo targetMethod = AccessTools.Method(typeof(Gen), nameof(Gen.IsHashIntervalTick), new[] { typeof(Thing), typeof(int) });
             for (int i = 0; i < code.Count - 3; i++)
             {
                 if (
@@ -30,13 +31,13 @@ namespace FantasyBiotech
                     code[i + 3].opcode == OpCodes.Brfalse_S
                 )
                 {
-                    var skipLabel = (Label)code[i + 3].operand;
+                    Label skipLabel = (Label)code[i + 3].operand;
                     code.RemoveRange(i, 4);
                     code.Insert(i, new CodeInstruction(OpCodes.Br_S, skipLabel));
                     break;
                 }
             }
-            foreach (var c in code) yield return c;
+            foreach (CodeInstruction c in code) yield return c;
         }
     }
 }

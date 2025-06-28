@@ -97,7 +97,7 @@
 			<WorkToBuild>35</WorkToBuild>
 			<Flammability>1.0</Flammability>
 		</statBases>
-		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<drawStyleCategory>Conduits</drawStyleCategory>
 		<costList>
 			<Steel>3</Steel>
 			<Gold>1</Gold>
@@ -173,7 +173,7 @@
 			<WorkToBuild>280</WorkToBuild>
 			<Flammability>0</Flammability>
 		</statBases>
-		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<drawStyleCategory>Conduits</drawStyleCategory>
 		<costList>
 			<Steel>6</Steel>
 			<Gold>2</Gold>
@@ -452,6 +452,7 @@
 		<costList>
 			<Steel>300</Steel>
 		</costList>
+		<bringAlongOnGravship>false</bringAlongOnGravship>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
@@ -471,6 +472,10 @@
 				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
 				<wickTicks>70~150</wickTicks>
 			</li>
+			<li Class="CompProperties_AmbientSound">
+				<sound>GeothermalPlant_Ambience</sound>
+				<disabledOnUnpowered>false</disabledOnUnpowered>
+			</li>
 		</comps>
 		<rotatable>false</rotatable>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -480,7 +485,6 @@
 		</placeWorkers>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>

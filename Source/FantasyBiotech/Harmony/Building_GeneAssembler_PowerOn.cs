@@ -17,10 +17,10 @@ namespace FantasyBiotech
         /// </summary>
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            var code = instructions.ToList();
+            List<CodeInstruction> code = instructions.ToList();
             yield return new CodeInstruction(OpCodes.Ldc_I4_1);
             yield return new CodeInstruction(OpCodes.Ret);
-            foreach (var c in code) yield return c;
+            foreach (CodeInstruction c in code) yield return c;
         }
     }
 }

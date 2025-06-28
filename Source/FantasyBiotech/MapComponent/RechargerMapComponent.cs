@@ -19,7 +19,7 @@ namespace FantasyBiotech
 
         public void GetChargerMap()
         {
-            foreach (var thing in this.map.listerBuildings.allBuildingsColonist)
+            foreach (Building thing in this.map.listerBuildings.allBuildingsColonist)
             {
                 if (thing is Building_MechCharger_Steam steamCharger)
                 {
