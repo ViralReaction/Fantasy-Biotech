@@ -101,7 +101,7 @@
 		</comps>
 	</ThingDef>
 
-	<PawnKindDef ParentName="BaseMechanoidKind">
+	<PawnKindDef ParentName="VR_BaseConstructKind">
 		<defName>VR_Construct_Apocriton</defName>
 		<label>apocriton</label>
 		<race>VR_Construct_Apocriton</race>

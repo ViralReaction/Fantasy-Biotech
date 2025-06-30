@@ -37,8 +37,6 @@
 	<!-- Remove Power Comps -->
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/ThingDef[defName="GeneExtractor" or 
-		defName="GeneBank" or 
-		defName="GeneAssembler" or
 		defName="GeneProcessor" or
 		defName="GrowthVat"]/comps/li[@Class="CompProperties_Power"]
 		</xpath>
@@ -46,74 +44,9 @@
 
 	<Operation Class="PatchOperationRemove">
 		<xpath>Defs/ThingDef[defName="GeneExtractor" or 
-		defName="GeneBank" or 
-		defName="GeneAssembler" or
 		defName="GeneProcessor" or
 		defName="GrowthVat"]/comps/li[@Class = "CompProperties_Flickable"]
 		</xpath>
-	</Operation>
-
-	<!-- Gene Assembler -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="GeneAssembler"]/costList/ComponentIndustrial</xpath>
-		<match Class="PatchOperationRemove">
-			<xpath>Defs/ThingDef[defName="GeneAssembler"]/costList/ComponentIndustrial</xpath>
-		</match>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="GeneAssembler"]/comps</xpath>
-		<value>
-			<li Class="CompProperties_Refuelable">
-				<fuelConsumptionRate>0.5</fuelConsumptionRate> 
-				<fuelCapacity>5</fuelCapacity>
-				<fuelLabel>Hemogen</fuelLabel>
-				<fuelFilter>
-				<thingDefs>
-					<li>HemogenPack</li>
-				</thingDefs>
-				</fuelFilter>
-				<initialFuelPercent>0</initialFuelPercent>
-				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
-				<externalTicking>true</externalTicking>
-				<autoRefuelPercent>0.05</autoRefuelPercent>
-			</li>
-		</value>
-	</Operation>
-
-	<!-- Gene Bank -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="GeneBank"]/costList/ComponentIndustrial</xpath>
-		<match Class="PatchOperationRemove">
-			<xpath>Defs/ThingDef[defName="GeneBank"]/costList/ComponentIndustrial</xpath>
-		</match>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="GeneBank"]/tickerType</xpath>
-		<value>
-			 <tickerType>Normal</tickerType>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="GeneBank"]/comps</xpath>
-		<value>
-			<li Class="CompProperties_Refuelable">
-				<fuelConsumptionRate>0.5</fuelConsumptionRate> 
-				<fuelCapacity>5</fuelCapacity>
-				<fuelLabel>Hemogen</fuelLabel>
-				<fuelFilter>
-				<thingDefs>
-					<li>HemogenPack</li>
-				</thingDefs>
-				</fuelFilter>
-				<initialFuelPercent>0</initialFuelPercent>
-				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
-				<externalTicking>true</externalTicking>
-				<autoRefuelPercent>0.05</autoRefuelPercent>
-			</li>
-		</value>
 	</Operation>
 
 	<!-- Gene Processor -->

@@ -8,7 +8,7 @@ namespace FantasyBiotech;
 
 public class WorldTechLevel_Patch
 {
-    private static Type WorldTechLevel_EffectiveTechLevels => AccessTools.TypeByName("WorldTechLevel.EffectiveTechLevels");
+    private static Type WorldTechLevel_EffectiveTechLevels => AccessTools.TypeByName("WorldTechLevel.DefTechLevels");
 
     [HarmonyPatch]
     public static class WorldTechLevel_EffectiveTechLevels_Patch
@@ -20,14 +20,13 @@ public class WorldTechLevel_Patch
 
         public static MethodBase TargetMethod()
         {
-            return AccessTools.Method("WorldTechLevel.EffectiveTechLevels:ResearchProjectDefFirstPass", [typeof(ResearchProjectDef)
-            ]);
+            return AccessTools.Method("WorldTechLevel.DefTechLevels:ResearchProjectDefFirstPass", [typeof(ResearchProjectDef)]);
         }
 
-        public static bool Prefix(ref TechLevel __result, ResearchProjectDef def)
+        public static void Postfix(ref TechLevel __result, ResearchProjectDef def)
         {
-            __result = def.techLevel;
-            return false;
+            if (def.GetModExtension<ResearchTechLevelOverride>()?.canOverride == true)
+                __result = def.techLevel;
         }
     }
 }

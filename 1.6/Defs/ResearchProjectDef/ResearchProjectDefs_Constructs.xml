@@ -12,6 +12,11 @@
 		<techLevel>Medieval</techLevel>
 		<tab>VR_BiotechResearchTab</tab>
 		<requiresMechanitor>true</requiresMechanitor>
+		<modExtensions>
+			<li Class="FantasyBiotech.ResearchTechLevelOverride">
+				<canOverride>true</canOverride>
+			</li>
+		</modExtensions>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VR_ConstructTechBase">

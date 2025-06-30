@@ -2,7 +2,7 @@ using System;
 
 namespace FantasyBiotech
 {
-    public class GenericUtility
+    public static class GenericUtility
     {
         public static string GetClassName(Type declaringType)
         {

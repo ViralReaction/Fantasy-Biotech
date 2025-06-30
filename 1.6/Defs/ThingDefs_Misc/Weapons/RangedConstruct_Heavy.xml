@@ -6,7 +6,6 @@
 		<defName>VR_ConstructGun_HeavyFlamer</defName>
 		<label>heavy flame cannon</label>
 		<description>A ultra-high-power energy pulse projector designed for siegebreaking. The hellsphere cannon must hold a bead on its target for several seconds while charging, before it releases a devastating tsunami of power. The explosion is capable of melting concrete in its blast radius. The heat of the explosion will ignite anything nearby. It cannot fire at close-up targets.</description>
-		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/Flamer</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

@@ -1,6 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	
+	<ThingDef ParentName="GeneBuildingBase">
+		<defName>VR_GeneRack</defName>
+		<label>gene rack</label>
+		<description>This building can store genepacks and make them usable to create new xenogerms, when placed near a gene assembler. Large gene libraries require many gene banks.\n\nWhen powered, gene banks prevent genepacks from deteriorating and will slowly repair deterioration.</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/GeneRack/GeneRack</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3, 1.5)</drawSize>
+			<shadowData>
+				<volume>(1.7, 0.3, 0.85)</volume>
+			</shadowData>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<canOverlapZones>false</canOverlapZones>
+		<fillPercent>0.4</fillPercent>
+		<size>(2, 1)</size>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>5000</WorkToBuild>
+			<Mass>20</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<inspectorTabs>
+			<li>ITab_ContentsGenepackHolder</li>
+		</inspectorTabs>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Woody</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<descriptionHyperlinks>
+			<ThingDef>Genepack</ThingDef>
+			<ThingDef>VR_GraftForge</ThingDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="CompProperties_GenepackContainer">
+				<maxCapacity>8</maxCapacity>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>100</maxSimultaneous>
+				<maxDistance>12.9</maxDistance>
+				<showMaxSimultaneous>false</showMaxSimultaneous>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>0.5</fuelConsumptionRate>
+				<fuelCapacity>5</fuelCapacity>
+				<fuelLabel>Hemogen</fuelLabel>
+				<fuelFilter>
+					<thingDefs>
+						<li>HemogenPack</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>0</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<externalTicking>true</externalTicking>
+				<autoRefuelPercent>0.05</autoRefuelPercent>
+			</li>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+
+	<ThingDef ParentName="GeneBuildingBase">
+		<defName>VR_GraftForge</defName>
+		<label>graft forge</label>
+		<description>A workbench for creating implantable xenogerms from genepacks stored in nearby gene banks. Genepacks are not consumed in this process and can be reused.</description>
+		<thingClass>Building_GeneAssembler</thingClass>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.4</fillPercent>
+		<graphicData>
+			<texPath>Things/Building/Misc/GraftForge/GraftForge</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5, 3.5)</drawSize>
+			<!-- <shadowData> -->
+				<!-- <volume>(2.55, 0.75, 1.7)</volume> -->
+			<!-- </shadowData> -->
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<descriptionHyperlinks>
+			<ThingDef>VR_GeneRack</ThingDef>
+			<ThingDef>GeneProcessor</ThingDef>
+			<ThingDef>Genepack</ThingDef>
+			<ThingDef>Xenogerm</ThingDef>
+		</descriptionHyperlinks>
+		<tickerType>Normal</tickerType>
+		<size>(3, 2)</size>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0, 0, 2)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Mass>35</Mass>
+			<Flammability>0.5</Flammability>
+			<AssemblySpeedFactor>1.0</AssemblySpeedFactor>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+		</costList>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Woody</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VR_GeneRack</li>
+					<li>GeneProcessor</li>
+				</linkableFacilities>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>0.5</fuelConsumptionRate> 
+				<fuelCapacity>5</fuelCapacity>
+				<fuelLabel>Hemogen</fuelLabel>
+				<fuelFilter>
+				<thingDefs>
+					<li>HemogenPack</li>
+				</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>0</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<externalTicking>false</externalTicking>
+				<autoRefuelPercent>0.05</autoRefuelPercent>
+				<canEjectFuel>false</canEjectFuel>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			</li>
+		</comps>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
 
 </Defs>

@@ -3,7 +3,6 @@
 
 	<ThingDef Name="VR_LightConstructGun" ParentName="BaseGun" Abstract="True">
 		<tradeability>None</tradeability>
-		<techLevel>Medieval</techLevel>
 		<destroyOnDrop>true</destroyOnDrop>
 		<relicChance>0</relicChance>
 		<graphicData>
@@ -21,20 +20,20 @@
 				<cooldownTime>2.6</cooldownTime>
 			</li>
 		</tools>
+		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
 	<!-- Ranged -->
-	<ThingDef Name="LightConstructGunRanged" ParentName="VR_LightConstructGun" Abstract="True">
+	<ThingDef Name="VR_LightConstructGunRanged" ParentName="VR_LightConstructGun" Abstract="True">
 		<weaponClasses>
 			<li>Ranged</li>
 		</weaponClasses>
 	</ThingDef>
 
-	<ThingDef ParentName="LightConstructGunRanged">
+	<ThingDef ParentName="VR_LightConstructGunRanged">
 		<defName>VR_ConstructGun_MiniBlunderbuss</defName>
 		<label>mini-shotgun</label>
 		<description>A compact, short-range shotgun designed to be mounted on a light combat mechanoid.</description>
-		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MiniBlunderbuss</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -55,7 +54,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_MiniShotgun</defaultProjectile>
+				<defaultProjectile>Bullet_VR_MiniBlunderbuss</defaultProjectile>
 				<warmupTime>1.2</warmupTime>
 				<range>12.9</range>
 				<burstShotCount>1</burstShotCount>
@@ -68,7 +67,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_MiniBlunderbuss</defName>
+		<defName>Bullet_VR_MiniBlunderbuss</defName>
 		<label>blunderbuss blast</label>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_MiniShotgun</texPath>

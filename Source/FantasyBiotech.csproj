@@ -41,6 +41,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantasyBiotech\Alert_GeneRackUnfueled.cs" />
     <Compile Include="FantasyBiotech\ComplexThreats\FileName.cs" />
     <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_SteamTank.cs" />
     <Compile Include="FantasyBiotech\Comps\CompResourceTrader_Steam.cs" />
@@ -48,7 +49,7 @@
     <Compile Include="FantasyBiotech\Comps\CompResourceStorage_SteamTank.cs" />
     <Compile Include="FantasyBiotech\Defs\ConstructExtension.cs" />
     <Compile Include="FantasyBiotech\Defs\FantasyBiotechDefOf.cs" />
-    <Compile Include="FantasyBiotech\Harmony\Alert_GenebankUnpowered_Patch.cs" />
+    <Compile Include="FantasyBiotech\Defs\ResearchTechLevelOverride.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_PowerOn.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_Tick_Patch.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_GetGizmos.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="FantasyBiotech\Harmony\BillMech_BillTick_Patch.cs" />
     <Compile Include="FantasyBiotech\Harmony\ComplexThreatWorker_SleepingMechanoids_Transpiler_Postfix.cs" />
     <Compile Include="FantasyBiotech\Harmony\ComplexThreatWorker_Ambush_CanResolveInt.cs" />
+    <Compile Include="FantasyBiotech\Harmony\Genepack_Deteriorating.cs" />
     <Compile Include="FantasyBiotech\Harmony\MechClusterGenerator_MechKindSuitableForCluster.cs" />
     <Compile Include="FantasyBiotech\Harmony\MechClusterUtility_SpawnCluster.cs" />
     <Compile Include="FantasyBiotech\Harmony\MechClusterGenerator_GenerateClusterSketch.cs" />
