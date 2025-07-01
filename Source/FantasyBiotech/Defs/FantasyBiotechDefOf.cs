@@ -10,9 +10,6 @@ namespace FantasyBiotech
         [UsedImplicitly] public static FactionDef VR_Construct;
         public static ThingDef VR_GeneRack;
 
-        public static ThingDef Mote_PowerBeam;
-
-
         static FantasyBiotechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FantasyBiotechDefOf));
     }
 
