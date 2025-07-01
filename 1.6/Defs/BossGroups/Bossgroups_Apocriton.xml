@@ -67,7 +67,7 @@
 				<escorts>
 					<VR_Construct_Militor>10</VR_Construct_Militor>
 					<VR_Construct_Centurion>1</VR_Construct_Centurion>
-					<VR_Construct_Centurion_Burner>2</VR_Construct_Centurion_Burner>
+					<VR_Construct_Centurion_Shooter>2</VR_Construct_Centurion_Shooter>
 					<VR_Construct_Colossus>2</VR_Construct_Colossus>
 				</escorts>
 				<bossApparel>
@@ -81,7 +81,7 @@
 				<escorts>
 					<VR_Construct_Militor>10</VR_Construct_Militor>
 					<VR_Construct_Sphere_Melee>5</VR_Construct_Sphere_Melee>
-					<VR_Construct_Centurion_Burner>2</VR_Construct_Centurion_Burner>
+					<VR_Construct_Centurion_Shooter>2</VR_Construct_Centurion_Shooter>
 					<VR_Construct_Colossus>3</VR_Construct_Colossus>
 				</escorts>
 				<bossApparel>

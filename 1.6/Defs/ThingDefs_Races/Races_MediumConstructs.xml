@@ -203,22 +203,8 @@
 			</li>
 		</verbs>
 		<comps>
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
-				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
-				<verbProps>
-					<li>
-						<label>construct ballista</label>
-						<description>Shoots target with steam powered ballista</description>
-						<canBeToggled>false</canBeToggled>
-						<separateToggle>false</separateToggle>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
-								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
-								<cooldownTime>2.1</cooldownTime>
-							</li>
-						</comps>
-					</li>
-				</verbProps>
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialAbility">
+				<initialAbility>VR_Fantasy_BallistaeBolt</initialAbility>
 			</li>
 		</comps>
 		<race>
