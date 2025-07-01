@@ -210,10 +210,20 @@
 		<statBases>
 			<MoveSpeed>4.2</MoveSpeed>
 		</statBases>
+		<tools>
+			<li>
+				<label>pincers</label>
+				<capacities>
+					<li>Cut</li>
+					<li>Stab</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+		</tools>
 		<race>
-			<deathAction>
-				<workerClass>DeathActionWorker_SmallExplosion</workerClass>
-			</deathAction>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>

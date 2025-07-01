@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<!-- Ranged -->
+	<ThingDef ParentName="VR_MediumConstructGun">
+		<defName>VR_ConstructGun_HeavyCrossbow</defName>
+		<label>steam crossbow</label>
+		<description>A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/SteamDoubleCrossbow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<Mass>8</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.85</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>2.7</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>VR_ConstructGun_HeavyCrossbow</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>VR_Bullet_ConstructGun_Crossbow</defaultProjectile>
+				<warmupTime>1.7</warmupTime>
+				<range>29.9</range>
+				<soundCast>ChargeLance_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>VR_Bullet_ConstructGun_HeavyCrossbow</defName>
+		<label>charge lance shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/ChargeLanceShot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>30</damageAmountBase>
+			<stoppingPower>1.5</stoppingPower>
+			<speed>120</speed>
+		</projectile>
+	</ThingDef>
+
 	<!-- Hellsphere cannon -->
 	<ThingDef ParentName="VR_MediumConstructGun">
 		<defName>VR_ConstructGun_HeavyFlamer</defName>

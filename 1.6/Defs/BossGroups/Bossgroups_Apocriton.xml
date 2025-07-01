@@ -67,9 +67,8 @@
 				<escorts>
 					<VR_Construct_Militor>10</VR_Construct_Militor>
 					<VR_Construct_Centurion>1</VR_Construct_Centurion>
-					<VR_Construct_Centurion_Ranged>2</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Centurion_Burner>2</VR_Construct_Centurion_Burner>
 					<VR_Construct_Colossus>2</VR_Construct_Colossus>
-					<!-- <Mech_Centurion>1</Mech_Centurion> -->
 				</escorts>
 				<bossApparel>
 					<li>
@@ -82,9 +81,8 @@
 				<escorts>
 					<VR_Construct_Militor>10</VR_Construct_Militor>
 					<VR_Construct_Sphere_Melee>5</VR_Construct_Sphere_Melee>
-					<VR_Construct_Centurion_Ranged>2</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Centurion_Burner>2</VR_Construct_Centurion_Burner>
 					<VR_Construct_Colossus>3</VR_Construct_Colossus>
-					<!-- <Mech_Centurion>1</Mech_Centurion> -->
 				</escorts>
 				<bossApparel>
 					<li>
@@ -98,8 +96,8 @@
 					<VR_Construct_Militor>12</VR_Construct_Militor>
 					<VR_Construct_Sphere_Range>10</VR_Construct_Sphere_Range>
 					<VR_Construct_Centurion>5</VR_Construct_Centurion>
-					<VR_Construct_Centurion_Ranged>4</VR_Construct_Centurion_Ranged>
-					<!-- <Mech_Warqueen>1</Mech_Warqueen> -->
+					<VR_Construct_Centurion_Burner>4</VR_Construct_Centurion_Burner>
+					<VR_Construct_ScarabQueen>1</VR_Construct_ScarabQueen>
 				</escorts>
 				<bossApparel>
 					<li>
@@ -112,9 +110,10 @@
 				<escorts>
 					<VR_Construct_Militor>15</VR_Construct_Militor>
 					<VR_Construct_Sphere_Melee>10</VR_Construct_Sphere_Melee>
-					<VR_Construct_Centurion_Ranged>8</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Centurion_Shooter>4</VR_Construct_Centurion_Shooter>
+					<VR_Construct_Centurion>6</VR_Construct_Centurion>
 					<VR_Construct_Colossus>2</VR_Construct_Colossus>
-					<!-- <Mech_Warqueen>1</Mech_Warqueen> -->
+					<VR_Construct_ScarabQueen>1</VR_Construct_ScarabQueen>
 				</escorts>
 				<bossApparel>
 					<li>

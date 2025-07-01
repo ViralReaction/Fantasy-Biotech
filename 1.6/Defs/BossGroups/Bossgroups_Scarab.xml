@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Warqueen -->s
+	<BossDef>
+		<defName>VR_Construct_ScarabQueen</defName>
+		<kindDef>VR_Construct_ScarabQueen</kindDef>
+		<appearAfterTicks>14400000</appearAfterTicks><!-- 4 years -->
+	</BossDef>
+
+	<BossgroupDef ParentName="BaseBossgroup">
+		<defName>VR_Construct_ScarabQueen</defName>
+		<boss>VR_Construct_ScarabQueen</boss>
+		<waves>
+			<li><!-- 0 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Sphere_Range>5</VR_Construct_Sphere_Range>
+					<VR_Construct_Sphere_Melee>2</VR_Construct_Sphere_Melee>
+				</escorts>
+			</li>
+			<li><!-- 1 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Militor>7</VR_Construct_Militor>
+					<Mech_CentipedeBurner>2</Mech_CentipedeBurner>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 2 - Repeat starts here -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<VR_Construct_Sphere_Range>5</VR_Construct_Sphere_Range>
+					<VR_Construct_Tesseron>2</VR_Construct_Tesseron>
+					<VR_Construct_Centurion>3</VR_Construct_Centurion>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 3 -->
+				<bossCount>2</bossCount>
+				<escorts>
+					<VR_Construct_Militor>8</VR_Construct_Militor>
+					<VR_Construct_Ballistae>4</VR_Construct_Ballistae>
+					<VR_Construct_Centurion_Burner>2</VR_Construct_Centurion_Burner>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 4 -->
+				<bossCount>2</bossCount>
+				<escorts>
+					<VR_Construct_Sphere_Range>5</VR_Construct_Sphere_Range>
+					<VR_Construct_Ballistae>5</VR_Construct_Ballistae>
+					<!-- <Mech_Legionary>3</Mech_Legionary> -->
+					<VR_Construct_Centurion_Burner>3</VR_Construct_Centurion_Burner>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 5 -->
+				<bossCount>2</bossCount>
+				<escorts>
+					<VR_Construct_Sphere_Melee>14</VR_Construct_Sphere_Melee>
+					<VR_Construct_Centurion_Burner>4</VR_Construct_Centurion_Burner>
+					<VR_Construct_Centurion>1</VR_Construct_Centurion>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 6 -->
+				<bossCount>2</bossCount>
+				<escorts>
+					<VR_Construct_Centurion_Burner>8</VR_Construct_Centurion_Burner>
+					<VR_Construct_Scorcher>18</VR_Construct_Scorcher>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li><!-- 7 -->
+				<bossCount>3</bossCount>
+				<escorts>
+					<VR_Construct_Sphere_Melee>6</VR_Construct_Sphere_Melee>
+					<VR_Construct_Sphere_Range>6</VR_Construct_Sphere_Range>
+					<VR_Construct_Ballistae>8</VR_Construct_Ballistae>
+					<VR_Construct_Centurion_Burner>8</VR_Construct_Centurion_Burner>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+		</waves>
+		<leaderDescription>The {LEADERKIND_label} has a built-in mech gestator and is capable of deploying war urchin combat mechs.</leaderDescription>
+		<rewardDef>PowerfocusChip</rewardDef>
+	</BossgroupDef>
+
+</Defs>

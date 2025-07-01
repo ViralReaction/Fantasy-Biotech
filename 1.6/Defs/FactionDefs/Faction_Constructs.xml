@@ -57,10 +57,10 @@
 					<VR_Construct_Sphere_Melee>10</VR_Construct_Sphere_Melee>
 					<VR_Construct_Ballistae>10</VR_Construct_Ballistae>
 					<VR_Construct_Sphere_Range>10</VR_Construct_Sphere_Range>
-					<VR_Construct_Centurion_Ranged>10</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Centurion_Burner>10</VR_Construct_Centurion_Burner>
 					<VR_Construct_Militor>20</VR_Construct_Militor>
 					<!-- <Mech_Centurion MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Centurion> -->
-					<!-- <Mech_Warqueen MayRequire="Ludeon.RimWorld.Biotech">1</Mech_Warqueen> -->
+					<VR_Construct_ScarabQueen>1</VR_Construct_ScarabQueen>
 					<VR_Construct_Apocriton>1</VR_Construct_Apocriton>
 				</options>
 			</li>
@@ -90,9 +90,9 @@
 				<kindDef>Combat</kindDef>
 				<commonality>30</commonality>
 				<options>
-					<!-- <Mech_CentipedeBlaster>10</Mech_CentipedeBlaster> -->
-					<!-- <Mech_CentipedeGunner>5</Mech_CentipedeGunner> -->
-					<VR_Construct_Centurion_Ranged>5</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Centurion>10</VR_Construct_Centurion>
+					<VR_Construct_Centurion_Shooter>5</VR_Construct_Centurion_Shooter>
+					<VR_Construct_Centurion_Burner>5</VR_Construct_Centurion_Burner>
 				</options>
 			</li>
 			<li>
@@ -111,7 +111,7 @@
 					<VR_Construct_Ballistae>10</VR_Construct_Ballistae>
 					<VR_Construct_Sphere_Melee>10</VR_Construct_Sphere_Melee>
 					<VR_Construct_Sphere_Range>10</VR_Construct_Sphere_Range>
-					<VR_Construct_Centurion_Ranged>10</VR_Construct_Centurion_Ranged>
+					<VR_Construct_Centurion_Burner>10</VR_Construct_Centurion_Burner>
 					<Mech_Termite_Breach>1</Mech_Termite_Breach>
 					<VR_Construct_Militor>20</VR_Construct_Militor>
 				</options>

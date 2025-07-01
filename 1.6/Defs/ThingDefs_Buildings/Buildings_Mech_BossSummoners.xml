@@ -45,12 +45,12 @@
 		<comps>
 			<li Class="CompProperties_Usable">
 				<useJob>TriggerObject</useJob>
-				<useLabel>Summon warqueen threat</useLabel>
+				<useLabel>Summon scarab queen threat</useLabel>
 				<useDuration>900</useDuration>
 				<floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
 			</li>
 			<li Class="CompProperties_Useable_CallBossgroup">
-				<bossgroupDef>Warqueen</bossgroupDef>
+				<bossgroupDef>VR_Construct_ScarabQueen</bossgroupDef>
 				<effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
 				<prepareEffecterDef>MechBandAntennaPrepared</prepareEffecterDef>
 				<unlockedLetterLabelKey>LetterLabelBossgroupCallerUnlocked</unlockedLetterLabelKey>

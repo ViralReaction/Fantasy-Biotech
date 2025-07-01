@@ -82,15 +82,15 @@
 	</PawnKindDef>
 	
 	<ThingDef ParentName="VR_Construct_Centurion">
-		<defName>VR_Construct_Centurion_Ranged</defName>
-		<label>centurion (ranged)</label>
+		<defName>VR_Construct_Centurion_Burner</defName>
+		<label>centurion (burner)</label>
 		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
 	</ThingDef>
 	
 	<PawnKindDef ParentName="VR_HeavyConstructKind">
-		<defName>VR_Construct_Centurion_Ranged</defName>
-		<label>centurion (ranged)</label>
-		<race>VR_Construct_Centurion_Ranged</race>
+		<defName>VR_Construct_Centurion_Burner</defName>
+		<label>centurion (burner)</label>
+		<race>VR_Construct_Centurion_Burner</race>
 		<combatPower>150</combatPower>
 		<lifeStages>
 			<li>
@@ -109,6 +109,39 @@
 		<defendPointRadius>0</defendPointRadius>
 		<weaponTags>
 			<li>VR_Construct_HeavyFlamer</li>
+		</weaponTags>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+	</PawnKindDef>
+	
+	<ThingDef ParentName="VR_Construct_Centurion">
+		<defName>VR_Construct_Centurion_Shooter</defName>
+		<label>centurion (ranged)</label>
+		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
+	</ThingDef>
+	
+	<PawnKindDef ParentName="VR_HeavyConstructKind">
+		<defName>VR_Construct_Centurion_Shooter</defName>
+		<label>centurion (ranged)</label>
+		<race>VR_Construct_Centurion_Shooter</race>
+		<combatPower>150</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Centurion</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Centurion</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.5</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<defendPointRadius>0</defendPointRadius>
+		<weaponTags>
+			<li>VR_ConstructGun_HeavyCrossbow</li>
 		</weaponTags>
 		<techHediffsChance>1</techHediffsChance>
 		<techHediffsMoney>9999~9999</techHediffsMoney>

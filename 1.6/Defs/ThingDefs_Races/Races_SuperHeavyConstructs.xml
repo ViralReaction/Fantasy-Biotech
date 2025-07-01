@@ -291,9 +291,10 @@
 			<li Class="CompProperties_MechCarrier">
 				<spawnPawnKind>VR_Construct_Scarab</spawnPawnKind>
 				<fixedIngredient>Steel</fixedIngredient>
-				<costPerPawn>25</costPerPawn>
-				<startingIngredientCount>1000</startingIngredientCount>
-				<maxIngredientCount>1000</maxIngredientCount>
+				<costPerPawn>24</costPerPawn>
+				<startingIngredientCount>600</startingIngredientCount>
+				<maxIngredientCount>600</maxIngredientCount>
+				<maxPawnsToSpawn>5</maxPawnsToSpawn>
 				<spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
 				<spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
 				<attachSpawnedEffecter>true</attachSpawnedEffecter>
