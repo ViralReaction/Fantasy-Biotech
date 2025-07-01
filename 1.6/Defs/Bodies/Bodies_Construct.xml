@@ -42,82 +42,82 @@
 					</parts>
 				</li>
 				<li>
-				  <def>SmallMechanicalLeg</def>
-				  <customLabel>left front leg</customLabel>
-				  <coverage>0.10</coverage>
-				  <height>Bottom</height>
-				  <parts>
-					<li>
-					  <def>SmallMechanicalFoot</def>
-					  <customLabel>left front foot</customLabel>
-					  <coverage>0.10</coverage>
-					</li>
-				  </parts>
+					<def>SmallMechanicalLeg</def>
+					<customLabel>left front leg</customLabel>
+					<coverage>0.10</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>SmallMechanicalFoot</def>
+							<customLabel>left front foot</customLabel>
+							<coverage>0.10</coverage>
+						</li>
+					</parts>
 				</li>
 				<li>
-				  <def>SmallMechanicalLeg</def>
-				  <customLabel>right front leg</customLabel>
-				  <coverage>0.10</coverage>
-				  <height>Bottom</height>
-				  <parts>
-					<li>
-					  <def>SmallMechanicalFoot</def>
-					  <customLabel>right front foot</customLabel>
-					  <coverage>0.10</coverage>
-					</li>
-				  </parts>
+					<def>SmallMechanicalLeg</def>
+					<customLabel>right front leg</customLabel>
+					<coverage>0.10</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>SmallMechanicalFoot</def>
+							<customLabel>right front foot</customLabel>
+							<coverage>0.10</coverage>
+						</li>
+					</parts>
 				</li>
 				<li>
-				  <def>SmallMechanicalLeg</def>
-				  <customLabel>left middle leg</customLabel>
-				  <coverage>0.10</coverage>
-				  <height>Bottom</height>
-				  <parts>
-					<li>
-					  <def>SmallMechanicalFoot</def>
-					  <customLabel>left middle foot</customLabel>
-					  <coverage>0.10</coverage>
-					</li>
-				  </parts>
+					<def>SmallMechanicalLeg</def>
+					<customLabel>left middle leg</customLabel>
+					<coverage>0.10</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>SmallMechanicalFoot</def>
+							<customLabel>left middle foot</customLabel>
+							<coverage>0.10</coverage>
+						</li>
+					</parts>
 				</li>
 				<li>
-				  <def>SmallMechanicalLeg</def>
-				  <customLabel>right middle leg</customLabel>
-				  <coverage>0.10</coverage>
-				  <height>Bottom</height>
-				  <parts>
-					<li>
-					  <def>SmallMechanicalFoot</def>
-					  <customLabel>right middle foot</customLabel>
-					  <coverage>0.10</coverage>
-					</li>
-				  </parts>
+					<def>SmallMechanicalLeg</def>
+					<customLabel>right middle leg</customLabel>
+					<coverage>0.10</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>SmallMechanicalFoot</def>
+							<customLabel>right middle foot</customLabel>
+							<coverage>0.10</coverage>
+						</li>
+					</parts>
 				</li>
 				<li>
-				  <def>SmallMechanicalLeg</def>
-				  <customLabel>left rear leg</customLabel>
-				  <coverage>0.10</coverage>
-				  <height>Bottom</height>
-				  <parts>
-					<li>
-					  <def>SmallMechanicalFoot</def>
-					  <customLabel>left rear foot</customLabel>
-					  <coverage>0.10</coverage>
-					</li>
-				  </parts>
+					<def>SmallMechanicalLeg</def>
+					<customLabel>left rear leg</customLabel>
+					<coverage>0.10</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>SmallMechanicalFoot</def>
+							<customLabel>left rear foot</customLabel>
+							<coverage>0.10</coverage>
+						</li>
+					</parts>
 				</li>
 				<li>
-				  <def>SmallMechanicalLeg</def>
-				  <customLabel>right rear leg</customLabel>
-				  <coverage>0.10</coverage>
-				  <height>Bottom</height>
-				  <parts>
-					<li>
-					  <def>SmallMechanicalFoot</def>
-					  <customLabel>right rear foot</customLabel>
-					  <coverage>0.10</coverage>
-					</li>
-				  </parts>
+					<def>SmallMechanicalLeg</def>
+					<customLabel>right rear leg</customLabel>
+					<coverage>0.10</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>SmallMechanicalFoot</def>
+							<customLabel>right rear foot</customLabel>
+							<coverage>0.10</coverage>
+						</li>
+					</parts>
 				</li>
 				<li>
 					<def>VR_DynamoCore</def>
@@ -370,6 +370,99 @@
 					<def>VR_SteamCirculator</def>
 					<coverage>0.04</coverage>
 					<depth>Inside</depth>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+	
+	<BodyDef>
+		<defName>VR_Construct_Queen</defName>
+		<label>war queen</label>
+		<corePart>
+			<def>MechanicalWarqueenBodyFirstRing</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>Torso</li>
+			</groups>
+			<parts>
+				<li>
+					<def>MechanicalHead</def>
+					<coverage>0.1</coverage>
+					<groups>
+						<li>HeadAttackTool</li>
+					</groups>
+					<parts>
+						<li>
+							<def>VR_ClockworkBrain</def>
+							<coverage>0.10</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>VR_BrassOcular</def>
+							<customLabel>left sight sensor</customLabel>
+							<coverage>0.13</coverage>
+						</li>
+						<li>
+							<def>VR_BrassOcular</def>
+							<customLabel>right sight sensor</customLabel>
+							<coverage>0.13</coverage>
+						</li>
+						<li>
+							<def>VR_HarmonicListener</def>
+							<customLabel>left hearing sensor</customLabel>
+							<coverage>0.10</coverage>
+						</li>
+						<li>
+							<def>VR_HarmonicListener</def>
+							<customLabel>right hearing sensor</customLabel>
+							<coverage>0.10</coverage>
+						</li>
+						<li>
+							<def>SmellSensor</def>
+							<coverage>0.10</coverage>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalWarqueenBodySecondRing</def>
+					<coverage>0.75</coverage>
+					<parts>
+						<li>
+							<def>VR_DynamoCore</def>
+							<coverage>0.05</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>MechanicalWarqueenBodyThirdRing</def>
+							<coverage>0.8</coverage>
+							<parts>
+								<li>
+									<def>MechanicalWarqueenBodyFourthRing</def>
+									<coverage>0.7</coverage>
+									<parts>
+										<li>
+											<def>MechanicalWarqueenBodyFifthRing</def>
+											<coverage>0.6</coverage>
+											<parts>
+												<li>
+													<def>VR_SteamCirculator</def>
+													<coverage>0.05</coverage>
+													<depth>Inside</depth>
+												</li>
+												<li>
+													<def>MechanicalWarqueenFormingPod</def>
+													<coverage>0.5</coverage>
+													<height>Middle</height>
+													<depth>Inside</depth>
+												</li>
+											</parts>
+										</li>
+									</parts>
+								</li>
+							</parts>
+						</li>
+					</parts>
 				</li>
 			</parts>
 		</corePart>

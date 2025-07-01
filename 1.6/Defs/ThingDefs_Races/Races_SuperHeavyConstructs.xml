@@ -181,8 +181,14 @@
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			</li>
 		</tools>
-		<comps>
-			<li Class="CompProperties_TargetingBeam"/>
+		<comps> 
+			<li Class="FantasyBiotech.CompProperties_ColossusRayExplosion">
+				<defaultDelayTicks>150</defaultDelayTicks>
+				<radius>2.9</radius>
+				<damageAmount>30</damageAmount>
+				<damageDef>Vaporize</damageDef>
+				<armorPenetration>0.4</armorPenetration>
+			</li>
 		</comps>
 		<statBases>
 			<BandwidthCost>5</BandwidthCost>
@@ -219,6 +225,110 @@
 		<abilities>
 			<li>FireBurst</li>
 		</abilities>
+	</PawnKindDef>
+	
+	<!-- Warqueen -->
+	<ThingDef Name="VR_ConstructQueen" ParentName="VR_SuperHeavyConstruct">
+		<defName>VR_Construct_ScarabQueen</defName>
+		<label>scarab queen</label>
+		<description>An ultra-heavy mech with a built-in mech gestator. Fed with appropriate resources, the war queen can form small war urchin combat mechs within its massive carapace and deploy them into combat.\n\nEven more than other mechanoids, the war queen resembles a giant, living insect. All war mechs can be terrifying, but humans tend to find the war queen disturbing on a deeper level.</description>
+		<statBases>
+			<MoveSpeed>1.6</MoveSpeed>
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+			<MeleeDoorDamageFactor>1.5</MeleeDoorDamageFactor>
+			<EMPResistance>0.7</EMPResistance>
+		</statBases>
+		<race>
+			<body>VR_Construct_Queen</body>
+			<baseBodySize>4</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Warqueen_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Warqueen_Death</soundDeath>
+					<soundCall>Pawn_Mech_Warqueen_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>5.2</baseHealthScale>
+			<dutyBoss>Warqueen</dutyBoss>
+			<detritusLeavings>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>13</texOverrideIndex>
+					<spawnChance>0.75</spawnChance>
+				</li>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>3</texOverrideIndex>
+					<spawnChance>0.75</spawnChance>
+				</li>
+				<li>
+					<def>ChunkMechanoidSlag</def>
+					<texOverrideIndex>0</texOverrideIndex>
+					<spawnChance>0.75</spawnChance>
+				</li>
+			</detritusLeavings>
+		</race>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialAbility">
+				<initialAbility>VR_Fantasy_ElectricBolt</initialAbility>
+			</li>
+			<li Class="CompProperties_MechCarrier">
+				<spawnPawnKind>VR_Construct_Scarab</spawnPawnKind>
+				<fixedIngredient>Steel</fixedIngredient>
+				<costPerPawn>25</costPerPawn>
+				<startingIngredientCount>1000</startingIngredientCount>
+				<maxIngredientCount>1000</maxIngredientCount>
+				<spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
+				<spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
+				<attachSpawnedEffecter>true</attachSpawnedEffecter>
+				<attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
+			</li>
+		</comps>
+		<killedLeavingsPlayerHostile>
+			<PowerfocusChip>1</PowerfocusChip>
+		</killedLeavingsPlayerHostile>
+	</ThingDef>
+
+	<PawnKindDef Name="VR_ConstructQueenKind" ParentName="VR_HeavyConstructKind">
+		<defName>VR_Construct_ScarabQueen</defName>
+		<label>war queen</label>
+		<labelPlural>war queens</labelPlural>
+		<race>VR_Construct_ScarabQueen</race>
+		<combatPower>600</combatPower>
+		<maxPerGroup>3</maxPerGroup>
+		<isBoss>true</isBoss>
+		<allowInMechClusters>false</allowInMechClusters>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/ConstructQueen</texPath>
+					<!-- <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/MechWarqueen</maskPath> -->
+					<!-- <shaderType>CutoutWithOverlay</shaderType> -->
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.7, 0.8, 0.7)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<controlGroupPortraitZoom>0.7</controlGroupPortraitZoom>
 	</PawnKindDef>
 
 </Defs>

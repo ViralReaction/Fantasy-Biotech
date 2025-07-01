@@ -56,4 +56,126 @@
 		<tradeability>Sellable</tradeability>
 	</ThingDef>
 
+	<ThingDef ParentName="ApparelArmorHelmetMechanitorBase">
+		<defName>VR_Apparel_ArtificeLordHelmet</defName>
+		<label>artificelord helmet</label>
+		<description>A heavy plasteel-weave helmet packed with mechanitor-assistance gear. The mechlord helmet dramatically amplifies a mechanitor's bandwidth, but is somewhat less protective than dedicated heavy armor.</description>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/ArtificerLordHelmet/ArtificerLordHelmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>240</MaxHitPoints>
+			<ArmorRating_Sharp>0.69</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.345</ArmorRating_Heat>
+			<Insulation_Cold>3</Insulation_Cold>
+			<Insulation_Heat>1.5</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<MechBandwidth>12</MechBandwidth>
+			<ShootingAccuracyPawn>-5</ShootingAccuracyPawn>
+			<MeleeHitChance>-0.5</MeleeHitChance>
+		</equippedStatOffsets>
+		<recipeMaker Inherit="False">
+			<researchPrerequisite>VR_UltraConstructTech</researchPrerequisite>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+			<workSkill>Crafting</workSkill>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<displayPriority>520</displayPriority>
+		</recipeMaker>
+		<costList Inherit="False">
+			<Plasteel>120</Plasteel>
+			<ComponentSpacer>6</ComponentSpacer>
+			<NanostructuringChip>2</NanostructuringChip>
+		</costList>
+		<apparel>
+			<tags>
+				<li>RoyalTier7</li>
+				<li>Mechlord</li>
+			</tags>
+			<scoreOffset>4</scoreOffset>
+			<mechanitorApparel>true</mechanitorApparel>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerLordHelmet/ArtificerLordHelmet</wornGraphicPath>
+			<forceEyesVisibleForRotations>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</forceEyesVisibleForRotations>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="HatMakeableBase">
+		<defName>VR_Apparel_ArtificerRespirator</defName>
+		<label>respirator</label>
+		<description>A flexible mask worn over the face with an embedded air filter. It dramatically reduces exposure to pollution through the lungs, but does not protect the skin on the rest of the body.\n\nIt prevents tox gas irritants from entering through the eyes and mouth.</description>
+		<techLevel>Medieval</techLevel>
+		<possessionCount>1</possessionCount>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/ArtificerMask/ArtificerMask</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToMake>6000</WorkToMake>
+			<Mass>0.4</Mass>
+			<ArmorRating_Sharp>0.18</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<Insulation_Cold>1.5</Insulation_Cold>
+			<EquipDelay>0.8</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<researchPrerequisite>Smithing</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedMask</unfinishedThingDef>
+			<recipeUsers Inherit="False">
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+			<displayPriority>215</displayPriority>
+		</recipeMaker>
+		<costList>
+			<Steel>20</Steel>
+			<Chemfuel>20</Chemfuel>
+		</costList>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<immuneToToxGasExposure>true</immuneToToxGasExposure>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerMask/ArtificerMask</wornGraphicPath>
+			<renderSkipFlags>
+				<li>None</li>
+			</renderSkipFlags>
+			<drawData>
+				<dataNorth>
+					<layer>-3</layer>
+				</dataNorth>
+			</drawData>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>Medieval_Respirator</li>
+			</tags>
+			<forceEyesVisibleForRotations>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</forceEyesVisibleForRotations>
+		</apparel>
+	</ThingDef>
+
 </Defs>

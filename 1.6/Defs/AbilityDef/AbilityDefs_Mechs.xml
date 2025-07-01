@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AbilityDef>
+		<defName>VR_Fantasy_ElectricBolt</defName>
+		<label>electric bolt</label>
+		<description>Unleashes a surge electrical energy from its chest.</description>
+		<!-- <iconPath>UI/Abilities/Teslacannon</iconPath> -->
+		<iconPath>Things/Item/Equipment/WeaponRanged/Teslacannon</iconPath>
+		<cooldownTicksRange>60</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<writeCombatLog>True</writeCombatLog>
+		<verbProperties>
+			<verbClass>Verb_AbilityShoot</verbClass>
+			<defaultProjectile>VR_Bullet_LightingGunProjectile</defaultProjectile>
+			<accuracyTouch>0.9</accuracyTouch>
+			<accuracyShort>0.85</accuracyShort>
+			<accuracyMedium>0.8</accuracyMedium>
+			<accuracyLong>0.75</accuracyLong>
+			<range>30</range>
+			<muzzleFlashScale>0</muzzleFlashScale>
+			<warmupTime>2</warmupTime>
+			<soundCast>ChargeLance_Fire</soundCast>
+			<commonality>2</commonality>
+			<minRange>2</minRange>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+			</targetParams>
+			<ai_IsWeapon>false</ai_IsWeapon>
+		</verbProperties>
+	</AbilityDef>
+
+</Defs>
