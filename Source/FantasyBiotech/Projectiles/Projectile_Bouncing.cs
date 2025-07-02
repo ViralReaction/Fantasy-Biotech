@@ -46,23 +46,22 @@ namespace FantasyBiotech
 
         private bool IsValidTarget(Pawn pawn)
         {
-            return !_hitThings.Contains(pawn) &&
-                   pawn.Spawned && !pawn.Dead && !pawn.Downed &&
-                   pawn.HostileTo(launcher);
+            return !_hitThings.Contains(pawn) && pawn.Spawned && !pawn.Dead && !pawn.Downed && pawn.HostileTo(launcher);
         }
 
         public override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            Vector3 vec1 = (_previousProjectile ?? launcher).TrueCenter();
-            Vector3 vec2 = this.DrawPos;
-            if (vec2.magnitude > vec1.magnitude)
+            Vector3 start = (_previousProjectile ?? launcher).TrueCenter();
+            Vector3 end = DrawPos;
+            if (end.magnitude > start.magnitude)
             {
-                (vec2, vec1) = (vec1, vec2);
+                (end, start) = (start, end);
             }
-
-            Graphics.DrawMesh(MeshPool.plane10,
-                Matrix4x4.TRS(vec2 + (vec1 - vec2) / 2, Quaternion.AngleAxis(vec1.AngleToFlat(vec2) + 90f, Vector3.up), new Vector3(1f, 1f, (vec1 - vec2).magnitude)),
-                Graphic.MatSingle, 0);
+            Vector3 center = (start + end) / 2f;
+            float length = (start - end).magnitude;
+            float angle = start.AngleToFlat(end) + 90f;
+            Matrix4x4 matrix = Matrix4x4.TRS(center, Quaternion.AngleAxis(angle, Vector3.up), new Vector3(1f, 1f, length));
+            Graphics.DrawMesh(MeshPool.plane10, matrix, Graphic.MatSingle, 0);
         }
 
         private void FireAt(Thing newTarget, Thing hitThing)
@@ -70,7 +69,7 @@ namespace FantasyBiotech
             IntVec3 launchPos = hitThing.Position;
 
             Projectile_Bouncing newProj = (Projectile_Bouncing)GenSpawn.Spawn(def, launchPos, newTarget.Map);
-            newProj._numBounces = this._numBounces + 1;
+            newProj._numBounces = _numBounces + 1;
             newProj._hitThings = new List<Thing>(_hitThings);
             newProj._previousProjectile = this;
             newProj._props = _props;
