@@ -60,7 +60,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Centurion</texPath>
+					<texPath>Things/Pawn/Mechanoid/CenturionSteam</texPath>
 					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Centurion</maskPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
@@ -95,7 +95,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Centurion</texPath>
+					<texPath>Things/Pawn/Mechanoid/CenturionSteam</texPath>
 					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Centurion</maskPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
@@ -128,7 +128,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Centurion</texPath>
+					<texPath>Things/Pawn/Mechanoid/CenturionSteam</texPath>
 					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Centurion</maskPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
