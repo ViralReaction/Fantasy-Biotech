@@ -42,9 +42,9 @@
 
 	<ThingDef ParentName="BaseBullet">
 		<defName>VR_Bullet_ConstructGun_HeavyCrossbow</defName>
-		<label>charge lance shot</label>
+		<label>heavy crossbow bolt</label>
 		<graphicData>
-			<texPath>Things/Projectile/ChargeLanceShot</texPath>
+			<texPath>Things/Projectile/Dwemer_CrossbowBolt</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 			<drawSize>1.5</drawSize>

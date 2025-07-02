@@ -284,9 +284,41 @@
 				<chanceFactor>0.2</chanceFactor>
 			</li>
 		</tools>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>0.60</accuracyTouch>
+				<accuracyShort>0.80</accuracyShort>
+				<accuracyMedium>0.90</accuracyMedium>
+				<accuracyLong>1.05</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>VR_Bullet_TeslaChestProjectile</defaultProjectile>
+				<warmupTime>4.5</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<range>29.9</range>
+				<soundCast>Shot_NeedleGun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<label>tesla charge</label>
+				<commonality>10</commonality>
+			</li>
+		</verbs>
 		<comps>
-			<li Class="VEF.AnimalBehaviours.CompProperties_InitialAbility">
-				<initialAbility>VR_Fantasy_ElectricBolt</initialAbility>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>tesla charge</label>
+						<description>Unleashes a surge electrical energy from its chest.</description>
+						<canBeToggled>false</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+								<cooldownTime>2.1</cooldownTime>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
 			</li>
 			<li Class="CompProperties_MechCarrier">
 				<spawnPawnKind>VR_Construct_Scarab</spawnPawnKind>
@@ -331,5 +363,30 @@
 		</lifeStages>
 		<controlGroupPortraitZoom>0.7</controlGroupPortraitZoom>
 	</PawnKindDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>VR_Bullet_TeslaChestProjectile</defName>
+		<label>lightning projectile</label>
+		<thingClass>FantasyBiotech.Projectile_Bouncing</thingClass>
+		<graphicData>
+			<texPath>Projectile/Lightning</texPath>
+			<graphicClass>Graphic_Flicker</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Beam</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<speed>60</speed>
+		</projectile>
+		<modExtensions>
+			<li Class="VEF.Weapons.TeslaChainingProps">
+				<maxBounceCount>6</maxBounceCount>
+				<damageDef>Beam</damageDef>
+				<targetFriendly>false</targetFriendly>
+				<addFire>false</addFire>
+				<bounceRange>10</bounceRange>
+				<maxLifetime>10</maxLifetime>
+			</li>
+		</modExtensions>
+	</ThingDef>
 
 </Defs>
