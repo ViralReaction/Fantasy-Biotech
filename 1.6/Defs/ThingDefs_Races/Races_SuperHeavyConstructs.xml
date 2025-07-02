@@ -378,13 +378,10 @@
 			<speed>60</speed>
 		</projectile>
 		<modExtensions>
-			<li Class="VEF.Weapons.TeslaChainingProps">
-				<maxBounceCount>6</maxBounceCount>
-				<damageDef>Beam</damageDef>
-				<targetFriendly>false</targetFriendly>
-				<addFire>false</addFire>
-				<bounceRange>10</bounceRange>
-				<maxLifetime>10</maxLifetime>
+			<li Class="FantasyBiotech.BounceProjectileExtension">
+				<bounceCount>6</bounceCount>
+				<bounceRadius>10</bounceRadius>
+				<doubleTarget>true</doubleTarget>
 			</li>
 		</modExtensions>
 	</ThingDef>

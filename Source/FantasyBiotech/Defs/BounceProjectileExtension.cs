@@ -5,6 +5,7 @@ namespace FantasyBiotech
     {
         public int bounceCount = 1;
         public float bounceRadius = 10f;
+        public bool doubleTarget = false;
 
     }
 }

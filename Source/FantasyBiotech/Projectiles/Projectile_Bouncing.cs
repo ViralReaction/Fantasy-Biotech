@@ -18,14 +18,15 @@ namespace FantasyBiotech
             _props ??= def.GetModExtension<BounceProjectileExtension>();
             if (launcher is not Pawn caster)
             {
-                Log.Error("Chain Lightning: Launcher is not a Pawn.");
+                Log.Error("Fantasy Biotech :: Chain Lighting : Launcher is not a Pawn.");
                 return;
             }
             IntVec3 strikePos = hitThing?.Position ?? Position;
             if (hitThing == null) return;
-            _hitThings.Add(hitThing);
-            DamageInfo dinfo = new DamageInfo(def.projectile.damageDef, def.projectile.GetDamageAmount(launcher), def.projectile.GetArmorPenetration(launcher), ExactRotation.eulerAngles.y, launcher, null, equipmentDef);
-            hitThing.TakeDamage(dinfo);
+            if (!_props.doubleTarget)
+            {
+                _hitThings.Add(hitThing);
+            }
             if (_numBounces >= _props.bounceCount) return;
             if (!TryFindNextTarget(strikePos, caster, out Pawn nextTarget))
                 return;
@@ -70,7 +71,10 @@ namespace FantasyBiotech
 
             Projectile_Bouncing newProj = (Projectile_Bouncing)GenSpawn.Spawn(def, launchPos, newTarget.Map);
             newProj._numBounces = _numBounces + 1;
-            newProj._hitThings = new List<Thing>(_hitThings);
+            if (!_props.doubleTarget)
+            {
+                newProj._hitThings = new List<Thing>(_hitThings);
+            }
             newProj._previousProjectile = this;
             newProj._props = _props;
 
@@ -81,7 +85,10 @@ namespace FantasyBiotech
         {
             base.ExposeData();
             Scribe_Values.Look(ref _numBounces, "numBounces");
-            Scribe_Collections.Look(ref _hitThings, "hitThings", LookMode.Reference);
+            if (!_props.doubleTarget)
+            {
+                Scribe_Collections.Look(ref _hitThings, "hitThings", LookMode.Reference);
+            }
             Scribe_References.Look(ref _previousProjectile, "previousProjectile");
             if (Scribe.mode == LoadSaveMode.LoadingVars)
             {
