@@ -11,57 +11,39 @@ namespace FantasyBiotech
         private const float SearchRadius = 10f;
         private int _numBounces;
         private List<Thing> _hitThings = [];
-#nullable enable
-        private Thing? _previousProjectile;
-#nullable disable
+        private Thing _previousProjectile;
+
 
         public override void Impact(Thing hitThing, bool blockedByShield = false)
         {
-
-            base.Impact(hitThing);
+            base.Impact(hitThing, blockedByShield);
             if (launcher is not Pawn caster)
             {
-                Log.Warning("Chain Lightning: Launcher is not a Pawn or map is null.");
+                Log.Error("Chain Lightning: Launcher is not a Pawn.");
                 return;
             }
             IntVec3 strikePos = hitThing?.Position ?? Position;
-            if (hitThing != null)
-            {
-                _hitThings.Add(hitThing);
-                DamageInfo dinfo = new(
-                    def.projectile.damageDef,
-                    def.projectile.GetDamageAmount(launcher),
-                    def.projectile.GetArmorPenetration(launcher),
-                    ExactRotation.eulerAngles.y,
-                    launcher,
-                    null,
-                    equipmentDef
-                );
-                hitThing.TakeDamage(dinfo);
-                if (_numBounces < MaxBounces)
-                {
-                    Pawn nextTarget = FindNextTarget(strikePos, caster);
-                    if (nextTarget != null)
-                    {
-                        Log.Message("Firing next target");
-                        FireAt(nextTarget, hitThing);
-                    }
-                }
-            }
+            if (hitThing == null) return;
+            _hitThings.Add(hitThing);
+            DamageInfo dinfo = new DamageInfo(def.projectile.damageDef, def.projectile.GetDamageAmount(launcher), def.projectile.GetArmorPenetration(launcher), ExactRotation.eulerAngles.y, launcher, null, equipmentDef);
+            hitThing.TakeDamage(dinfo);
+            if (_numBounces >= MaxBounces) return;
+            if (!TryFindNextTarget(strikePos, caster, out Pawn nextTarget))
+                return;
+            FireAt(nextTarget, hitThing);
         }
-#nullable enable
-        private Pawn? FindNextTarget(IntVec3 originCell, Pawn caster)
+
+        private bool TryFindNextTarget(IntVec3 originCell, Pawn caster, out Pawn target)
         {
-            foreach (Pawn? pawn in RadialUtility.GetPawnsInRadius(originCell, caster.Map, SearchRadius))
+            target = null;
+            foreach (Pawn pawn in RadialUtility.GetPawnsInRadius(originCell, caster.Map, SearchRadius))
             {
-                if (IsValidTarget(pawn))
-                {
-                    return pawn;
-                }
+                if (!IsValidTarget(pawn)) continue;
+                target = pawn;
+                return true;
             }
-            return null;
+            return false;
         }
-#nullable disable
 
         private bool IsValidTarget(Pawn pawn)
         {
@@ -88,13 +70,13 @@ namespace FantasyBiotech
         {
             IntVec3 launchPos = hitThing.Position;
 
-            Projectile_Bouncing newProj = (Projectile_Bouncing)GenSpawn.Spawn(def, launchPos, hitThing.Map);
+            Projectile_Bouncing newProj = (Projectile_Bouncing)GenSpawn.Spawn(def, launchPos, newTarget.Map);
             newProj._numBounces = this._numBounces + 1;
             newProj._hitThings = new List<Thing>(_hitThings);
-            newProj.Launch(launcher, newTarget, newTarget, ProjectileHitFlags.IntendedTarget);
             newProj._previousProjectile = this;
-        }
 
+            newProj.Launch(launcher, newTarget, newTarget, ProjectileHitFlags.IntendedTarget);
+        }
 
         public override void ExposeData()
         {
