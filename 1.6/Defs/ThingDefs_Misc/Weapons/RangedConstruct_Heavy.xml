@@ -9,7 +9,9 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/SteamDoubleCrossbow</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
 		</graphicData>
+		<uiIconScale>0.50</uiIconScale>
 		<statBases>
 			<MarketValue>1000</MarketValue>
 			<Mass>8</Mass>
@@ -28,6 +30,8 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>VR_Bullet_ConstructGun_Crossbow</defaultProjectile>
 				<warmupTime>1.7</warmupTime>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<burstShotCount>2</burstShotCount>
 				<range>29.9</range>
 				<soundCast>ChargeLance_Fire</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>

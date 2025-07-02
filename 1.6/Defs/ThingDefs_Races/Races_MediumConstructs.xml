@@ -202,11 +202,11 @@
 				<commonality>10</commonality>
 			</li>
 		</verbs>
-		<comps>
-			<li Class="VEF.AnimalBehaviours.CompProperties_InitialAbility">
-				<initialAbility>VR_Fantasy_BallistaeBolt</initialAbility>
-			</li>
-		</comps>
+		<!-- <comps> -->
+			<!-- <li Class="VEF.AnimalBehaviours.CompProperties_InitialAbility"> -->
+				<!-- <initialAbility>VR_Fantasy_BallistaeBolt</initialAbility> -->
+			<!-- </li> -->
+		<!-- </comps> -->
 		<race>
 			<body>Pikeman</body>
 			<baseHealthScale>0.85</baseHealthScale>
@@ -354,6 +354,5 @@
 		<techHediffsChance>1</techHediffsChance>
 		<techHediffsMoney>9999~9999</techHediffsMoney>
 	</PawnKindDef>
-	
 	
 </Defs>

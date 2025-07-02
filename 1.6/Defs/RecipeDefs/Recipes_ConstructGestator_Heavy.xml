@@ -99,4 +99,51 @@
 		</descriptionHyperlinks>
 	</RecipeDef>
 	
+	<RecipeDef ParentName="VR_HeavyConstructRecipe">
+		<defName>VR_Construct_Centurion_Shooter</defName>
+		<label>gestate tunneler</label>
+		<description>Gestate a tunneler mechanoid.</description>
+		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>255</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>355</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>32</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VR_DynamoCoreHigh</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<VR_Construct_Centurion_Shooter>1</VR_Construct_Centurion_Shooter>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Centurion_Shooter</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	
 </Defs>

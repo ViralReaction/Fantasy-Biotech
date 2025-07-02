@@ -58,7 +58,7 @@
 			<li>VR_MakeConstruct_Lifter</li>
 			<li>VR_MakeConstruct_Constructoid</li>
 			<li>VR_MakeConstruct_Agrihand</li>
-			<li>ResurrectLightMech</li>
+			<li>VR_ResurrectLightConstruct</li>
 		</recipes>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
@@ -248,9 +248,12 @@
 			<li>VR_Construct_Tesseron</li>
 			<li>VR_Construct_Centurion</li>
 			<li>VR_Construct_Centurion_Burner</li>
-			<li>ResurrectMediumMech</li>
-			<li>ResurrectHeavyMech</li>
-			<li>ResurrectUltraheavyMech</li>
+			<li>VR_Construct_Centurion_Shooter</li>
+			<li>VR_Construct_Colossus</li>
+			<li>VR_Construct_ScarabQueen</li>
+			<li>VR_ResurrectMediumConstruct</li>
+			<li>VR_ResurrectHeavyConstruct</li>
+			<li>VR_ResurrectUltraheavyConstruct</li>
 		</recipes>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
