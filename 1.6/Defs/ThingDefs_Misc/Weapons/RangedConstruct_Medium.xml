@@ -175,7 +175,7 @@
 			</li>
 		</verbs>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BaseBullet">
 		<defName>VR_Bullet_LightingGunProjectile</defName>
 		<label>lightning projectile</label>
@@ -190,13 +190,9 @@
 			<speed>60</speed>
 		</projectile>
 		<modExtensions>
-			<li Class="VEF.Weapons.TeslaChainingProps">
-				<maxBounceCount>3</maxBounceCount>
-				<damageDef>Beam</damageDef>
-				<targetFriendly>false</targetFriendly>
-				<addFire>false</addFire>
-				<bounceRange>5</bounceRange>
-				<maxLifetime>10</maxLifetime>
+			<li Class="FantasyBiotech.BounceProjectileExtension">
+				<bounceCount>3</bounceCount>
+				<bounceRadius>5</bounceRadius>
 			</li>
 		</modExtensions>
 	</ThingDef>

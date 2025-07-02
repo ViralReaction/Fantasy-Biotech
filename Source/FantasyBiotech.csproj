@@ -49,6 +49,7 @@
     <Compile Include="FantasyBiotech\Comps\CompResourceTrader_Steam.cs" />
     <Compile Include="FantasyBiotech\Comps\CompPowerPlantNeedResource_Steam.cs" />
     <Compile Include="FantasyBiotech\Comps\CompResourceStorage_SteamTank.cs" />
+    <Compile Include="FantasyBiotech\Defs\BounceProjectileExtension.cs" />
     <Compile Include="FantasyBiotech\Defs\ConstructExtension.cs" />
     <Compile Include="FantasyBiotech\Defs\FantasyBiotechDefOf.cs" />
     <Compile Include="FantasyBiotech\Defs\ResearchTechLevelOverride.cs" />
