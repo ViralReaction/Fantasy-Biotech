@@ -7,7 +7,7 @@
 		<appearAfterTicks>21600000</appearAfterTicks><!-- 6 years -->
 	</BossDef>
 
-	<BossgroupDef ParentName="BaseBossgroup">
+	<BossgroupDef ParentName="VR_BaseBossgroupBase">
 		<defName>VR_Construct_Apocriton</defName>
 		<boss>VR_Construct_Apocriton</boss>
 		<waves>

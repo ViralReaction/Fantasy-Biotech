@@ -47,9 +47,10 @@
 				<useJob>TriggerObject</useJob>
 				<useLabel>Summon scarab queen threat</useLabel>
 				<useDuration>900</useDuration>
-				<floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+				<floatMenuFactionIcon>VR_Construct</floatMenuFactionIcon>
 			</li>
 			<li Class="CompProperties_Useable_CallBossgroup">
+				<compClass>FantasyBiotech.CompUseEffect_CallBossgroup_Steam</compClass>
 				<bossgroupDef>VR_Construct_ScarabQueen</bossgroupDef>
 				<effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
 				<prepareEffecterDef>MechBandAntennaPrepared</prepareEffecterDef>
@@ -70,67 +71,86 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VR_ConstructBandDish</defName>
 		<label>construct band dish</label>
-		<description>A mech-band signaling device more powerful than the normal mechband antenna. When activated, it puts out an ultra-powerful mech signal pulse, which will attract a mechanoid commander to attack with its escorts. If you can defeat it, you can collect special technologies from its corpse. The signal pulse burns out the dish, so this building can only be used once.</description>
+		<description>Allows radio contact with other factions and orbital traders.</description>
+		<thingClass>FantasyBiotech.Building_CommsConsole_Steam</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Misc/MechbandDish_Steam/MechbandDish_Steam</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(2,2)</drawSize>
+			<drawSize>(3,3)</drawSize>
 			<shadowData>
 				<volume>(1.1, 0.75, 1.1</volume>
 			</shadowData>
 		</graphicData>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
-		<fillPercent>0.3</fillPercent>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>2200</WorkToBuild>
+			<Flammability>0.6</Flammability>
+		</statBases>
+		<size>(3,3)</size>
 		<building>
-			<ai_chillDestination>false</ai_chillDestination>
-			<buildingTags>
-				<li>Biotech</li>
-			</buildingTags>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
 		<designationCategory>Biotech</designationCategory>
-		<uiOrder>2460</uiOrder>
-		<statBases>
-			<MaxHitPoints>150</MaxHitPoints>
-			<WorkToBuild>8000</WorkToBuild>
-			<Mass>25</Mass>
-			<Flammability>0.5</Flammability>
-		</statBases>
-		<size>(2,2)</size>
 		<costList>
-			<Steel>75</Steel>
-			<Plasteel>25</Plasteel>
-			<ComponentSpacer>2</ComponentSpacer>
+			<Steel>120</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
-		<killedLeavings>
-			<ChunkSlagSteel>5</ChunkSlagSteel>
-		</killedLeavings>
-		<researchPrerequisites>
-			<li>VR_HighConstructTech</li>
-		</researchPrerequisites>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<interactionCellOffset>(0,0,2)</interactionCellOffset>
+		<hasInteractionCell>true</hasInteractionCell>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<uiOrder>2100</uiOrder>
 		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>7</consumptionPerTick>
+				<idleConsumptionPerTick>1</idleConsumptionPerTick>
+			</li>
+			<li Class="CompProperties_Power">
+				<transmitsPower>false</transmitsPower>
+				<!-- Specify the comp class -->
+				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_Usable">
 				<useJob>TriggerObject</useJob>
-				<useLabel>Summon apocriton threat</useLabel>
+				<useLabel>Summon colossus threat</useLabel>
 				<useDuration>900</useDuration>
-				<floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+				<floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
+				<floatMenuFactionIcon>VR_Construct</floatMenuFactionIcon>
+				<ignoreOtherReservations>true</ignoreOtherReservations>
+				<layerWhitelist>
+					<li>Surface</li>
+				</layerWhitelist>
 			</li>
 			<li Class="CompProperties_Useable_CallBossgroup">
-				<bossgroupDef>VR_Construct_Apocriton</bossgroupDef>
-				<effecterDef>MechbandDishUsed</effecterDef>
-				<prepareEffecterDef>MechBandDishPrepared</prepareEffecterDef>
-				<unlockedLetterLabelKey>LetterLabelBossgroupCallerUnlocked</unlockedLetterLabelKey>
-				<unlockedLetterTextKey>LetterBossgroupCallerUnlocked</unlockedLetterTextKey>
+				<compClass>FantasyBiotech.CompUseEffect_CallBossgroup_Steam</compClass>
+				<bossgroupDef>VR_Construct_Colossus</bossgroupDef>
+				<spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
+				<spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
+				<effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
 				<delayTicks>120</delayTicks>
-			</li>
-			<li Class="CompProperties_UseEffectDestroySelf">
-				<delayTicks>120</delayTicks>
-				<spawnKilledLeavings>true</spawnKilledLeavings>
-				<effecterDef>MechbandBuildingDestroyed</effecterDef>
 			</li>
 		</comps>
+		<designationHotKey>Misc3</designationHotKey>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>VR_BasicConstructTech</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 		<tickerType>Normal</tickerType>
-		<filthLeaving>Filth_MachineBits</filthLeaving>
 	</ThingDef>
 
 </Defs>

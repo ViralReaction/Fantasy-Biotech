@@ -7,7 +7,7 @@
 		<appearAfterTicks>7200000</appearAfterTicks><!-- 2 years -->
 	</BossDef>
 
-	<BossgroupDef ParentName="BaseBossgroup">
+	<BossgroupDef ParentName="VR_BaseBossgroupBase">
 		<defName>VR_Construct_Colossus</defName>
 		<boss>VR_Construct_Colossus</boss>
 		<waves>

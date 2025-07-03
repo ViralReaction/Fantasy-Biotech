@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BossgroupDef Abstract="True" Name="VR_BaseBossgroupBase">
+		<quest>VR_Bossgroup</quest>
+		<repeatWaveStartIndex>2</repeatWaveStartIndex>
+	</BossgroupDef>
+
+</Defs>

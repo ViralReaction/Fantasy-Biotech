@@ -41,8 +41,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantasyBiotech\QuestNode_Root_Bossgroup_Construct.cs" />
     <Compile Include="FantasyBiotech\Alert_GeneRackUnfueled.cs" />
     <Compile Include="FantasyBiotech\ComplexThreats\FileName.cs" />
+    <Compile Include="FantasyBiotech\Comps\CompUseEffect_CallBossgroup_Steam.cs" />
     <Compile Include="FantasyBiotech\Comps\CompColossusRayExplosion.cs" />
     <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_ColossusRayExplosion.cs" />
     <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_SteamTank.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="FantasyBiotech\MapComponent\RechargerMapComponent.cs" />
     <Compile Include="FantasyBiotech\Projectiles\Projectile_Bouncing.cs" />
     <Compile Include="FantasyBiotech\SymbolResolvers\SymbolResolver_RandomConstructGroup.cs" />
+    <Compile Include="FantasyBiotech\ThingClasses\Building_CommsConsole_Steam.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_SteamGenerator.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_MechCharger_Steam.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_ConstructGestator.cs" />
