@@ -32,8 +32,8 @@
 
 	<ThingDef ParentName="VR_LightConstructGunRanged">
 		<defName>VR_ConstructGun_MiniBlunderbuss</defName>
-		<label>mini-shotgun</label>
-		<description>A compact, short-range shotgun designed to be mounted on a light combat mechanoid.</description>
+		<label>mini-blunderbuss</label>
+		<description>A compact, short-range blunderbuss designed to be mounted on a light combat construct.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MiniBlunderbuss</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

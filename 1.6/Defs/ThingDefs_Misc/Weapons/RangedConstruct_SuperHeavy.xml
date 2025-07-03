@@ -40,9 +40,9 @@
 
 	<!-- Hellsphere cannon -->
 	<ThingDef ParentName="VR_SuperHeavyConstructGun">
-		<defName>VR_ConstructGun_HellsphereCannon</defName>
-		<label>hellsphere cannon</label>
-		<description>A ultra-high-power energy pulse projector designed for siegebreaking. The hellsphere cannon must hold a bead on its target for several seconds while charging, before it releases a devastating tsunami of power. The explosion is capable of melting concrete in its blast radius. The heat of the explosion will ignite anything nearby. It cannot fire at close-up targets.</description>
+		<defName>VR_ConstructGun_TonalIncinerator</defName>
+		<label>tonal incinerator</label>
+		<description>A ancient device that emits a sweeping ray that destructively detonates ambient magika.</description>
 		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/Teslacannon</texPath>
@@ -120,7 +120,7 @@
 	<ThingDef ParentName="VR_SuperHeavyConstructGun">
 		<defName>VR_ConstructGun_HeavyBowGun</defName>
 		<label>heavy bow gun</label>
-		<description>A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<description>A steam-charged amalgmation of crossbow and siege device. Can launch explosive rounds over walls.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/HeavyBowGun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

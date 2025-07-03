@@ -42,7 +42,7 @@
 	<ThingDef ParentName="VR_MediumConstructGun">
 		<defName>VR_ConstructGun_Crossbow</defName>
 		<label>steam crossbow</label>
-		<description>A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<description>A mechanical crossbow with a steam-charged catapult.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/SteamDoubleCrossbow</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -94,7 +94,7 @@
 	<ThingDef ParentName="VR_MediumConstructGun">
 		<defName>VR_ConstructGun_Flamer</defName>
 		<label>flame cannon</label>
-		<description>A ultra-high-power energy pulse projector designed for siegebreaking. The hellsphere cannon must hold a bead on its target for several seconds while charging, before it releases a devastating tsunami of power. The explosion is capable of melting concrete in its blast radius. The heat of the explosion will ignite anything nearby. It cannot fire at close-up targets.</description>
+		<description>Emits a single blast of alchemical flame, igniting terrain and melting armor</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/Flamer</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -145,7 +145,7 @@
 	<ThingDef ParentName="VR_MediumConstructGun">
 		<defName>VR_ConstructGun_LightningGun</defName>
 		<label>lightning gun</label>
-		<description>A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<description>An experimental minituraized version of device seen in larger constructs. It emits a dangerous blast of electrical energy.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/Teslacannon</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
