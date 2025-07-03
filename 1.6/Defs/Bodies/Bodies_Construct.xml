@@ -120,7 +120,7 @@
 					</parts>
 				</li>
 				<li>
-					<def>VR_DynamoCore</def>
+					<def>VR_TonalCore</def>
 					<coverage>0.06</coverage>
 					<depth>Inside</depth>
 				</li>
@@ -179,7 +179,7 @@
 					<height>Bottom</height>
 				</li>
 				<li>
-					<def>VR_DynamoCore</def>
+					<def>VR_TonalCore</def>
 					<coverage>0.06</coverage>
 					<depth>Inside</depth>
 				</li>
@@ -357,7 +357,7 @@
 					<height>Bottom</height>
 				</li>
 				<li>
-					<def>VR_DynamoCore</def>
+					<def>VR_TonalCore</def>
 					<coverage>0.06</coverage>
 					<depth>Inside</depth>
 				</li>
@@ -429,7 +429,7 @@
 					<coverage>0.75</coverage>
 					<parts>
 						<li>
-							<def>VR_DynamoCore</def>
+							<def>VR_TonalCore</def>
 							<coverage>0.05</coverage>
 							<depth>Inside</depth>
 						</li>

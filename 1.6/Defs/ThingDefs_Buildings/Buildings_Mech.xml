@@ -350,7 +350,7 @@
 	</ThingDef>
 
 	<ThingDef Abstract="True" Name="VR_SubcoreScannerSteamBase" ParentName="BuildingBase">
-		<thingClass>FantasyBiotech.Building_DynamoCoreScanner</thingClass>
+		<thingClass>FantasyBiotech.Building_TonalCoreScanner</thingClass>
 		<containedPawnsSelectable>true</containedPawnsSelectable>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
@@ -414,7 +414,7 @@
 			<li>VR_StandardConstructTech</li>
 		</researchPrerequisites>
 		<building>
-			<subcoreScannerOutputDef>VR_DynamoCoreRegular</subcoreScannerOutputDef>
+			<subcoreScannerOutputDef>VR_TonalCoreRegular</subcoreScannerOutputDef>
 			<subcoreScannerStartEffect>SubcoreSoftscanner_Start</subcoreScannerStartEffect>
 			<subcoreScannerWorking>SubcoreSoftscanner_Working</subcoreScannerWorking>
 			<subcoreScannerComplete>SubcoreSoftscanner_Complete</subcoreScannerComplete>
@@ -457,7 +457,7 @@
 			<li>VR_HighConstructTech</li>
 		</researchPrerequisites>
 		<building>
-			<subcoreScannerOutputDef>VR_DynamoCoreHigh</subcoreScannerOutputDef>
+			<subcoreScannerOutputDef>VR_TonalCoreHigh</subcoreScannerOutputDef>
 			<subcoreScannerStartEffect>SubcoreRipscanner_Start</subcoreScannerStartEffect>
 			<destroyBrain>true</destroyBrain>
 			<subcoreScannerWorking>SubcoreRipscanner_Working</subcoreScannerWorking>

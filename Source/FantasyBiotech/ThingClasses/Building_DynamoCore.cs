@@ -9,7 +9,7 @@ using Verse.Sound;
 namespace FantasyBiotech
 {
     [StaticConstructorOnStartup]
-    public class Building_DynamoCoreScanner : Building_SubcoreScanner
+    public class Building_TonalCoreScanner : Building_SubcoreScanner
     {
        
         public override AcceptanceReport CanAcceptPawn(Pawn selPawn)

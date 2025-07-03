@@ -25,7 +25,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>VR_DynamoCoreBasic</li>
+						<li>VR_TonalCoreBasic</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>

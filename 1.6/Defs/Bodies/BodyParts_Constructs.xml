@@ -34,7 +34,7 @@
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<defName>VR_DynamoCore</defName>
+		<defName>VR_TonalCore</defName>
 		<label>dynamo core</label>
 		<hitPoints>20</hitPoints>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
