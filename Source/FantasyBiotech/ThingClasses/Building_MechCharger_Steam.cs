@@ -248,32 +248,16 @@ namespace FantasyBiotech
 
         public bool CanPawnChargeCurrentlySteam(Pawn pawn)
         {
-            if (pawn == null)
+            if (pawn == null || !IsCompatibleWithCharger(pawn.kindDef) || !IsPowered)
             {
                 return false;
             }
-
-            if (!IsCompatibleWithCharger(pawn.kindDef))
+            if (currentlyChargingMech == null)
             {
-                return false;
+                return true;
             }
+            return currentlyChargingMech == pawn;
 
-            if (IsPowered)
-            {
-
-                if (currentlyChargingMech == null)
-                {
-                    return true;
-                }
-
-                if (currentlyChargingMech == pawn)
-                {
-                    return true;
-                }
-
-            }
-
-            return false;
         }
 
     }

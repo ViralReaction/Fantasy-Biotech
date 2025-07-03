@@ -491,7 +491,7 @@
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<fillPercent>0.4</fillPercent>
 		<graphicData>
-			<texPath>Things/Building/Misc/BandNode</texPath>
+			<texPath>Things/Building/Misc/BandNode_Steam</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(2,2)</drawSize>
 			<shadowData>

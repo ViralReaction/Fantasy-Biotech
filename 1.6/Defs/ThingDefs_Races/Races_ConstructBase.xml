@@ -48,8 +48,13 @@
 			</li>
 			<li MayRequire="Ludeon.RimWorld.Biotech" Class="CompProperties_MechRepairable"/>
 		</comps>
+		<modExtensions>
+			<li Class="FantasyBiotech.ConstructExtension">
+				<isConstruct>true</isConstruct>
+			</li>
+		</modExtensions>
 	</ThingDef>
-	
+
 	<!-- Light Constructs (Militor/Helper Constructs) -->
 	<ThingDef Name="VR_LightConstruct" ParentName="VR_BaseConstruct" Abstract="True">
 		<statBases>

@@ -9,7 +9,8 @@ namespace FantasyBiotech
     {
         public static bool Prefix(ref Building_MechCharger __result, Pawn mech, Pawn carrier, bool forced)
         {
-
+            ConstructExtension extension = mech.def.GetModExtension<ConstructExtension>();
+            if (extension?.isConstruct != true) return true;
             __result = MechUtility.GetClosestCharger(carrier, mech, forced);
             return false;
         }

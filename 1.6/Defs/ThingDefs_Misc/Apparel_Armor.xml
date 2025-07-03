@@ -65,5 +65,70 @@
 		</tradeTags>
 		<colorGenerator Class="ColorGenerator_StandardApparel"/>
 	</ThingDef>
+	
+	<ThingDef ParentName="ArmorSmithableBase">
+		<defName>VR_Apparel_ArtificerSuit_Lord</defName>
+		<label>artificelord suit</label>
+		<description>An armor suit packed with artificer-assistance gear. This suit amplifies a artificer's bandwidth, but is somewhat less protective than dedicated heavy armor.</description>
+		<recipeMaker>
+			<researchPrerequisite>VR_UltraConstructTech</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<displayPriority>530</displayPriority>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/ArtificerArmour/ArtificerArmour</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<WorkToMake>38000</WorkToMake>
+			<MaxHitPoints>290</MaxHitPoints>
+			<Mass>10</Mass>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.20</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>11</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MechBandwidth>6</MechBandwidth>
+			<ShootingAccuracyPawn>-5</ShootingAccuracyPawn>
+			<MeleeHitChance>-0.5</MeleeHitChance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
+		</equippedStatOffsets>
+		<costList>
+			<!-- <NanostructuringChip>2</NanostructuringChip> -->
+			<!-- <PowerfocusChip>1</PowerfocusChip> -->
+			<Plasteel>120</Plasteel>
+		</costList>
+		<stuffCategories>
+			<li>Leathery</li>
+			<li>Fabric</li>
+		</stuffCategories>
+		<costStuffCount>170</costStuffCount>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>ArtificerArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerArmour/ArtificerArmour</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+		</apparel>
+		<tradeability>Sellable</tradeability>
+		<tradeTags Inherit="False">
+			<li>ArtificerArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_StandardApparel"/>
+	</ThingDef>
 
 </Defs>

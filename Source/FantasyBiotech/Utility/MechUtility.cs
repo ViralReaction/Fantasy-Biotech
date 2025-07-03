@@ -11,18 +11,6 @@ namespace FantasyBiotech
 
         public static Building_MechCharger GetClosestCharger(Pawn carrier, Pawn mech, bool forced)
         {
-            if (mech == null)
-            {
-                Log.Error("[ERROR] GetClosestCharger called with null mech.");
-                return null;
-            }
-
-            if (mech.Map == null)
-            {
-                Log.Error($"[ERROR] Mech {mech} has no valid map.");
-                return null;
-            }
-
             Danger danger = forced ? Danger.Deadly : Danger.Some;
             Building_MechCharger closestCharger = null;
             float closestDist = float.MaxValue;
@@ -72,6 +60,11 @@ namespace FantasyBiotech
             }
 
             return Faction.OfMechanoids;
+        }
+
+        public static bool IsArtificer(Pawn pawn)
+        {
+            return pawn.health.hediffSet.HasHediff(FantasyBiotechDefOf.VR_ArtificerImplant);
         }
 
     }
