@@ -36,7 +36,7 @@
 	<RecipeDef ParentName="VR_LightConstructRecipe">
 		<defName>VR_MakeConstruct_Militor</defName>
 		<label>gestate militor</label>
-		<description>Gestate a militor mechanoid.</description>
+		<description>Gestate a militor construct.</description>
 		<products>
 			<VR_Construct_Militor>1</VR_Construct_Militor>
 		</products>
@@ -48,7 +48,7 @@
 	<RecipeDef ParentName="VR_LightConstructRecipe">
 		<defName>VR_MakeConstruct_Lifter</defName>
 		<label>gestate lifter</label>
-		<description>Gestate a lifter mechanoid.</description>
+		<description>Gestate a lifter construct.</description>
 		<products>
 			<VR_Construct_Lifter>1</VR_Construct_Lifter>
 		</products>
@@ -60,7 +60,7 @@
 	<RecipeDef ParentName="VR_LightConstructRecipe">
 		<defName>VR_MakeConstruct_Constructoid</defName>
 		<label>gestate constructoid</label>
-		<description>Gestate a constructoid mechanoid.</description>
+		<description>Gestate a constructoid construct.</description>
 		<products>
 			<VR_Construct_Constructoid>1</VR_Construct_Constructoid>
 		</products>
@@ -72,7 +72,7 @@
 	<RecipeDef ParentName="VR_LightConstructRecipe">
 		<defName>VR_MakeConstruct_Agrihand</defName>
 		<label>gestate agrihand</label>
-		<description>Gestate an agrihand mechanoid.</description>
+		<description>Gestate an agrihand construct.</description>
 		<products>
 			<VR_Construct_Agrihand>1</VR_Construct_Agrihand>
 		</products>

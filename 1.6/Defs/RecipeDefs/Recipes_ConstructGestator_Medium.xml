@@ -9,7 +9,7 @@
 	<RecipeDef ParentName="VR_MediumConstructRecipe">
 		<defName>VR_Construct_Sphere_Melee</defName>
 		<label>gestate melee sphere</label>
-		<description>Gestate a melle sphere construct.</description>
+		<description>Gestate a melee sphere construct.</description>
 		<ingredients Inherit="False">
 			<li>
 				<filter>

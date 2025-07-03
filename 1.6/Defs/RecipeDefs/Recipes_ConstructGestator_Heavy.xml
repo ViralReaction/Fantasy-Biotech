@@ -7,8 +7,8 @@
 
 	<RecipeDef ParentName="VR_HeavyConstructRecipe">
 		<defName>VR_Construct_Centurion</defName>
-		<label>gestate tunneler</label>
-		<description>Gestate a tunneler mechanoid.</description>
+		<label>gestate centurion</label>
+		<description>Gestate a centurion construct.</description>
 		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
 		<ingredients Inherit="False">
 			<li>
@@ -54,8 +54,8 @@
 	
 	<RecipeDef ParentName="VR_HeavyConstructRecipe">
 		<defName>VR_Construct_Centurion_Burner</defName>
-		<label>gestate tunneler</label>
-		<description>Gestate a tunneler mechanoid.</description>
+		<label>gestate centurion (burner)</label>
+		<description>Gestate a centurion (burner) construct.</description>
 		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
 		<ingredients Inherit="False">
 			<li>
@@ -101,8 +101,8 @@
 	
 	<RecipeDef ParentName="VR_HeavyConstructRecipe">
 		<defName>VR_Construct_Centurion_Shooter</defName>
-		<label>gestate tunneler</label>
-		<description>Gestate a tunneler mechanoid.</description>
+		<label>gestate centurion (shooter)</label>
+		<description>Gestate a centurion (shooter) constructs.</description>
 		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
 		<ingredients Inherit="False">
 			<li>

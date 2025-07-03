@@ -9,8 +9,8 @@
   
 	<RecipeDef ParentName="VR_SuperHeavyConstructRecipe">
 		<defName>VR_Construct_Colossus</defName>
-		<label>gestate diabolus</label>
-		<description>Gestate a diabolus mech.</description>
+		<label>gestate colossus</label>
+		<description>Gestate a colossus construct.</description>
 		<gestationCycles>12</gestationCycles>
 		<researchPrerequisite Inherit="False">VR_HighConstructTech</researchPrerequisite>
 		<ingredients Inherit="False">
@@ -58,7 +58,7 @@
 	<RecipeDef ParentName="VR_SuperHeavyConstructRecipe">
 		<defName>VR_Construct_ScarabQueen</defName>
 		<label>gestate scarab queen</label>
-		<description>Gestate a scarab queen mechanoid.</description>
+		<description>Gestate a scarab queen construct.</description>
 		<products>
 			<VR_Construct_ScarabQueen>1</VR_Construct_ScarabQueen>
 		</products>
