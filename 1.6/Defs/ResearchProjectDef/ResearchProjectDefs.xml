@@ -17,12 +17,11 @@
 			<rulesStrings>
 				<li>subject->steam power</li>
 
-				<li>subject_story->excavated archite genes from the transcendent moon of Ix</li>
-				<li>subject_story->made a good living as an archite gene trader</li>
-				<li>subject_story->led a research expedition to an ancient monolith and returned changed</li>
+				<li>subject_story->built a boiler deep beneath a mountain</li>
+				<li>subject_story->discovered forgotten steam diagrams in a buried vault</li>
+				<li>subject_story->traversed an active geyser field</li>
 
-				<li>subject_gerund->assembling archite genes</li>
-				<li>subject_gerund->creating seemingly impossible genes</li>
+				<li>subject_gerund->created pressurized containment vessels</li>
 
 			</rulesStrings>
 		</generalRules>
