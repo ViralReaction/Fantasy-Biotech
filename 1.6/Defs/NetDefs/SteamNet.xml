@@ -249,7 +249,8 @@
 			<li Class="FantasyBiotech.CompProperties_SteamTank">
 				<compClass>FantasyBiotech.CompResourceStorage_SteamTank</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
-				<storageCapacity>240000</storageCapacity>
+				<!-- Each 600 is one SPU per day -->
+				<storageCapacity>2400</storageCapacity><!-- Equivalent to 4 SPUd -->
 				<barSize>(0.45, 0.12)</barSize>
 				<margin>0.0</margin>
 				<centerOffset>(-0.005, 0, 0.51)</centerOffset>
@@ -314,7 +315,8 @@
 		<comps>
 			<li Class="FantasyBiotech.CompProperties_SteamTank">
 				<pipeNet>VR_SteamNet</pipeNet>
-				<storageCapacity>1200000</storageCapacity>
+				<!-- Each 600 is one SPU per day -->
+				<storageCapacity>12000</storageCapacity><!-- Equivalent to 20 SPUd -->
 				<barSize>(0.90, 0.25)</barSize>
 				<margin>0.0</margin>
 				<centerOffset>(-0.01, 0, 1.02)</centerOffset>

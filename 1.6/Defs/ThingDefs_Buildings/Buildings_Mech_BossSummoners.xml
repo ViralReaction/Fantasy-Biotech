@@ -112,7 +112,6 @@
 				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
 				<consumptionPerTick>7</consumptionPerTick>
-				<idleConsumptionPerTick>1</idleConsumptionPerTick>
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>false</transmitsPower>

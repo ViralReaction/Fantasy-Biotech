@@ -11,6 +11,7 @@ namespace FantasyBiotech
     public class CompResourceStorage_SteamTank : CompResourceStorage
     {
         public new CompProperties_SteamTank Props => (CompProperties_SteamTank)props;
+        private float decayRate = 1f;
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
 
@@ -24,10 +25,7 @@ namespace FantasyBiotech
                 PipeSystemDebug.Message($"Registering {this}");
             }
 
-            LongEventHandler.ExecuteWhenFinished(delegate
-            {
-                StartSustainer();
-            });
+            LongEventHandler.ExecuteWhenFinished(StartSustainer);
 
             graphicLinkedOverlay = LinkedPipes.GetOverlayFor(Props.pipeNet);
             powerComp = parent.TryGetComp<CompPowerTrader>();
@@ -130,7 +128,26 @@ namespace FantasyBiotech
                 };
                 pipeNetOverlayDrawer?.ToggleStatic(parent, MaterialCreator.transferMat, markedForTransfer);
             }
+            const float percentPerDay = 0.05f;
+            const float intervalsPerDay = GenDate.TicksPerDay / 250f;
+            decayRate = Props.storageCapacity * percentPerDay / intervalsPerDay;
         }
+        public override void CompTickInterval(int delta)
+        {
+            base.CompTickInterval(delta);
+            if (parent.IsHashIntervalTick(250))
+            {
+                if (amountStored > 0)
+                {
+                    amountStored -= decayRate;
+                    if (amountStored < 0)
+                    {
+                        amountStored = 0;
+                    }
+                }
+            }
+        }
+
         public override void PostDraw()
         {
             base.PostDraw();
@@ -146,8 +163,8 @@ namespace FantasyBiotech
             if (Props.addStorageInfo)
             {
                 // Convert SPU-ticks to SPU-days
-                float storedSPUd = amountStored / GenDate.TicksPerDay;
-                float maxSPUd = Props.storageCapacity / GenDate.TicksPerDay;
+                float storedSPUd = amountStored * 100 / GenDate.TicksPerDay;
+                float maxSPUd = Props.storageCapacity * 100 / GenDate.TicksPerDay;
                 sb.AppendInNewLine("PowerBatteryStored".Translate() + ": " + storedSPUd.ToString("F1") + " / " + maxSPUd.ToString("F0") + " SPUd");
             }
             if (markedForTransfer)
@@ -155,7 +172,7 @@ namespace FantasyBiotech
                 sb.AppendInNewLine("PipeSystem_MarkedToTransferContent".Translate());
             }
             PipeNet net = PipeNet;
-            sb.AppendInNewLine("FantasyBiotech_SteamNetExcess".Translate((net.Production - net.Consumption).ToString("F0"), (net.Stored / GenDate.TicksPerDay).ToString("F1")));
+            sb.AppendInNewLine("FantasyBiotech_SteamNetExcess".Translate((net.Production - net.Consumption).ToString("F0"), (net.Stored * 100 / GenDate.TicksPerDay).ToString("F1")));
             if (DebugSettings.godMode)
             {
                 sb.AppendInNewLine(net.ToString());

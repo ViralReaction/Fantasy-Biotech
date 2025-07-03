@@ -10,17 +10,17 @@ namespace FantasyBiotech
         public override string CompInspectStringExtra()
         {
             StringBuilder sb = new StringBuilder();
-            if (this.Consumption >= 0f)
+            if (Consumption >= 0f)
             {
-                sb.AppendFormat("{0} {1:##0} {2}", "PipeSystem_ResourceNeeded".Translate(this.Resource.name), (this.Consumption), this.Resource.unit);
+                sb.AppendFormat("{0} {1:##0} {2}", "PipeSystem_ResourceNeeded".Translate(Resource.name), (Consumption), Resource.unit);
             }
             else
             {
-                sb.AppendFormat("{0} {1:##0} {2}", "PipeSystem_ResourceOutput".Translate(this.Resource.name), this.ResourceOn ? -(this.Consumption) : 0.0, this.Resource.unit);
+                sb.AppendFormat("{0} {1:##0} {2}", "PipeSystem_ResourceOutput".Translate(Resource.name), ResourceOn ? -(Consumption) : 0.0, Resource.unit);
             }
             if (PipeNet == null)
             {
-                sb.Append("PipeSystem_NotConnected".Translate(this.Resource.name));
+                sb.Append("PipeSystem_NotConnected".Translate(Resource.name));
                 return sb.ToString().Trim();
             }
             if (!ResourceOn)
@@ -29,9 +29,9 @@ namespace FantasyBiotech
                 return sb.ToString().Trim();
             }
             PipeNet net = PipeNet;
-            sb.AppendInNewLine("FantasyBiotech_SteamNetExcess".Translate((net.Production - net.Consumption).ToString("F0"), (net.Stored / GenDate.TicksPerDay).ToString("F1")));
+            sb.AppendInNewLine("FantasyBiotech_SteamNetExcess".Translate((net.Production - net.Consumption).ToString("F0"), (net.Stored * 100 / GenDate.TicksPerDay).ToString("F1")));
             if (DebugSettings.ShowDevGizmos)
-                sb.AppendInNewLine(this.DebugString);
+                sb.AppendInNewLine(DebugString);
             return sb.ToString().Trim();
         }
     }
