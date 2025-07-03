@@ -22,7 +22,7 @@
 	<ResearchProjectDef ParentName="VR_ConstructTechBase">
 		<defName>VR_BasicConstructTech</defName>
 		<label>basic construct tech</label>
-		<description>The technology needed for your mechanitor to create and control basic-tier mechanoids.</description>
+		<description>The technology needed for your artificer to create and control basic-tier constructs.</description>
 		<baseCost>200</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
@@ -34,12 +34,12 @@
 			<rulesStrings>
 				<li>subject->constructs</li>
 
-				<li>subject_story->authored a children's book covering the basic types of mechanoid</li>
-				<li>subject_story->was implanted with a prototype mechlink</li>
-				<li>subject_story->replicated basic biomech techniques independently</li>
-				<li>subject_story->was mining an ancient exostrider wreck and found a mechlink preserved in the wreckage</li>
+				<li>subject_story->authored a children's book covering the basic types of constructs</li>
+				<li>subject_story->was implanted with a prototype artificelink</li>
+				<li>subject_story->replicated basic tonal harmonic techniques independently</li>
+				<!-- <li>subject_story->was mining an ancient exostrider wreck and found a mechlink preserved in the wreckage</li> -->
 
-				<li>subject_gerund->creating basic mechanoids</li>
+				<li>subject_gerund->creating basic constructs</li>
 			</rulesStrings>
 		</generalRules>
 	</ResearchProjectDef>
@@ -47,7 +47,7 @@
 	<ResearchProjectDef ParentName="VR_ConstructTechBase">
 		<defName>VR_StandardConstructTech</defName>
 		<label>standard construct tech</label>
-		<description>The technology needed for your mechanitor to create and control standard-tier mechanoids.\n\nYou can get signal chips by using a mechanitor to summon a diabolus threat.</description>
+		<description>The technology needed for your artificer to create and control standard-tier constructs.\n\nYou can get signal chips by using a artificer to summon a collosus threat.</description>
 		<baseCost>1000</baseCost>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
@@ -62,12 +62,12 @@
 			<rulesStrings>
 				<li>subject->constructs</li>
 
-				<li>subject_story->acquired a signal chip in shady circumstances</li>
-				<li>subject_story->found an intact signal chip in a diabolus wreck</li>
-				<li>subject_story->survived a mechanoid hive assault</li>
-				<li>subject_story->collated reports of mechanoid attacks, looking for commonalities</li>
+				<!-- <li>subject_story->acquired a signal chip in shady circumstances</li> -->
+				<!-- <li>subject_story->found an intact signal chip in a diabolus wreck</li> -->
+				<li>subject_story->survived an automata foundry assault</li>
+				<li>subject_story->collated reports of construct attacks, looking for commonalities</li>
 
-				<li>subject_gerund->creating standard mechanoids</li>
+				<li>subject_gerund->creating standard constructs</li>
 			</rulesStrings>
 		</generalRules>
 	</ResearchProjectDef>
@@ -75,7 +75,7 @@
 	<ResearchProjectDef ParentName="VR_ConstructTechBase">
 		<defName>VR_HighConstructTech</defName>
 		<label>high construct tech</label>
-		<description>The technology needed for your mechanitor to create and control high-tier mechanoids.\n\nYou can get powerfocus chips by using a mechanitor to summon a war queen threat.</description>
+		<description>The technology needed for your artificer to create and control high-tier constructs.\n\nYou can get powerfocus chips by using a artificer to summon a scarab queen threat.</description>
 		<baseCost>3000</baseCost>
 		<researchViewX>3.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
@@ -90,12 +90,12 @@
 			<rulesStrings>
 				<li>subject->high tier constructs</li>
 
-				<li>subject_story->survived a War Queen assault on an Imperial world</li>
-				<li>subject_story->bought a Powerfocus chip from a trader who didn't understand its worth</li>
-				<li>subject_story->interrogated mechanitors captured in planetary raids</li>
-				<li>subject_story->built prototype mechanoid micro-organs for an offworld client</li>
+				<li>subject_story->survived a Scarab Queen assault in a ancient cavern</li>
+				<!-- <li>subject_story->bought a Powerfocus chip from a trader who didn't understand its worth</li> -->
+				<li>subject_story->interrogated artificers captured in raids</li>
+				<!-- <li>subject_story->built prototype mechanoid micro-organs for an offworld client</li> -->
 
-				<li>subject_gerund->creating high-tier mechanoids</li>
+				<li>subject_gerund->creating high-tier constructs</li>
 			</rulesStrings>
 		</generalRules>
 	</ResearchProjectDef>
@@ -103,7 +103,7 @@
 	<ResearchProjectDef ParentName="VR_ConstructTechBase">
 		<defName>VR_UltraConstructTech</defName>
 		<label>ultra construct tech</label>
-		<description>The advanced technology needed for your mechanitor to create and control ultra-tier mechanoids, including large mechs and ultra-tier mechanitor gear.\n\nYou can get nano structuring chips by using a mechanitor to summon an apocriton threat.</description>
+		<description>The advanced technology needed for your artificer to create and control ultra-tier constructs, including large mechs and ultra-tier artificer gear.\n\nYou can get nano structuring chips by using a artificer to summon an apocriton threat.</description>
 		<baseCost>5000</baseCost>
 		<researchViewX>4.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
@@ -118,12 +118,12 @@
 			<rulesStrings>
 				<li>subject->ultra-tier constructs</li>
 
-				<li>subject_story->found a powered-down apocriton in the wreckage of a deadworld</li>
-				<li>subject_story->observed an apocriton resurrecting mechs from a safe distance</li>
+				<li>subject_story->found a powered-down apocriton in a dormant manufactoria</li>
+				<li>subject_story->observed an apocriton resurrecting automatons from a safe distance</li>
 				<li>subject_story->tapped into the deep psychic hatred that the apocritons feel towards humanity</li>
-				<li>subject_story->found an ascension diary next to an inert archonexus</li>
+				<!-- <li>subject_story->found an ascension diary next to an inert archonexus</li> -->
 
-				<li>subject_gerund->creating ultra-tier mechanoids</li>
+				<li>subject_gerund->creating ultra-tier constructs</li>
 			</rulesStrings>
 		</generalRules>
 	</ResearchProjectDef>
