@@ -5,7 +5,7 @@
 	<ThingDef ParentName="VR_HeavyConstruct" Name="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion</defName>
 		<label>centurion (melee)</label>
-		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
+		<description>A larger combat mech designed as a shock trooper. They are known to extremely dangerous for even the most well equipped adventurer.</description>
 		<tools>
 			<li>
 				<label>head</label>
@@ -84,7 +84,6 @@
 	<ThingDef ParentName="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion_Burner</defName>
 		<label>centurion (burner)</label>
-		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
 	</ThingDef>
 	
 	<PawnKindDef ParentName="VR_HeavyConstructKind">
@@ -117,7 +116,6 @@
 	<ThingDef ParentName="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion_Shooter</defName>
 		<label>centurion (ranged)</label>
-		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
 	</ThingDef>
 	
 	<PawnKindDef ParentName="VR_HeavyConstructKind">

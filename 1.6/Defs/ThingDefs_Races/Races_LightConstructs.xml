@@ -51,7 +51,7 @@
 	<ThingDef ParentName="VR_LightConstruct">
 		<defName>VR_Construct_Lifter</defName>
 		<label>lifter</label>
-		<description>A small mechanoid designed for hauling. Lacking a ranged weapon, it can make only weak melee attacks.</description>
+		<description>A small construct designed for hauling. Lacking a ranged weapon, it can make only weak melee attacks.</description>
 		<statBases>
 			<MoveSpeed>2.8</MoveSpeed>
 		</statBases>
@@ -93,7 +93,7 @@
 	<ThingDef ParentName="VR_LightConstruct">
 		<defName>VR_Construct_Constructoid</defName>
 		<label>constructoid</label>
-		<description>A small mechanoid designed to perform construction tasks. It can perform blunt melee attacks if necessary.</description>
+		<description>A small construct designed to perform construction tasks. It can perform blunt melee attacks if necessary.</description>
 		<statBases>
 			<ConstructionSpeed>0.5</ConstructionSpeed>
 		</statBases>
@@ -146,7 +146,7 @@
 	<ThingDef ParentName="VR_LightConstruct">
 		<defName>VR_Construct_Agrihand</defName>
 		<label>agrihand</label>
-		<description>A small mechanoid designed to sow and harvest crops. While it is better suited to labor than combat, it can fight with built-in cutting blades if necessary.</description>
+		<description>A small construct designed to sow and harvest crops. While it is better suited to labor than combat, it can fight with built-in cutting blades if necessary.</description>
 		<tools>
 			<li>
 				<label>right blade</label>
@@ -206,7 +206,7 @@
 	<ThingDef ParentName="VR_LightConstruct">
 		<defName>VR_Construct_Scarab</defName>
 		<label>scarab</label>
-		<description>A small, deployable combat mechanoid usually manufactured inside an ultra-heavy war queen mech. War urchins are expendable fighters designed to swarm-attack enemies. They are mounted with short-ranged spiner guns and have a non-rechargeable power source.</description>
+		<description>A small, deployable combat construct that are usually deployed from a Scarab Queen. Scarabs are expendable fighters designed to swarm-attack enemies.</description>
 		<statBases>
 			<MoveSpeed>4.2</MoveSpeed>
 		</statBases>

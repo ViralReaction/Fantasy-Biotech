@@ -63,7 +63,7 @@
 	<ThingDef ParentName="VR_SphereBase">
 		<defName>VR_Construct_Sphere_Melee</defName>
 		<label>sphere (melee)</label>
-		<description>Fast, spindly, human-sized combat mechanoids specializing in rapid approach and close-range combat. Their bodies are covered in points and blades, but they mostly use their two arm blades to lop off limbs or gut their victims alive.</description>
+		<description>Construct that is intentionally designed for combat. Mostly seen carrying a variety of melee weapons, but occasionally can be equipped with ranged weapons.</description>
 		<statBases>
 			<BandwidthCost>2</BandwidthCost>
 		</statBases>
@@ -107,7 +107,7 @@
 	<ThingDef Name="VR_LancerConstructWalker" ParentName="VR_SphereBase">
 		<defName>VR_Construct_Sphere_Range</defName>
 		<label>sphere (ranged)</label>
-		<description>Fast human-sized combat mechanoids built for medium and long-range combat. Their bodies are light, making them vulnerable targets at close range - especially in melee combat.</description>
+		<description>Construct that is intentionally designed for combat. Mostly seen carrying a variety of melee weapons, but occasionally can be equipped with ranged weapons.</description>
 		<statBases>
 			<BandwidthCost>3</BandwidthCost>
 		</statBases>
@@ -144,7 +144,7 @@
 	<ThingDef ParentName="VR_BaseConstructWalker">
 		<defName>VR_Construct_Ballistae</defName>
 		<label>ballistae</label>
-		<description>A clunky multi-legged combat mechanoid specialized as a long-range weapons platform. While effective at distance, it is weak in close-range fights and in melee combat.\n\nVeterans of mechanoid wars know that often, the safest place to be around a pikeman is touching it.</description>
+		<description>A clunky multi-legged combat construct specialized as a long-range weapons platform. While effective at distance, it is weak in close-range fights and in melee combat.</description>
 		<statBases>
 			<MoveSpeed>2.5</MoveSpeed>
 			<BandwidthCost>2</BandwidthCost>
@@ -299,7 +299,7 @@
 	<ThingDef ParentName="VR_LancerConstructWalker">
 		<defName>VR_Construct_Scorcher</defName>
 		<label>scorcher</label>
-		<description>Fast human-sized combat mechanoids built for medium and long-range combat. Their bodies are light, making them vulnerable targets at close range - especially in melee combat.</description>
+		<description>Smaller combat construct that is well equipped with a short range flamer.</description>
 		<statBases>
 			<BandwidthCost>1</BandwidthCost>
 		</statBases>
@@ -336,7 +336,7 @@
 	<ThingDef ParentName="VR_LancerConstructWalker">
 		<defName>VR_Construct_Tesseron</defName>
 		<label>tesseron</label>
-		<description>Fast human-sized combat mechanoids built for medium and long-range combat. Their bodies are light, making them vulnerable targets at close range - especially in melee combat.</description>
+		<description>Smaller combat construct that carries an experimental miniaturized version of the lightning gun seen in bigger constructs.</description>
 		<statBases>
 			<BandwidthCost>3</BandwidthCost>
 		</statBases>

@@ -25,7 +25,7 @@
 	<ThingDef ParentName="VR_BaseConstructWalker">
 		<defName>VR_Construct_Apocriton</defName>
 		<label>apocriton</label>
-		<description>A mechanoid commander designed to coordinate and motivate other mechs during long extermination campaigns. Its most obvious power is its ability to resurrect recently-killed mechs by supercharging their self-repair processes. Less obviously, it is intelligent and psychically present, radiating hatred into the minds of anyone in a wide radius. It can also move quickly with its built-in jump launcher.\n\nWhile all mechanoids have a dim psychically-present intelligence, only the apocriton and a few others truly feel hatred for their victims and understand the suffering they inflict.</description>
+		<description>A large construct commander designed to coordinate and motivate other automatons during long extermination campaigns. combat mech designed as a shock trooper. Its most obvious power is its ability to resurrect recently-damaged constructs by restructuring their tonal signature.</description>
 		<statBases>
 			<MarketValue>1600</MarketValue>
 			<MoveSpeed>3.2</MoveSpeed>
@@ -137,7 +137,7 @@
 	<ThingDef Name="VR_ConstructColossus" ParentName="VR_SuperHeavyConstruct">
 		<defName>VR_Construct_Colossus</defName>
 		<label>colossus</label>
-		<description>An ultra-heavy mechanoid with an ultra-powerful hellsphere cannon. Made for siegebreaking, its hellsphere cannon takes time to charge up a shot, but can melt concrete and vaporize bone. The diabolus dissipates the hellsphere cannon's waste power in a heat column mounted on its back, which can pulse to ignite flammable objects nearby.\n\nThis mech's name comes from a thousand-year-old poem written by a Haspian monk who survived the erasure of his monastery. His religiously-tinged work describes a razor-bodied fiend pulsing with flesh-searing heat as it crushed scorched bodies under massive claws. The few who have faced a diabolus and survived tend to agree with this depiction.</description>
+		<description>An ultra-heavy construct equipped with a tonal incinerator. Made for breaking lines of enemies, it can cause widespread panic as the ray emitted will detonate raw magika in the near vicinity.</description>
 		<race>
 			<body>VR_ConstructBipedal</body>
 			<baseBodySize>4</baseBodySize>
@@ -231,7 +231,7 @@
 	<ThingDef Name="VR_ConstructQueen" ParentName="VR_SuperHeavyConstruct">
 		<defName>VR_Construct_ScarabQueen</defName>
 		<label>scarab queen</label>
-		<description>An ultra-heavy mech with a built-in mech gestator. Fed with appropriate resources, the war queen can form small war urchin combat mechs within its massive carapace and deploy them into combat.\n\nEven more than other mechanoids, the war queen resembles a giant, living insect. All war mechs can be terrifying, but humans tend to find the war queen disturbing on a deeper level.</description>
+		<description>An ultra-heavy construct with a built-in manufactoria. Fed with appropriate resources, the scarab queen can form small scarab combat mechs within its massive carapace and deploy them into combat. While relying mostly swarming enemies with it's scarabs, it can emit a charge of electrical energy from its chest.</description>
 		<statBases>
 			<MoveSpeed>1.6</MoveSpeed>
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
