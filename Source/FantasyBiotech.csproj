@@ -41,6 +41,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantasyBiotech\Defs\BossGroupExtension.cs" />
+    <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
+    <Compile Include="FantasyBiotech\Harmony\WorldFactionsUIUtility_DoWindowContents.cs" />
     <Compile Include="FantasyBiotech\QuestNode_Root_Bossgroup_Construct.cs" />
     <Compile Include="FantasyBiotech\Alert_GeneRackUnfueled.cs" />
     <Compile Include="FantasyBiotech\ComplexThreats\FileName.cs" />

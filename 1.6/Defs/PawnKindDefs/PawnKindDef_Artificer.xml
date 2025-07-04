@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef Name="MechanitorBase">
+		<defName>VR_Artificer</defName>
+		<label>artificer</label>
+		<race>Human</race>
+		<combatPower>85</combatPower>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Scientist</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<defaultFactionDef>PlayerColony</defaultFactionDef>
+		<chemicalAddictionChance>0.08</chemicalAddictionChance>
+		<apparelMoney>0~2500</apparelMoney>
+		<apparelTags>
+			<li>IndustrialAdvanced</li>
+		</apparelTags>
+		<apparelRequired>
+			<!-- <li>Apparel_FlakVest</li> -->
+			<li>Apparel_Duster</li>
+			<li>Apparel_CollarShirt</li>
+			<li>Apparel_Pants</li>
+			<!-- <li>Apparel_AirwireHeadset</li> -->
+		</apparelRequired>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<weaponMoney>300~900</weaponMoney>
+		<weaponTags>
+			<li>LongSword</li>
+		</weaponTags>
+		<forceWeaponQuality>Masterwork</forceWeaponQuality>
+		<weaponStuffOverride>Steel</weaponStuffOverride>
+		<techHediffsMoney>1000~2000</techHediffsMoney>
+		<!-- <techHediffsTags> -->
+			<!-- <li>Simple</li> -->
+			<!-- <li>Advanced</li> -->
+			<!-- <li>AdvancedWeapon</li> -->
+		<!-- </techHediffsTags> -->
+		<techHediffsRequired>
+			<li>Mechlink</li>
+		</techHediffsRequired>
+		<combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+		<initialWillRange>0</initialWillRange>
+		<initialResistanceRange>0~1</initialResistanceRange>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		<forcedTraits>
+			<Recluse>0</Recluse>
+		</forcedTraits>
+		<disallowedTraits>
+			<li>BodyPurist</li>
+		</disallowedTraits>
+		<disallowedTraitsWithDegree>
+			<PsychicSensitivity>-1</PsychicSensitivity>
+			<PsychicSensitivity>-2</PsychicSensitivity>
+		</disallowedTraitsWithDegree>
+	</PawnKindDef>
+
+	<!-- <PawnKindDef ParentName="MechanitorBase"> -->
+		<!-- <defName>Mechanitor_Basic</defName> -->
+		<!-- <apparelMoney>0~1000</apparelMoney> -->
+		<!-- <apparelRequired Inherit="False"/> -->
+		<!-- <techHediffsTags Inherit="False"/> -->
+		<!-- <forcedTraits Inherit="False"/> -->
+		<!-- <defaultFactionDef Inherit="False"/> -->
+	<!-- </PawnKindDef> -->
+
+</Defs>

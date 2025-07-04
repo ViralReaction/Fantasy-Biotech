@@ -4,6 +4,9 @@
 	<BossgroupDef Abstract="True" Name="VR_BaseBossgroupBase">
 		<quest>VR_Bossgroup</quest>
 		<repeatWaveStartIndex>2</repeatWaveStartIndex>
+		<modExtensions>
+			<li Class="FantasyBiotech.BossGroupExtension"/>
+		</modExtensions>
 	</BossgroupDef>
 
 </Defs>

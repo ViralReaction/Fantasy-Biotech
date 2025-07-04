@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!-- Warqueen -->s
+	<!-- Warqueen -->
 	<BossDef>
 		<defName>VR_Construct_ScarabQueen</defName>
 		<kindDef>VR_Construct_ScarabQueen</kindDef>

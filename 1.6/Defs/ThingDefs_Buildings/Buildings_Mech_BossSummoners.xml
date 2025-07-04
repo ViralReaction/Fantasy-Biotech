@@ -2,6 +2,73 @@
 <Defs>
 
 	<ThingDef ParentName="BuildingBase">
+		<defName>VR_BurnoutConstructLinkBooster_Duplicate</defName>
+		<label>construct band antenna temp</label>
+		<description>A mech-band signaling device. When activated, it puts out a powerful mech signal pulse, which will attract an ultra-heavy feral mechanoid to attack with its escorts. If you can defeat it, you can collect special technologies from its corpse. The signal pulse burns out the transmitter, so this building can only be used once.</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/MechbandAntenna_Steam/MechbandAntenna_Steam</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,1)</drawSize>
+			<shadowData>
+				<volume>(1.7, 0.75, 0.8)</volume>
+				<offset>(0.15, 0, 0)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.3</fillPercent>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<buildingTags>
+				<li>Biotech</li>
+			</buildingTags>
+		</building>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2450</uiOrder>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>8000</WorkToBuild>
+			<Mass>25</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<size>(2,1)</size>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<killedLeavings>
+			<ChunkSlagSteel>3</ChunkSlagSteel>
+		</killedLeavings>
+		<researchPrerequisites>
+			<li>VR_StandardConstructTech</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>TriggerObject</useJob>
+				<useLabel>Summon apocriton threat</useLabel>
+				<useDuration>900</useDuration>
+				<floatMenuFactionIcon>VR_Construct</floatMenuFactionIcon>
+			</li>
+			<li Class="CompProperties_Useable_CallBossgroup">
+				<compClass>FantasyBiotech.CompUseEffect_CallBossgroup_Steam</compClass>
+				<bossgroupDef>VR_Construct_Apocriton</bossgroupDef>
+				<effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
+				<prepareEffecterDef>MechBandAntennaPrepared</prepareEffecterDef>
+				<unlockedLetterLabelKey>LetterLabelBossgroupCallerUnlocked</unlockedLetterLabelKey>
+				<unlockedLetterTextKey>LetterBossgroupCallerUnlocked</unlockedLetterTextKey>
+				<delayTicks>120</delayTicks>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf">
+				<delayTicks>120</delayTicks>
+				<spawnKilledLeavings>true</spawnKilledLeavings>
+				<effecterDef>MechbandBuildingDestroyed</effecterDef>
+			</li>
+		</comps>
+		<tickerType>Normal</tickerType>
+		<filthLeaving>Filth_MachineBits</filthLeaving>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
 		<defName>VR_BurnoutConstructLinkBooster</defName>
 		<label>construct band antenna</label>
 		<description>A mech-band signaling device. When activated, it puts out a powerful mech signal pulse, which will attract an ultra-heavy feral mechanoid to attack with its escorts. If you can defeat it, you can collect special technologies from its corpse. The signal pulse burns out the transmitter, so this building can only be used once.</description>
@@ -115,7 +182,6 @@
 			</li>
 			<li Class="CompProperties_Power">
 				<transmitsPower>false</transmitsPower>
-				<!-- Specify the comp class -->
 				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
