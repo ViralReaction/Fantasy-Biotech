@@ -6,8 +6,8 @@
 			<MarketValue>1600</MarketValue>
 			<ControlTakingTime>30</ControlTakingTime>
 			<BandwidthCost>5</BandwidthCost>
-			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.60</ArmorRating_Sharp>
 			<PsychicSensitivity>0.75</PsychicSensitivity>
 			<MechEnergyLossPerHP>0.15</MechEnergyLossPerHP>
 		</statBases>
@@ -34,8 +34,8 @@
 			<BandwidthCost>2</BandwidthCost>
 			<ControlTakingTime>18</ControlTakingTime>
 			<EMPResistance>0.8</EMPResistance>
-			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.60</ArmorRating_Sharp>
 		</statBases>
 		<race>
 			<body>Apocriton</body>
@@ -99,6 +99,9 @@
 				<effecterDef>ApocrionAttached</effecterDef>
 			</li>
 		</comps>
+		<abilities>
+			<li>ResurrectionMech</li>
+		</abilities>
 	</ThingDef>
 
 	<PawnKindDef ParentName="VR_BaseConstructKind">

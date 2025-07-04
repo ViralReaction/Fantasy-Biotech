@@ -60,7 +60,7 @@
 		<statBases>
 			<MarketValue>800</MarketValue>
 			<MoveSpeed>3.4</MoveSpeed>
-			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
 			<MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
 		</statBases>
@@ -101,8 +101,8 @@
 	<ThingDef Name="VR_BaseConstructWalker" ParentName="VR_BaseConstruct" Abstract="True">
 		<statBases>
 			<MoveSpeed>4.7</MoveSpeed>
-			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
 		</statBases>
 		<race>
 			<intelligence>ToolUser</intelligence>
@@ -127,8 +127,8 @@
 	<ThingDef Name="VR_HeavyConstruct" ParentName="VR_BaseConstruct" Abstract="True">
 		<statBases>
 			<MoveSpeed>1.9</MoveSpeed>
-			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
 			<ControlTakingTime>24</ControlTakingTime>
 			<MechEnergyLossPerHP>0.2</MechEnergyLossPerHP>
 		</statBases>
