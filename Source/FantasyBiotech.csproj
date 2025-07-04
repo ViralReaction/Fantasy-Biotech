@@ -41,6 +41,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantasyBiotech\Comps\CompTempControl_Steam.cs" />
     <Compile Include="FantasyBiotech\Defs\BossGroupExtension.cs" />
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
     <Compile Include="FantasyBiotech\Harmony\WorldFactionsUIUtility_DoWindowContents.cs" />
