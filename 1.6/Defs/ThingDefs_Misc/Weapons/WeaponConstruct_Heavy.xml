@@ -50,7 +50,7 @@
 				</capacities>
 				<power>24</power>
 				<armorPenetration>0.20</armorPenetration>
-				<cooldownTime>2</cooldownTime>				
+				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
 		<tradeability>None</tradeability>
@@ -88,10 +88,10 @@
 				<capacities>
 					<li>Demolish</li>
 				</capacities>
-				<power>35/power>
+				<power>35</power>
 				<cooldownTime>2.87</cooldownTime>
 				<armorPenetration>0.30</armorPenetration>
-			</li>			
+			</li>
 		</tools>
 		<tradeability>None</tradeability>
 		<destroyOnDrop>true</destroyOnDrop>
@@ -131,7 +131,7 @@
 				<power>35</power>
 				<armorPenetration>0.40</armorPenetration>
 				<cooldownTime>4</cooldownTime>
-			</li>			
+			</li>
 		</tools>
 		<tradeability>None</tradeability>
 		<destroyOnDrop>true</destroyOnDrop>
