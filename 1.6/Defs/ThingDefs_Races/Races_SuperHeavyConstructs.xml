@@ -99,9 +99,6 @@
 				<effecterDef>ApocrionAttached</effecterDef>
 			</li>
 		</comps>
-		<abilities>
-			<li>ResurrectionMech</li>
-		</abilities>
 	</ThingDef>
 
 	<PawnKindDef ParentName="VR_BaseConstructKind">
@@ -130,7 +127,6 @@
 		<techHediffsChance>1</techHediffsChance>
 		<techHediffsMoney>9999~9999</techHediffsMoney>
 		<abilities>
-			<!-- <li>LongjumpMech</li> -->
 			<li>ResurrectionMech</li>
 		</abilities>
 		<skipResistant>true</skipResistant>

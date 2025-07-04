@@ -247,9 +247,6 @@
 				<totalPowerTicks>15000</totalPowerTicks>
 			</li>
 		</comps>
-		<abilities>
-			<li>LongjumpMech</li>
-		</abilities>
 	</ThingDef>
    
 	<PawnKindDef ParentName="VR_LightConstructKind">
@@ -273,6 +270,9 @@
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
+		<abilities>
+			<li>LongjumpMech</li>
+		</abilities>
 	</PawnKindDef>
 
 </Defs>
