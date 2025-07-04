@@ -233,7 +233,7 @@
 					<soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
 				</li>
 			</lifeStageAges>
-			<thinkTreeConstant>WarUrchinConstant</thinkTreeConstant>
+			<thinkTreeConstant>VR_ScarabConstant</thinkTreeConstant>
 			<baseHealthScale>1.3</baseHealthScale>
 		</race>
 		<comps Inherit="False">
@@ -271,7 +271,7 @@
 			</li>
 		</lifeStages>
 		<abilities>
-			<li>LongjumpMech</li>
+			<li>VR_LongjumpConstruct</li>
 		</abilities>
 	</PawnKindDef>
 

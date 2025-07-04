@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Mech -->
+	<AbilityDef Name="LongJumpMech">
+		<defName>VR_LongjumpConstruct</defName>
+		<label>construct longjump</label>
+		<description>Jump to a distant location using steam pistons to launch themselves.</description>
+		<iconPath>UI/Abilities/MechLongJump</iconPath>
+		<cooldownTicksRange>480</cooldownTicksRange>
+		<jobDef>CastJump</jobDef>
+		<ai_IsOffensive>true</ai_IsOffensive>
+		<aiCanUse>true</aiCanUse>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityJump</verbClass>
+			<label>jump</label>
+			<violent>false</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<warmupTime>0.5</warmupTime>
+			<minRange>5.9</minRange>
+			<range>9.9</range>
+			<requireLineOfSight>true</requireLineOfSight>
+			<soundCast>Longjump_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			<flyWithCarriedThing>false</flyWithCarriedThing>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+
+</Defs>

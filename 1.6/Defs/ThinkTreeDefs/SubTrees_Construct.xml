@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThinkTreeDef>
+		<defName>VR_ScarabConstant</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+        
+				<!-- Despawned -->
+				<li Class="ThinkNode_Subtree">
+					<treeDef>Despawned</treeDef>
+				</li>
+
+				<li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+					<subNodes>
+						<li Class="JobGiver_AIAbilityFight">
+							<targetAcquireRadius>65</targetAcquireRadius>
+							<targetKeepRadius>72</targetKeepRadius>
+							<ability>VR_LongjumpConstruct</ability>
+						</li>
+						<li Class="JobGiver_ReactToCloseMeleeThreat">
+							<maxDistance>2.9</maxDistance>
+						</li>
+						<li Class="JobGiver_AIFightEnemies">
+							<targetAcquireRadius>65</targetAcquireRadius>
+							<targetKeepRadius>72</targetKeepRadius>
+							<allowTurrets>true</allowTurrets>
+						</li>
+						<li Class="JobGiver_AITrashColonyClose"/>
+						<li Class="JobGiver_AITrashBuildingsDistant"/>
+						<li Class="JobGiver_AIGotoNearestHostile" />
+						<li Class="JobGiver_AITrashBuildingsDistant">
+							<attackAllInert>true</attackAllInert>
+						</li>
+						<li Class="ThinkNode_ConditionalPlayerMech">
+							<subNodes>
+								<li Class="JobGiver_WanderColony"/>
+							</subNodes>
+						</li>
+						<li Class="JobGiver_WanderAnywhere"/>
+					</subNodes>
+				</li>
+				
+				
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+
+
+</Defs>
