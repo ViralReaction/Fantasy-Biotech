@@ -53,12 +53,11 @@
 		</weaponTags>
 		<tools>
 			<li>
-				<label>edge</label>
-				<labelNoLocation>blade</labelNoLocation>
+				<label>handle</label>
 				<capacities>
-					<li>Cut</li>
+					<li>Poke</li>
 				</capacities>
-				<power>20</power>
+				<power>9</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
@@ -67,16 +66,18 @@
 				<capacities>
 					<li>Stab</li>
 				</capacities>
-				<power>20</power>
-				<cooldownTime>2</cooldownTime>
+				<power>24</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>3.15</cooldownTime>
 			</li>
 			<li>
-				<label>handle</label>
+				<label>edge</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
 				<capacities>
-					<li>Poke</li>
+					<li>Cut</li>
 				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
+				<power>18</power>
+				<cooldownTime>2</cooldownTime>				
 			</li>
 		</tools>
 		<tradeability>None</tradeability>
@@ -101,30 +102,22 @@
 		</weaponTags>
 		<tools>
 			<li>
-				<label>edge</label>
-				<labelNoLocation>blade</labelNoLocation>
-				<capacities>
-					<li>Cut</li>
-				</capacities>
-				<power>20</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>point</label>
-				<labelNoLocation>blade</labelNoLocation>
-				<capacities>
-					<li>Stab</li>
-				</capacities>
-				<power>20</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
 				<label>handle</label>
 				<capacities>
 					<li>Poke</li>
 				</capacities>
 				<power>9</power>
 				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>23</power>
+				<cooldownTime>2.87</cooldownTime>
+				<armorPenetration>0.20</armorPenetration>
 			</li>
 		</tools>
 		<tradeability>None</tradeability>
@@ -149,30 +142,21 @@
 		</weaponTags>
 		<tools>
 			<li>
-				<label>edge</label>
-				<labelNoLocation>blade</labelNoLocation>
-				<capacities>
-					<li>Cut</li>
-				</capacities>
-				<power>20</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>point</label>
-				<labelNoLocation>blade</labelNoLocation>
-				<capacities>
-					<li>Stab</li>
-				</capacities>
-				<power>20</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
 				<label>handle</label>
 				<capacities>
 					<li>Poke</li>
 				</capacities>
 				<power>9</power>
 				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<labelNoLocation>lance</labelNoLocation>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>25</power>
+				<cooldownTime>4</cooldownTime>
 			</li>
 		</tools>
 		<tradeability>None</tradeability>
