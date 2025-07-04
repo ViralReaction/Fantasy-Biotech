@@ -242,8 +242,7 @@
 		</statBases>
 		<size>(1,2)</size>
 		<costList>
-			<Steel>180</Steel>
-			<Gold>20</Gold>
+			<Steel>100</Steel>
 		</costList>
 		<comps>
 			<li Class="FantasyBiotech.CompProperties_SteamTank">
@@ -257,9 +256,8 @@
 				<horizontalBarSize>(0.50, 0.10)</horizontalBarSize>
 				<horizontalCenterOffset>(-0.22, 0, 0.28)</horizontalCenterOffset>
 			</li>
-			<li Class="CompProperties_Explosive">
-				<explosiveRadius>3</explosiveRadius>
-				<explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+			<li Class="PipeSystem.CompProperties_ExplosiveContent">
+				<explosiveMaxRadius>6</explosiveMaxRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
 				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
@@ -302,15 +300,14 @@
 		<rotatable>true</rotatable>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<MaxHitPoints>150</MaxHitPoints>
+			<MaxHitPoints>300</MaxHitPoints>
 			<WorkToBuild>800</WorkToBuild>
 			<Mass>20</Mass>
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<size>(2,4)</size>
 		<costList>
-			<Steel>180</Steel>
-			<Gold>20</Gold>
+			<Steel>250</Steel>
 		</costList>
 		<comps>
 			<li Class="FantasyBiotech.CompProperties_SteamTank">
@@ -323,9 +320,8 @@
 				<horizontalBarSize>(1.05, 0.24)</horizontalBarSize>
 				<horizontalCenterOffset>(-0.45, 0, 0.55)</horizontalCenterOffset>
 			</li>
-			<li Class="CompProperties_Explosive">
-				<explosiveRadius>6</explosiveRadius>
-				<explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+			<li Class="PipeSystem.CompProperties_ExplosiveContent">
+				<explosiveMaxRadius>12</explosiveMaxRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
 				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
@@ -477,7 +473,7 @@
 				<heatPerSecond>12</heatPerSecond>
 			</li>
 			<li Class="CompProperties_Explosive">
-				<explosiveRadius>3</explosiveRadius>
+				<explosiveRadius>4</explosiveRadius>
 				<explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
@@ -549,7 +545,7 @@
 				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
 				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
 				<wickTicks>70~150</wickTicks>
-			</li>
+			</li>			
 			<li Class="CompProperties_AmbientSound">
 				<sound>GeothermalPlant_Ambience</sound>
 				<disabledOnUnpowered>false</disabledOnUnpowered>
