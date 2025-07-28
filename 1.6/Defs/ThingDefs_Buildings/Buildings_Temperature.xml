@@ -131,7 +131,7 @@
 				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
 				<consumptionPerTick>3</consumptionPerTick>
-			</li>			
+			</li>
 		</comps>
 		<designationCategory>Temperature</designationCategory>
 		<designationHotKey>Misc4</designationHotKey>
@@ -139,6 +139,94 @@
 			<li>PassiveCooler</li>
 			<li>VR_SteamPower</li>
 		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef Abstract="True" Name="VRSteam_LampBase" ParentName="NonBuildableLampBase">
+		<designationCategory>Furniture</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<uiOrder>2800</uiOrder>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<statBases>
+			<WorkToBuild>300</WorkToBuild>
+		</statBases>
+		<researchPrerequisites>
+			<li>VR_SteamPower</li>
+		</researchPrerequisites>
+		<placeWorkers>
+			<li>PlaceWorker_GlowRadius</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+	</ThingDef>
+  
+	<ThingDef ParentName="VRSteam_LampBase">
+		<defName>VRSteam_WallLamp</defName>
+		<label>steam wall lamp</label>
+		<description>A steam-powered wall-mounted lamp that lights an area. It is less powerful than a torch, but more convenient.</description>
+		<rotatable>true</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Furniture/WallLight_Steam/WallLight_Steam</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawOffsetNorth>(0,0,0.9)</drawOffsetNorth>
+			<drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+			<drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+			<drawOffsetEast>(0.9,0,0)</drawOffsetEast>
+			<damageData>
+				<enabled>false</enabled>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Furniture/WallLight_Steam/WallLight_Steam_MenuIcon</uiIconPath>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<costList>
+			<Steel>15</Steel>
+		</costList>
+		<statBases>
+			<WorkToBuild>330</WorkToBuild>
+			<MaxHitPoints>35</MaxHitPoints>
+			<Mass>2</Mass>
+		</statBases>
+		<uiOrder>2991</uiOrder>
+		<passability>Standable</passability>
+		<terrainAffordanceNeeded IsNull="True"/>
+		<pathCost>0</pathCost>
+		<overrideMinifiedRot>North</overrideMinifiedRot>
+		<minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
+		<building>
+			<isEdifice>false</isEdifice>
+			<isAttachment>true</isAttachment>
+		</building>
+		<placeWorkers>
+			<li>Placeworker_AttachedToWall</li>
+		</placeWorkers>
+		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>0.50</consumptionPerTick>
+			</li>
+			<li Class="CompProperties_Power">
+				<transmitsPower>false</transmitsPower>
+				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
+				<powerUpgrades>
+					<li>
+						<researchProject>ColoredLights</researchProject>
+						<factor>0.5</factor>
+					</li>
+				</powerUpgrades>
+			</li>
+			<li Class="CompProperties_Styleable"/>
+			<li Class="CompProperties_Glower">
+				<glowRadius>11</glowRadius>
+				<glowColor>(214,148,94,0)</glowColor>
+				<colorPickerEnabled>true</colorPickerEnabled>
+				<darklightToggle>true</darklightToggle>
+			</li>
+		</comps>
 	</ThingDef>
 
 </Defs>

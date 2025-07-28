@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>VR_ExtractGeneOnPawn</defName>
+    <driverClass>FantasyBiotech.JobDriver_OperateOnPawn</driverClass>
+    <reportString>operating on TargetB.</reportString>
+  </JobDef>
+
+</Defs>

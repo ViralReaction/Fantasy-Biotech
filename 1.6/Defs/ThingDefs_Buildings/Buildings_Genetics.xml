@@ -86,9 +86,9 @@
 		<graphicData>
 			<texPath>Things/Building/Misc/GraftForge/GraftForge</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(5, 3.5)</drawSize>
+			<drawSize>(5, 4)</drawSize>
 			<!-- <shadowData> -->
-				<!-- <volume>(2.55, 0.75, 1.7)</volume> -->
+			<!-- <volume>(2.55, 0.75, 1.7)</volume> -->
 			<!-- </shadowData> -->
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -129,13 +129,13 @@
 				</linkableFacilities>
 			</li>
 			<li Class="CompProperties_Refuelable">
-				<fuelConsumptionRate>0.5</fuelConsumptionRate> 
+				<fuelConsumptionRate>0.5</fuelConsumptionRate>
 				<fuelCapacity>5</fuelCapacity>
 				<fuelLabel>Hemogen</fuelLabel>
 				<fuelFilter>
-				<thingDefs>
-					<li>HemogenPack</li>
-				</thingDefs>
+					<thingDefs>
+						<li>HemogenPack</li>
+					</thingDefs>
 				</fuelFilter>
 				<initialFuelPercent>0</initialFuelPercent>
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
@@ -146,6 +146,60 @@
 			</li>
 		</comps>
 		<techLevel>Medieval</techLevel>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_GeneRemover</defName>
+		<label>gene remover</label>
+		<description>An automated surgery machine that can extract a person's genes and create a genepack from them. The extracted genes will be randomly selected from the person's xenogenes and germline genes. You can force someone into the machine, but they won't like it.\n\nExtracting a person's genes while their genes are currently regrowing will kill them. Otherwise, gene extraction causes no lasting harm.\n\nGenes that require archite capsules are too complex to be extracted.</description>
+		<thingClass>FantasyBiotech.Building_GeneRemover</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Building/Misc/GeneRemover/GeneRemover</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2, 2)</drawSize>
+			<shadowData>
+				<volume>(1.7, 0.8, 1.7)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(2, 2)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0, 0, 2)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2100</uiOrder>
+		<researchPrerequisites>
+			<li>Xenogermination</li>
+		</researchPrerequisites>
+		<building>
+			<buildingTags>
+				<li>Biotech</li>
+			</buildingTags>
+			<workTableRoomRole>Laboratory</workTableRoomRole>
+		</building>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Mass>85</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+		</costList>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Woody</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 	</ThingDef>
 
 </Defs>

@@ -132,7 +132,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/ConstructSpider</texPath>
+					<texPath>Things/Pawn/Mechanoid/ConstructSpider_Constructoid</texPath>
 					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Constructoid</maskPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
@@ -192,7 +192,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/ConstructSpider</texPath>
+					<texPath>Things/Pawn/Mechanoid/ConstructSpider_Agrihand</texPath>
 					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Agrihand</maskPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>

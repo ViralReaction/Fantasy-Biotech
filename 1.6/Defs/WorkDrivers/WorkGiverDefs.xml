@@ -19,4 +19,18 @@
 		<prioritizeSustains>true</prioritizeSustains>
 	</WorkGiverDef>
 
+	<WorkGiverDef>
+		<defName>VR_ExtractGeneOnPawn</defName>
+		<label>operate</label>
+		<giverClass>FantasyBiotech.WorkGiver_ExtractGeneOnPawn</giverClass>
+		<workType>Doctor</workType>
+		<verb>operate</verb>
+		<gerund>operate</gerund>
+		<priorityInType>80</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
 </Defs>
