@@ -11,6 +11,10 @@ namespace FantasyBiotech
     [HarmonyPatch(typeof(SignalAction_Ambush), "GenerateAmbushPawns")]
     public static class SignalAction_Ambush_GenerateAmbushPawns
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> code = instructions.ToList();

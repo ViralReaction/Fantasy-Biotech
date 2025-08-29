@@ -12,6 +12,10 @@ namespace FantasyBiotech
     [HarmonyPatch(typeof(ComplexThreatWorker_SleepingMechanoids), nameof(ComplexThreatWorker_SleepingMechanoids.CanResolveInt))]
     public static class ComplexThreatWorker_SleepingMechanoids_CanResolveInt
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> code = instructions.ToList();
@@ -35,9 +39,13 @@ namespace FantasyBiotech
 
         }
     }
-    [HarmonyPatch(typeof(ComplexThreatWorker_SleepingMechanoids), nameof(ComplexThreatWorker_SleepingMechanoids.MechKindSuitableForComplex))]
+   [HarmonyPatch(typeof(ComplexThreatWorker_SleepingMechanoids), nameof(ComplexThreatWorker_SleepingMechanoids.MechKindSuitableForComplex))]
     public static class ComplexThreatWorker_SleepingMechanoids_MechKindSuitableForComplex
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static void Postfix(PawnKindDef def, ref bool __result)
         {
             if (__result)

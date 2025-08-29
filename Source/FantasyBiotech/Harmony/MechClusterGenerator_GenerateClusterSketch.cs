@@ -11,6 +11,10 @@ namespace FantasyBiotech
     [HarmonyPatch(typeof(MechClusterGenerator), nameof(MechClusterGenerator.GenerateClusterSketch))]
     public static class MechClusterGenerator_GenerateClusterSketch
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> code = instructions.ToList();

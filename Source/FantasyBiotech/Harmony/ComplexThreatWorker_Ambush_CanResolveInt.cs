@@ -12,6 +12,10 @@ namespace FantasyBiotech
     [HarmonyPatch(typeof(ComplexThreatWorker_Ambush), nameof(ComplexThreatWorker_Ambush.CanResolveInt))]
     public static class ComplexThreatWorker_Ambush_CanResolveInt
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> code = instructions.ToList();

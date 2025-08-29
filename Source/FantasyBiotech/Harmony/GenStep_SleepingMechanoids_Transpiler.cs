@@ -12,6 +12,10 @@ namespace FantasyBiotech
     [HarmonyPatch(typeof(GenStep_SleepingMechanoids), nameof(GenStep_SleepingMechanoids.Generate))]
     public static class GenStep_SleepingMechanoids_Generate
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> code = instructions.ToList();
@@ -43,6 +47,10 @@ namespace FantasyBiotech
     [HarmonyPatch(typeof(GenStep_SleepingMechanoids), nameof(GenStep_SleepingMechanoids.GeneratePawns))]
     public static class GenStep_SleepingMechanoids_GeneratePawns
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> code = instructions.ToList();

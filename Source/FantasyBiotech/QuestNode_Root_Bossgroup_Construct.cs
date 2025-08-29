@@ -105,6 +105,7 @@ namespace FantasyBiotech
 			                intVec, destroyItemsOnCleanup: true,
 			                dropAllInSamePod: false,
 			                allowFogged: false,
+			                canRetargetAnyMap: false,
 			                Faction.OfMechanoids);
 			quest.Letter(LetterDefOf.NeutralEvent,
 			             null,

@@ -12,6 +12,10 @@ namespace FantasyBiotech
     [HarmonyPatch(typeof(SymbolResolver_SleepingMechanoids), nameof(SymbolResolver_SleepingMechanoids.CanResolve))]
     public static class SymbolResolver_SleepingMechanoids_CanResolve
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> code = instructions.ToList();
@@ -34,9 +38,14 @@ namespace FantasyBiotech
             return code;
         }
     }
+
     [HarmonyPatch(typeof(SymbolResolver_SleepingMechanoids), nameof(SymbolResolver_SleepingMechanoids.Resolve))]
     public static class SymbolResolver_SleepingMechanoids_Resolve
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> code = instructions.ToList();

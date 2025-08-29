@@ -11,6 +11,10 @@ namespace FantasyBiotech.FantasyBiotech.Harmony
     [HarmonyPatch(typeof(MechClusterUtility), nameof(MechClusterUtility.SpawnCluster))]
     public static class MechClusterUtility_SpawnCluster
     {
+        public static bool Prepare()
+        {
+            return FantasyBiotech_Mod.settings.replaceMechanoids;
+        }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             List<CodeInstruction> code = instructions.ToList();
@@ -38,5 +42,4 @@ namespace FantasyBiotech.FantasyBiotech.Harmony
             return code;
         }
     }
-
 }

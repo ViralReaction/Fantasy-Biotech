@@ -7,19 +7,19 @@ namespace FantasyBiotech
     [HarmonyPatch(typeof(MechClusterGenerator), "MechKindSuitableForCluster")]
     public static class MechClusterGenerator_MechKindSuitableForCluster
     {
-        public static bool Prefix(ref bool __result, PawnKindDef def)
+        public static void Postfix(ref bool __result, PawnKindDef def)
         {
-            if (!def.RaceProps.IsMechanoid || def.isGoodBreacher ||
-                !def.isFighter || !def.allowInMechClusters ||
-                ModsConfig.BiotechActive && Find.BossgroupManager.ReservedByBossgroup(def) ||
-                def.GetModExtension<ConstructExtension>()?.isConstruct == false)
+            if (__result)
             {
-                __result = false;
-                return false;
+                if (!FantasyBiotech_Mod.settings.replaceMechanoids)
+                {
+                    __result = !def.GetModExtension<ConstructExtension>()?.isConstruct == true;
+                }
+                else
+                {
+                    __result = def.GetModExtension<ConstructExtension>()?.isConstruct == false;
+                }
             }
-
-            __result = true;
-            return false;
         }
     }
 }
