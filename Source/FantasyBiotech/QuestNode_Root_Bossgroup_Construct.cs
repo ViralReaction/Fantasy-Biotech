@@ -78,41 +78,62 @@ namespace FantasyBiotech
 				map.attackTargetsCache.UpdateTarget(item2);
 			}
 			string text = QuestGen.GenerateNewSignal("BossgroupArrives");
-			QuestPart_BossgroupArrives questPart_BossgroupArrives = new QuestPart_BossgroupArrives();
-			questPart_BossgroupArrives.mapParent = map.Parent;
-			questPart_BossgroupArrives.bossgroupDef = bossgroupDef;
-			questPart_BossgroupArrives.minDelay = MinDelayTicksRange.RandomInRange;
-			questPart_BossgroupArrives.maxDelay = MaxDelayTicksRange.RandomInRange;
-			questPart_BossgroupArrives.inSignalEnable = QuestGen.slate.Get<string>("inSignal");
+			QuestPart_BossgroupArrives questPart_BossgroupArrives = new QuestPart_BossgroupArrives
+			{
+				mapParent = map.Parent,
+				bossgroupDef = bossgroupDef,
+				minDelay = MinDelayTicksRange.RandomInRange,
+				maxDelay = MaxDelayTicksRange.RandomInRange,
+				inSignalEnable = QuestGen.slate.Get<string>("inSignal")
+			};
 			questPart_BossgroupArrives.outSignalsCompleted.Add(text);
 			quest.AddPart(questPart_BossgroupArrives);
-			Quest quest2 = quest;
 			MapParent parent = map.Parent;
-			string inSignal = text;
-			quest2.DropPods(parent,
-			                enumerable,
-			                null,
-			                null,
-			                null,
-			                null,
-			                false,
-			                useTradeDropSpot: false,
-			                joinPlayer: false,
-			                makePrisoners: false,
-			                inSignal,
-			                null,
-			                QuestPart.SignalListenMode.OngoingOnly,
-			                intVec, destroyItemsOnCleanup: true,
-			                dropAllInSamePod: false,
-			                allowFogged: false,
-			                canRetargetAnyMap: false,
-			                Faction.OfMechanoids);
+			if (TryFindEntryCell(map, out IntVec3 cell))
+			{
+				quest.PawnsArrive(
+					enumerable,
+					text,
+					parent,
+					PawnsArrivalModeDefOf.EdgeWalkIn,
+					false,
+					cell,
+					null,
+					null,
+					null,
+					null,
+					false,
+					false,
+					false
+				);
+			}
+			else
+			{
+				quest.DropPods(parent,
+				               enumerable,
+				               null,
+				               null,
+				               null,
+				               null,
+				               false,
+				               useTradeDropSpot: false,
+				               joinPlayer: false,
+				               makePrisoners: false,
+				               text,
+				               null,
+				               QuestPart.SignalListenMode.OngoingOnly,
+				               intVec, destroyItemsOnCleanup: true,
+				               dropAllInSamePod: false,
+				               allowFogged: false,
+				               canRetargetAnyMap: false,
+				               MechUtility.ConstructFaction());
+			}
 			quest.Letter(LetterDefOf.NeutralEvent,
 			             null,
 			             null,
 			             label: "LetterLabelBossgroupSummoned".Translate(bossgroupDef.boss.kindDef.LabelCap),
 			             text: "LetterBossgroupSummoned".Translate(constructFaction.NameColored.ToString()).ToString(),
-			             relatedFaction: Faction.OfMechanoids);
+			             relatedFaction:  MechUtility.ConstructFaction());
 			quest.Letter(LetterDefOf.Bossgroup,
 			             label: "LetterLabelBossgroupArrived".Translate(bossgroupDef.boss.kindDef.LabelCap),
 			             inSignal: text, chosenPawnSignal: null,
@@ -121,13 +142,13 @@ namespace FantasyBiotech
 			                                                      bossgroupDef.boss.kindDef.label,
 			                                                      constructFaction.def.pawnsPlural,
 			                                                      bossgroupDef.GetWaveDescription(waveIndex)).ToString(),
-			             relatedFaction: Faction.OfMechanoids, useColonistsOnMap: null,
+			             relatedFaction:  MechUtility.ConstructFaction(), useColonistsOnMap: null,
 			             useColonistsFromCaravanArg: false,
 			             signalListenMode: QuestPart.SignalListenMode.OngoingOnly,
 			             lookTargets: enumerable);
 			QuestPart_Bossgroup questPart_Bossgroup = new QuestPart_Bossgroup();
 			questPart_Bossgroup.pawns.AddRange(enumerable);
-			questPart_Bossgroup.faction = Faction.OfMechanoids;
+			questPart_Bossgroup.faction =  MechUtility.ConstructFaction();
 			questPart_Bossgroup.mapParent = map.Parent;
 			questPart_Bossgroup.bosses.AddRange(list3);
 			questPart_Bossgroup.stageLocation = intVec;
@@ -157,5 +178,7 @@ namespace FantasyBiotech
 			}
 			return false;
 		}
+
+		private bool TryFindEntryCell(Map map, out IntVec3 cell) => RCellFinder.TryFindRandomPawnEntryCell(out cell, map, CellFinder.EdgeRoadChance_Animal + 0.2f);
 	}
 }
