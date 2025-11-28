@@ -397,7 +397,7 @@
 
 	<ThingDef ParentName="VR_SubcoreScannerSteamBase">
 		<defName>VR_SubcoreSoftscanner_Steam</defName>
-		<label>dynamo harmonic sampler</label>
+		<label>harmonic sampler</label>
 		<description>A pod with thousands of tiny tissue probes and a high-energy brain scanner. Once a person is inserted, the system uses the probes and scanner to sense a neuro-psychic pattern that it can analog-transfer to a new standard-tier mechanoid subcore. The person will be left temporarily sick, but unharmed.\n\nSubcores are mechanoid brains and producing any mechanoid requires one. Standard-tier subcores produced by this softscanner can only power standard-tier mechanoids.\n\nHigher tier subcores can be created by building a subcore ripscanner.</description>
 		<graphicData>
 			<texPath>Things/Building/Production/SubcoreSoftscanner_Steam</texPath>
@@ -440,7 +440,7 @@
 
 	<ThingDef ParentName="VR_SubcoreScannerSteamBase">
 		<defName>VR_SubcoreRipscanner_Steam</defName>
-		<label>dynamo tonal transcriber</label>
+		<label>tonal transcriber</label>
 		<description>A pod with thousands of tissue probe injectors and an ultra-high-power vaporizing brain scanner. Once a person is inserted, the device will insert the probes into their body through the skin while the ripscanner chews through the brain, reading the reflected radiation and destroying the brain in the process. Ripscanning the mind generates a neuro-psychic pattern that the scanner can analog-transfer to a new high-tier mechanoid subcore.\n\nSubcores are mechanoid brains and producing any mechanoid requires one. High-tier subcores produced by this ripscanner can only power high-tier mechanoids.</description>
 		<graphicData>
 			<texPath>Things/Building/Production/SubcoreRipscanner_Steam</texPath>
