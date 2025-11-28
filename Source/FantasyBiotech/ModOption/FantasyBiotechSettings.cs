@@ -53,7 +53,7 @@ namespace FantasyBiotech
             // Reset to Default Button
             options.GapLine();
             options.Gap();
-            if (options.ButtonText("Reset to Defaults"))
+            if (options.ButtonText("FantasyBiotech_ResetDefault".Translate()))
             {
                 ResetSettingsToDefault();
             }

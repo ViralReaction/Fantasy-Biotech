@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!-- Titles -->
+    <FantasyBiotech.ModNameShort>Fantasy Biotech</FantasyBiotech.ModNameShort>
+    <FantasyBiotech_Settings_Options>Settings</FantasyBiotech_Settings_Options>
+
+    <!-- Options -->
+    <FantasyBiotech_Settings_Mech_Replace_Title>Replace Mechs</FantasyBiotech_Settings_Mech_Replace_Title>
+    <FantasyBiotech_Settings_Mech_Replace_Desc>Replaces vanilla mechs with artifice constructs in various game events. Advised to leave on if you want full experience of the mod.</FantasyBiotech_Settings_Mech_Replace_Desc>
+
+    <!-- Reset to Default -->
+    <FantasyBiotech_ResetDefault>Reset to Default</FantasyBiotech_ResetDefault>
+
+
+</LanguageData>
