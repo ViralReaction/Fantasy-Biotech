@@ -23,7 +23,7 @@
 				<li>Biotech</li>
 			</buildingTags>
 		</building>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<uiOrder>2450</uiOrder>
 		<statBases>
 			<MaxHitPoints>80</MaxHitPoints>
@@ -90,7 +90,7 @@
 				<li>Biotech</li>
 			</buildingTags>
 		</building>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<uiOrder>2450</uiOrder>
 		<statBases>
 			<MaxHitPoints>80</MaxHitPoints>
@@ -164,7 +164,7 @@
 		<building>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<costList>
 			<Steel>120</Steel>
 			<ComponentIndustrial>4</ComponentIndustrial>

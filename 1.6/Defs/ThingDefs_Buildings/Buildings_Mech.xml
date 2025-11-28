@@ -26,7 +26,7 @@
 				<li>Biotech</li>
 			</buildingTags>
 		</building>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<uiOrder>2400</uiOrder>
 		<defaultPlacingRot>South</defaultPlacingRot>
 		<placeWorkers>
@@ -295,7 +295,7 @@
 			</buildingTags>
 		</building>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<uiOrder>2430</uiOrder>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
@@ -378,7 +378,7 @@
 				</li>
 			</subcoreScannerFixedIngredients>
 		</building>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<uiOrder>2430</uiOrder>
 		<canOverlapZones>false</canOverlapZones>
 		<size>(3,2)</size>
@@ -508,7 +508,7 @@
 			</buildingTags>
 		</building>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-		<designationCategory>Biotech</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<uiOrder>2440</uiOrder>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>

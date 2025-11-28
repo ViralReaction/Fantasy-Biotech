@@ -127,7 +127,7 @@
 		<neverMultiSelect>true</neverMultiSelect>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<designationCategory>Power</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<clearBuildingArea>false</clearBuildingArea>
 		<researchPrerequisites>
@@ -203,7 +203,7 @@
 		<neverMultiSelect>true</neverMultiSelect>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<designationCategory>Power</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<clearBuildingArea>false</clearBuildingArea>
 		<researchPrerequisites>
@@ -268,7 +268,7 @@
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>Power</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<canOverlapZones>false</canOverlapZones>
 		<researchPrerequisites>
@@ -332,7 +332,7 @@
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>Power</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<canOverlapZones>false</canOverlapZones>
 		<researchPrerequisites>
@@ -409,7 +409,7 @@
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>Power</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<researchPrerequisites>
 			<li>VR_SteamPower</li>
@@ -485,7 +485,7 @@
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>Power</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<researchPrerequisites>
 			<li>VR_SteamPower</li>
@@ -556,7 +556,7 @@
 		</comps>
 		<rotatable>false</rotatable>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<designationCategory>Power</designationCategory>
+		<designationCategory>VR_Artifice</designationCategory>
 		<placeWorkers>
 			<li>PlaceWorker_OnSteamGeyser</li>
 		</placeWorkers>
