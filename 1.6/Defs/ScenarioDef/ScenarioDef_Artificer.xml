@@ -4,7 +4,7 @@
 	<ScenarioDef ParentName="ScenarioBase">
 		<defName>Artificer</defName>
 		<label>The Artificer</label>
-		<description>You knew you could only achieve greatness with help. People were too unreliable, so you chose to take on mechanoids as your servants, workers, and warriors. As you gained strength, others became fearful. It became clear you needed to get away from the influence of humanity. Now you've migrated to this sparsely-populated rimworld with some of your metallic helpers. Finally, you have the space to grasp your true potential!\n\nNote: Since your starting character will lack some skills, this is a difficult scenario.</description>
+		<description>You long knew that true greatness could not be achieved alone. Yet people proved fickle and untrustworthy, so you turned instead to the faithful service of your crafted constructs—your tireless hands, loyal guardians, and steadfast companions. As your influence grew, so too did the fear of those around you. It soon became clear you had to flee the grasp of suspicious folk.\n\nNow you have journeyed to this sparsely settled area, bringing a few of your metalbound creations with you. Here, at last, you have the freedom and space to pursue the heights of your art.\n\nNote: Because your starting character lacks many essential skills, this scenario is considered difficult.</description>
 		<scenario>
 			<summary>One artificer and a few servant constructs.</summary>
 			<!-- <playerFaction> -->
@@ -16,7 +16,7 @@
 				<!-- Game start dialog -->
 				<li Class="ScenPart_GameStartDialog">
 					<def>GameStartDialog</def>
-					<text>You knew you could only achieve greatness with help. People were too unreliable, so you chose to take on mechanoids as your servants, workers, and warriors.\n\nAs you gained strength, others became fearful. It became clear you needed to get away from the influence of humanity.\n\nNow you've migrated to this sparsely-populated rimworld with some of your metallic helpers. Finally, you have the space to grasp your true potential!</text>
+					<text>You long knew that true greatness could not be achieved alone. Yet people proved fickle and untrustworthy, so you turned instead to the faithful service of your crafted constructs—your tireless hands, loyal guardians, and steadfast companions. As your influence grew, so too did the fear of those around you. It soon became clear you had to flee the grasp of suspicious folk.\n\nNow you have journeyed to this sparsely settled area, bringing a few of your metalbound creations with you. Here, at last, you have the freedom and space to pursue the heights of your art.</text>
 					<closeSound>GameStartSting</closeSound>
 				</li>
 
