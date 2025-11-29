@@ -59,7 +59,6 @@
 		</inspectorTabs>
 		<costList>
 			<Steel>50</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<costStuffCount>60</costStuffCount>
 		<stuffCategories>
@@ -149,7 +148,7 @@
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
 					<li>VR_GeneRack</li>
-					<li>GeneProcessor</li>
+					<li>VR_GeneProcessor</li>
 				</linkableFacilities>
 			</li>
 			<li Class="CompProperties_Refuelable">
@@ -224,6 +223,95 @@
 			<li>Metallic</li>
 		</stuffCategories>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_GeneProcessor</defName>
+		<label>gene processor</label>
+		<description>A genetic analysis and processing system. Placed near a gene assembler, it increases the maximum genetic complexity of the xenogerms you can assemble. Building multiple gene processors will increase the genetic complexity limit further.</description>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>14</pathCost>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Building/Misc/VR_GeneProcessor/VR_GeneProcessor_a</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2, 2)</drawSize>
+			<shadowData>
+				<volume>(1.5, 0.4, 1.5)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(2, 2)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2100</uiOrder>
+		<researchPrerequisites>
+			<li>VR_AdvancedGenetics</li>
+		</researchPrerequisites>
+		<descriptionHyperlinks>
+			<ThingDef>GeneAssembler</ThingDef>
+			<ThingDef>GeneBank</ThingDef>
+			<ThingDef>Genepack</ThingDef>
+			<ThingDef>Xenogerm</ThingDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Mass>85</Mass>
+			<Flammability>0.5</Flammability>
+			<GeneticComplexityIncrease>2</GeneticComplexityIncrease>
+		</statBases>
+		<costList>
+			<Steel>100</Steel>
+		</costList>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Woody</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<building>
+			<buildingTags>
+				<li>Biotech</li>
+			</buildingTags>
+			<workTableRoomRole>Laboratory</workTableRoomRole>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>10.0</fuelConsumptionRate>
+				<fuelCapacity>20.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+				  <thingDefs>
+					<li>WoodLog</li>
+				  </thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<functionsInVacuum>false</functionsInVacuum>
+			</li>
+			 <li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>2</heatPerSecond>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_InspectString">
+				<compClass>CompInspectStringGeneProcessor</compClass>
+				<inspectString>Gene complexity increase</inspectString>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>100</maxSimultaneous>
+				<maxDistance>12.9</maxDistance>
+				<showMaxSimultaneous>false</showMaxSimultaneous>
+			</li>
+		</comps>
 	</ThingDef>
 
 </Defs>

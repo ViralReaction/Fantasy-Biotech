@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ResearchProjectDef>
+	<ResearchProjectDef Abstract="True" Name="VR_GeneticTechBase">
+		<techLevel>Medieval</techLevel>
+		<tab>VR_BiotechResearchTab</tab>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VR_GeneticTechBase">
 		<defName>VR_BasicGenetics</defName>
 		<label>Chymerimancy</label>
 		<description>Create xenogerms which can be implanted in a person to genetically modify them. Extract genepacks from living people using a gene extractor so you can reimplant their genes into someone else.</description>
 		<baseCost>1500</baseCost>
-		<researchViewX>2.00</researchViewX>
-		<researchViewY>1.40</researchViewY>
-		<techLevel>Medieval</techLevel>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
 		<prerequisites>
 			<li>PsychoidBrewing</li>
+		</prerequisites>
+		<heldByFactionCategoryTags Inherit="False"/>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->chymerimancy</li>
+				<li>subject->genetic implantation</li>
+
+				<li>subject_story->was uplifted by a scientist that focused on the genetically disadvantaged</li>
+				<li>subject_story->had [ANYPAWN_possessive] flesh stolen by a rogue biologist</li>
+				<li>subject_story->ran a genetic transfer clinic for the nobility</li>
+
+				<li>subject_gerund->crafting xenogerms</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VR_GeneticTechBase">
+		<defName>VR_AdvancedGenetics</defName>
+		<label>Advanced Chymerimancy</label>
+		<description>Create xenogerms which can be implanted in a person to genetically modify them. Extract genepacks from living people using a gene extractor so you can reimplant their genes into someone else.</description>
+		<baseCost>1500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+		<prerequisites>
+			<li>VR_BasicGenetics</li>
 		</prerequisites>
 		<heldByFactionCategoryTags Inherit="False"/>
 		<generalRules>
