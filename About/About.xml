@@ -28,5 +28,6 @@
 	<forceLoadAfter>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 		<li>vanillaracesexpanded.sanguophage</li>
+		<li>m00nl1ght.WorldTechLevel</li>
 	</forceLoadAfter>
 </ModMetaData>

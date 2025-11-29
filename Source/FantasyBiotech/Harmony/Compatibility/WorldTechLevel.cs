@@ -26,7 +26,12 @@ public class WorldTechLevel_Patch
         public static void Postfix(ref TechLevel __result, ResearchProjectDef def)
         {
             if (def.GetModExtension<ResearchTechLevelOverride>()?.canOverride == true)
+            {
+                #if Debug
+                Log.Message(def.label + " : " + "Overriding World Tech Level settings. Tech level set to " + def.techLevel + ".");
+                #endif
                 __result = def.techLevel;
+            }
         }
     }
 }
