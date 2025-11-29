@@ -83,7 +83,6 @@
     <Compile Include="FantasyBiotech\Harmony\SitePartWorker_SleepingMechanoids_GetMechanoidsCount.cs" />
     <Compile Include="FantasyBiotech\Harmony\SignalAction_Ambush_GenerateAmbushPawns.cs" />
     <Compile Include="FantasyBiotech\Harmony\JobGiver_GetEnergy_Charger_GetClosestCharger.cs" />
-    <Compile Include="FantasyBiotech\Harmony\HarmonyPatches.cs" />
     <Compile Include="FantasyBiotech\MapComponent\RechargerMapComponent.cs" />
     <Compile Include="FantasyBiotech\Projectiles\Projectile_Bouncing.cs" />
     <Compile Include="FantasyBiotech\SymbolResolvers\SymbolResolver_RandomConstructGroup.cs" />
