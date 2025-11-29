@@ -13,7 +13,6 @@ namespace FantasyBiotech
     {
         public static bool Prefix(ref Genepack __instance, ref bool __result)
         {
-            Log.Message("Test deteroriating");
             CompGenepackContainer parentContainer = __instance.ParentContainer;
             if (parentContainer == null || !parentContainer.PowerOn)
             {
