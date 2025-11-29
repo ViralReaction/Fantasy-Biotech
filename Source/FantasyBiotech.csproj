@@ -44,6 +44,7 @@
     <Compile Include="FantasyBiotech\Comps\CompTempControl_Steam.cs" />
     <Compile Include="FantasyBiotech\Defs\BossGroupExtension.cs" />
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
+    <Compile Include="FantasyBiotech\Harmony\MechanitorUtility_ShouldBeMechanitor.cs" />
     <Compile Include="FantasyBiotech\Harmony\WorldFactionsUIUtility_DoWindowContents.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_OperateOnPawn.cs" />
     <Compile Include="FantasyBiotech\ModOption\MenuController.cs" />

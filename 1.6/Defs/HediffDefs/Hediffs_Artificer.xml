@@ -29,12 +29,6 @@
 			</li>
 			<li Class="CompProperties_UseEffectInstallImplant">
 				<compClass>CompUseEffect_InstallImplantMechlink</compClass>
-				<hediffDef>MechlinkImplant</hediffDef>
-				<bodyPart>Brain</bodyPart>
-				<requiresPsychicallySensitive>true</requiresPsychicallySensitive>
-			</li>
-			<li Class="CompProperties_UseEffectInstallImplant">
-				<compClass>CompUseEffect_InstallImplantMechlink</compClass>
 				<hediffDef>VR_ArtificerImplant</hediffDef>
 				<bodyPart>Brain</bodyPart>
 				<requiresPsychicallySensitive>true</requiresPsychicallySensitive>
@@ -61,17 +55,13 @@
 		<duplicationAllowed>false</duplicationAllowed>
 		<stages>
 			<li>
-				<becomeVisible>false</becomeVisible>
+				<becomeVisible>true</becomeVisible>
+				<statOffsets>
+					<MechBandwidth>6</MechBandwidth>
+					<MechControlGroups>2</MechControlGroups>
+				</statOffsets>
 			</li>
 		</stages>
-		<!-- <stages> -->
-			<!-- <li> -->
-				<!-- <statOffsets> -->
-					<!-- <MechBandwidth>6</MechBandwidth> -->
-					<!-- <MechControlGroups>2</MechControlGroups> -->
-				<!-- </statOffsets> -->
-			<!-- </li> -->
-		<!-- </stages> -->
 	</HediffDef>
 
 </Defs>
