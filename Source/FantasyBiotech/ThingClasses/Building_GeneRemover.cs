@@ -23,7 +23,14 @@ public class Building_GeneRemover : Building_Enterable, IThingHolderWithDrawnPaw
 	[Unsaved]
 	private Effecter progressBar;
 
-	private const int TicksToExtract = 30000;
+	private const int TicksToExtract = 12000;
+
+	private const float TicksToExtractFloat = TicksToExtract;
+
+	private const float DoctorSkillToBleedModifier = 30f;
+	private const float BleedStartingValue = 0.75f;
+
+
 
 	private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
 
@@ -129,7 +136,7 @@ public class Building_GeneRemover : Building_Enterable, IThingHolderWithDrawnPaw
 		progressBar.EffectTick(new TargetInfo(Position + IntVec3.North.RotatedBy(Rotation), Map), TargetInfo.Invalid);
 		MoteProgressBar mote = ((SubEffecter_ProgressBar)progressBar.children[0]).mote;
 		if (mote == null) return;
-		mote.progress = 1f - Mathf.Clamp01(ticksRemaining / 30000f);
+		mote.progress = 1f - Mathf.Clamp01(ticksRemaining / TicksToExtractFloat);
 		mote.offsetZ = ((Rotation == Rot4.North) ? 0.5f : (-0.5f));
 	}
 
@@ -247,10 +254,9 @@ public class Building_GeneRemover : Building_Enterable, IThingHolderWithDrawnPaw
 	{
 		if (containedPawn != null)
 		{
-			float skillLevel = pawn.skills.GetSkill(SkillDefOf.Medicine).Level;
-			Log.Message(skillLevel);
+			float skillLevel = pawn.skills.GetSkill(SkillDefOf.Medicine).Level / DoctorSkillToBleedModifier;
 			Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, containedPawn);
-			hediff.Severity = 0.45f - skillLevel;
+			hediff.Severity = BleedStartingValue - skillLevel;
 			containedPawn.health.AddHediff(hediff);
 		}
 	}
