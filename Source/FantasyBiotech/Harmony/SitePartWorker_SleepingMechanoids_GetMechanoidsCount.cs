@@ -10,7 +10,7 @@ namespace FantasyBiotech
     {
         public static bool Prepare()
         {
-            return FantasyBiotech_Mod.settings.replaceMechanoids;
+            return MenuController.settings.replaceMechanoids;
         }
         public static bool Prefix(ref int __result, CompGenepackContainer __instance, Site site, SitePartParams parms)
         {

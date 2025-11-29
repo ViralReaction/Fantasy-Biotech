@@ -46,8 +46,8 @@
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
     <Compile Include="FantasyBiotech\Harmony\WorldFactionsUIUtility_DoWindowContents.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_OperateOnPawn.cs" />
-    <Compile Include="FantasyBiotech\ModOption\FantasyBiotechMod.cs" />
-    <Compile Include="FantasyBiotech\ModOption\FantasyBiotechSettings.cs" />
+    <Compile Include="FantasyBiotech\ModOption\MenuController.cs" />
+    <Compile Include="FantasyBiotech\ModOption\MenuSettings.cs" />
     <Compile Include="FantasyBiotech\QuestNode_Root_Bossgroup_Construct.cs" />
     <Compile Include="FantasyBiotech\Alert_GeneRackUnfueled.cs" />
     <Compile Include="FantasyBiotech\ComplexThreats\FileName.cs" />

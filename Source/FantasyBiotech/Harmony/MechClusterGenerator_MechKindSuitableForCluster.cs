@@ -11,7 +11,7 @@ namespace FantasyBiotech
         {
             if (__result)
             {
-                if (!FantasyBiotech_Mod.settings.replaceMechanoids)
+                if (!MenuController.settings.replaceMechanoids)
                 {
                     __result = !def.GetModExtension<ConstructExtension>()?.isConstruct == true;
                 }

@@ -4,6 +4,9 @@
     <!-- Titles -->
     <FantasyBiotech.ModNameShort>Fantasy Biotech</FantasyBiotech.ModNameShort>
     <FantasyBiotech_Settings_Options>Settings</FantasyBiotech_Settings_Options>
+    <FantasyBiotech_Settings_HeaderConstructs>Constructs</FantasyBiotech_Settings_HeaderConstructs>
+    <FantasyBiotech_Settings_HeaderGenetics>Genetics</FantasyBiotech_Settings_HeaderGenetics>
+    <FantasyBiotech_Settings_HeaderVampires>Vampires</FantasyBiotech_Settings_HeaderVampires>
 
     <!-- Options -->
     <FantasyBiotech_Settings_Mech_Replace_Title>Replace Mechs</FantasyBiotech_Settings_Mech_Replace_Title>

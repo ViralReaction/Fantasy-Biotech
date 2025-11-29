@@ -13,7 +13,7 @@ namespace FantasyBiotech
     {
         public static bool Prepare()
         {
-            return FantasyBiotech_Mod.settings.replaceMechanoids;
+            return MenuController.settings.replaceMechanoids;
         }
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
