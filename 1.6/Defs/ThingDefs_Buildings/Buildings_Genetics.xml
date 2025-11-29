@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="GeneBuildingBase">
+	<ThingDef Name="VR_FantasyBiotech_GeneBuildingBase" ParentName="GeneBuildingBase" Abstract="True">
+		<researchPrerequisites Inherit="False">
+			<li>VR_BasicGenetics</li>
+		</researchPrerequisites>
+		<altitudeLayer>Building</altitudeLayer>
+		<designationCategory>Biotech</designationCategory>
+		<uiOrder>2100</uiOrder>
+		<pathCost>42</pathCost>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<buildingTags>
+				<li>Biotech</li>
+			</buildingTags>
+			<workTableRoomRole>Laboratory</workTableRoomRole>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="VR_FantasyBiotech_GeneBuildingBase">
 		<defName>VR_GeneRack</defName>
 		<label>gene rack</label>
 		<description>This building can store genepacks and make them usable to create new xenogerms, when placed near a gene assembler. Large gene libraries require many gene banks.\n\nWhen powered, gene banks prevent genepacks from deteriorating and will slowly repair deterioration.</description>
@@ -75,7 +99,7 @@
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
-	<ThingDef ParentName="GeneBuildingBase">
+	<ThingDef ParentName="VR_FantasyBiotech_GeneBuildingBase">
 		<defName>VR_GraftForge</defName>
 		<label>graft forge</label>
 		<description>A workbench for creating implantable xenogerms from genepacks stored in nearby gene banks. Genepacks are not consumed in this process and can be reused.</description>
@@ -147,7 +171,7 @@
 		</comps>
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BuildingBase">
 		<defName>VR_GeneRemover</defName>
 		<label>gene remover</label>
@@ -176,7 +200,7 @@
 		<designationCategory>Biotech</designationCategory>
 		<uiOrder>2100</uiOrder>
 		<researchPrerequisites>
-			<li>Xenogermination</li>
+			<li>VR_BasicGenetics</li>
 		</researchPrerequisites>
 		<building>
 			<buildingTags>
