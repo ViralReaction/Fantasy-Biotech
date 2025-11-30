@@ -132,12 +132,12 @@
 
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/costList/HemogenPack</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/costList/HemogenPack</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/costList</xpath>
 			<value>
 				<HemogenPack>30</HemogenPack>
 			</value>
-		</match>
+		</nomatch>
 	</Operation>
 
 	<!-- Hemogen Amplifier -->
