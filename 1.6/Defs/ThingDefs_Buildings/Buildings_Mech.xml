@@ -376,14 +376,6 @@
 					</filter>
 					<count>50</count>
 				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Uranium</li>
-						</thingDefs>
-					</filter>
-					<count>12</count>
-				</li>
 			</subcoreScannerFixedIngredients>
 		</building>
 		<designationCategory>VR_Artifice</designationCategory>
@@ -478,15 +470,7 @@
 							<li>Steel</li>
 						</thingDefs>
 					</filter>
-					<count>60</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Uranium</li>
-						</thingDefs>
-					</filter>
-					<count>20</count>
+					<count>50</count>
 				</li>
 			</subcoreScannerFixedIngredients>
 		</building>
