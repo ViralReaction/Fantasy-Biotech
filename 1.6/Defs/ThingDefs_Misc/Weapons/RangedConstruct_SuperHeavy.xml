@@ -156,9 +156,9 @@
 
 	<ThingDef ParentName="BaseBullet">
 		<defName>VR_Bullet_ConstructGun_HeavyBowGun</defName>
-		<label>charge lance shot</label>
+		<label>heavy bowgun shot</label>
 		<graphicData>
-			<texPath>Things/Projectile/ChargeLanceShot</texPath>
+			<texPath>Things/Projectile/Dwemer_BallistaBolt</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 			<drawSize>1.5</drawSize>

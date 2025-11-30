@@ -376,6 +376,14 @@
 					</filter>
 					<count>50</count>
 				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Uranium</li>
+						</thingDefs>
+					</filter>
+					<count>12</count>
+				</li>
 			</subcoreScannerFixedIngredients>
 		</building>
 		<designationCategory>VR_Artifice</designationCategory>
@@ -463,6 +471,24 @@
 			<subcoreScannerWorking>SubcoreRipscanner_Working</subcoreScannerWorking>
 			<subcoreScannerComplete>SubcoreRipscanner_Complete</subcoreScannerComplete>
 			<subcoreScannerTicks>30000</subcoreScannerTicks>
+			<subcoreScannerFixedIngredients>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Steel</li>
+						</thingDefs>
+					</filter>
+					<count>60</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Uranium</li>
+						</thingDefs>
+					</filter>
+					<count>20</count>
+				</li>
+			</subcoreScannerFixedIngredients>
 		</building>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
@@ -518,8 +544,9 @@
 		</statBases>
 		<size>(2,2)</size>
 		<costList>
-			<Steel>200</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>125</Steel>
+			<Uranium>20</Uranium>
+			<VR_TonalCoreRegular>1</VR_TonalCoreRegular>
 		</costList>
 		<researchPrerequisites>
 			<li>VR_BasicConstructTech</li>

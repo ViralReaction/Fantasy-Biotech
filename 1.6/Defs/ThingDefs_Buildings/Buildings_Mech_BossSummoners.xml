@@ -2,7 +2,7 @@
 <Defs>
 
 	<ThingDef ParentName="BuildingBase">
-		<defName>VR_BurnoutConstructLinkBooster_Duplicate</defName>
+		<defName>VR_BurnoutConstructLinkBooster_Large</defName>
 		<label>large construct band antenna</label>
 		<description>A mech-band signaling device. When activated, it puts out a powerful mech signal pulse, which will attract an ultra-heavy feral mechanoid to attack with its escorts. If you can defeat it, you can collect special technologies from its corpse. The signal pulse burns out the transmitter, so this building can only be used once.</description>
 		<graphicData>
@@ -33,8 +33,8 @@
 		</statBases>
 		<size>(4,2)</size>
 		<costList>
-			<Steel>200</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>150</Steel>
+			<VR_TonalCoreHigh>2</VR_TonalCoreHigh>
 		</costList>
 		<killedLeavings>
 			<ChunkSlagSteel>3</ChunkSlagSteel>
@@ -101,7 +101,7 @@
 		<size>(2,1)</size>
 		<costList>
 			<Steel>50</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<VR_TonalCoreRegular>1</VR_TonalCoreRegular>
 		</costList>
 		<killedLeavings>
 			<ChunkSlagSteel>3</ChunkSlagSteel>
@@ -167,7 +167,8 @@
 		<designationCategory>VR_Artifice</designationCategory>
 		<costList>
 			<Steel>120</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Uranium>15</Uranium>
+			<VR_TonalCoreBasic>2</VR_TonalCoreBasic>
 		</costList>
 		<defaultPlacingRot>South</defaultPlacingRot>
 		<interactionCellOffset>(0,0,2)</interactionCellOffset>

@@ -25,15 +25,23 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Plasteel</li>
+						<li>Uranium</li>
 					</thingDefs>
 				</filter>
-				<count>300</count>
+				<count>100</count>
 			</li>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SignalChip</li>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>200</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VR_PowerchipBasic</li>
 					</thingDefs>
 				</filter>
 				<count>2</count>
@@ -41,7 +49,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SubcoreHigh</li>
+						<li>VR_TonalCoreHigh</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -77,23 +85,23 @@
 			<li>
 				<filter>
 					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>125</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
 						<li>Plasteel</li>
 					</thingDefs>
 				</filter>
-				<count>300</count>
+				<count>225</count>
 			</li>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>ComponentSpacer</li>
-					</thingDefs>
-				</filter>
-				<count>3</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>NanostructuringChip</li>
+						<li>VR_PowerchipAdvanced</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -101,7 +109,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SubcoreHigh</li>
+						<li>VR_TonalCoreHigh</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>

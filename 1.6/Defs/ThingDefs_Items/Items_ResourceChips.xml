@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Name="VR_MechResourceBase" ParentName="ResourceBase" Abstract="True">
+      <soundInteract>Metal_Drop</soundInteract>
+      <soundDrop>Standard_Drop</soundDrop>
+      <stackLimit>10</stackLimit>
+      <healthAffectsPrice>false</healthAffectsPrice>
+      <statBases>
+        <MaxHitPoints>100</MaxHitPoints>
+        <MarketValue>500</MarketValue>
+        <Mass>1</Mass>
+        <Flammability>0.25</Flammability>
+        <DeteriorationRate>2.0</DeteriorationRate>
+      </statBases>
+      <intricate>true</intricate>
+      <thingCategories>
+        <li>Manufactured</li>
+      </thingCategories>
+      <isTechHediff>true</isTechHediff>
+  </ThingDef>
+
+  <ThingDef ParentName="VR_MechResourceBase">
+    <defName>VR_PowerchipBasic</defName>
+    <label>basic powerchip</label>
+    <description>A rune-etched powerchip brimming with bound aether. It is necessary to produce certain advanced types of constructs and equipment.\n\nAn artificer can study this chip to help unlock higher tiers of construct tech research.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PowerchipBasic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_CompAnalyzableUnlockResearch">
+        <analysisID>29080735</analysisID>
+        <requiresMechanitor>true</requiresMechanitor>
+
+        <!-- Analyzable -->
+
+        <analysisDurationHours>0.5</analysisDurationHours>
+        <destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+        <completedLetterLabel>Basic powerchip studied: {RESEARCH} unlocked</completedLetterLabel>
+        <completedLetter>By studying the basic powerchip, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+        <completedLetterDef>PositiveEvent</completedLetterDef>
+
+        <!-- Interactable -->
+
+        <activateTexPath>UI/Icons/Study</activateTexPath>
+
+        <activateLabelString>Analyze...</activateLabelString>
+        <activateDescString>Analyze the basic powerchip.</activateDescString>
+        <jobString>Analyze basic powerchip</jobString>
+        <guiLabelString>Choose who should analyze this</guiLabelString>
+        <inspectString>Can be analyzed by a colonist.</inspectString>
+
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="VR_MechResourceBase">
+    <defName>VR_PowerchipStandard</defName>
+    <label>standard powerchip</label>
+    <description>A rune-etched powerchip brimming with bound aether. It is necessary to produce certain advanced types of constructs and equipment.\n\nAn artificer can study this chip to help unlock higher tiers of construct tech research.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PowerchipStandard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_CompAnalyzableUnlockResearch">
+        <analysisID>07063199</analysisID>
+        <requiresMechanitor>true</requiresMechanitor>
+
+        <!-- Analyzable -->
+
+        <analysisDurationHours>0.5</analysisDurationHours>
+        <destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+        <completedLetterLabel>Standard powerchipchip studied: {RESEARCH} unlocked</completedLetterLabel>
+        <completedLetter>By studying the standrad powerchip, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+        <completedLetterDef>PositiveEvent</completedLetterDef>
+
+        <!-- Interactable -->
+
+        <activateTexPath>UI/Icons/Study</activateTexPath>
+
+        <activateLabelString>Analyze...</activateLabelString>
+        <activateDescString>Analyze the standard powerchip.</activateDescString>
+        <jobString>Analyze standard powerchip</jobString>
+        <guiLabelString>Choose who should analyze this</guiLabelString>
+        <inspectString>Can be analyzed by a colonist.</inspectString>
+
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="VR_MechResourceBase">
+    <defName>VR_PowerchipAdvanced</defName>
+    <label>advanced powerchip</label>
+    <description>A rune-etched powerchip brimming with bound aether.. It is necessary to produce certain advanced constructs and equipment.\n\nAn artificer can study this chip to help unlock higher tiers of construct tech research.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PowerchipAdvanced</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_CompAnalyzableUnlockResearch">
+        <analysisID>07360983</analysisID>
+        <requiresMechanitor>true</requiresMechanitor>
+
+        <!-- Analyzable -->
+
+        <analysisDurationHours>0.5</analysisDurationHours>
+        <destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+        <completedLetterLabel>Advanced powerchip studied: {RESEARCH} unlocked</completedLetterLabel>
+        <completedLetter>By studying the advanced powerchip, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+        <completedLetterDef>PositiveEvent</completedLetterDef>
+
+        <!-- Interactable -->
+
+        <activateTexPath>UI/Icons/Study</activateTexPath>
+
+        <activateLabelString>Analyze...</activateLabelString>
+        <activateDescString>Analyze the advanced powerchip.</activateDescString>
+        <jobString>Analyze advanced powerchip</jobString>
+        <guiLabelString>Choose who should analyze this</guiLabelString>
+        <inspectString>Can be analyzed by a colonist.</inspectString>
+
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

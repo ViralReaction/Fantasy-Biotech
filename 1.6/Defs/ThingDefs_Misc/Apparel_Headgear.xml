@@ -13,7 +13,7 @@
 		</graphicData>
 		<costList>
 			<Steel>50</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Uranium>25</Uranium>
 		</costList>
 		<recipeMaker>
 			<researchPrerequisite>VR_BasicConstructTech</researchPrerequisite>
@@ -92,14 +92,14 @@
 			<displayPriority>520</displayPriority>
 		</recipeMaker>
 		<costList Inherit="False">
-			<Plasteel>120</Plasteel>
-			<ComponentSpacer>6</ComponentSpacer>
-			<NanostructuringChip>2</NanostructuringChip>
+			<Steel>120</Steel>
+			<Plasteel>40</Plasteel>
+			<VR_PowerchipAdvanced>2</VR_PowerchipAdvanced>
 		</costList>
 		<apparel>
 			<tags>
 				<li>RoyalTier7</li>
-				<li>Mechlord</li>
+				<li>ArtificerArmor</li>
 			</tags>
 			<scoreOffset>4</scoreOffset>
 			<mechanitorApparel>true</mechanitorApparel>
@@ -146,14 +146,13 @@
 		</recipeMaker>
 		<costList>
 			<Steel>20</Steel>
-			<Chemfuel>20</Chemfuel>
 		</costList>
 		<apparel>
 			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
 			<immuneToToxGasExposure>true</immuneToToxGasExposure>
 			<bodyPartGroups>
-				<li>FullHead</li>
+				<li>Mouth</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerMask/ArtificerMask</wornGraphicPath>
 			<renderSkipFlags>

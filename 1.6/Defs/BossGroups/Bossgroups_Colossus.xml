@@ -110,7 +110,7 @@
 			</li>
 		</waves>
 		<leaderDescription>The {LEADERKIND_label} is equipped with a concrete-melting hellsphere cannon. It is slow to charge, but when it fires it will annihilate anything in the blast circle.</leaderDescription>
-		<rewardDef>SignalChip</rewardDef>
+		<rewardDef>VR_PowerchipBasic</rewardDef>
 	</BossgroupDef>
 
 </Defs>

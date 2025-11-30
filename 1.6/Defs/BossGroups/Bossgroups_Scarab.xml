@@ -112,7 +112,7 @@
 			</li>
 		</waves>
 		<leaderDescription>The {LEADERKIND_label} has a built-in mech gestator and is capable of deploying war urchin combat mechs.</leaderDescription>
-		<rewardDef>PowerfocusChip</rewardDef>
+		<rewardDef>VR_PowerchipStandard</rewardDef>
 	</BossgroupDef>
 
 </Defs>

@@ -19,7 +19,7 @@
 			<WorkToMake>38000</WorkToMake>
 			<MaxHitPoints>290</MaxHitPoints>
 			<Mass>10</Mass>
-			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.15</ArmorRating_Heat>
 			<StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
@@ -33,15 +33,15 @@
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
-			<!-- <NanostructuringChip>2</NanostructuringChip> -->
-			<!-- <PowerfocusChip>1</PowerfocusChip> -->
-			<Plasteel>120</Plasteel>
+			<VR_PowerchipStandard>2</VR_PowerchipStandard>
+			<Steel>120</Steel>
+			<Plasteel>40</Plasteel>
 		</costList>
 		<stuffCategories>
 			<li>Leathery</li>
 			<li>Fabric</li>
 		</stuffCategories>
-		<costStuffCount>170</costStuffCount>
+		<costStuffCount>60</costStuffCount>
 		<apparel>
 			<bodyPartGroups>
 				<li>Torso</li>
@@ -54,6 +54,7 @@
 				<li>Shell</li>
 			</layers>
 			<tags>
+				<li>RoyalTier6</li>
 				<li>ArtificerArmor</li>
 			</tags>
 			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerArmour/ArtificerArmour</wornGraphicPath>
@@ -76,7 +77,7 @@
 			<displayPriority>530</displayPriority>
 		</recipeMaker>
 		<graphicData>
-			<texPath>Things/Pawn/Humanlike/Apparel/ArtificerArmour/ArtificerArmour</texPath>
+			<texPath>Things/Pawn/Humanlike/Apparel/ArtificerLordArmour/ArtificerLordArmour</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -84,23 +85,23 @@
 			<WorkToMake>38000</WorkToMake>
 			<MaxHitPoints>290</MaxHitPoints>
 			<Mass>10</Mass>
-			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.46</ArmorRating_Heat>
 			<StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
 			<StuffEffectMultiplierInsulation_Heat>0.20</StuffEffectMultiplierInsulation_Heat>
 			<EquipDelay>11</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<MechBandwidth>6</MechBandwidth>
+			<MechBandwidth>12</MechBandwidth>
 			<ShootingAccuracyPawn>-5</ShootingAccuracyPawn>
-			<MeleeHitChance>-0.5</MeleeHitChance>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
-			<!-- <NanostructuringChip>2</NanostructuringChip> -->
-			<!-- <PowerfocusChip>1</PowerfocusChip> -->
-			<Plasteel>120</Plasteel>
+			<VR_PowerchipAdvanced>2</VR_PowerchipAdvanced>
+			<VR_PowerchipStandard>1</VR_PowerchipStandard>
+			<Steel>200</Steel>
+			<Plasteel>60</Plasteel>
 		</costList>
 		<stuffCategories>
 			<li>Leathery</li>
@@ -119,9 +120,10 @@
 				<li>Shell</li>
 			</layers>
 			<tags>
+				<li>RoyalTier7</li>
 				<li>ArtificerArmor</li>
 			</tags>
-			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerArmour/ArtificerArmour</wornGraphicPath>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerLordArmour/ArtificerLordArmour</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		<tradeability>Sellable</tradeability>
