@@ -47,7 +47,7 @@
 		</pipeDefs>
 		<designator>
 			<deconstructIconPath>UI/Gizmos/SteamPipesDeconstruct</deconstructIconPath>
-			<designationCategoryDef>Biotech</designationCategoryDef>
+			<designationCategoryDef>VR_Artifice</designationCategoryDef>
 		</designator>
 		<overlayOptions>
 			<overlayColor>(255, 210, 85)</overlayColor>
