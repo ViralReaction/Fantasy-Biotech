@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DeathrestCapacitySerum"]</xpath>
+        <value>
+            <techLevel>Medieval</techLevel>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="ArchiteCapsule"]</xpath>
+        <value>
+            <techLevel>Medieval</techLevel>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>World Tech Level</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_ThingDefs"]/entries/li[contains(.,"Deathrest")]</xpath>
+                    <value>
+                        <li>
+                            <defName>DeathrestCapacitySerum</defName>
+                            <techLevel>Medieval</techLevel>
+                        </li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_ThingDefs"]/entries/li[contains(.,"ArchiteCapsule")]</xpath>
+                    <value>
+                        <li>
+                            <defName>ArchiteCapsule</defName>
+                            <techLevel>Medieval</techLevel>
+                        </li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_ThingDefs"]/entries/li[contains(.,"Genepack")]</xpath>
+                    <value>
+                        <li>
+                            <defName>Genepack</defName>
+                            <techLevel>Medieval</techLevel>
+                        </li>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
