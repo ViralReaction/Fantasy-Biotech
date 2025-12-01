@@ -60,8 +60,15 @@
 
                 <li Class="PatchOperationConditional">
                     <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_StartingThing_Defined"][contains(.,"ComponentIndustrial")]</xpath>
-                    <match Class="PatchOperationRemove">
+                    <match Class="PatchOperationReplace">
                         <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_StartingThing_Defined"][contains(.,"ComponentIndustrial")]</xpath>
+                        <value>
+                            <li Class="ScenPart_StartingThing_Defined">
+                                <def>StartingThing_Defined</def>
+                                <thingDef>Gold</thingDef>
+                                <count>20</count>
+                            </li>
+                        </value>
                     </match>
                 </li>
 

@@ -14,6 +14,7 @@ namespace FantasyBiotech
         public static SoundDef Recipe_ButcherCorpseFlesh;
         public static JobDef VR_ExtractGeneOnPawn;
         public static ThingDef VR_GeneRemover;
+        public static ThingDef VR_GraftForge;
 
         static FantasyBiotechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FantasyBiotechDefOf));
     }

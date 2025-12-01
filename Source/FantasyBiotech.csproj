@@ -100,6 +100,7 @@
     <Compile Include="FantasyBiotech\Utility\MechUtility.cs" />
     <Compile Include="FantasyBiotech\Verbs\Verb_ColossusRay.cs" />
     <Compile Include="FantasyBiotech\Verbs\Verb_ConstructFlame.cs" />
+    <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_CreateXenogerm.cs" />
     <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_DoGestate_Construct.cs" />
     <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_ExtractGeneOnPawn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

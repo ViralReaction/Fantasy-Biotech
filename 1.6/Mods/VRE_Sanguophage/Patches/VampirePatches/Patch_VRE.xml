@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+		<settings>
+			<li>replaceVampires</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/comps/li[@Class="CompProperties_Power"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/comps/li[@Class="CompProperties_Power"]</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/techLevel</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/techLevel</xpath>
+						<value>
+							<techLevel>Medieval</techLevel>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix" or defName="VRE_HemodynamicAccelerator" or defName="VRE_HemogenSolidifier" or defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]</xpath>
+						<value>
+							<techLevel>Medieval</techLevel>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/costList/Steel</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/costList/Steel</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/costList/ComponentIndustrial</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/costList/ComponentIndustrial</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]</xpath>
+					<value>
+						<costStuffCount>300</costStuffCount>
+						<stuffCategories>
+							<li>Stony</li>
+							<li>Metallic</li>
+						</stuffCategories>
+					</value>
+				</li>
+
+				<!-- Glucosoid and Psychofluid Pump -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/costList/Steel</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/costList/Steel</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/costList/ComponentIndustrial</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/costList/ComponentIndustrial</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/costList</xpath>
+					<value>
+						<Gold>5</Gold>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]</xpath>
+					<value>
+						<costStuffCount>550</costStuffCount>
+						<stuffCategories>
+							<li>Stony</li>
+							<li>Metallic</li>
+						</stuffCategories>
+					</value>
+				</li>
+
+				<!-- Hemogen Solidifier -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/costList/Steel</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/costList/Steel</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/costList/ComponentIndustrial</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/costList/ComponentIndustrial</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/costList</xpath>
+					<value>
+						<Gold>10</Gold>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]</xpath>
+					<value>
+						<costStuffCount>300</costStuffCount>
+						<stuffCategories>
+							<li>Stony</li>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+				</li>
+
+				<!-- Glucosoid and Psychofluid Pump -->
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/costList/Steel</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/costList/Steel</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/costList/ComponentIndustrial</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/costList/ComponentIndustrial</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]</xpath>
+					<value>
+						<costStuffCount>400</costStuffCount>
+						<stuffCategories>
+							<li>Stony</li>
+							<li>Metallic</li>
+						</stuffCategories>
+					</value>
+				</li>
+
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Royalty</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/comps/li[@Class="CompProperties_Power"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/comps/li[@Class="CompProperties_Power"]</xpath>
+								</match>
+							</li>
+
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+								</match>
+							</li>
+
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/techLevel</xpath>
+								<match Class="PatchOperationReplace">
+									<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/techLevel</xpath>
+									<value>
+										<techLevel>Medieval</techLevel>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]</xpath>
+									<value>
+										<techLevel>Medieval</techLevel>
+									</value>
+								</nomatch>
+							</li>
+
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/costList/Steel</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/costList/Steel</xpath>
+								</match>
+							</li>
+
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/costList/ComponentIndustrial</xpath>
+								<match Class="PatchOperationRemove">
+									<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/costList/ComponentIndustrial</xpath>
+								</match>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/costList/HemogenPack</xpath>
+								<value>
+									<HemogenPack>30</HemogenPack>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/costList</xpath>
+								<value>
+									<Gold>10</Gold>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]</xpath>
+								<value>
+									<costStuffCount>400</costStuffCount>
+									<stuffCategories>
+										<li>Stony</li>
+										<li>Metallic</li>
+									</stuffCategories>
+								</value>
+							</li>
+
+						</operations>
+					</match>
+				</li>
+
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

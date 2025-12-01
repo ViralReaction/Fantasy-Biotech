@@ -51,4 +51,18 @@
 		<canBeDoneByMechs>false</canBeDoneByMechs>
 	</WorkGiverDef>
 
+	<WorkGiverDef>
+		<defName>VR_CreateXenogerm</defName>
+		<label>create xenogerm</label>
+		<giverClass>FantasyBiotech.WorkGiver_CreateXenogerm</giverClass>
+		<workType>Research</workType>
+		<verb>create xenogerm</verb>
+		<gerund>creating xenogerm at</gerund>
+		<priorityInType>120</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByMechs>false</canBeDoneByMechs>
+	</WorkGiverDef>
+
 </Defs>

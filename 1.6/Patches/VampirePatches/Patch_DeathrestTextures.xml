@@ -3,7 +3,7 @@
 
 	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
 		<settings>
-			<li>replaceVampireTextures</li>
+			<li>replaceVampires</li>
 		</settings>
 		<active Class="PatchOperationSequence">
 			<operations>
@@ -261,6 +261,22 @@
 						<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData</xpath>
 						<value>
 							<shaderType>CutoutComplex</shaderType>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="DeathrestCasket"]/uiIconScale</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="DeathrestCasket"]/uiIconScale</xpath>
+						<value>
+							<uiIconScale>0.40</uiIconScale>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="DeathrestCasket"]</xpath>
+						<value>
+							<uiIconScale>0.40</uiIconScale>
 						</value>
 					</nomatch>
 				</li>

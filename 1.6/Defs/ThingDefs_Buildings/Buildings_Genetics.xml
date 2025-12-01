@@ -28,7 +28,7 @@
 	<ThingDef ParentName="VR_FantasyBiotech_GeneBuildingBase">
 		<defName>VR_GeneRack</defName>
 		<label>gene rack</label>
-		<description>This building can store genepacks and make them usable to create new xenogerms, when placed near a gene assembler. Large gene libraries require many gene banks.\n\nWhen powered, gene banks prevent genepacks from deteriorating and will slowly repair deterioration.</description>
+		<description>This building can store genepacks and make them usable to create new xenogerms, when placed near a graft forge. Large gene libraries require many gene banks.\n\nWhen fueled, gene banks prevent genepacks from deteriorating and will slowly repair deterioration.</description>
 		<graphicData>
 			<texPath>Things/Building/Misc/GeneRack/GeneRack</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -101,7 +101,7 @@
 	<ThingDef ParentName="VR_FantasyBiotech_GeneBuildingBase">
 		<defName>VR_GraftForge</defName>
 		<label>graft forge</label>
-		<description>A workbench for creating implantable xenogerms from genepacks stored in nearby gene banks. Genepacks are not consumed in this process and can be reused.</description>
+		<description>A workbench for creating implantable xenogerms from genepacks stored in nearby gene racks. Genepacks are not consumed in this process and can be reused.</description>
 		<thingClass>Building_GeneAssembler</thingClass>
 		<passability>PassThroughOnly</passability>
 		<castEdgeShadows>true</castEdgeShadows>
@@ -174,7 +174,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VR_GeneRemover</defName>
 		<label>gene remover</label>
-		<description>An automated surgery machine that can extract a person's genes and create a genepack from them. The extracted genes will be randomly selected from the person's xenogenes and germline genes. You can force someone into the machine, but they won't like it.\n\nExtracting a person's genes while their genes are currently regrowing will kill them. Otherwise, gene extraction causes no lasting harm.\n\nGenes that require archite capsules are too complex to be extracted.</description>
+		<description>An surgery table that allows a doctor to extract a person's genes and create a genepack from them. The extracted genes will be randomly selected from the person's xenogenes and germline genes. You can force someone into the machine, but they won't like it.\n\nDue to the invasive nature of this extraction, there will be blood loss based on the doctor's skill.\n\nExtracting a person's genes while their genes are currently regrowing will kill them.\n\nGenes that require archite capsules are too complex to be extracted.</description>
 		<thingClass>FantasyBiotech.Building_GeneRemover</thingClass>
 		<containedPawnsSelectable>true</containedPawnsSelectable>
 		<passability>PassThroughOnly</passability>
@@ -227,8 +227,8 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>VR_GeneProcessor</defName>
-		<label>gene processor</label>
-		<description>A genetic analysis and processing system. Placed near a gene assembler, it increases the maximum genetic complexity of the xenogerms you can assemble. Building multiple gene processors will increase the genetic complexity limit further.</description>
+		<label>mutagenic furnace</label>
+		<description>Placed near a graft forge, it increases the maximum genetic complexity of the xenogerms you can assemble. Building multiple mutagenic furnace will increase the genetic complexity limit further.</description>
 		<passability>PassThroughOnly</passability>
 		<fillPercent>0.4</fillPercent>
 		<pathCost>14</pathCost>
@@ -241,6 +241,7 @@
 			<shadowData>
 				<volume>(1.5, 0.4, 1.5)</volume>
 			</shadowData>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<size>(2, 2)</size>
 		<canOverlapZones>false</canOverlapZones>
