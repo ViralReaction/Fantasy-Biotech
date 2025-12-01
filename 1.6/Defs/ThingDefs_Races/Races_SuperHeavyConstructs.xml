@@ -83,7 +83,7 @@
 			</li>
 		</tools>
 		<killedLeavingsPlayerHostile>
-			<NanostructuringChip>1</NanostructuringChip>
+			<VR_PowerchipAdvanced>1</VR_PowerchipAdvanced>
 		</killedLeavingsPlayerHostile>
 		<comps>
 			<li Class="CompProperties_Explosive">
@@ -195,7 +195,7 @@
 			<MoveSpeed>2.4</MoveSpeed>
 		</statBases>
 		<killedLeavingsPlayerHostile>
-			<SignalChip>1</SignalChip>
+			<VR_PowerchipBasic>1</VR_PowerchipBasic>
 		</killedLeavingsPlayerHostile>
 	</ThingDef>
     
@@ -333,7 +333,7 @@
 			</li>
 		</comps>
 		<killedLeavingsPlayerHostile>
-			<PowerfocusChip>1</PowerfocusChip>
+			<VR_PowerchipStandard>1</VR_PowerchipStandard>
 		</killedLeavingsPlayerHostile>
 	</ThingDef>
 
