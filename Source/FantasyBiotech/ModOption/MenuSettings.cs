@@ -4,22 +4,50 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 using System;
+using System.Reflection;
 
 namespace FantasyBiotech
 {
     public class MenuSettings : ModSettings
     {
         #region Settings
+
         public bool replaceMechanoids = true;
+
+        private bool replaceVampires = true;
+        private bool replaceVampireTextures = true;
+        private bool basicDeathrestCasket = true;
+        private bool renameSanguophage = true;
+        private bool retextureBlood = true;
+        private bool medievalVampireScenario = true;
+        private bool medievalSanguophageFaction = true;
+
         #endregion
 
         private readonly Dictionary<int, float> _cachedTabHeights = [];
         private readonly HashSet<int> _dirtyTabs = [];
 
+        public IEnumerable<string> toggleSettings
+        {
+            get
+            {
+                return GetType()
+                        .GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                        .Where(f => f.FieldType == typeof(bool) && (bool)f.GetValue(this))
+                        .Select(f => f.Name);
+            }
+        }
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref replaceMechanoids, "replaceMechanoids", true);
+            Scribe_Values.Look(ref replaceVampires, "replaceVampires", true);
+            Scribe_Values.Look(ref replaceVampireTextures, "replaceVampireTextures", true);
+            Scribe_Values.Look(ref basicDeathrestCasket, "basicDeathrestCasket", true);
+            Scribe_Values.Look(ref renameSanguophage, "renameSanguophage", true);
+            Scribe_Values.Look(ref retextureBlood, "retextureBlood", true);
+            Scribe_Values.Look(ref medievalVampireScenario, "medievalVampireScenario", true);
+            Scribe_Values.Look(ref medievalSanguophageFaction, "medievalSanguophageFaction", true);
 
         }
 
@@ -55,7 +83,17 @@ namespace FantasyBiotech
         {
             list.Label("FantasyBiotech_Settings_HeaderVampires".Translate());
             list.Gap();
-            //list.CheckboxLabeled("FantasyBiotech_Settings_Mech_Replace_Title".Translate(), ref replaceMechanoids, "FantasyBiotech_Settings_Mech_Replace_Desc".Translate());
+            list.CheckboxLabeled("FantasyBiotech_Settings_Vampire_Replace_Title".Translate(), ref replaceVampires, "FantasyBiotech_Settings_Vampire_Replace_Desc".Translate());
+            list.CheckboxLabeled("FantasyBiotech_Settings_VampireTextures_Replace_Title".Translate(), ref replaceVampireTextures, "FantasyBiotech_Settings_VampireTextures_Replace_Desc".Translate());
+            list.CheckboxLabeled("FantasyBiotech_Settings_RetextureBlood_Replace_Title".Translate(), ref retextureBlood, "FantasyBiotech_Settings_RetextureBlood_Replace_Desc".Translate());
+            list.CheckboxLabeled("FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Title".Translate(), ref basicDeathrestCasket, "FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Desc".Translate());
+
+            list.CheckboxLabeled("FantasyBiotech_Settings_RenameSanguophage_Replace_Title".Translate(), ref renameSanguophage, "FantasyBiotech_Settings_RenameSanguophage_Replace_Desc".Translate());
+            list.CheckboxLabeled("FantasyBiotech_Settings_MedievalVampireScenario_Replace_Title".Translate(), ref medievalVampireScenario, "FantasyBiotech_Settings_MedievalVampireScenario_Replace_Desc".Translate());
+
+            list.CheckboxLabeled("FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Title".Translate(), ref medievalSanguophageFaction, "FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Desc".Translate());
+
+
         }
 
         public float GetOrCalculateHeightForTab(int tabIndex, float width)
@@ -95,10 +133,13 @@ namespace FantasyBiotech
             switch (MenuController.SelectedTab)
             {
                 case 0:
+                    ResetToDefault_Constructs();
                     break;
                 case 1:
+                    ResetToDefault_Genetics();
                     break;
                 case 2:
+                    ResetToDefault_Vampires();
                     break;
             }
             _dirtyTabs.Add(MenuController.SelectedTab);
@@ -115,6 +156,9 @@ namespace FantasyBiotech
 
         private void ResetToDefault_Vampires()
         {
+            replaceVampires = true;
+            replaceVampireTextures = true;
+            basicDeathrestCasket = true;
         }
         #endregion
     }

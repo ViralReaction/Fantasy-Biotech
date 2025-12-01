@@ -51,7 +51,7 @@
 			<Flammability>0.5</Flammability>
 			<Beauty>5</Beauty>
 			<BedRestEffectiveness>1</BedRestEffectiveness>
-			<Comfort>0.75</Comfort>
+			<Comfort>0.65</Comfort>
 			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
 			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
 		</statBases>
@@ -71,7 +71,7 @@
 			<li Class="CompProperties_DeathrestBindable">
 				<stackLimit>1</stackLimit>
 				<countsTowardsBuildingLimit>false</countsTowardsBuildingLimit>
-				<deathrestEffectivenessFactor>1.1</deathrestEffectivenessFactor>
+				<deathrestEffectivenessFactor>0.80</deathrestEffectivenessFactor>
 				<mustBeLayingInToBind>true</mustBeLayingInToBind>
 				<displayTimeActive>false</displayTimeActive>
 				<soundStart>DeathrestCasket_Enter</soundStart>

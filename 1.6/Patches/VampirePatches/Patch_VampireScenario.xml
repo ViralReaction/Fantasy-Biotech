@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+        <settings>
+            <li>medievalVampireScenario</li>
+        </settings>
+        <active Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/label</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/label</xpath>
+                        <value>
+                            <label>The Vampire</label>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/summary</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/summary</xpath>
+                        <value>
+                            <summary>One vampire needing blood to survive, and one human colonist.</summary>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/description</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/description</xpath>
+                        <value>
+                            <description>When a dark stranger offered you a cure for your cancer, you were ready to agree to anything. He made you into a vampire - an immortal blood-drinker hated by a thousand religions. You hid your condition for years, but eventually a hunter tracked you down. Sneaking away in the night, you barely escaped alive.\n\nNote: Vampires have unique strengths and weaknesses, which makes this a difficult scenario.</description>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
+                        <value>
+                            <text>When a dark stranger offered you a cure for your cancer, you were ready to agree to anything. He made you into a vampire - an immortal blood-drinker hated by a thousand religions. You hid your condition for years, but eventually a hunter tracked you down. Sneaking away in the night, you barely escaped alive.\n\nNote: Vampires have unique strengths and weaknesses, which makes this a difficult scenario.</text>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_PlayerPawnsArriveMethod"]/method</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_PlayerPawnsArriveMethod"]/method</xpath>
+                        <value>
+                            <method>Standing</method>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_StartingThing_Defined"][contains(.,"ComponentIndustrial")]</xpath>
+                    <match Class="PatchOperationRemove">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_StartingThing_Defined"][contains(.,"ComponentIndustrial")]</xpath>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario</xpath>
+                    <value>
+                        <playerFaction>
+                            <factionDef>VR_VampireStart</factionDef>
+                        </playerFaction>
+                    </value>
+                </li>
+
+            </operations>
+        </active>
+    </Operation>
+
+</Patch>

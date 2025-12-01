@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+        <settings>
+            <li>basicDeathrestCasket</li>
+        </settings>
+        <active Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ResearchProjectDef[defName="VR_BasicDeathRestCasket"]</xpath>
+                    <match Class="PatchOperationRemove">
+                        <xpath>Defs/ResearchProjectDef[defName="VR_BasicDeathRestCasket"]/designationCategory</xpath>
+                    </match>
+                </li>
+
+            </operations>
+        </active>
+    </Operation>
+
+</Patch>

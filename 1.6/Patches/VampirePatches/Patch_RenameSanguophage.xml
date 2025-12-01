@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+        <settings>
+            <li>replaceVampires</li>
+        </settings>
+        <active Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/XenotypeDef[defName="Sanguophage"]/label</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/XenotypeDef[defName="Sanguophage"]/label</xpath>
+                        <value>
+                            <label>Vampire</label>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/XenotypeDef[defName="Sanguophage"]/description</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/XenotypeDef[defName="Sanguophage"]/description</xpath>
+                        <value>
+                            <description>Vampires are a type of genetic anomaly. Powered by supernatural means, their abilities go far beyond normal genetic enhancements. They are mentally adept and preternaturally beautiful. In combat, they can launch deadly spines and heal injured friends. They don't age or die naturally and never suffer from disease or poison. A vampire can make a new vampire by reimplanting their own xenogerm into a person.\n\Vampires must regularly consume hemogen derived from human blood, and they must periodically deathrest for long periods. They're easily destroyed by fire, and slowed down by UV light.\n\nThe first vampires appeared thousands of years ago when the lord-explorer Varan-Dur sought to control a [REDACTED] and found himself transformed by it instead. Every vampire is descended from him. Since then, vampires have often been hunted because of their destabilizing power and their need for blood. Since they can pass for baseliners, many live in hiding among typical humans.\n\nTheir numbers are unknown. Some think they are legends or rare irrelevancies. Some believe vampires secretly direct entire human civilizations.</description>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/XenotypeDef[defName="Sanguophage"]/descriptionShort</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/XenotypeDef[defName="Sanguophage"]/descriptionShort</xpath>
+                        <value>
+                            <descriptionShort>Vampires are ageless, deathless super-humans powered by supernatural means. They are beautiful and extremely intelligent. They can heal any injury, and never suffer from disease or poison. In combat, they can launch deadly spines and heal injured friends. The price is that vampires must consume hemogen derived from human blood to survive, and they must periodically deathrest for long periods. They're easily destroyed by fire, and slowed down by UV light.</descriptionShort>
+                        </value>
+                    </match>
+                </li>
+
+
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/FactionDef[defName="Sanguophage"]/label</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/FactionDef[defName="Sanguophage"]/label</xpath>
+                        <value>
+                            <label>vampires</label>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/FactionDef[defName="Sanguophage"]/pawnSingular</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/FactionDef[defName="Sanguophage"]/pawnSingular</xpath>
+                        <value>
+                            <label>vampire</label>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/FactionDef[defName="Sanguophage"]/pawnsPlural</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/FactionDef[defName="Sanguophage"]/pawnsPlural</xpath>
+                        <value>
+                            <label>vampires</label>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/FactionDef[defName="Sanguophage"]/description</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/FactionDef[defName="Sanguophage"]/description</xpath>
+                        <value>
+                            <description>A group of ancient vampires.</description>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/InteractionDef[defName="SanguophageChat"]/logRulesInitiator/rulesStrings/li[.="subject->sanguophages"]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/InteractionDef[defName="SanguophageChat"]/logRulesInitiator/rulesStrings/li[.="subject->sanguophages"]</xpath>
+                        <value>
+                            <li>subject->vampires</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/InteractionDef[defName="SanguophageChat"]/logRulesInitiator/rulesStrings/li[.="planType->destroying sanguophage hunters"]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/InteractionDef[defName="SanguophageChat"]/logRulesInitiator/rulesStrings/li[.="planType->destroying sanguophage hunters"]</xpath>
+                        <value>
+                            <li>planType->destroying sanguophage hunters</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/PawnkindDef[@Name="SanguophageBase"]/label</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/PawnkindDef[@Name="SanguophageBase"]/label</xpath>
+                        <value>
+                            <label>vampire</label>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questNameRules/rulesStrings/li[.="meetAdjective->sanguophage"]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questNameRules/rulesStrings/li[.="meetAdjective->sanguophage"]</xpath>
+                        <value>
+                            <li>meetAdjective->vampire</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questDescriptionRules/rulesStrings/li[contains(.,"questDescription->A sanguophage")]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questDescriptionRules/rulesStrings/li[contains(.,"questDescription->A sanguophage")]</xpath>
+                        <value>
+                            <li>questDescription->A vampire named [asker_nameDef] is looking for a safe place to meet with [sanguophageCountMinusOne] other [sanguophageSingOrPlural] where they won't be tracked. Their leader [asker_nameDef] is asking for you to host the meeting at [map_definite].\n\nIf you accept, [sanguophageCount] vampires will arrive at [map_definite] from different directions. They will spend several hours discussing their own secret issues before departing. They promise to give you your reward before they leave.\n\nYou may betray the vampires and attack them. Downed vampires can be forced to turn one of your own colonists into a vampire.\n\n[sanguophageInfo]</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questDescriptionRules/rulesStrings/li[contains(.,"sanguophageSingOrPlural(sanguophageCountMinusOne==1)")]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questDescriptionRules/rulesStrings/li[contains(.,"sanguophageSingOrPlural(sanguophageCountMinusOne==1)")]</xpath>
+                        <value>
+                            <li>sanguophageSingOrPlural(sanguophageCountMinusOne==1)->vampire</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questDescriptionRules/rulesStrings/li[contains(.,"sanguophageSingOrPlural(sanguophageCountMinusOne>=2)")]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questDescriptionRules/rulesStrings/li[contains(.,"sanguophageSingOrPlural(sanguophageCountMinusOne>=2)")]</xpath>
+                        <value>
+                            <li>sanguophageSingOrPlural(sanguophageCountMinusOne==1)->vampires</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questDescriptionRules/rulesStrings/li[contains(.,"sanguophageInfo->")]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questDescriptionRules/rulesStrings/li[contains(.,"sanguophageInfo->")]</xpath>
+                        <value>
+                            <li>sanguophageInfo->(*Gray)About vampires: Vampires are ageless, deathless super-humans powered by supernatural means. They are beautiful and extremely intelligent. They can heal any injury, and never suffer from disease or poison. In combat, they can launch deadly spines and heal injured friends. The price is that vampires must consume hemogen derived from human blood to survive, and they must periodically deathrest for long periods. They're easily destroyed by fire, and slowed down by UV light.(/Gray)</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questContentRules/rulesStrings/li[contains(.,"sanguophagesArriveLetterLabel->")]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questContentRules/rulesStrings/li[contains(.,"sanguophagesArriveLetterLabel->")]</xpath>
+                        <value>
+                            <li>sanguophagesArriveLetterLabel->Vampires arrived</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questContentRules/rulesStrings/li[contains(.,"successLetterText->")]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questContentRules/rulesStrings/li[contains(.,"successLetterText->")]</xpath>
+                        <value>
+                            <li>successLetterText->The vampires have completed their meeting and will now give you your reward.</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questContentRules/rulesStrings/li[contains(.,"raidArrivedLetterLabel->")]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questContentRules/rulesStrings/li[contains(.,"raidArrivedLetterLabel->")]</xpath>
+                        <value>
+                            <li>raidArrivedLetterLabel->Vampire hunters</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questContentRules/rulesStrings/li[contains(.,"raidArrivedLetterText->")]</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/QuestScriptDef[defName="SanguophageMeetingHost"]/questContentRules/rulesStrings/li[contains(.,"raidArrivedLetterText->")]</xpath>
+                        <value>
+                            <li>raidArrivedLetterText->A group of vampire hunters from [enemyFaction_name] are approaching!\n\nThey will attack the meeting vampires as well as those who hosted them.</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/AbilityDef[defName="Bloodfeed"]/description</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/AbilityDef[defName="Bloodfeed"]/description</xpath>
+                        <value>
+                            <description>Bite the target and drink from their blood. The target will lose blood and will be horrified by the interaction, but will be otherwise unharmed. A fast-acting coagulant will seal the wound to prevent bleeding.\n\nCan only target non-vampiric humans. Blood gain is affected by the target's body size.</description>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/AbilityDef[defName="PiercingSpine"]/description</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/AbilityDef[defName="PiercingSpine"]/description</xpath>
+                        <value>
+                            <description>Use vampiric powers to launch a bony spine at the target. The spine exits through the skin from an opening between the collarbones. Given the method of launch, it is surprisingly easy to aim.</description>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/AbilityDef[defName="LongJump"]/description</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/AbilityDef[defName="LongJump"]/description</xpath>
+                        <value>
+                            <description>Jump to a distant location using super-strong vampiric legs.</description>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/label</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/label</xpath>
+                        <value>
+                            <label>The Vampire</label>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/summary</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/summary</xpath>
+                        <value>
+                            <summary>One vampire needing blood to survive, and one human colonist.</summary>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/description</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/description</xpath>
+                        <value>
+                            <description>When a dark stranger offered you a cure for your cancer, you were ready to agree to anything. He made you into a vampire - an immortal blood-drinker hated by a thousand religions. You hid your condition for years, but eventually a hunter tracked you down. Sneaking away in the night, you barely escaped alive.\n\nNote: Vampires have unique strengths and weaknesses, which makes this a difficult scenario.</description>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
+                        <value>
+                            <text>When a dark stranger offered you a cure for your cancer, you were ready to agree to anything. He made you into a vampire - an immortal blood-drinker hated by a thousand religions. You hid your condition for years, but eventually a hunter tracked you down. Sneaking away in the night, you barely escaped alive.\n\nNote: Vampires have unique strengths and weaknesses, which makes this a difficult scenario.</text>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_PlayerPawnsArriveMethod"]/method</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_PlayerPawnsArriveMethod"]/method</xpath>
+                        <value>
+                            <method>Standing</method>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_StartingThing_Defined"][contains(.,"ComponentIndustrial")]</xpath>
+                    <match Class="PatchOperationRemove">
+                        <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_StartingThing_Defined"][contains(.,"ComponentIndustrial")]</xpath>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ScenarioDef[defName="Sanguophage"]/scenario</xpath>
+                    <value>
+                        <playerFaction>
+                            <factionDef>VR_VampireStart</factionDef>
+                        </playerFaction>
+                    </value>
+                </li>
+
+            </operations>
+        </active>
+    </Operation>
+
+</Patch>

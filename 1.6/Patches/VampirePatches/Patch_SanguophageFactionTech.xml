@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+        <settings>
+            <li>medievalSanguophageFaction</li>
+        </settings>
+        <active Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/FactionDef[defName="Sanguophages"]/techLevel</xpath>
+                    <value>
+                        <techLevel>Medieval</techLevel>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[defName="Sanguophage"]/techHediffsTags</xpath>
+                    <value>
+                        <techHediffsTags/>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[defName="Sanguophage"]/weaponTags</xpath>
+                    <value>
+                       <weaponTags>
+                           <li>MedievalMeleeAdvanced</li>
+                       </weaponTags>
+                    </value>
+                </li>
+
+            </operations>
+        </active>
+    </Operation>
+
+</Patch>
