@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -17,11 +18,7 @@ namespace FantasyBiotech
             {
                 return false;
             }
-            if (!pawn.CanReserve(t, 1, -1, null, forced) || (t.def.hasInteractionCell && !pawn.CanReserveSittableOrSpot(t.InteractionCell, forced)))
-            {
-                return false;
-            }
-            return true;
+            return pawn.CanReserve(t, 1, -1, null, forced) && (!t.def.hasInteractionCell || pawn.CanReserveSittableOrSpot(t.InteractionCell, forced));
         }
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)

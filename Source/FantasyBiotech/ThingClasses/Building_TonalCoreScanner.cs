@@ -126,6 +126,7 @@ namespace FantasyBiotech
         private void DestroyOccupant()
         {
             Pawn occupant = Occupant;
+            DropAllItems(occupant);
             DamageInfo dinfo = new DamageInfo(DamageDefOf.ExecutionCut, 9999f, 999f, -1f, null, occupant.health.hediffSet.GetBrain());
             dinfo.SetIgnoreInstantKillProtection(ignore: true);
             dinfo.SetAllowDamagePropagation(val: false);
@@ -133,8 +134,33 @@ namespace FantasyBiotech
             occupant.Destroy();
             occupant.forceNoDeathNotification = false;
             ThoughtUtility.GiveThoughtsForPawnExecuted(occupant, null, PawnExecutionKind.Ripscanned);
-            Messages.Message("FantasyBiotech_MessagePawnKilledRipscanner".Translate(occupant.Named("PAWN")), occupant, MessageTypeDefOf.NegativeHealthEvent);
-            
+            Messages.Message("FantasyBiotech_MessagePawnKilledRipscanner".Translate(occupant.Named("PAWN"), def.label.Named("BUILDING")), occupant, MessageTypeDefOf.NegativeHealthEvent);
+        }
+
+        private void DropAllItems(Pawn pawn)
+        {
+            if (pawn.apparel != null)
+            {
+                for (int i = pawn.apparel.WornApparel.Count - 1; i >= 0; i--)
+                {
+                    Apparel apparel = pawn.apparel.WornApparel[i];
+                    if (apparel == null) continue;
+                    pawn.apparel.TryDrop(apparel,out _, pawn.Position, false);
+                }
+            }
+            if (pawn.equipment != null)
+            {
+                for (int i = pawn.equipment.AllEquipmentListForReading.Count - 1; i >= 0; i--)
+                {
+                    ThingWithComps thing = pawn.equipment.AllEquipmentListForReading[i];
+                    if (thing == null) continue;
+                    pawn.equipment.TryDropEquipment(thing, out _, pawn.Position, false);
+                }
+            }
+            if (pawn.inventory != null)
+            {
+                pawn.inventory.DropAllNearPawn(pawn.Position, false);
+            }
         }
 
         public override void Tick()
