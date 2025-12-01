@@ -274,7 +274,7 @@
 	<ThingDef ParentName="BenchBase">
 		<defName>VR_SubcoreEncoder_Steam</defName>
 		<label>soulcore encoder</label>
-		<description>A work station where a mechanitor can produce basic-tier subcores. Subcores are the brains of mechanoids, and one is required to produce any mechanoid. Basic subcores can only be used in simple basic-tier mechs.\n\nHigher tier subcores can be created by building a subcore softscanner or a subcore ripscanner.</description>
+		<description>A work station where an artificer can produce basic-tier soulcores and implants. Soulcores are the essence of life for constructs, and one is required to produce any construct. Basic soulcores can only be used in simple basic-tier mechs.\n\nHigher tier soulcores can be created by building a harmonic sampler or a tonal transcriber.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<canOverlapZones>false</canOverlapZones>
 		<passability>PassThroughOnly</passability>

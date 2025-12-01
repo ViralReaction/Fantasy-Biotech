@@ -20,7 +20,7 @@
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>VR_SubcoreEncoder_Steam</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -40,7 +40,9 @@
 
 	<!-- Control sublink -->
 	<ThingDef Abstract="True" Name="VR_Artificer_ControlSublinkBase" ParentName="VR_ArtificerImplantCraftableBase">
-		<descriptionHyperlinks><HediffDef>ControlSublinkImplant</HediffDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<HediffDef>VR_Artificer_ControlSublinkImplant</HediffDef>
+		</descriptionHyperlinks>
 		<statBases>
 			<MaxInstallCount>3</MaxInstallCount>
 		</statBases>
@@ -51,8 +53,8 @@
 		<label>control sublink (standard)</label>
 		<description>A neural implant which gives a mechanitor an additional control group. Additionally, the sublink slightly increases the work speed of any mechanoids controlled by the mechanitor.\n\nThis standard-tier sublink can only increase the control group count up to 3. To go higher, a higher-tier sublink implant must be used.\n\nIt can be self-installed without surgery.\n\nThis implant can be installed up to 3 times to increase its effect.</description>
 		<costList>
-			<SignalChip>1</SignalChip>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<VR_PowerchipBasic>1</VR_PowerchipBasic>
+			<Uranium>60</Uranium>
 		</costList>
 		<recipeMaker>
 			<researchPrerequisite>VR_StandardConstructTech</researchPrerequisite>
@@ -62,10 +64,10 @@
 				<compClass>CompUsableImplant</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Implant sublink</useLabel>
-				<userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+				<userMustHaveHediff>VR_ArtificerImplant</userMustHaveHediff>
 			</li>
 			<li Class="CompProperties_UseEffectInstallImplant">
-				<hediffDef>ControlSublinkImplant</hediffDef>
+				<hediffDef>VR_Artificer_ControlSublinkImplant</hediffDef>
 				<bodyPart>Brain</bodyPart>
 				<canUpgrade>true</canUpgrade>
 				<maxSeverity>3</maxSeverity>
@@ -78,9 +80,9 @@
 		<label>control sublink (high)</label>
 		<description>A neural implant which gives a mechanitor an additional control group. Additionally, the sublink slightly increases the work speed of any mechanoids controlled by the mechanitor.\n\nThis high-tier implant can increase the control group count up to 6.\n\nIt can be self-installed without surgery.\n\nThis implant can be installed up to 3 times to increase its effect.</description>
 		<costList>
-			<PowerfocusChip>1</PowerfocusChip>
-			<ComponentIndustrial>3</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
+			<VR_PowerchipStandard>1</VR_PowerchipStandard>
+			<Uranium>45</Uranium>
+			<Plasteel>60</Plasteel>
 		</costList>
 		<recipeMaker>
 			<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
@@ -90,10 +92,10 @@
 				<compClass>CompUsableImplant</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Implant high sublink</useLabel>
-				<userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+				<userMustHaveHediff>VR_ArtificerImplant</userMustHaveHediff>
 			</li>
 			<li Class="CompProperties_UseEffectInstallImplant">
-				<hediffDef>ControlSublinkImplant</hediffDef>
+				<hediffDef>VR_Artificer_ControlSublinkImplant</hediffDef>
 				<bodyPart>Brain</bodyPart>
 				<canUpgrade>true</canUpgrade>
 				<requiresExistingHediff>true</requiresExistingHediff>
@@ -105,7 +107,9 @@
 	<HediffDef>
 		<defName>VR_Artificer_ControlSublinkImplant</defName>
 		<hediffClass>Hediff_Level</hediffClass>
-		<descriptionHyperlinks><ThingDef>ControlSublink</ThingDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Artificer_ControlSublink</ThingDef>
+		</descriptionHyperlinks>
 		<label>control sublink</label>
 		<description>An implant which increases a mechanitor's control group count and the work speed of a mechanitor's mechs.\n\nThis implant can be installed up to 6 times to increase its effect.</description>
 		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
@@ -122,42 +126,42 @@
 				<minSeverity>1</minSeverity>
 				<statOffsets>
 					<MechControlGroups>1</MechControlGroups>
-					<WorkSpeedGlobalOffsetMech>0.06</WorkSpeedGlobalOffsetMech>
+					<WorkSpeedGlobalOffsetMech>0.03</WorkSpeedGlobalOffsetMech>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>2</minSeverity>
 				<statOffsets>
 					<MechControlGroups>2</MechControlGroups>
-					<WorkSpeedGlobalOffsetMech>0.12</WorkSpeedGlobalOffsetMech>
+					<WorkSpeedGlobalOffsetMech>0.06</WorkSpeedGlobalOffsetMech>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>3</minSeverity>
 				<statOffsets>
 					<MechControlGroups>3</MechControlGroups>
-					<WorkSpeedGlobalOffsetMech>0.18</WorkSpeedGlobalOffsetMech>
+					<WorkSpeedGlobalOffsetMech>0.09</WorkSpeedGlobalOffsetMech>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>4</minSeverity>
 				<statOffsets>
 					<MechControlGroups>4</MechControlGroups>
-					<WorkSpeedGlobalOffsetMech>0.24</WorkSpeedGlobalOffsetMech>
+					<WorkSpeedGlobalOffsetMech>0.12</WorkSpeedGlobalOffsetMech>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>5</minSeverity>
 				<statOffsets>
 					<MechControlGroups>5</MechControlGroups>
-					<WorkSpeedGlobalOffsetMech>0.30</WorkSpeedGlobalOffsetMech>
+					<WorkSpeedGlobalOffsetMech>0.15</WorkSpeedGlobalOffsetMech>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>6</minSeverity>
 				<statOffsets>
 					<MechControlGroups>6</MechControlGroups>
-					<WorkSpeedGlobalOffsetMech>0.36</WorkSpeedGlobalOffsetMech>
+					<WorkSpeedGlobalOffsetMech>0.18</WorkSpeedGlobalOffsetMech>
 				</statOffsets>
 			</li>
 		</stages>
@@ -168,10 +172,12 @@
 		<defName>VR_Artificer_MechFormfeeder</defName>
 		<label>mech gestation processor</label>
 		<description>An implant which increases the speed at which a mechanitor can produce mechs in a mech gestator. The processor optimizes the behavior of the mechanites in the mech forming tank.\n\nThis implant can be self-installed in the same way as the mechlink.\n\nThis implant can be installed up to 6 times to increase its effect.</description>
-		<descriptionHyperlinks><HediffDef>MechFormfeederImplant</HediffDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<HediffDef>VR_Artificer_MechFormfeederImplant</HediffDef>
+		</descriptionHyperlinks>
 		<costList>
-			<SignalChip>1</SignalChip>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<VR_PowerchipBasic>1</VR_PowerchipBasic>
+			<Uranium>90</Uranium>
 		</costList>
 		<statBases>
 			<MaxInstallCount>6</MaxInstallCount>
@@ -184,10 +190,10 @@
 				<compClass>CompUsableImplant</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Implant {0_label}</useLabel>
-				<userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+				<userMustHaveHediff>VR_ArtificerImplant</userMustHaveHediff>
 			</li>
 			<li Class="CompProperties_UseEffectInstallImplant">
-				<hediffDef>MechFormfeederImplant</hediffDef>
+				<hediffDef>VR_Artificer_MechFormfeederImplant</hediffDef>
 				<bodyPart>Brain</bodyPart>
 				<canUpgrade>true</canUpgrade>
 			</li>
@@ -197,7 +203,9 @@
 	<HediffDef>
 		<defName>VR_Artificer_MechFormfeederImplant</defName>
 		<hediffClass>Hediff_Level</hediffClass>
-		<descriptionHyperlinks><ThingDef>MechFormfeeder</ThingDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Artificer_MechFormfeeder</ThingDef>
+		</descriptionHyperlinks>
 		<label>mech gestation processor</label>
 		<description>An implant which increases the speed at which a mechanitor can produce mechs in a mech gestator. The processor optimizes the behavior of the mechanites in the mech forming tank.\n\nThis implant can be self-installed in the same way as the mechlink.\n\nThis implant can be installed up to 6 times to increase its effect.</description>
 		<descriptionShort>An implant which lets a mechanitor gestate new mechs faster. This can be installed up to 6 times to increase the effect.</descriptionShort>
@@ -214,37 +222,37 @@
 			<li>
 				<minSeverity>1</minSeverity>
 				<statOffsets>
-					<MechFormingSpeed>0.33</MechFormingSpeed>
+					<MechFormingSpeed>0.25</MechFormingSpeed>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>2</minSeverity>
 				<statOffsets>
-					<MechFormingSpeed>0.66</MechFormingSpeed>
+					<MechFormingSpeed>0.50</MechFormingSpeed>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>3</minSeverity>
 				<statOffsets>
-					<MechFormingSpeed>1</MechFormingSpeed>
+					<MechFormingSpeed>0.75</MechFormingSpeed>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>4</minSeverity>
 				<statOffsets>
-					<MechFormingSpeed>1.33</MechFormingSpeed>
+					<MechFormingSpeed>1</MechFormingSpeed>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>5</minSeverity>
 				<statOffsets>
-					<MechFormingSpeed>1.66</MechFormingSpeed>
+					<MechFormingSpeed>1.25</MechFormingSpeed>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>6</minSeverity>
 				<statOffsets>
-					<MechFormingSpeed>2</MechFormingSpeed>
+					<MechFormingSpeed>1.5</MechFormingSpeed>
 				</statOffsets>
 			</li>
 		</stages>
