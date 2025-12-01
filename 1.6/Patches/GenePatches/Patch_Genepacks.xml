@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="GeneSetHolderBase"]</xpath>
+		<value>
+			<techLevel>Medieval</techLevel>
+		</value>
+	</Operation>
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Genepack"]/graphicData/texPath</xpath>
 		<value>
@@ -19,6 +26,27 @@
 		<xpath>Defs/ThingDef[defName="ArchiteCapsule"]/graphicData/texPath</xpath>
 		<value>
 			<texPath>Things/Item/Special/ArchitePotion</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Genepack"]/descriptionHyperlinks/ThingDef[.="GeneAssembler"]</xpath>
+		<value>
+			<ThingDef>VR_GraftForge</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Xenogerm"]/descriptionHyperlinks/ThingDef[.="GeneAssembler"]</xpath>
+		<value>
+			<ThingDef>VR_GraftForge</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="ArchiteCapsule"]/descriptionHyperlinks/ThingDef[.="GeneAssembler"]</xpath>
+		<value>
+			<ThingDef>VR_GraftForge</ThingDef>
 		</value>
 	</Operation>
 

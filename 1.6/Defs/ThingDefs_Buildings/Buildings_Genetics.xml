@@ -117,7 +117,7 @@
 		</graphicData>
 		<descriptionHyperlinks>
 			<ThingDef>VR_GeneRack</ThingDef>
-			<ThingDef>GeneProcessor</ThingDef>
+			<ThingDef>VR_GeneProcessor</ThingDef>
 			<ThingDef>Genepack</ThingDef>
 			<ThingDef>Xenogerm</ThingDef>
 		</descriptionHyperlinks>
@@ -252,8 +252,8 @@
 			<li>VR_AdvancedGenetics</li>
 		</researchPrerequisites>
 		<descriptionHyperlinks>
-			<ThingDef>GeneAssembler</ThingDef>
-			<ThingDef>GeneBank</ThingDef>
+			<ThingDef>VR_GraftForge</ThingDef>
+			<ThingDef>VR_GeneRack</ThingDef>
 			<ThingDef>Genepack</ThingDef>
 			<ThingDef>Xenogerm</ThingDef>
 		</descriptionHyperlinks>
