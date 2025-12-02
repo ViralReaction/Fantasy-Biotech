@@ -1,15 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <loadFolders>
-	<!-- <v1.4> -->
-		<!-- <li>/</li> -->
-		<!-- <li>Common</li> -->
-		<!-- <li>v1.4</li> -->
-	<!-- </v1.4> -->
+
 	<v1.6>
 		<li>/</li>
 		<li>Common</li>
 		<li>1.6</li>
 		<li IfModActive="vanillaracesexpanded.sanguophage">1.6/Mods/VRE_Sanguophage</li>
+		<li IfModActive="m00nl1ght.worldtechlevel">1.6/Mods/World_Tech_Level</li>
 	</v1.6>
 
 </loadFolders>
