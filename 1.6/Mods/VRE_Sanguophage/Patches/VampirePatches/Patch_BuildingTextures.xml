@@ -198,6 +198,20 @@
 
 				<!-- Hemodynamic Accelerator -->
 				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/label</xpath>
+					<value>
+						<label>sanguine brazier</label>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/description</xpath>
+					<value>
+						<description>An occult device designed to expedite the deathrest process at the cost of blood consumption. By connecting with a deathresting person, the efficiency of the deathrest casket is maximized. As it hastens the character's recovery, the Sanguine Brazier demands a continuous supply of blood to fuel its powerful effect. To function, it must be connected to a deathrest casket, ensuring the swift rejuvenation of its occupant.</description>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/graphicData/graphicClass</xpath>
 					<value>
 						<graphicClass>Graphic_Single</graphicClass>
@@ -257,6 +271,21 @@
 								</li>
 							</offsets>
 						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Building/FantasyDraincasket/Draincasket</texPath>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/graphicData/drawSize</xpath>
+					<value>
+						<drawSize>(4,4)</drawSize>
+						<shaderType>CutoutComplex</shaderType>
 					</value>
 				</li>
 

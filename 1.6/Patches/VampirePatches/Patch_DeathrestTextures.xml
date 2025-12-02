@@ -8,6 +8,21 @@
 		<active Class="PatchOperationSequence">
 			<operations>
 
+				<!-- Deathrest Casket -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DeathrestCasket"]/description</xpath>
+					<value>
+						<description>An improved casket that accelerates the process of deathrest. It can connect to other vampire ritual objects which confer additional bonuses on the deathrester. The number of objects that can connect depends on the person's deathrest capacity, which can be seen by selecting them.\n\nOnly those with the deathrest gene can use the deathrest casket</description>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Things/Building/Misc/FantasyDeathrestCasket/DeathrestCasket</texPath>
+					</value>
+				</li>
+
 				<!-- Hemopump -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/graphicData/drawSize</xpath>

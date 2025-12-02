@@ -4,7 +4,7 @@
 	<ThingDef ParentName="FurnitureWithQualityBase">
 		<defName>VR_BasicDeathRestCasket</defName>
 		<label>basic deathrest casket</label>
-		<description>An enclosed med-casket that accelerates the process of deathrest. It can connect to other devices which confer additional bonuses on the deathrester. The number of devices that can connect depends on the person's deathrest capacity, which can be seen by selecting them.\n\nOnly those with the deathrest gene can use the deathrest casket.</description>
+		<description>An improved casket that accelerates the process of deathrest. It can connect to other vampire ritual objects which confer additional bonuses on the deathrester. The number of objects that can connect depends on the person's deathrest capacity, which can be seen by selecting them.\n\nOnly those with the deathrest gene can use the deathrest casket</description>
 		<thingClass>Building_Bed</thingClass>
 		<tickerType>Rare</tickerType>
 		<fillPercent>0.4</fillPercent>

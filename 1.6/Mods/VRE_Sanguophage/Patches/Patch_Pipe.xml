@@ -117,14 +117,6 @@
 	</Operation>
 	
 	<!-- Drain Casket -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/graphicData/drawSize</xpath>
-		<value>
-			<drawSize>(4,4)</drawSize>
-			<shaderType>CutoutComplex</shaderType>
-		</value>
-	</Operation>
-
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/costList/Steel</xpath>
 		<match Class="PatchOperationRemove">
