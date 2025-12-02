@@ -5,18 +5,18 @@
         <settings>
             <li>basicDeathrestCasket</li>
         </settings>
-        <active Class="PatchOperationSequence">
+        <inactive Class="PatchOperationSequence">
             <operations>
 
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/ResearchProjectDef[defName="VR_BasicDeathRestCasket"]</xpath>
+                    <xpath>Defs/ThingDef[defName="VR_BasicDeathRestCasket"]</xpath>
                     <match Class="PatchOperationRemove">
-                        <xpath>Defs/ResearchProjectDef[defName="VR_BasicDeathRestCasket"]/designationCategory</xpath>
+                        <xpath>Defs/ThingDef[defName="VR_BasicDeathRestCasket"]/designationCategory</xpath>
                     </match>
                 </li>
 
             </operations>
-        </active>
+        </inactive>
     </Operation>
 
 </Patch>
