@@ -103,7 +103,6 @@
 		<drawStyleCategory>Conduits</drawStyleCategory>
 		<costList>
 			<Steel>3</Steel>
-			<Gold>1</Gold>
 		</costList>
 		<comps>
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -179,7 +178,6 @@
 		<drawStyleCategory>Conduits</drawStyleCategory>
 		<costList>
 			<Steel>6</Steel>
-			<Gold>2</Gold>
 		</costList>
 		<comps>
 			<li Class="PipeSystem.CompProperties_Resource">

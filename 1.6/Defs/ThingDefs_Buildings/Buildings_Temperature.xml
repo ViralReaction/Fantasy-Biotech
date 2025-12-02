@@ -178,6 +178,7 @@
 			<damageData>
 				<enabled>false</enabled>
 			</damageData>
+			<drawSize>(2,2)</drawSize>
 		</graphicData>
 		<uiIconPath>Things/Building/Furniture/WallLight_Steam/WallLight_Steam_MenuIcon</uiIconPath>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
