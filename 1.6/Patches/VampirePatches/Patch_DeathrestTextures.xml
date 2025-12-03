@@ -1,303 +1,376 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
-		<settings>
-			<li>replaceVampires</li>
-		</settings>
-		<active Class="PatchOperationSequence">
-			<operations>
+	<!-- Deathrest Casket -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestCasket"]/description</xpath>
+		<value>
+			<description>An improved casket that accelerates the process of deathrest. It can connect to other vampire ritual objects which confer additional bonuses on the deathrester. The number of objects that can connect depends on the person's deathrest capacity, which can be seen by selecting them.\n\nOnly those with the deathrest gene can use the deathrest casket</description>
+		</value>
+	</Operation>
 
-				<!-- Deathrest Casket -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DeathrestCasket"]/description</xpath>
-					<value>
-						<description>An improved casket that accelerates the process of deathrest. It can connect to other vampire ritual objects which confer additional bonuses on the deathrester. The number of objects that can connect depends on the person's deathrest capacity, which can be seen by selecting them.\n\nOnly those with the deathrest gene can use the deathrest casket</description>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Things/Building/Misc/FantasyDeathrestCasket/DeathrestCasket</texPath>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Things/Building/Misc/FantasyDeathrestCasket/DeathrestCasket</texPath>
-					</value>
-				</li>
+	<!-- Hemopump -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/label</xpath>
+		<value>
+			<label>blood rite sigil</label>
+		</value>
+	</Operation>
 
-				<!-- Hemopump -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/graphicData/drawSize</xpath>
-					<value>
-						<drawSize>(5,4)</drawSize>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/description</xpath>
+		<value>
+			<description>A ritualistic circle connects with a deathresting person and makes deathrest complete quicker. It must be connected to a deathrest casket to function.</description>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/graphicData/graphicClass</xpath>
-					<value>
-						<graphicClass>Graphic_Single</graphicClass>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(5,4)</drawSize>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Things/Building/Misc/FantasyDeathrestAccelerator/DeathrestAccelerator</texPath>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/graphicData/graphicClass</xpath>
+		<value>
+			<graphicClass>Graphic_Single</graphicClass>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/graphicData/shadowData</xpath>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Things/Building/Misc/FantasyDeathrestAccelerator/DeathrestAccelerator</texPath>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/size</xpath>
-					<value>
-						<size>(3,4)</size>
-					</value>
-				</li>
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/graphicData/shadowData</xpath>
+	</Operation>
 
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/defaultPlacingRot</xpath>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/size</xpath>
+		<value>
+			<size>(3,4)</size>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]</xpath>
-					<value>
-						<altitudeLayer Inherit="False">FloorEmplacement</altitudeLayer>
-					</value>
-				</li>
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/defaultPlacingRot</xpath>
+	</Operation>
 
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]</xpath>
-					<value>
-						<building>
-							<isEdifice>false</isEdifice>
-						</building>
-					</value>
-				</li>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]</xpath>
+		<value>
+			<altitudeLayer Inherit="False">FloorEmplacement</altitudeLayer>
+		</value>
+	</Operation>
 
-				<!-- Hemogen Amplifier -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="PsychofluidPump"]/graphicData/drawSize</xpath>
-					<value>
-						<drawSize>(4,4)</drawSize>
-					</value>
-				</li>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="DeathrestAccelerator"]</xpath>
+		<value>
+			<building>
+				<isEdifice>false</isEdifice>
+			</building>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="PsychofluidPump"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Things/Building/Misc/FantasyPsychofluidPump/PsychofluidPump</texPath>
-					</value>
-				</li>
+	<!-- Psychofluid Pump -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]/label</xpath>
+		<value>
+			<label>bloodscript monolith</label>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="PsychofluidPump"]/graphicData/graphicClass</xpath>
-					<value>
-						<graphicClass>Graphic_Single</graphicClass>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]/description</xpath>
+		<value>
+			<description>An ancient stone slab carved with vampiric scripture, the runes enhance the psychic sensitivity of a deathresting person. It must be connected to a deathrest casket to function.</description>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="PsychofluidPump"]/size</xpath>
-					<value>
-						<size>(2,2)</size>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4,4)</drawSize>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="PsychofluidPump"]</xpath>
-					<value>
-						<rotatable>false</rotatable>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Things/Building/Misc/FantasyPsychofluidPump/PsychofluidPump</texPath>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="PsychofluidPump"]</xpath>
-					<value>
-						<altitudeLayer Inherit="False">BuildingOnTop</altitudeLayer>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]/graphicData/graphicClass</xpath>
+		<value>
+			<graphicClass>Graphic_Single</graphicClass>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="PsychofluidPump"]/defaultPlacingRot</xpath>
-					<value>
-						<defaultPlacingRot>North</defaultPlacingRot>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]/size</xpath>
+		<value>
+			<size>(2,2)</size>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="PsychofluidPump"]/uiIconScale</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="PsychofluidPump"]/uiIconScale</xpath>
-						<value>
-							<uiIconScale>0.70</uiIconScale>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="PsychofluidPump"]</xpath>
-						<value>
-							<uiIconScale>0.70</uiIconScale>
-						</value>
-					</nomatch>
-				</li>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]</xpath>
+		<value>
+			<rotatable>false</rotatable>
+		</value>
+	</Operation>
 
-				<!-- Glucosoid and Psychofluid Pump -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/graphicData/drawSize</xpath>
-					<value>
-						<drawSize>(3,3)</drawSize>
-					</value>
-				</li>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]</xpath>
+		<value>
+			<altitudeLayer Inherit="False">BuildingOnTop</altitudeLayer>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/graphicData/shaderType</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/graphicData/shaderType</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/graphicData</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</nomatch>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]/defaultPlacingRot</xpath>
+		<value>
+			<defaultPlacingRot>North</defaultPlacingRot>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/size</xpath>
-					<value>
-						<size>(1,1)</size>
-					</value>
-				</li>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="PsychofluidPump"]/uiIconScale</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="PsychofluidPump"]/uiIconScale</xpath>
+			<value>
+				<uiIconScale>0.70</uiIconScale>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="PsychofluidPump"]</xpath>
+			<value>
+				<uiIconScale>0.70</uiIconScale>
+			</value>
+		</nomatch>
+	</Operation>
 
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]</xpath>
-					<value>
-						<altitudeLayer Inherit="False">BuildingOnTop</altitudeLayer>
-					</value>
-				</li>
+	<!-- Glucosoid and Psychofluid Pump -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Hemopump"]/label</xpath>
+		<value>
+			<label>idol of the voidbound</label>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Hemopump"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Things/Building/Misc/FantasyHemopump/Hemopump</texPath>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Hemopump"]/description</xpath>
+		<value>
+			<description>This idol increases the amount of blood a deathresting person can store in their body. It must be connected to a deathrest casket to function.\n\nThis building needs to consume blood to function.</description>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="HemogenAmplifier"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Things/Building/Misc/FantasyHemogenAmplifier/HemogenAmplifier</texPath>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HemogenAmplifier"]/label</xpath>
+		<value>
+			<label>idol of the covenant</label>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/defaultPlacingRot</xpath>
-					<value>
-						<defaultPlacingRot>South</defaultPlacingRot>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HemogenAmplifier"]/description</xpath>
+		<value>
+			<description>This idol leaves a deathrester in a blood-amplified state so they gain more blood from any blood source. It must be connected to a deathrest casket to function.\n\nThis building needs to consume blood to function.</description>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/uiIconScale</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/uiIconScale</xpath>
-						<value>
-							<uiIconScale>0.40</uiIconScale>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]</xpath>
-						<value>
-							<uiIconScale>0.40</uiIconScale>
-						</value>
-					</nomatch>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(3,3)</drawSize>
+		</value>
+	</Operation>
 
-				<!-- Deathrest Accelerator -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData/drawSize</xpath>
-					<value>
-						<drawSize>(4,3)</drawSize>
-					</value>
-				</li>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/graphicData/shaderType</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/graphicData/shaderType</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/graphicData</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</nomatch>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Things/Building/Misc/FantasyGlucosoidPump/GlucosoidPump</texPath>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/size</xpath>
+		<value>
+			<size>(1,1)</size>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData/shaderType</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData/shaderType</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</nomatch>
-				</li>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]</xpath>
+		<value>
+			<altitudeLayer Inherit="False">BuildingOnTop</altitudeLayer>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="GlucosoidPump"]/size</xpath>
-					<value>
-						<size>(2,1)</size>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Hemopump"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Things/Building/Misc/FantasyHemopump/Hemopump</texPath>
+		</value>
+	</Operation>
 
-				<!-- Deathrest Casket -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData/drawSize</xpath>
-					<value>
-						<drawSize>(3,4)</drawSize>
-						<shaderType>CutoutComplex</shaderType>
-					</value>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HemogenAmplifier"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Things/Building/Misc/FantasyHemogenAmplifier/HemogenAmplifier</texPath>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData/shaderType</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData/shaderType</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</nomatch>
-				</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/defaultPlacingRot</xpath>
+		<value>
+			<defaultPlacingRot>South</defaultPlacingRot>
+		</value>
+	</Operation>
 
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="DeathrestCasket"]/uiIconScale</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="DeathrestCasket"]/uiIconScale</xpath>
-						<value>
-							<uiIconScale>0.40</uiIconScale>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="DeathrestCasket"]</xpath>
-						<value>
-							<uiIconScale>0.40</uiIconScale>
-						</value>
-					</nomatch>
-				</li>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/uiIconScale</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]/uiIconScale</xpath>
+			<value>
+				<uiIconScale>0.40</uiIconScale>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Hemopump" or defName="HemogenAmplifier"]</xpath>
+			<value>
+				<uiIconScale>0.40</uiIconScale>
+			</value>
+		</nomatch>
+	</Operation>
 
-			</operations>
-		</active>
+	<!-- Deathrest Accelerator -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GlucosoidPump"]/label</xpath>
+		<value>
+			<label>Altar of the nightbreath</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GlucosoidPump"]/description</xpath>
+		<value>
+			<description>This altar allows a deathrester to move faster after deathrest is complete. It fills the body with nightbreath, boosting the muscle-signaling factor while clearing waste from muscle tissue. The effect lasts until the individual deathrests again. It must be connected to a deathrest casket to function.\n\nThis building must consume blood to function.</description>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4,3)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Things/Building/Misc/FantasyGlucosoidPump/GlucosoidPump</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData/shaderType</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData/shaderType</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="GlucosoidPump"]/graphicData</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="GlucosoidPump"]/size</xpath>
+		<value>
+			<size>(2,1)</size>
+		</value>
+	</Operation>
+
+	<!-- Deathrest Casket -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestCasket"]/label</xpath>
+		<value>
+			<label>royal deathrest casket</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestCasket"]/description</xpath>
+		<value>
+			<description>An improved casket that accelerates the process of deathrest. It can connect to other vampire ritual objects which confer additional bonuses on the deathrester. The number of objects that can connect depends on the person's deathrest capacity, which can be seen by selecting them.\n\nOnly those with the deathrest gene can use the deathrest casket</description>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(3,4)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData/shaderType</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData/shaderType</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DeathrestCasket"]/graphicData</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DeathrestCasket"]/uiIconScale</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DeathrestCasket"]/uiIconScale</xpath>
+			<value>
+				<uiIconScale>0.40</uiIconScale>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DeathrestCasket"]</xpath>
+			<value>
+				<uiIconScale>0.40</uiIconScale>
+			</value>
+		</nomatch>
 	</Operation>
 
 </Patch>

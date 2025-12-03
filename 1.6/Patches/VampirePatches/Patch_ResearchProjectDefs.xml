@@ -1,42 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
-		<settings>
-			<li>replaceVampires</li>
-		</settings>
-		<active Class="PatchOperationSequence">
-			<operations>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Deathrest"]/techLevel</xpath>
+        <value>
+            <techLevel>Medieval</techLevel>
+        </value>
+    </Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="Deathrest"]/techLevel</xpath>
-					<value>
-						<techLevel>Medieval</techLevel>
-					</value>
-				</li>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Deathrest"]/prerequisites/li[.="Electricity"]</xpath>
+        <value>
+            <li>ComplexFurniture</li>
+        </value>
+    </Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="Deathrest"]/prerequisites/li[.="Electricity"]</xpath>
-					<value>
-						<li>ComplexFurniture</li>
-					</value>
-				</li>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Deathrest"]/researchViewX</xpath>
+        <value>
+            <researchViewX>2.00</researchViewX>
+        </value>
+    </Operation>
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="Deathrest"]/researchViewX</xpath>
-					<value>
-						<researchViewX>2.00</researchViewX>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ResearchProjectDef[defName="Deathrest"]/researchViewY</xpath>
-					<value>
-						<researchViewY>5.40</researchViewY>
-					</value>
-				</li>
-			</operations>
-		</active>
-	</Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Deathrest"]/researchViewY</xpath>
+        <value>
+            <researchViewY>5.40</researchViewY>
+        </value>
+    </Operation>
 
 </Patch>

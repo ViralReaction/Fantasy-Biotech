@@ -1,337 +1,313 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
-		<settings>
-			<li>replaceVampires</li>
-		</settings>
-		<active Class="PatchOperationSequence">
+	<!-- Invocation Matrix -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4,4)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/graphicClass</xpath>
+		<value>
+			<graphicClass>Graphic_Single</graphicClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Building/FantasyInvocationMatrix/FantasyInvocationMatrix</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/shaderType</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/shaderType</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/shadowData</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]</xpath>
+		<value>
+			<altitudeLayer Inherit="False">BuildingOnTop</altitudeLayer>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/uiIconScale</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/uiIconScale</xpath>
+			<value>
+				<uiIconScale>0.70</uiIconScale>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]</xpath>
+			<value>
+				<uiIconScale>0.70</uiIconScale>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Small Buildings -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(3,3)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemogenAmplifier"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Building/FantasySmallHemogenAmplifier/SmallHemogenAmplifier</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Building/FantasySmallHemopump/SmallHemopump</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData/shaderType</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData/shaderType</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/size</xpath>
+		<value>
+			<size>(1,1)</size>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/rotatable</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/rotatable</xpath>
+			<value>
+				<rotatable>true</rotatable>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]</xpath>
+		<value>
+			<altitudeLayer Inherit="False">BuildingOnTop</altitudeLayer>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/defaultPlacingRot</xpath>
+		<value>
+			<defaultPlacingRot>South</defaultPlacingRot>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/uiIconScale</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/uiIconScale</xpath>
+			<value>
+				<uiIconScale>0.40</uiIconScale>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]</xpath>
+			<value>
+				<uiIconScale>0.40</uiIconScale>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Hemogen Solidifier -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4,3)</drawSize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Building/FantasyHemogenSolidifier/HemogenSolidifier</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/shaderType</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/shaderType</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData</xpath>
+			<value>
+				<shaderType>CutoutComplex</shaderType>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/size</xpath>
+		<value>
+			<size>(2,1)</size>
+		</value>
+	</Operation>
+
+	<!-- Hemodynamic Accelerator -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/graphicData/graphicClass</xpath>
+		<value>
+			<graphicClass>Graphic_Single</graphicClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Building/FantasyHemodynamicAccelerator/HemodynamicAccelerator</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/size</xpath>
+		<value>
+			<size>(1,1)</size>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Glower">
+				<glowRadius>10</glowRadius>
+				<glowColor>(460, 220, 205, 0)</glowColor>
+			</li>
+			<li Class="CompProperties_SanguophageMeetingFire">
+				<fireSize>0.75</fireSize>
+				<offset>(0,0,0.15)</offset>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>3.5</heatPerSecond>
+				<heatPushMaxTemperature>23</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes><li>Flame</li></focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Lit">
+						<offset>0.1</offset>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsLit">
+						<defs>
+							<li>Campfire</li>
+							<li>TorchLamp</li>
+							<li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+							<li MayRequire="Ludeon.RimWorld.Ideology">Darktorch</li>
+							<li MayRequire="Ludeon.RimWorld.Ideology">DarktorchFungus</li>
+						</defs>
+						<offsetPerBuilding>0.01</offsetPerBuilding>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<explanationKey>MeditationFocusPerFlame</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Drain Casket -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Building/FantasyDraincasket/Draincasket</texPath>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/graphicData/drawSize</xpath>
+		<value>
+			<drawSize>(4,4)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationSequence">
 			<operations>
 
-				<!-- Invocation Matrix -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/drawSize</xpath>
-					<value>
-						<drawSize>(4,4)</drawSize>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/graphicClass</xpath>
+					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/graphicClass</xpath>
 					<value>
 						<graphicClass>Graphic_Single</graphicClass>
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/texPath</xpath>
+					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/texPath</xpath>
 					<value>
-						<texPath>Building/FantasyInvocationMatrix/FantasyInvocationMatrix</texPath>
+						<texPath>Building/FantasyPsychofluidWell/PsychofluidWell</texPath>
 					</value>
 				</li>
 
 				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/shaderType</xpath>
+					<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/shaderType</xpath>
 					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/shaderType</xpath>
+						<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/shaderType</xpath>
 						<value>
 							<shaderType>CutoutComplex</shaderType>
 						</value>
 					</match>
 					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData</xpath>
+						<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData</xpath>
 						<value>
 							<shaderType>CutoutComplex</shaderType>
 						</value>
 					</nomatch>
-				</li>
-
-				<li Class="PatchOperationRemove">
-					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/graphicData/shadowData</xpath>
-				</li>
-
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]</xpath>
-					<value>
-						<altitudeLayer Inherit="False">BuildingOnTop</altitudeLayer>
-					</value>
-				</li>
-
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/uiIconScale</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/uiIconScale</xpath>
-						<value>
-							<uiIconScale>0.70</uiIconScale>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]</xpath>
-						<value>
-							<uiIconScale>0.70</uiIconScale>
-						</value>
-					</nomatch>
-				</li>
-
-				<!-- Small Buildings -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData/drawSize</xpath>
-					<value>
-						<drawSize>(3,3)</drawSize>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_SmallHemogenAmplifier"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Building/FantasySmallHemogenAmplifier/SmallHemogenAmplifier</texPath>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Building/FantasySmallHemopump/SmallHemopump</texPath>
-					</value>
-				</li>
-
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData/shaderType</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData/shaderType</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/graphicData</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</nomatch>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/size</xpath>
-					<value>
-						<size>(1,1)</size>
-					</value>
-				</li>
-
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/rotatable</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/rotatable</xpath>
-						<value>
-							<rotatable>true</rotatable>
-						</value>
-					</match>
-				</li>
-
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]</xpath>
-					<value>
-						<altitudeLayer Inherit="False">BuildingOnTop</altitudeLayer>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/defaultPlacingRot</xpath>
-					<value>
-						<defaultPlacingRot>South</defaultPlacingRot>
-					</value>
-				</li>
-
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/uiIconScale</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]/uiIconScale</xpath>
-						<value>
-							<uiIconScale>0.40</uiIconScale>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="VRE_SmallHemopump" or defName="VRE_SmallHemogenAmplifier"]</xpath>
-						<value>
-							<uiIconScale>0.40</uiIconScale>
-						</value>
-					</nomatch>
-				</li>
-
-				<!-- Hemogen Solidifier -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/drawSize</xpath>
-					<value>
-						<drawSize>(4,3)</drawSize>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Building/FantasyHemogenSolidifier/HemogenSolidifier</texPath>
-					</value>
-				</li>
-
-				<li Class="PatchOperationConditional">
-					<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/shaderType</xpath>
-					<match Class="PatchOperationReplace">
-						<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData/shaderType</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</match>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/graphicData</xpath>
-						<value>
-							<shaderType>CutoutComplex</shaderType>
-						</value>
-					</nomatch>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/size</xpath>
-					<value>
-						<size>(2,1)</size>
-					</value>
-				</li>
-
-				<!-- Hemodynamic Accelerator -->
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/label</xpath>
-					<value>
-						<label>sanguine brazier</label>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/description</xpath>
-					<value>
-						<description>An occult device designed to expedite the deathrest process at the cost of blood consumption. By connecting with a deathresting person, the efficiency of the deathrest casket is maximized. As it hastens the character's recovery, the Sanguine Brazier demands a continuous supply of blood to fuel its powerful effect. To function, it must be connected to a deathrest casket, ensuring the swift rejuvenation of its occupant.</description>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/graphicData/graphicClass</xpath>
-					<value>
-						<graphicClass>Graphic_Single</graphicClass>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Building/FantasyHemodynamicAccelerator/HemodynamicAccelerator</texPath>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/size</xpath>
-					<value>
-						<size>(1,1)</size>
-					</value>
-				</li>
-
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/comps</xpath>
-					<value>
-						<li Class="CompProperties_Glower">
-							<glowRadius>10</glowRadius>
-							<glowColor>(460, 220, 205, 0)</glowColor>
-						</li>
-						<li Class="CompProperties_SanguophageMeetingFire">
-							<fireSize>0.75</fireSize>
-							<offset>(0,0,0.15)</offset>
-						</li>
-						<li Class="CompProperties_HeatPusher">
-							<compClass>CompHeatPusherPowered</compClass>
-							<heatPerSecond>3.5</heatPerSecond>
-							<heatPushMaxTemperature>23</heatPushMaxTemperature>
-						</li>
-						<li Class="CompProperties_MeditationFocus">
-							<statDef>MeditationFocusStrength</statDef>
-							<focusTypes><li>Flame</li></focusTypes>
-							<offsets>
-								<li Class="FocusStrengthOffset_Lit">
-									<offset>0.1</offset>
-								</li>
-								<li Class="FocusStrengthOffset_BuildingDefsLit">
-									<defs>
-										<li>Campfire</li>
-										<li>TorchLamp</li>
-										<li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
-										<li MayRequire="Ludeon.RimWorld.Ideology">Darktorch</li>
-										<li MayRequire="Ludeon.RimWorld.Ideology">DarktorchFungus</li>
-									</defs>
-									<offsetPerBuilding>0.01</offsetPerBuilding>
-									<radius>9.9</radius>
-									<maxBuildings>8</maxBuildings>
-									<explanationKey>MeditationFocusPerFlame</explanationKey>
-									<explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
-								</li>
-							</offsets>
-						</li>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/graphicData/texPath</xpath>
-					<value>
-						<texPath>Building/FantasyDraincasket/Draincasket</texPath>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="VRE_Draincasket"]/graphicData/drawSize</xpath>
-					<value>
-						<drawSize>(4,4)</drawSize>
-						<shaderType>CutoutComplex</shaderType>
-					</value>
-				</li>
-
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Royalty</li>
-					</mods>
-					<match Class="PatchOperationSequence">
-						<operations>
-
-							<li Class="PatchOperationReplace">
-								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/graphicClass</xpath>
-								<value>
-									<graphicClass>Graphic_Single</graphicClass>
-								</value>
-							</li>
-
-							<li Class="PatchOperationReplace">
-								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/texPath</xpath>
-								<value>
-									<texPath>Building/FantasyPsychofluidWell/PsychofluidWell</texPath>
-								</value>
-							</li>
-
-							<li Class="PatchOperationConditional">
-								<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/shaderType</xpath>
-								<match Class="PatchOperationReplace">
-									<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData/shaderType</xpath>
-									<value>
-										<shaderType>CutoutComplex</shaderType>
-									</value>
-								</match>
-								<nomatch Class="PatchOperationAdd">
-									<xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/graphicData</xpath>
-									<value>
-										<shaderType>CutoutComplex</shaderType>
-									</value>
-								</nomatch>
-							</li>
-
-						</operations>
-					</match>
 				</li>
 
 			</operations>
-		</active>
+		</match>
 	</Operation>
 
 </Patch>

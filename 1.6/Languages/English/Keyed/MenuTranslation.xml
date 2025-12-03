@@ -12,19 +12,11 @@
     <FantasyBiotech_Settings_Mech_Replace_Title>Replace Mechs</FantasyBiotech_Settings_Mech_Replace_Title>
     <FantasyBiotech_Settings_Mech_Replace_Desc>Replaces vanilla mechs with artifice constructs in various game events. Advised to leave on if you want full experience of the mod.</FantasyBiotech_Settings_Mech_Replace_Desc>
 
-    <FantasyBiotech_Settings_Vampire_Replace_Title>Make Deathrest Medieval</FantasyBiotech_Settings_Vampire_Replace_Title>
-    <FantasyBiotech_Settings_Vampire_Replace_Desc>Makes deathrest buildings medieval and appropriate changes to cost</FantasyBiotech_Settings_Vampire_Replace_Desc>
-    <FantasyBiotech_Settings_VampireTextures_Replace_Title>Replace Deathrest Building Textures</FantasyBiotech_Settings_VampireTextures_Replace_Title>
-    <FantasyBiotech_Settings_VampireTextures_Replace_Desc>Replaces deathrest textures with fantasy themed textures</FantasyBiotech_Settings_VampireTextures_Replace_Desc>
-
     <FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Title>Basic Deathrest Casket</FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Title>
     <FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Desc>Enables a basic casket for deathrest</FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Desc>
 
     <FantasyBiotech_Settings_RenameSanguophage_Replace_Title>Rename Sanguophage</FantasyBiotech_Settings_RenameSanguophage_Replace_Title>
-    <FantasyBiotech_Settings_RenameSanguophage_Replace_Desc>Renames sanguophages to vampires</FantasyBiotech_Settings_RenameSanguophage_Replace_Desc>
-
-    <FantasyBiotech_Settings_RetextureBlood_Replace_Title>Retexture Hemogen Packs</FantasyBiotech_Settings_RetextureBlood_Replace_Title>
-    <FantasyBiotech_Settings_RetextureBlood_Replace_Desc>Retextures hemogen packs to blood vials</FantasyBiotech_Settings_RetextureBlood_Replace_Desc>
+    <FantasyBiotech_Settings_RenameSanguophage_Replace_Desc>Renames everything sanguophages to be more fantasy vampire related</FantasyBiotech_Settings_RenameSanguophage_Replace_Desc>
 
     <FantasyBiotech_Settings_MedievalVampireScenario_Replace_Title>Make Sanguophage scenario medieval</FantasyBiotech_Settings_MedievalVampireScenario_Replace_Title>
     <FantasyBiotech_Settings_MedievalVampireScenario_Replace_Desc>Makes the vanilla sanguophage scenario medieval</FantasyBiotech_Settings_MedievalVampireScenario_Replace_Desc>

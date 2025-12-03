@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+        <settings>
+            <li>replaceVampires</li>
+        </settings>
+        <active Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="VRE_Hemosmosis"]/description</xpath>
+                    <value>
+                        <description>Suck bloody filth from the area around the vampire and turn it into blood.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="VRE_Hemosmosis_SingleUse"]/description</xpath>
+                    <value>
+                        <description>Suck bloody filth from the area around the vampire and turn it into blood.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="VRE_SanguoFeeder"]/description</xpath>
+                    <value>
+                        <description>Carriers of this gene have small retractable fangs and an organ on the roof of the mouth which can extract blood from other vampires. They can bite an unresisting vampire, suck the blood directly.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/XenotypeDef[defName="VRE_Strigoi"]/descriptionShort</xpath>
+                    <value>
+                        <descriptionShort>Strigoi are ageless, deathless super-humans powered by archotech-created archites in the bloodstream. They are viscous and resemble a half-human half-bat hybrid. They can heal any injury, and never suffer from disease or poison. In combat, they use their huge talons to rip their prey to pieces. The price is that strigoi vampires must consume blood derived from either human blood or animal blood to survive, and they must periodically deathrest for long periods. They lose their blood supply quickly due to high entropy, and need to replenish it regularly to sustain themselves. They're easily destroyed by fire, and suffer extreme penalties in UV light.</descriptionShort>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/XenotypeDef[defName="VRE_Ekkimian"]/description</xpath>
+                    <value>
+                        <description>In the darkest reaches of the universe, the Ekkimian vampires were birthed from the twisted ambitions of a rogue scientist named Dr. Mortis. Obsessed with the concept of death and resurrection, Dr. Mortis sought to create a new breed of immortals by fusing archites with the DNA of humans and a mysterious, long-extinct species that thrived on consuming the dead. The Ekkimian vampires, as they came to be known, are grotesque and horrifying in appearance. Resembling desiccated corpses more than living beings, their monstrous visages instill terror in all who lay eyes upon them. Despite their hideous appearance, the Ekkimian vampires possess incredible regenerative abilities, healing any injury and remaining immune to disease and poison.\n\nEkkimian vampires must consume blood derived exclusively from human corpses to survive. This morbid requirement has led them to lurk in the shadows, scavenging the remains of fallen warriors and feeding on the aftermath of battles. Like other vampires, they must periodically enter deathrest to recover their strength and replenish their blood reserves.\n\nThere are whispered tales of entire planets falling under the sway of Ekkimian vampire lords, who feed on the corpses of their enemies and rule with an iron, undead fist. Fearful of the day when these monstrous beings might rise up and unleash their full power, the inhabitants of the colonized planets must remain ever vigilant, lest they become mere fodder for the insatiable hunger of the Ekkimians.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/XenotypeDef[defName="VRE_Ekkimian"]/descriptionShort</xpath>
+                    <value>
+                        <descriptionShort>Ekkimian are ageless, deathless super-humans powered by archotech-created archites in the bloodstream. They are extremely ugly and resemble dessicated corpses more than humans. They can heal any injury, and never suffer from disease or poison. In combat, they can excrete toxic clouds around themselves, and rapidly regenerate any wounds at the cost of blood. The price is that ekkimian vampires must consume blood derived from human corpses and only corpses, and they must periodically deathrest for long periods. They're easily destroyed by fire, and slowed down by UV light.</descriptionShort>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/XenotypeDef[defName="VRE_Bruxa"]/description</xpath>
+                    <value>
+                        <description>In the complex tapestry of the universe, the Bruxas emerged as a unique and alluring subxenotype of vampire. Created by an enigmatic archotech entity seeking to weave together beauty and power, the Bruxas were gifted with unparalleled grace and charm. Designed as the ultimate companions to other vampires, the Bruxas were engineered with the unique ability to bond with their brethren and feed on their blood, bestowing mutual benefits upon both parties.\n\nThe Bruxas are ageless and deathless, their bodies imbued with archotech-created archites that grant them extraordinary abilities. Possessing an ethereal beauty, they are irresistibly captivating to those who cross their paths. In addition to their regenerative powers, which allow them to heal any injury and remain immune to disease and poison, Bruxas have the remarkable ability to filter infections from the bloodstream of other humans, purifying their blood and filling them with an overwhelming sense of ecstasy in the process.\n\nThroughout the ages, the Bruxas have been both feared and revered for their beguiling beauty and potent abilities. Often serving as confidants and companions to powerful individuals, including vampire lords, they have been known to wield considerable influence in the shadow societies. Their unique ability to bond with other humans has led to the formation of secret alliances and networks, further solidifying their power and influence.\n\nIn the vast expanse of the universe, the Bruxas remain an enigma - seductive and mysterious, their true intentions hidden behind a veil of allure and grace. Those who encounter a Bruxa must tread carefully, for while their touch may bring unimaginable pleasure, it may also lead to a fate more treacherous than one could ever imagine.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/XenotypeDef[defName="VRE_Bruxa"]/descriptionShort</xpath>
+                    <value>
+                        <descriptionShort>Bruxas are ageless, deathless super-humans powered by archotech-created archites in the bloodstream. They are extremely beautiful, and almost always bond with other vampires. Unlike other subxenotypes of that species, bruxas are capable of feeding on vampire blood, providing them with great benefits. They can heal any injury, and never suffer from disease or poison. They can filter infection out of the bloodstream of other humans, as well as fill them with a sense of strong ecstasy. The price is that bruxa must sometimes consume blood - either human or vampire, and they must periodically deathrest for long periods. They're easily destroyed by fire, and slowed down by UV light.</descriptionShort>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/StyleItemCategoryDef[defName="VRE_Sanguophage"]/label</xpath>
+                    <value>
+                        <label>Vampire</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/HediffDef[defName="VRE_ConsumedSanguophageHemogen"]/label</xpath>
+                    <value>
+                        <label>consumed vampire blood</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/HediffDef[defName="VRE_ConsumedSanguophageHemogen"]/description</xpath>
+                    <value>
+                        <description>Vampire blood gives the carrier a powerful boost to all capacities.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GameConditionDef[defName="VRE_BloodMoonCondition"]/description</xpath>
+                    <value>
+                        <description>One of the moons of this planet has orbited into the rimworld’s umbra, making vampires go mad with hunger.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GameConditionDef[defName="VRE_BloodMoonCondition"]/letterText</xpath>
+                    <value>
+                        <letterText>One of the moons of this planet has orbited into the rimworld’s umbra, blocking all direct sunlight from illuminating the moon’s surface. This resulted in the moon taking on a crimson color - a phenomena known as the blood moon.\n\nDuring this time, vampire mechanites will go into overdrive, driving blood-starved bloodfeeders out of their caves. Any bloodfeeder vampire with less than half blood supply gone will enter the hemohunter mental state. Blood will drain significantly quicker during blood moon.</letterText>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/JobDef[defName="VRE_ExtractHemogenAnimal"]/reportString</xpath>
+                    <value>
+                        <reportString>extracting blood (animal) from TargetA.</reportString>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/JobDef[defName="VRE_ExtractHemogenCorpse"]/reportString</xpath>
+                    <value>
+                        <reportString>extracting blood (corpse) from TargetA.</reportString>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/JobDef[defName="VRE_DrinkHemogenCorpse"]/reportString</xpath>
+                    <value>
+                        <reportString>drinking blood (corpse) from TargetA.</reportString>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/JobDef[defName="VRE_ExtractHemogenSanguophage"]/reportString</xpath>
+                    <value>
+                        <reportString>extracting blood (vampire) from TargetA.</reportString>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/JobDef[defName="VRE_HemohunterJob"]/reportString</xpath>
+                    <value>
+                        <reportString>forcefully extracting blood from TargetA.</reportString>
+                    </value>
+                </li>
+
+                <!-- Invocation Matrix -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/label</xpath>
+                    <value>
+                        <label>nightgift obelisk</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/description</xpath>
+                    <value>
+                        <description>A ritual focus that infuses deathresting people with rare and potent sanguophage abilities, tapping into the very essence of their vampiric nature. Employing a complex system of blood conduits and essence resonators, the matrix connects to a deathrest casket and channels the life force of its occupant to unlock hidden potential within their bloodline. As the person slumbers in their deathrest state, the Nightgift Obelisk bestows upon them a selected, unique power. This building requires a constant supply of blood to operate.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_InvocationMatrix"]/comps/li[@Class="CompProperties_Refuelable"]/fuelLabel</xpath>
+                    <value>
+                        <fuelLabel>Blood</fuelLabel>
+                    </value>
+                </li>
+
+                <!-- Hemogen Solidifier -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/label</xpath>
+                    <value>
+                        <label>altar of consumption</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/description</xpath>
+                    <value>
+                        <description>An altar designed to harden and strengthen the flesh of a deathresting vampire. Drawing power from a blood-filled bowl, fueling an eerie resonance that seeps into the resting body, thickening the skin and lending it a hardened, resilient quality. It must be connected to a deathrest casket to function.\n\nThis building must consume blood to function.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenSolidifier"]/comps/li[@Class="CompProperties_Refuelable"]/fuelLabel</xpath>
+                    <value>
+                        <fuelLabel>Blood</fuelLabel>
+                    </value>
+                </li>
+
+
+                <!-- Hemodynamic Accelerator -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/label</xpath>
+                    <value>
+                        <label>sanguine brazier</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/description</xpath>
+                    <value>
+                        <description>An occult device designed to expedite the deathrest process at the cost of blood consumption. By connecting with a deathresting person, the efficiency of the deathrest casket is maximized. As it hastens the character's recovery, the Sanguine Brazier demands a continuous supply of blood to fuel its powerful effect. To function, it must be connected to a deathrest casket, ensuring the swift rejuvenation of its occupant.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemodynamicAccelerator"]/comps/li[@Class="CompProperties_Refuelable"]/fuelLabel</xpath>
+                    <value>
+                        <fuelLabel>Blood</fuelLabel>
+                    </value>
+                </li>
+
+                <!-- Small Buildings -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_SmallHemopump"]/label</xpath>
+                    <value>
+                        <label>idol of gluttony</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_SmallHemopump"]/description</xpath>
+                    <value>
+                        <description>This idol increases the amount of blood a deathresting person can store in their body. It must be connected to a deathrest casket to function. This building needs to consume blood to function.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_SmallHemogenAmplifier"]/label</xpath>
+                    <value>
+                        <label>idol of undeath</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_SmallHemogenAmplifier"]/description</xpath>
+                    <value>
+                        <description>This idol leaves a deathrester in a blood-amplified state so they gain slightly more blood from any blood source. It must be connected to a deathrest casket to function. This building needs to consume blood to function.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_SmallHemogenAmplifier"]/comps/li[@Class="CompProperties_Refuelable"]/fuelLabel</xpath>
+                    <value>
+                        <fuelLabel>Blood</fuelLabel>
+                    </value>
+                </li>
+
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_SmallHemopump"]/comps/li[@Class="CompProperties_Refuelable"]/fuelLabel</xpath>
+                    <value>
+                        <fuelLabel>Blood</fuelLabel>
+                    </value>
+                </li>
+
+                <!-- Drain Casket -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_Draincasket"]/label</xpath>
+                    <value>
+                        <label>drain slab</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_Draincasket"]/description</xpath>
+                    <value>
+                        <description>A slab designed to maximize extraction of blood from an individual, while keeping them alive. Bound to the Drain Slab, the occupant's survival depends on being fed regularly, as they can still starve to death. \n\nProduces blood packs a day as long as the occupant has food and the casket is connected to a blood network. The amount of blood packs depends on the occupant's hunger rate - someone with a worse metabolic efficiency will produce more blood packs while using proportionally more nutrition to do so. If deprived of food, the casket will eventually kill its occupant.</description>
+                    </value>
+                </li>
+
+
+                <!-- Drain Basin -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenDrain"]/label</xpath>
+                    <value>
+                        <label>offering basin</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenDrain"]/description</xpath>
+                    <value>
+                        <description>A basin meant to input blood into the network, filling up connected vats.</description>
+                    </value>
+                </li>
+
+                <!-- Blood Tap -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenTap"]/label</xpath>
+                    <value>
+                        <label>blood spout</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenTap"]/description</xpath>
+                    <value>
+                        <description>A spout meant to dispense blood for later use.</description>
+                    </value>
+                </li>
+
+                <!-- Blood Tap -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenVat"]/label</xpath>
+                    <value>
+                        <label>blood vat</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenVat"]/description</xpath>
+                    <value>
+                        <description>A storage vat meant for storing blood delivered via blood pipe network. Vats can be designated to be siphoned for usable blood as needed.</description>
+                    </value>
+                </li>
+
+                <!-- Blood Valve -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenValve"]/label</xpath>
+                    <value>
+                        <label>blood valve</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenValve"]/description</xpath>
+                    <value>
+                        <description>Switches blood flow on/off.</description>
+                    </value>
+                </li>
+
+                <!-- Blood Pipe -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenPipe"]/label</xpath>
+                    <value>
+                        <label>blood pipe</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_HemogenPipe"]/description</xpath>
+                    <value>
+                        <description>A pipe that’s used to transport blood between taps, drains, vats and blood-fueled structures.</description>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_UndergroundHemogenPipe"]/label</xpath>
+                    <value>
+                        <label>hidden blood pipe</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VRE_UndergroundHemogenPipe"]/description</xpath>
+                    <value>
+                        <description>Hidden steel pipes designed to transport blood between taps, drains, vats and blood-fueled structures.</description>
+                    </value>
+                </li>
+
+
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Royalty</li>
+                    </mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/label</xpath>
+                                <value>
+                                    <label>sanguine fountain</label>
+                                </value>
+                            </li>
+
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/ThingDef[defName="VRE_PsychofluidWell"]/description</xpath>
+                                <value>
+                                    <description>A specialized apparatus designed to rejuvenate the psyfocus of deathresting psycasters by delicately nurturing their psychic centers. As the individual rests within the deathrest casket, the Sanguine Fountain revitalizes their psychic reservoirs, preparing them for future psychic exertions. To operate effectively, the device must be connected to a deathrest casket and requires a steady supply of blood to fuel its subtle yet powerful restorative functions.\n\nContrary to other deathrest machines, the saguine fountain regenerates 5% of total Psyfocus to the deathresting occupant every 1 hour, instead of acting all at once when the deathrest ends.</description>
+                                </value>
+                            </li>
+
+                        </operations>
+                    </match>
+                </li>
+
+            </operations>
+        </active>
+    </Operation>
+
+</Patch>
