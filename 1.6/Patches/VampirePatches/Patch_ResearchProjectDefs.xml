@@ -5,6 +5,7 @@
         <xpath>Defs/ResearchProjectDef[defName="Deathrest"]/techLevel</xpath>
         <value>
             <techLevel>Medieval</techLevel>
+            <tab>VR_BiotechResearchTab</tab>
         </value>
     </Operation>
 
@@ -18,14 +19,14 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="Deathrest"]/researchViewX</xpath>
         <value>
-            <researchViewX>2.00</researchViewX>
+            <researchViewX>0.00</researchViewX>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="Deathrest"]/researchViewY</xpath>
         <value>
-            <researchViewY>5.40</researchViewY>
+            <researchViewY>2.10</researchViewY>
         </value>
     </Operation>
 

@@ -56,4 +56,29 @@
 		</generalRules>
 	</ResearchProjectDef>
 
+	<ResearchProjectDef ParentName="VR_GeneticTechBase">
+		<defName>VR_ArchiteGenetics</defName>
+		<label>Archite Chymerimancy</label>
+		<description>>Allows a graft forge to use archite capsules to create seemingly impossible genes. Archite genes and archite capsules can be obtained from traders.</description>
+		<baseCost>1500</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<prerequisites>
+			<li>VR_AdvancedGenetics</li>
+		</prerequisites>
+		<heldByFactionCategoryTags Inherit="False"/>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->archite chymerimancy</li>
+
+				<li>subject_story->excavated archite genes from the ancient ruin</li>
+				<li>subject_story->made a good living as an archite gene trader</li>
+				<li>subject_story->led a research expedition to an ancient monolith and returned changed</li>
+
+				<li>subject_gerund->assembling archite genes</li>
+				<li>subject_gerund->creating seemingly impossible genes</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
 </Defs>

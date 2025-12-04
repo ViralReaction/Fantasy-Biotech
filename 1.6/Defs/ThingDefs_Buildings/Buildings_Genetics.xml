@@ -102,7 +102,7 @@
 		<defName>VR_GraftForge</defName>
 		<label>graft forge</label>
 		<description>A workbench for creating implantable xenogerms from genepacks stored in nearby gene racks. Genepacks are not consumed in this process and can be reused.</description>
-		<thingClass>Building_GeneAssembler</thingClass>
+		<thingClass>FantasyBiotech.Building_GraftForge</thingClass>
 		<passability>PassThroughOnly</passability>
 		<castEdgeShadows>true</castEdgeShadows>
 		<fillPercent>0.4</fillPercent>
