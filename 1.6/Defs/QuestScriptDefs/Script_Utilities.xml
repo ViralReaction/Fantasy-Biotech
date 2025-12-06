@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>VR_Util_Raid</defName>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>threatDescription->[enemyFaction_pawnsPlural] from [enemyFaction_name] will attack you. Their group is composed of:\n\n[raidPawnKinds]\n\n[raidArrivalModeInfo]</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="FantasyBiotech.QuestNode_Raid">
+                    <tag>$tag</tag>
+                    <customLetterLabel>$customLetterLabel</customLetterLabel>
+                    <customLetterText>$customLetterText</customLetterText>
+                    <customLetterLabelRules>$customLetterLabelRules</customLetterLabelRules>
+                    <customLetterTextRules>$customLetterTextRules</customLetterTextRules>
+                    <arrivalMode>$arrivalMode</arrivalMode>
+                    <canTimeoutOrFlee>$canTimeoutOrFlee</canTimeoutOrFlee>
+                    <raidPawnKind>$raidPawnKind</raidPawnKind>
+                    <raidPoints>$raidPoints</raidPoints>
+                    <inSignalLeave>EndRaid</inSignalLeave>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>

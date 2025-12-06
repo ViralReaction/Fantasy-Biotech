@@ -13,7 +13,7 @@
         <li>arrivalLetterText->A [mech_label] has dropped from orbit and is placing itself under the control of [mechanitor_nameDef].\n\nIt seems to have been attached to [mechanitor_possessive] implant and is eager to serve its purpose once again.</li>
       </rulesStrings>
     </questContentRules>
-    <root Class="QuestNode_Root_MechanitorStartingMech">
+    <root Class="FantasyBiotech.QuestNode_StartingMechWalkIn">
       <mechTypes>
         <li>VR_Construct_Lifter</li>
         <li>VR_Construct_Constructoid</li>

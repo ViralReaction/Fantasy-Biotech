@@ -332,31 +332,33 @@ public class Dialog_CreateGenepack : GeneCreationDialogBase
 	public override void DoBottomButtons(Rect rect)
 	{
 		base.DoBottomButtons(rect);
-		if (selectedGenepacks.Any())
+		if (!selectedGenepacks.Any()) return;
+		int numTicks = Mathf.RoundToInt(Mathf.RoundToInt(GeneTuning.ComplexityToCreationHoursCurve.Evaluate(gcx) * 2500f) / geneAssembler.GetStatValue(StatDefOf.AssemblySpeedFactor));
+		Rect rect2 = new Rect(rect.center.x, rect.y, rect.width / 2f - ButSize.x - 10f, ButSize.y);
+		TaggedString label;
+		TaggedString taggedString;
+		ResearchProjectDef missingResearch = arc switch
 		{
-			int numTicks = Mathf.RoundToInt((float)Mathf.RoundToInt(GeneTuning.ComplexityToCreationHoursCurve.Evaluate(gcx) * 2500f) / geneAssembler.GetStatValue(StatDefOf.AssemblySpeedFactor));
-			Rect rect2 = new Rect(rect.center.x, rect.y, rect.width / 2f - GeneCreationDialogBase.ButSize.x - 10f, GeneCreationDialogBase.ButSize.y);
-			TaggedString label;
-			TaggedString taggedString;
-			if (arc > 0 && !FantasyBiotechDefOf.VR_ArchiteGenetics.IsFinished)
-			{
-				label = ("MissingRequiredResearch".Translate() + ": " + FantasyBiotechDefOf.VR_ArchiteGenetics.LabelCap).Colorize(ColorLibrary.RedReadable);
-				taggedString = "MustResearchProject".Translate(FantasyBiotechDefOf.VR_ArchiteGenetics);
-			}
-			else
-			{
-				label = "RecombineDuration".Translate() + ": " + numTicks.ToStringTicksToPeriod();
-				taggedString = "RecombineDurationDesc".Translate();
-			}
-			Text.Anchor = TextAnchor.MiddleLeft;
-			Widgets.Label(rect2, label);
-			Text.Anchor = TextAnchor.UpperLeft;
-			if (Mouse.IsOver(rect2))
-			{
-				Widgets.DrawHighlight(rect2);
-				TooltipHandler.TipRegion(rect2, taggedString);
-			}
+			> 2 when !FantasyBiotechDefOf.VR_MasterArchiteGenetics.IsFinished => FantasyBiotechDefOf.VR_MasterArchiteGenetics,
+			> 0 when !FantasyBiotechDefOf.VR_ArchiteGenetics.IsFinished => FantasyBiotechDefOf.VR_ArchiteGenetics,
+			_ => null
+		};
+		if (missingResearch != null)
+		{
+			label = ("MissingRequiredResearch".Translate() + ": " + missingResearch.LabelCap).Colorize(ColorLibrary.RedReadable);
+			taggedString = "MustResearchProject".Translate(missingResearch);
 		}
+		else
+		{
+			label = "RecombineDuration".Translate() + ": " + numTicks.ToStringTicksToPeriod();
+			taggedString = "RecombineDurationDesc".Translate();
+		}
+		Text.Anchor = TextAnchor.MiddleLeft;
+		Widgets.Label(rect2, label);
+		Text.Anchor = TextAnchor.UpperLeft;
+		if (!Mouse.IsOver(rect2)) return;
+		Widgets.DrawHighlight(rect2);
+		TooltipHandler.TipRegion(rect2, taggedString);
 	}
 
 	public override bool CanAccept()
@@ -370,10 +372,14 @@ public class Dialog_CreateGenepack : GeneCreationDialogBase
 			Messages.Message("MessageNoSelectedGenepacks".Translate(), null, MessageTypeDefOf.RejectInput, historical: false);
 			return false;
 		}
-		if (arc > 0 && !FantasyBiotechDefOf.VR_ArchiteGenetics.IsFinished)
+		switch (arc)
 		{
-			Messages.Message("AssemblingRequiresResearch".Translate(FantasyBiotechDefOf.VR_ArchiteGenetics), null, MessageTypeDefOf.RejectInput, historical: false);
-			return false;
+			case > 0 when !FantasyBiotechDefOf.VR_ArchiteGenetics.IsFinished:
+				Messages.Message("AssemblingRequiresResearch".Translate(FantasyBiotechDefOf.VR_ArchiteGenetics), null, MessageTypeDefOf.RejectInput, historical: false);
+				return false;
+			case > 2 when !FantasyBiotechDefOf.VR_MasterArchiteGenetics.IsFinished:
+				Messages.Message("AssemblingRequiresResearch".Translate(FantasyBiotechDefOf.VR_MasterArchiteGenetics), null, MessageTypeDefOf.RejectInput, historical: false);
+				return false;
 		}
 		if (gcx > maxGCX)
 		{

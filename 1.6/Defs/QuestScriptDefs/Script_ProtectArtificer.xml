@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <QuestScriptDef>
+    <defName>VR_ArtificerProtect</defName>
+    <defaultChallengeRating>3</defaultChallengeRating>
+    <expireDaysRange>3</expireDaysRange>
+    <isRootSpecial>true</isRootSpecial>
+    <defaultCharity>true</defaultCharity>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Protect the Artificer</li>
+
+        <!-- Pieces -->
+        <li>adjAny->hunted</li>
+        <li>adjAny->fleeing</li>
+        <li>adjAny->solitary</li>
+        <li>adjAny->ambushed</li>
+
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <include>
+        <li>QuestHospitalityCommon</li>
+      </include>
+      <rulesStrings>
+        <li>questDescription->[asker_nameFull], an artificer has sent a missive. [asker_possessive] guards were killed in an ambush. [asker_pronoun] escaped, but is now being followed by (*Threat)a reclamation squad(/Threat).\n\n[asker_nameDef] wants to join your colony.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_GetMap" />
+        <li Class="QuestNode_GetWalkInSpot" />
+
+        <!-- Generate Asker -->
+        <li Class="QuestNode_GeneratePawn">
+          <kindDef>VR_Artificer</kindDef>
+          <storeAs>asker</storeAs>
+          <faction>Player</faction>
+          <allowPregnant>false</allowPregnant>
+        </li>
+
+        <li Class="QuestNode_PawnsArrive">
+          <pawns>$asker</pawns>
+          <joinPlayer>true</joinPlayer>
+        </li>
+
+        <li Class="QuestNode_Set">
+          <name>raidPoints</name>
+          <value>$points</value>
+        </li>
+
+        <li Class="QuestNode_Set">
+          <name>enemyRaidFaction</name>
+          <value>VR_Construct</value>
+        </li>
+
+        <!-- Raid -->
+        <li Class="QuestNode_Set">
+          <name>raidDelayTicks</name>
+          <value>$(roundToTicksRough(randInt(1800, 2400)))</value>
+        </li>
+        <li Class="QuestNode_Delay">
+          <delayTicks>$raidDelayTicks</delayTicks>
+          <node Class="QuestNode_SubScript">
+            <def>VR_Util_Raid</def>
+            <prefix>raid</prefix>
+            <parms>
+              <inSignal>$inSignal</inSignal>
+              <map>$map</map>
+              <enemyFaction>$enemyRaidFaction</enemyFaction>
+              <points>$raidPoints</points>
+              <walkInSpot>$walkInSpot</walkInSpot>
+              <canTimeoutOrFlee>true</canTimeoutOrFlee>
+              <customLetterLabel TKey="LetterLabelLoyaltySquad">{BASELABEL}: Construct reclamation squad</customLetterLabel>
+              <customLetterText TKey="LetterTextLoyaltySquad">{BASETEXT}\n\nThis is the construct reclamation squad that was hunting [../asker_nameFull].</customLetterText>
+            </parms>
+          </node>
+        </li>
+
+
+
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+</Defs>

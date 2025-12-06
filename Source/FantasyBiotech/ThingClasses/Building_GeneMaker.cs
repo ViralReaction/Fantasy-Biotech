@@ -40,10 +40,6 @@ namespace FantasyBiotech
                                                                                        where !x.IsFinished
                                                                                        select x.label).ToCommaList(useAnd: true).CapitalizeFirst());
             }
-            else if (!PowerOn)
-            {
-                command_Action.Disable("CannotUseNoPower".Translate());
-            }
             else if (!GetGenepacks(includePowered: true, includeUnpowered: false).Any())
             {
                 command_Action.Disable("CannotUseReason".Translate("NoGenepacksAvailable".Translate().CapitalizeFirst()));

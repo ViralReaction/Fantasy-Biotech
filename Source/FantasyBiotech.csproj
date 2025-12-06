@@ -51,6 +51,9 @@
     <Compile Include="FantasyBiotech\ModOption\MenuController.cs" />
     <Compile Include="FantasyBiotech\ModOption\MenuSettings.cs" />
     <Compile Include="FantasyBiotech\ModOption\PatchOperation_ToggleSettings.cs" />
+    <Compile Include="FantasyBiotech\QuestNodes\QuestNode_RaidTest.cs" />
+    <Compile Include="FantasyBiotech\QuestNodes\QuestNode_Sanguophage.cs" />
+    <Compile Include="FantasyBiotech\QuestNodes\QuestNode_StartingMechWalkIn.cs" />
     <Compile Include="FantasyBiotech\QuestNode_Root_Bossgroup_Construct.cs" />
     <Compile Include="FantasyBiotech\Alert_GeneRackUnfueled.cs" />
     <Compile Include="FantasyBiotech\ComplexThreats\FileName.cs" />

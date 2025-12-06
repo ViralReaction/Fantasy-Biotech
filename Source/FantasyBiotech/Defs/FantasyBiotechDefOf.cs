@@ -16,6 +16,7 @@ namespace FantasyBiotech
         public static ThingDef VR_GeneRemover;
         public static ThingDef VR_GraftForge;
         public static ResearchProjectDef VR_ArchiteGenetics;
+        public static ResearchProjectDef VR_MasterArchiteGenetics;
 
         static FantasyBiotechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FantasyBiotechDefOf));
     }

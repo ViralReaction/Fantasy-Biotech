@@ -10,7 +10,7 @@
 		<defName>VR_BasicGenetics</defName>
 		<label>Chymerimancy</label>
 		<description>Create xenogerms which can be implanted in a person to genetically modify them. Extract genepacks from living people using a gene extractor so you can reimplant their genes into someone else.</description>
-		<baseCost>1500</baseCost>
+		<baseCost>1000</baseCost>
 		<researchViewX>0.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 		<prerequisites>
@@ -34,8 +34,8 @@
 	<ResearchProjectDef ParentName="VR_GeneticTechBase">
 		<defName>VR_AdvancedGenetics</defName>
 		<label>Advanced Chymerimancy</label>
-		<description>Create xenogerms which can be implanted in a person to genetically modify them. Extract genepacks from living people using a gene extractor so you can reimplant their genes into someone else.</description>
-		<baseCost>1500</baseCost>
+		<description>Build mutagenic furnaces, which allow a graft forge to create xenogerms of higher genetic complexity.</description>
+		<baseCost>1250</baseCost>
 		<researchViewX>1.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 		<prerequisites>
@@ -44,14 +44,14 @@
 		<heldByFactionCategoryTags Inherit="False"/>
 		<generalRules>
 			<rulesStrings>
-				<li>subject->chymerimancy</li>
-				<li>subject->genetic implantation</li>
+				<li>subject->advanced chymerimancy</li>
 
-				<li>subject_story->was uplifted by a scientist that focused on the genetically disadvantaged</li>
-				<li>subject_story->had [ANYPAWN_possessive] flesh stolen by a rogue biologist</li>
-				<li>subject_story->ran a genetic transfer clinic for the nobility</li>
+				<li>subject_story->extracted genes from a wandering rogue</li>
+				<li>subject_story->processed an entire village to create one set of higher genes</li>
+				<li>subject_story->began the slow process of uplift by implanting xenogerms into a primitive tribe</li>
 
-				<li>subject_gerund->crafting xenogerms</li>
+				<li>subject_gerund->constructing mutagenic furnaces</li>
+				<li>subject_gerund->processing genes</li>
 			</rulesStrings>
 		</generalRules>
 	</ResearchProjectDef>
@@ -59,10 +59,10 @@
 	<ResearchProjectDef ParentName="VR_GeneticTechBase">
 		<defName>VR_ArchiteGenetics</defName>
 		<label>Archite Chymerimancy</label>
-		<description>>Allows a graft forge to use archite capsules to create seemingly impossible genes. Archite genes and archite capsules can be obtained from traders.</description>
+		<description>Allows a graft forge to use up to two archite capsules to create seemingly impossible genes. Archite genes and archite capsules can be obtained from traders.</description>
 		<baseCost>1500</baseCost>
-		<researchViewX>1.00</researchViewX>
-		<researchViewY>2.00</researchViewY>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
 		<prerequisites>
 			<li>VR_AdvancedGenetics</li>
 		</prerequisites>
@@ -70,6 +70,31 @@
 		<generalRules>
 			<rulesStrings>
 				<li>subject->archite chymerimancy</li>
+
+				<li>subject_story->excavated archite genes from the ancient ruin</li>
+				<li>subject_story->made a good living as an archite gene trader</li>
+				<li>subject_story->led a research expedition to an ancient monolith and returned changed</li>
+
+				<li>subject_gerund->assembling archite genes</li>
+				<li>subject_gerund->creating seemingly impossible genes</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VR_GeneticTechBase">
+		<defName>VR_MasterArchiteGenetics</defName>
+		<label>Master Chymerimancy</label>
+		<description>Allows a graft forge to use unlimited amount of archite capsules to create seemingly impossible genes. Archite genes and archite capsules can be obtained from traders.</description>
+		<baseCost>2000</baseCost>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+		<prerequisites>
+			<li>VR_AdvancedGenetics</li>
+		</prerequisites>
+		<heldByFactionCategoryTags Inherit="False"/>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->master chymerimancy</li>
 
 				<li>subject_story->excavated archite genes from the ancient ruin</li>
 				<li>subject_story->made a good living as an archite gene trader</li>
