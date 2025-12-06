@@ -19,6 +19,8 @@ namespace FantasyBiotech
         private bool medievalVampireScenario = true;
         private bool medievalSanguophageFaction = true;
 
+        private bool medievalGoJuice = true;
+
         #endregion
 
         private readonly Dictionary<int, float> _cachedTabHeights = [];
@@ -42,6 +44,7 @@ namespace FantasyBiotech
             Scribe_Values.Look(ref renameSanguophage, "renameSanguophage", true);
             Scribe_Values.Look(ref medievalVampireScenario, "medievalVampireScenario", true);
             Scribe_Values.Look(ref medievalSanguophageFaction, "medievalSanguophageFaction", true);
+            Scribe_Values.Look(ref medievalGoJuice, "medievalGoJuice", true);
 
         }
 
@@ -71,6 +74,7 @@ namespace FantasyBiotech
         {
             list.Label("FantasyBiotech_Settings_HeaderGenetics".Translate());
             list.Gap();
+            list.CheckboxLabeled("FantasyBiotech_Settings_MedievalGoJuice_Replace_Title".Translate(), ref medievalGoJuice, "FantasyBiotech_Settings_MedievalGoJuice_Replace_Desc".Translate());
             //list.CheckboxLabeled("FantasyBiotech_Settings_Mech_Replace_Title".Translate(), ref replaceMechanoids, "FantasyBiotech_Settings_Mech_Replace_Desc".Translate());
         }
         private void DoSettingsWindowContents_Vampires(Listing_Standard list)
@@ -141,6 +145,7 @@ namespace FantasyBiotech
 
         private void ResetToDefault_Genetics()
         {
+            medievalVampireScenario = true;
         }
 
         private void ResetToDefault_Vampires()

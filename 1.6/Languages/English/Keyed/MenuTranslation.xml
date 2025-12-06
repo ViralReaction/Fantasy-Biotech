@@ -9,9 +9,15 @@
     <FantasyBiotech_Settings_HeaderVampires>Vampires</FantasyBiotech_Settings_HeaderVampires>
 
     <!-- Options -->
+    <!-- Mech Options -->
     <FantasyBiotech_Settings_Mech_Replace_Title>Replace Mechs</FantasyBiotech_Settings_Mech_Replace_Title>
     <FantasyBiotech_Settings_Mech_Replace_Desc>Replaces vanilla mechs with artifice constructs in various game events. Advised to leave on if you want full experience of the mod.</FantasyBiotech_Settings_Mech_Replace_Desc>
 
+    <!-- Genetic Options -->
+    <FantasyBiotech_Settings_MedievalGoJuice_Replace_Title>Medieval Go-Juice</FantasyBiotech_Settings_MedievalGoJuice_Replace_Title>
+    <FantasyBiotech_Settings_MedievalGoJuice_Replace_Desc>Modifies Go-Juice to be a medieval.</FantasyBiotech_Settings_MedievalGoJuice_Replace_Desc>
+
+    <!-- Sanguophage Options -->
     <FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Title>Basic Deathrest Casket</FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Title>
     <FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Desc>Enables a basic casket for deathrest</FantasyBiotech_Settings_BasicDeathrestCasket_Replace_Desc>
 

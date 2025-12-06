@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+		<settings>
+			<li>medievalGoJuice</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/prerequisites/li</xpath>
+					<value>
+						<li>PsychoidBrewing</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/label</xpath>
+					<value>
+						<label>go-juice brewing</label>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/description</xpath>
+					<value>
+						<description>Produce go-juice potion, a combat-performance-enhancing drug which improves shooting, melee, and movement ability, and dulls pain.</description>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="GoJuice"]/label</xpath>
+					<value>
+						<label>go-juice potion</label>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="GoJuice"]/description</xpath>
+					<value>
+						<description>A performance-enhancing drug developed for berserkers. Go-juice blocks pain, increases movement speed, and improves the user's melee and shooting abilities.\n\nThe military chemists who created it were never able to remove its addictiveness. Some saw this as a downside; others saw it as a benefit.</description>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="GoJuice"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="GoJuice"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<li>FueledStove</li>
+					</value>
+				</li>
+
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

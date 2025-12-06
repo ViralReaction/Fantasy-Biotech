@@ -15,10 +15,6 @@
                 <enableIfAnyModActive>
                     <li>Ludeon.RimWorld.Biotech</li>
                 </enableIfAnyModActive>
-                <blockedByQueuedOrActiveQuests>
-                    <li>OpportunitySite_AncientComplex_Mechanitor</li>
-                    <li>MechanitorShip</li>
-                </blockedByQueuedOrActiveQuests>
             </li>
         </value>
     </Operation>
