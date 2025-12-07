@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+		<settings>
+			<li>replaceMechanoids</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_RuleDefs"]/entries/li[contains(.,"SleepingMechanoids")]</xpath>
+					<value>
+						<li>
+							<defName>SleepingMechanoids</defName>
+							<techLevel>Medieval</techLevel>
+						</li>
+					</value>
+				</li>
+
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>
