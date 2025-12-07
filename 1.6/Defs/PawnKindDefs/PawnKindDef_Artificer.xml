@@ -18,11 +18,11 @@
 		<chemicalAddictionChance>0.08</chemicalAddictionChance>
 		<apparelMoney>0~2500</apparelMoney>
 		<apparelTags>
-			<li>IndustrialAdvanced</li>
+			<li>IndustrialBasic</li>
 		</apparelTags>
 		<apparelRequired>
-			<li>Apparel_Duster</li>
-			<li>Apparel_CollarShirt</li>
+			<li>Apparel_Jacket</li>
+			<li>Apparel_BasicShirt</li>
 			<li>Apparel_Pants</li>
 		</apparelRequired>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
@@ -44,6 +44,7 @@
 		<initialResistanceRange>0~1</initialResistanceRange>
 		<requiredWorkTags>
 			<li>Intellectual</li>
+			<li>Crafting</li>
 		</requiredWorkTags>
 		<forcedTraits>
 			<Recluse>0</Recluse>

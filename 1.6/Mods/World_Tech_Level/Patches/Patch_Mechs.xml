@@ -22,4 +22,14 @@
 		</active>
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_PreceptDefs"]/entries/li[contains(.,"MechanoidLabor_Enhanced")]</xpath>
+		<value>
+			<li>
+				<defName>MechanoidLabor_Enhanced</defName>
+				<techLevel>Medieval</techLevel>
+			</li>
+		</value>
+	</Operation>
+
 </Patch>
