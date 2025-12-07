@@ -36,6 +36,7 @@
 					</value>
 				</li>
 
+				<!-- ThingDef GoJuice -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="GoJuice"]/label</xpath>
 					<value>
@@ -47,6 +48,13 @@
 					<xpath>Defs/ThingDef[defName="GoJuice"]/description</xpath>
 					<value>
 						<description>A performance-enhancing drug developed for berserkers. Go-juice blocks pain, increases movement speed, and improves the user's melee and shooting abilities.\n\nThe military chemists who created it were never able to remove its addictiveness. Some saw this as a downside; others saw it as a benefit.</description>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="GoJuice"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Things/Item/Drug/FantasyGoJuice</texPath>
 					</value>
 				</li>
 
