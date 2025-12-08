@@ -303,7 +303,6 @@
 				<defaultProjectile>VR_ColossusSmashProj</defaultProjectile>
 				<forcedMissRadius>1</forcedMissRadius>
 				<warmupTime>4</warmupTime>
-				<soundCast>BotchJob_ColossusRoar</soundCast>
 				<minRange>1</minRange>
 				<burstShotCount>1</burstShotCount>
 				<aimingTargetMote>VR_ColossusSmashTarget</aimingTargetMote>

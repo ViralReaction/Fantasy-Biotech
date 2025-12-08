@@ -2,12 +2,12 @@
 <Defs>
 
 	<ThingDef ParentName="HatMakeableBase">
-		<defName>VR_Apparel_ArtificerGoggles</defName>
-		<label>artificer goggles</label>
-		<description>A simple head-mounted comms computer that slightly enhances a mechanitor's control bandwidth. This allows them to control more mechs.</description>
+		<defName>VR_Apparel_ArtificerMonocle</defName>
+		<label>artificer monocle</label>
+		<description>An arcana infused monocle that slightly enhances an artificers's control bandwidth. This allows them to control more constructs.</description>
 		<techLevel>Medieval</techLevel>
 		<graphicData>
-			<texPath>Things/Pawn/Humanlike/Apparel/ArtificerGoggles/ArtificerGoggles</texPath>
+			<texPath>Things/Pawn/Humanlike/Apparel/ArtificerMonocle/ArtificerMonocle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -39,6 +39,61 @@
 			<displayPriority>700</displayPriority>
 		</recipeMaker>
 		<apparel>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerMonocle/ArtificerMonocle</wornGraphicPath>
+			<renderSkipFlags>
+				<li>None</li>
+			</renderSkipFlags>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<scoreOffset>4</scoreOffset>
+			<mechanitorApparel>true</mechanitorApparel>
+		</apparel>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<ThingDef ParentName="HatMakeableBase">
+		<defName>VR_Apparel_ArtificerGoggles</defName>
+		<label>artificer goggles</label>
+		<description>A pair of arcana infused googles that enhances an artificers's control bandwidth. This allows them to control more constructs.</description>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/ArtificerGoggles/ArtificerGoggles</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<costList>
+			<Steel>60</Steel>
+			<Uranium>50</Uranium>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>VR_StandardConstructTech</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>2100</WorkToMake>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Mass>0.08</Mass>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MechBandwidth>6</MechBandwidth>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<recipeUsers Inherit="False">
+				<li>TableMachining</li>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+			<displayPriority>700</displayPriority>
+		</recipeMaker>
+		<apparel>
 			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerGoggles/ArtificerGoggles</wornGraphicPath>
 			<renderSkipFlags>
 				<li>None</li>
@@ -59,7 +114,7 @@
 	<ThingDef ParentName="HatMakeableBase">
 		<defName>VR_Apparel_ArtificeLordHelmet</defName>
 		<label>artificelord helmet</label>
-		<description>A heavy plasteel-weave helmet packed with mechanitor-assistance gear. The mechlord helmet dramatically amplifies a mechanitor's bandwidth, but is somewhat less protective than dedicated heavy armor.</description>
+		<description>A heavy helmet infused to assist an artificerlord. The artificelord helmet dramatically amplifies an artificers's bandwidth, but is somewhat less protective than dedicated heavy armor.</description>
 		<techLevel>Medieval</techLevel>
 		<graphicData>
 			<texPath>Things/Pawn/Humanlike/Apparel/ArtificerLordHelmet/ArtificerLordHelmet</texPath>
