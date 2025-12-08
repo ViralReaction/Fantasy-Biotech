@@ -140,6 +140,7 @@
 		<race>
 			<body>VR_ConstructBipedal</body>
 			<baseBodySize>4</baseBodySize>
+			<baseHealthScale>4.5</baseHealthScale>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>
@@ -149,7 +150,6 @@
 					<soundCall>Pawn_Mech_Diabolus_Call</soundCall>
 				</li>
 			</lifeStageAges>
-			<baseHealthScale>4.5</baseHealthScale>
 			<detritusLeavings>
 				<li>
 					<def>ChunkMechanoidSlag</def>
@@ -211,8 +211,8 @@
 			<li>
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Mechanoid/Colossus</texPath>
-					<!-- <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Diablo</maskPath> -->
-					<!-- <shaderType>CutoutWithOverlay</shaderType> -->
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Colossus</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3.5</drawSize>
 				</bodyGraphicData>
@@ -227,53 +227,10 @@
 	</PawnKindDef>
 
 	<!-- Melee Colossus -->
-	<ThingDef Name="VR_ConstructColossus_Melee" ParentName="VR_SuperHeavyConstruct">
+	<ThingDef ParentName="VR_ConstructColossus">
 		<defName>VR_Construct_Colossus_Melee</defName>
 		<label>colossus</label>
-		<description>An ultra-heavy construct equipped with a tonal incinerator. Made for breaking lines of enemies, it can cause widespread panic as the ray emitted will detonate raw magika in the near vicinity.</description>
-		<race>
-			<body>VR_ConstructBipedal</body>
-			<baseBodySize>4</baseBodySize>
-			<lifeStageAges>
-				<li>
-					<def>MechanoidFullyFormed</def>
-					<minAge>0</minAge>
-					<soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
-					<soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
-					<soundCall>Pawn_Mech_Diabolus_Call</soundCall>
-				</li>
-			</lifeStageAges>
-			<baseHealthScale>4.5</baseHealthScale>
-			<detritusLeavings>
-				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>3</texOverrideIndex>
-					<spawnChance>0.75</spawnChance>
-				</li>
-				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>17</texOverrideIndex>
-					<spawnChance>0.75</spawnChance>
-				</li>
-				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>1</texOverrideIndex>
-					<spawnChance>0.75</spawnChance>
-				</li>
-			</detritusLeavings>
-		</race>
-		<tools>
-			<li>
-				<label>head</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>18</power>
-				<cooldownTime>2.6</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-			</li>
-		</tools>
+		<description>An ultra-heavy construct equipped with a colossal axe. Made for breaking lines of enemies, it can cause widespread panic as it can level a building in a single swipe.</description>
 		<comps>
 			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.AnimalBehaviours.CompProperties_Draftable">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
@@ -320,14 +277,6 @@
 				<commonality>0.35</commonality>
 			</li>
 		</verbs>
-		<statBases>
-			<BandwidthCost>5</BandwidthCost>
-			<EMPResistance>0.6</EMPResistance>
-			<MoveSpeed>2.4</MoveSpeed>
-		</statBases>
-		<killedLeavingsPlayerHostile>
-			<VR_PowerchipBasic>1</VR_PowerchipBasic>
-		</killedLeavingsPlayerHostile>
 	</ThingDef>
 
 	<PawnKindDef ParentName="VR_ConstructColossusKind">
@@ -359,6 +308,7 @@
 		<race>
 			<body>VR_Construct_Queen</body>
 			<baseBodySize>4</baseBodySize>
+			<baseHealthScale>5.2</baseHealthScale>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>
@@ -368,7 +318,6 @@
 					<soundCall>Pawn_Mech_Warqueen_Call</soundCall>
 				</li>
 			</lifeStageAges>
-			<baseHealthScale>5.2</baseHealthScale>
 			<dutyBoss>Warqueen</dutyBoss>
 			<detritusLeavings>
 				<li>

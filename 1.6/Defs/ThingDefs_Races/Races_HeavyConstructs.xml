@@ -21,7 +21,8 @@
 		</tools>
 		<race>
 			<body>VR_ConstructBipedal</body>
-			<baseHealthScale>1.32</baseHealthScale>
+			<baseBodySize>1.6</baseBodySize>
+			<baseHealthScale>2.16</baseHealthScale>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>
@@ -56,7 +57,7 @@
 		<defName>VR_Construct_Centurion</defName>
 		<label>centurion (melee)</label>
 		<race>VR_Construct_Centurion</race>
-		<combatPower>150</combatPower>
+		<combatPower>250</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -130,7 +131,7 @@
 		<defName>VR_Construct_Centurion_Burner</defName>
 		<label>centurion (burner)</label>
 		<race>VR_Construct_Centurion_Burner</race>
-		<combatPower>150</combatPower>
+		<combatPower>300</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -162,7 +163,7 @@
 		<defName>VR_Construct_Centurion_Shooter</defName>
 		<label>centurion (ranged)</label>
 		<race>VR_Construct_Centurion_Shooter</race>
-		<combatPower>150</combatPower>
+		<combatPower>250</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
