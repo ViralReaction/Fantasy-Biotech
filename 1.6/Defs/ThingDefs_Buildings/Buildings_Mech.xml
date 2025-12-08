@@ -147,6 +147,7 @@
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
 		</comps>
+		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
 	<ThingDef ParentName="VR_MechGestatorBase">
@@ -269,6 +270,7 @@
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
 		</comps>
+		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
 	<ThingDef ParentName="BenchBase">
@@ -393,6 +395,7 @@
 		</comps>
 		<tickerType>Normal</tickerType>
 		<drawerType>MapMeshAndRealTime</drawerType>
+		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
 	<ThingDef ParentName="VR_SubcoreScannerSteamBase">
@@ -561,6 +564,84 @@
 			<li>PlaceWorker_BandNode</li>
 		</placeWorkers>
 		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+	    <defName>VR_MechBooster_Steam</defName>
+	    <label>construct booster</label>
+	    <description>A remote energy and enhancement device. Any friendly constructs in its effect radius will move and work faster.</description>
+	    <tickerType>Normal</tickerType>
+	    <drawerType>RealtimeOnly</drawerType>
+	    <fillPercent>0.4</fillPercent>
+	    <graphicData>
+	      <texPath>Things/Building/Power/MechBooster_Steam</texPath>
+	      <graphicClass>Graphic_Single</graphicClass>
+	      <drawSize>(2,2)</drawSize>
+	      <shadowData>
+	        <volume>(0.8, 0.35, 0.8)</volume>
+	        <offset>(0, 0, -0.2)</offset>
+	      </shadowData>
+	      <addTopAltitudeBias>true</addTopAltitudeBias>
+	    </graphicData>
+	    <altitudeLayer>Building</altitudeLayer>
+	    <passability>PassThroughOnly</passability>
+	    <building>
+	      <ai_chillDestination>false</ai_chillDestination>
+	      <buildingTags>
+	        <li>Biotech</li>
+	      </buildingTags>
+	    </building>
+	    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+	    <designationCategory>VR_Artifice</designationCategory>
+	    <uiOrder>2420</uiOrder>
+	    <minifiedDef>MinifiedThing</minifiedDef>
+	    <rotatable>false</rotatable>
+	    <thingCategories>
+		    <li>BuildingsMisc</li>
+	    </thingCategories>
+	    <statBases>
+		    <MaxHitPoints>150</MaxHitPoints>
+		    <WorkToBuild>8000</WorkToBuild>
+		    <Mass>25</Mass>
+
+		    <Flammability>0.5</Flammability>
+	    </statBases>
+	    <size>(2,2)</size>
+	    <costList>
+		    <Steel>100</Steel>
+		    <Uranium>40</Uranium>
+		    <VR_TonalCoreRegular>1</VR_TonalCoreRegular>
+	    </costList>
+	    <researchPrerequisites>
+		    <li>VR_HighConstructTech</li>
+	    </researchPrerequisites>
+	    <comps>
+		    <li Class="PipeSystem.CompProperties_ResourceTrader">
+			    <compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+			    <pipeNet>VR_SteamNet</pipeNet>
+			    <consumptionPerTick>5</consumptionPerTick>
+			    <idleConsumptionPerTick>1</idleConsumptionPerTick>
+		    </li>
+		    <li Class="CompProperties_Power">
+			    <transmitsPower>false</transmitsPower>
+			    <!-- Specify the comp class -->
+			    <compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
+			    <basePowerConsumption>-1000</basePowerConsumption>
+		    </li>
+		    <li Class="CompProperties_CauseHediff_AoE">
+		        <range>9.9</range>
+		        <onlyTargetMechs>true</onlyTargetMechs>
+		        <hediff>MechBoost</hediff>
+		        <activeSound>MechBooster_Working</activeSound>
+		      </li>
+			<li Class="CompProperties_Flickable"/>
+	    </comps>
+	    <placeWorkers>
+		    <li>PlaceWorker_ShowCauseHediffAoE</li>
+	    </placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
 </Defs>

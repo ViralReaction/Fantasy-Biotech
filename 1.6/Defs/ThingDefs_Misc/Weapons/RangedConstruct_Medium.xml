@@ -147,7 +147,7 @@
 		<label>lightning gun</label>
 		<description>An experimental minituraized version of device seen in larger constructs. It emits a dangerous blast of electrical energy.</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/Teslacannon</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/MiniTeslacannon</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>

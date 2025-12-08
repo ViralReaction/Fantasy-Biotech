@@ -3,12 +3,12 @@
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>VR_BurnoutConstructLinkBooster_Large</defName>
-		<label>large construct band antenna</label>
+		<label>construct band dish</label>
 		<description>A mech-band signaling device. When activated, it puts out a powerful mech signal pulse, which will attract an ultra-heavy feral mechanoid to attack with its escorts. If you can defeat it, you can collect special technologies from its corpse. The signal pulse burns out the transmitter, so this building can only be used once.</description>
 		<graphicData>
-			<texPath>Things/Building/Misc/MechbandAntenna_Steam/MechbandAntenna_Steam</texPath>
+			<texPath>Things/Building/Misc/MechbandDish_Steam/MechbandDish_Steam</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(4,2)</drawSize>
+			<drawSize>(2,2)</drawSize>
 			<shadowData>
 				<volume>(3.7, 1.75, 0.8)</volume>
 				<offset>(0.15, 0, 0)</offset>
@@ -31,7 +31,7 @@
 			<Mass>25</Mass>
 			<Flammability>0.5</Flammability>
 		</statBases>
-		<size>(4,2)</size>
+		<size>(2,2)</size>
 		<costList>
 			<Steel>150</Steel>
 			<VR_TonalCoreHigh>2</VR_TonalCoreHigh>
@@ -141,7 +141,7 @@
 		<description>Allows radio contact with other factions and orbital traders.</description>
 		<thingClass>FantasyBiotech.Building_CommsConsole_Steam</thingClass>
 		<graphicData>
-			<texPath>Things/Building/Misc/MechbandDish_Steam/MechbandDish_Steam</texPath>
+			<texPath>Things/Building/Misc/CommsConsole_Steam/CommsConsole_Steam</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(3,3)</drawSize>
 			<shadowData>

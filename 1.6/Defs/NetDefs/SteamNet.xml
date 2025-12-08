@@ -132,6 +132,7 @@
 		<researchPrerequisites>
 			<li>VR_SteamPower</li>
 		</researchPrerequisites>
+		<uiOrder>1</uiOrder>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -207,6 +208,7 @@
 		<researchPrerequisites>
 			<li>VR_SteamPower</li>
 		</researchPrerequisites>
+		<uiOrder>2</uiOrder>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -280,7 +282,7 @@
 		<description>A large storage tank meant for storing pressurized steam delivered via a pipe network.</description>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Building/Power/SteamTank/SteamTank</texPath>
+			<texPath>Things/Building/Power/SteamTank/SteamTankLarge</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(2,4)</drawSize>
 			<damageData>
@@ -421,7 +423,7 @@
 		<thingClass>FantasyBiotech.Building_SteamGenerator</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
-			<texPath>Things/Building/Power/SteamGenerator</texPath>
+			<texPath>Things/Building/Power/SteamGeneratorLarge</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(3,3)</drawSize>
 			<shadowData>
