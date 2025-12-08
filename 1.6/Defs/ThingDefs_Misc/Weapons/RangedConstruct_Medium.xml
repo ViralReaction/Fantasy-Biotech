@@ -16,25 +16,6 @@
 				<cooldownTime>2.6</cooldownTime>
 			</li>
 		</tools>
-		<modExtensions>
-			<li Class="VEF.Things.ThingDefExtension">
-				<weaponDraftedDrawOffsets>
-					<north>
-						<drawOffset>(-0.15,0.0,0.10)</drawOffset>
-						<angleOffset>60</angleOffset>
-					</north>
-					<east>
-						<drawOffset>(-0.10,0.00,0.10)</drawOffset>
-					</east>
-					<south>
-						<drawOffset>(0.15,0.00,0.10)</drawOffset>
-					</south>
-					<west>
-						<drawOffset>(0.10,0.0,0.10)</drawOffset>
-					</west>
-				</weaponDraftedDrawOffsets>
-			</li>
-		</modExtensions>
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
@@ -71,6 +52,26 @@
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
+		<equippedDistanceOffset>-0.14</equippedDistanceOffset>
+		<modExtensions>
+			<li Class="VEF.Things.ThingDefExtension">
+				<weaponDraftedDrawOffsets>
+					<north>
+						<drawOffset>(0.00,0.0,0.10)</drawOffset>
+						<angleOffset>60</angleOffset>
+					</north>
+					<east>
+						<drawOffset>(-0.20,0.00,0.00)</drawOffset>
+					</east>
+					<south>
+						<drawOffset>(0.15,0.00,0.00)</drawOffset>
+					</south>
+					<west>
+						<drawOffset>(0.20,0.0,0.00)</drawOffset>
+					</west>
+				</weaponDraftedDrawOffsets>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
@@ -140,6 +141,26 @@
 				<cooldownTime>2.6</cooldownTime>
 			</li>
 		</tools>
+		<equippedDistanceOffset>-0.14</equippedDistanceOffset>
+		<modExtensions>
+			<li Class="VEF.Things.ThingDefExtension">
+				<weaponDraftedDrawOffsets>
+					<north>
+						<drawOffset>(-0.15,0.0,-0.10)</drawOffset>
+						<angleOffset>60</angleOffset>
+					</north>
+					<east>
+						<drawOffset>(-0.30,0.00,0.00)</drawOffset>
+					</east>
+					<south>
+						<drawOffset>(0.00,0.00,0.00)</drawOffset>
+					</south>
+					<west>
+						<drawOffset>(0.30,0.0,0.00)</drawOffset>
+					</west>
+				</weaponDraftedDrawOffsets>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="VR_MediumConstructGun">
@@ -149,6 +170,7 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MiniTeslacannon</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
 		</graphicData>
 		<statBases>
 			<MarketValue>1000</MarketValue>
@@ -174,6 +196,26 @@
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
+		<equippedDistanceOffset>-0.14</equippedDistanceOffset>
+		<modExtensions>
+			<li Class="VEF.Things.ThingDefExtension">
+				<weaponDraftedDrawOffsets>
+					<north>
+						<drawOffset>(-0.15,0.0,-0.10)</drawOffset>
+						<angleOffset>60</angleOffset>
+					</north>
+					<east>
+						<drawOffset>(-0.30,0.00,0.00)</drawOffset>
+					</east>
+					<south>
+						<drawOffset>(0.00,0.00,0.00)</drawOffset>
+					</south>
+					<west>
+						<drawOffset>(0.30,0.0,0.00)</drawOffset>
+					</west>
+				</weaponDraftedDrawOffsets>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseBullet">
