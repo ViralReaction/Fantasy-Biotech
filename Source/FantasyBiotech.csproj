@@ -41,7 +41,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_AbilitySteamBurst.cs" />
     <Compile Include="FantasyBiotech\Comps\CompTempControl_Steam.cs" />
+    <Compile Include="FantasyBiotech\Comps\Comp_AbilitySteamBurst.cs" />
     <Compile Include="FantasyBiotech\Defs\BossGroupExtension.cs" />
     <Compile Include="FantasyBiotech\Dialogs\Dialog_CreateGenepack.cs" />
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />

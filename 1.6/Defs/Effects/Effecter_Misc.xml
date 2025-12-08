@@ -12,4 +12,39 @@
         </children>
     </EffecterDef>
 
+    <EffecterDef>
+        <defName>VR_Steam_Burst</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.15</positionRadius>
+                <fleckDef>VR_SteamSpew_A</fleckDef>
+                <chancePerTick>1</chancePerTick>
+                <speed>9.5</speed>
+                <scale>0.8~1.2</scale>
+                <angle>0~360</angle>
+                <positionLerpFactor>0.85</positionLerpFactor>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.1</positionRadius>
+                <fleckDef>VR_SteamSpew_Base</fleckDef>
+                <chancePerTick>1</chancePerTick>
+                <speed>0.6</speed>
+                <scale>0.8</scale>
+                <angle>0~360</angle>
+                <positionLerpFactor>0.75</positionLerpFactor>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.2</positionRadius>
+                <fleckDef>FireSpew_Glow</fleckDef>
+                <chancePerTick>0.16</chancePerTick>
+                <positionLerpFactor>0.65</positionLerpFactor>
+            </li>
+        </children>
+    </EffecterDef>
+
 </Defs>

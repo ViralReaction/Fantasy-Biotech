@@ -222,7 +222,7 @@
 			<li>Construct_GiantTeslaCannon</li>
 		</weaponTags>
 		<abilities>
-			<li>FireBurst</li>
+			<li>VR_SteamBurst</li>
 		</abilities>
 	</PawnKindDef>
 
@@ -316,8 +316,8 @@
 				<range>5</range>
 				<muzzleFlashScale>0</muzzleFlashScale>
 				<label>colossus smash</label>
-				<commandIcon>UI/Icons/Misc/BotchJob_ColossusSmashIcon</commandIcon>
-				<commonality>0.5</commonality>
+				<commandIcon>Things/Item/Equipment/WeaponMelee/ColossusAxe</commandIcon>
+				<commonality>0.35</commonality>
 			</li>
 		</verbs>
 		<statBases>

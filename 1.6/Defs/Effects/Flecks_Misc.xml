@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <EffecterDef>
+        <defName>VR_Steam_Burst_Warmup</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.1</positionRadius>
+                <moteDef>Mote_SparkThrownFast</moteDef>
+                <chancePerTick>1</chancePerTick>
+                <speed>3.3~5</speed>
+                <scale>0.1~0.2</scale>
+                <angle>0~360</angle>
+                <positionLerpFactor>0.65</positionLerpFactor>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <!-- <li> -->
+            <!--     <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
+            <!--     <positionRadius>0.15</positionRadius> -->
+            <!--     <fleckDef>FuelSpray</fleckDef> -->
+            <!--     <chancePerTick>1</chancePerTick> -->
+            <!--     <speed>6.5</speed> -->
+            <!--     <scale>0.8~1.2</scale> -->
+            <!--     <angle>0~360</angle> -->
+            <!--     <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity> -->
+            <!--     <spawnLocType>OnSource</spawnLocType> -->
+            <!-- </li> -->
+            <li>
+                <subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+                <soundDef>FireBurst_Warmup</soundDef>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>VR_SteamSpew_A</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.2</fadeInTime>
+        <solidTime>0.4</solidTime>
+        <fadeOutTime>0.2</fadeOutTime>
+        <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+        <rotateTowardsMoveDirectionExtraAngle>-90</rotateTowardsMoveDirectionExtraAngle>
+        <graphicData>
+            <graphicClass>Graphic_FleckPulse</graphicClass>
+            <shaderType>GlowAnimated</shaderType>
+            <texPath>Things/Mote/SteamSpew_a</texPath>
+            <shaderParameters>
+                <_NumFrames>5</_NumFrames>
+                <_FramesPerSec>7</_FramesPerSec>
+            </shaderParameters>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+    </FleckDef>
+
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>VR_SteamSpew_Base</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.2</fadeInTime>
+        <solidTime>0.2</solidTime>
+        <fadeOutTime>0.1</fadeOutTime>
+        <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+        <graphicData>
+            <graphicClass>Graphic_FleckPulse</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <texPath>Things/Mote/FireSpew_Base</texPath>
+            <drawSize>(1.25, 2.5)</drawSize>
+        </graphicData>
+    </FleckDef>
+
+</Defs>
