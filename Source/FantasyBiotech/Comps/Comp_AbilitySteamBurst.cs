@@ -12,7 +12,7 @@ namespace FantasyBiotech
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            GenExplosion.DoExplosion(Pawn.Position, Pawn.MapHeld, Props.radius, DamageDefOf.Burn, Pawn, Props.damage, Props.armorPen, null, null, null, null, null, 1f, 1, null, null, 255, applyDamageToExplosionCellsNeighbors: false, null, 0f, 1, 1f, damageFalloff: false, null, null, null, doVisualEffects: false, 0.6f);
+            GenExplosion.DoExplosion(Pawn.Position, Pawn.MapHeld, Props.radius, DamageDefOf.Burn, Pawn, Props.damage, Props.armorPen, null, null, null, null, null, 1f, 1, null, null, 255, applyDamageToExplosionCellsNeighbors: false, null, 0f, 1, 0f, damageFalloff: false, null, null, null, doVisualEffects: false, 0.6f);
             base.Apply(target, dest);
         }
 
