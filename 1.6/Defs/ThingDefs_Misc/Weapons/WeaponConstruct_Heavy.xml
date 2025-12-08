@@ -18,7 +18,7 @@
 		</graphicData>
 		<statBases>
 			<WorkToMake>14000</WorkToMake>
-			<Mass>2.5</Mass>
+			<Mass>20</Mass>
 		</statBases>
 		<weaponTags>
 			<li>VR_Construct_SteamSword_Heavy</li>
@@ -68,7 +68,7 @@
 		</graphicData>
 		<statBases>
 			<WorkToMake>14000</WorkToMake>
-			<Mass>2.5</Mass>
+			<Mass>20</Mass>
 		</statBases>
 		<weaponTags>
 			<li>VR_Construct_SteamHammer_Heavy</li>
@@ -108,7 +108,7 @@
 		</graphicData>
 		<statBases>
 			<WorkToMake>14000</WorkToMake>
-			<Mass>2.5</Mass>
+			<Mass>20</Mass>
 		</statBases>
 		<weaponTags>
 			<li>VR_Construct_StakeDriver_Heavy</li>

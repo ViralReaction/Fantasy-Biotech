@@ -46,7 +46,7 @@
 		</graphicData>
 		<statBases>
 			<WorkToMake>14000</WorkToMake>
-			<Mass>2.5</Mass>
+			<Mass>10</Mass>
 		</statBases>
 		<weaponTags>
 			<li>VR_Construct_SteamSword</li>
@@ -95,7 +95,7 @@
 		</graphicData>
 		<statBases>
 			<WorkToMake>14000</WorkToMake>
-			<Mass>2.5</Mass>
+			<Mass>10</Mass>
 		</statBases>
 		<weaponTags>
 			<li>VR_Construct_SteamHammer</li>
@@ -135,7 +135,7 @@
 		</graphicData>
 		<statBases>
 			<WorkToMake>14000</WorkToMake>
-			<Mass>2.5</Mass>
+			<Mass>10</Mass>
 		</statBases>
 		<weaponTags>
 			<li>VR_Construct_SteamLance</li>
