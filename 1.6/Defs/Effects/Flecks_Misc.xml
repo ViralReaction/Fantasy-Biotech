@@ -67,5 +67,19 @@
             <drawSize>(1.25, 2.5)</drawSize>
         </graphicData>
     </FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>VR_SteamBlast</defName>
+        <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+		<fadeInTime>0.05</fadeInTime>
+		<fadeOutTime>0.4</fadeOutTime>
+		<solidTime>0.2</solidTime>
+		<growthRate>2</growthRate>
+		<graphicData>
+		  <texPath>Things/Mote/SteamColossusSteamBlast</texPath>
+		  <shaderType>MoteGlow</shaderType>
+		  <drawSize>(2, 2)</drawSize>
+		</graphicData>
+	  </FleckDef>
 
 </Defs>
