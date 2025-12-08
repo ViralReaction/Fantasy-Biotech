@@ -208,7 +208,7 @@
 		<label>scarab</label>
 		<description>A small, deployable combat construct that are usually deployed from a Scarab Queen. Scarabs are expendable fighters designed to swarm-attack enemies.</description>
 		<statBases>
-			<MoveSpeed>4.2</MoveSpeed>
+			<MoveSpeed>3</MoveSpeed>
 		</statBases>
 		<tools>
 			<li>
