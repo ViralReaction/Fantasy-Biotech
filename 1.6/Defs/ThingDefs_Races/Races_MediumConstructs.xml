@@ -60,7 +60,7 @@
 	</ThingDef>
 
 	<!-- Scyther Equivalent -->
-	<ThingDef ParentName="VR_SphereBase">
+	<ThingDef Name="VR_Construct_Sphere_Melee_ThingDefBase" ParentName="VR_SphereBase">
 		<defName>VR_Construct_Sphere_Melee</defName>
 		<label>sphere (melee)</label>
 		<description>Construct that is intentionally designed for combat. Mostly seen carrying a variety of melee weapons, but occasionally can be equipped with ranged weapons.</description>
@@ -69,7 +69,7 @@
 		</statBases>
 	</ThingDef>
 
-	<PawnKindDef ParentName="VR_BaseConstructKind">
+	<PawnKindDef Name="VR_Construct_Sphere_Melee_Base" ParentName="VR_BaseConstructKind">
 		<defName>VR_Construct_Sphere_Melee</defName>
 		<label>sphere (melee)</label>
 		<race>VR_Construct_Sphere_Melee</race>
@@ -101,6 +101,46 @@
 				<isConstruct>true</isConstruct>
 			</li>
 		</modExtensions>
+	</PawnKindDef>
+
+	<!-- Crafting -->
+	<ThingDef ParentName="VR_Construct_Sphere_Melee_ThingDefBase">
+		<defName>VR_Construct_Sphere_Melee_Sword</defName>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_Construct_Sphere_Melee_Base">
+		<defName>VR_Construct_Sphere_Melee_Sword</defName>
+		<label>sphere (sword)</label>
+		<race>VR_Construct_Sphere_Melee_Sword</race>
+		<weaponTags Inherit="False">
+			<li>VR_Construct_SteamSword</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<ThingDef ParentName="VR_Construct_Sphere_Melee_ThingDefBase">
+		<defName>VR_Construct_Sphere_Melee_Hammer</defName>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_Construct_Sphere_Melee_Base">
+		<defName>VR_Construct_Sphere_Melee_Hammer</defName>
+		<label>sphere (hammer)</label>
+		<race>VR_Construct_Sphere_Melee_Hammer</race>
+		<weaponTags Inherit="False">
+			<li>VR_Construct_SteamHammer</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<ThingDef ParentName="VR_Construct_Sphere_Melee_ThingDefBase">
+		<defName>VR_Construct_Sphere_Melee_Lance</defName>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_Construct_Sphere_Melee_Base">
+		<defName>VR_Construct_Sphere_Melee_Lance</defName>
+		<label>sphere (lance)</label>
+		<race>VR_Construct_Sphere_Melee_Lance</race>
+		<weaponTags Inherit="False">
+			<li>VR_Construct_SteamLance</li>
+		</weaponTags>
 	</PawnKindDef>
 
 	<!-- Lancer Equivalent -->

@@ -6,9 +6,7 @@
 		<researchPrerequisite>VR_StandardConstructTech</researchPrerequisite>
 	</RecipeDef>
 
-	<RecipeDef ParentName="VR_MediumConstructRecipe">
-		<defName>VR_Construct_Sphere_Melee</defName>
-		<label>gestate melee sphere</label>
+	<RecipeDef Name="VR_Construct_Sphere_Melee_RecipeBase" ParentName="VR_MediumConstructRecipe" Abstract="True">
 		<description>Gestate a melee sphere construct.</description>
 		<ingredients Inherit="False">
 			<li>
@@ -44,11 +42,37 @@
 				<count>1</count>
 			</li>
 		</ingredients>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
+		<defName>VR_Construct_Sphere_Melee_Sword</defName>
+		<label>gestate melee sphere (sword)</label>
 		<products>
-			<VR_Construct_Sphere_Melee>1</VR_Construct_Sphere_Melee>
+			<VR_Construct_Sphere_Melee_Sword>1</VR_Construct_Sphere_Melee_Sword>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>VR_Construct_Sphere_Melee</ThingDef>
+			<ThingDef>VR_Construct_Sphere_Melee_Sword</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
+		<defName>VR_Construct_Sphere_Melee_Hammer</defName>
+		<label>gestate melee sphere (hammer)</label>
+		<products>
+			<VR_Construct_Sphere_Melee_Hammer>1</VR_Construct_Sphere_Melee_Hammer>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Sphere_Melee_Hammer</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
+		<defName>VR_Construct_Sphere_Melee_Lance</defName>
+		<label>gestate melee sphere (lance)</label>
+		<products>
+			<VR_Construct_Sphere_Melee_Lance>1</VR_Construct_Sphere_Melee_Lance>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Sphere_Melee_Lance</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 

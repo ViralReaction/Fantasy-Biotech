@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Scyther Equivalent -->
+	<!-- Scyther Equivalent -->
 	<ThingDef ParentName="VR_HeavyConstruct" Name="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion</defName>
 		<label>centurion (melee)</label>
@@ -48,11 +48,11 @@
 			</detritusLeavings>
 		</race>
 		<statBases>
-			<BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">2</BandwidthCost>
+			<BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">4</BandwidthCost>
 		</statBases>
 	</ThingDef>
 
-	<PawnKindDef ParentName="VR_HeavyConstructKind">
+	<PawnKindDef Name="VR_HeavyConstructKind_CenturionMeleeBase" ParentName="VR_HeavyConstructKind">
 		<defName>VR_Construct_Centurion</defName>
 		<label>centurion (melee)</label>
 		<race>VR_Construct_Centurion</race>
@@ -80,12 +80,52 @@
 		<techHediffsChance>1</techHediffsChance>
 		<techHediffsMoney>9999~9999</techHediffsMoney>
 	</PawnKindDef>
-	
+
+	<!-- Crafting -->
+	<ThingDef ParentName="VR_Construct_Centurion">
+		<defName>VR_Construct_Centurion_Sword</defName>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_HeavyConstructKind_CenturionMeleeBase">
+		<defName>VR_Construct_Centurion_Sword</defName>
+		<label>centurion (sword)</label>
+		<race>VR_Construct_Centurion_Sword</race>
+		<weaponTags Inherit="False">
+			<li>VR_Construct_SteamSword_Heavy</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<ThingDef ParentName="VR_Construct_Centurion">
+		<defName>VR_Construct_Centurion_Hammer</defName>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_HeavyConstructKind_CenturionMeleeBase">
+		<defName>VR_Construct_Centurion_Hammer</defName>
+		<label>centurion (hammer)</label>
+		<race>VR_Construct_Centurion_Hammer</race>
+		<weaponTags Inherit="False">
+			<li>VR_Construct_SteamHammer_Heavy</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<ThingDef ParentName="VR_Construct_Centurion">
+		<defName>VR_Construct_Centurion_StakeDriver</defName>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_HeavyConstructKind_CenturionMeleeBase">
+		<defName>VR_Construct_Centurion_StakeDriver</defName>
+		<label>centurion (stakedriver)</label>
+		<race>VR_Construct_Centurion_StakeDriver</race>
+		<weaponTags Inherit="False">
+			<li>VR_Construct_StakeDriver_Heavy</li>
+		</weaponTags>
+	</PawnKindDef>
+
 	<ThingDef ParentName="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion_Burner</defName>
 		<label>centurion (burner)</label>
 	</ThingDef>
-	
+
 	<PawnKindDef ParentName="VR_HeavyConstructKind">
 		<defName>VR_Construct_Centurion_Burner</defName>
 		<label>centurion (burner)</label>
@@ -112,12 +152,12 @@
 		<techHediffsChance>1</techHediffsChance>
 		<techHediffsMoney>9999~9999</techHediffsMoney>
 	</PawnKindDef>
-	
+
 	<ThingDef ParentName="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion_Shooter</defName>
 		<label>centurion (ranged)</label>
 	</ThingDef>
-	
+
 	<PawnKindDef ParentName="VR_HeavyConstructKind">
 		<defName>VR_Construct_Centurion_Shooter</defName>
 		<label>centurion (ranged)</label>

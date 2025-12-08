@@ -74,6 +74,9 @@
 				<li>Corpse_VR_Construct_Ballistae</li>
 				<li>Corpse_VR_Construct_Scorcher</li>
 				<li>Corpse_VR_Construct_Sphere_Melee</li>
+				<li>Corpse_VR_Construct_Sphere_Melee_Sword</li>
+				<li>Corpse_VR_Construct_Sphere_Melee_Hammer</li>
+				<li>Corpse_VR_Construct_Sphere_Melee_Lance</li>
 				<li>Corpse_VR_Construct_Sphere_Range</li>
 				<li>Corpse_VR_Construct_Tesseron</li>
 			</thingDefs>
@@ -105,6 +108,9 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Corpse_VR_Construct_Centurion</li>
+				<li>Corpse_VR_Construct_Centurion_Sword</li>
+				<li>Corpse_VR_Construct_Centurion_Hammer</li>
+				<li>Corpse_VR_Construct_Centurion_StakeDriver</li>
 				<li>Corpse_VR_Construct_Centurion_Burner</li>
 				<li>Corpse_VR_Construct_Centurion_Shooter</li>
 			</thingDefs>

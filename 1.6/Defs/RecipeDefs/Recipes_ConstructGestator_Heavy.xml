@@ -5,9 +5,7 @@
 		<gestationCycles>4</gestationCycles>
 	</RecipeDef>
 
-	<RecipeDef ParentName="VR_HeavyConstructRecipe">
-		<defName>VR_Construct_Centurion</defName>
-		<label>gestate centurion</label>
+	<RecipeDef Name="VR_Construct_Centurion_RecipeBase" ParentName="VR_HeavyConstructRecipe" Abstract="True">
 		<description>Gestate a centurion construct.</description>
 		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
 		<ingredients Inherit="False">
@@ -44,11 +42,37 @@
 				<count>1</count>
 			</li>
 		</ingredients>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
+		<defName>VR_Construct_Centurion_Melee_Sword</defName>
+		<label>gestate melee centurion (sword)</label>
 		<products>
-			<VR_Construct_Centurion>1</VR_Construct_Centurion>
+			<VR_Construct_Centurion_Sword>1</VR_Construct_Centurion_Sword>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>VR_Construct_Centurion</ThingDef>
+			<ThingDef>VR_Construct_Centurion_Sword</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
+		<defName>VR_Construct_Centurion_Melee_Hammer</defName>
+		<label>gestate melee centurion (hammer)</label>
+		<products>
+			<VR_Construct_Centurion_Hammer>1</VR_Construct_Centurion_Hammer>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Centurion_Hammer</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
+		<defName>VR_Construct_Centurion_Melee_StakeDriver</defName>
+		<label>gestate melee centurion (stakedriver)</label>
+		<products>
+			<VR_Construct_Centurion_StakeDriver>1</VR_Construct_Centurion_StakeDriver>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Centurion_StakeDriver</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 	
