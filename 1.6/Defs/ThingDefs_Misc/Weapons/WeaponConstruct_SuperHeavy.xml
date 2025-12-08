@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="VR_ConstructMeleeWeapon_SuperHeavy" ParentName="BaseWeapon" Abstract="True">
+		<weaponClasses>
+			<li>Melee</li>
+		</weaponClasses>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+		<modExtensions>
+			<li Class="VEF.Things.ThingDefExtension">
+				<weaponCarryDrawOffsets>
+					<north>
+						<drawOffset>(-0.15,0.0,0.10)</drawOffset>
+						<angleOffset>160</angleOffset>
+					</north>
+					<east>
+						<drawOffset>(-0.10,0.00,0.10)</drawOffset>
+						<angleOffset>-60</angleOffset>
+					</east>
+					<south>
+						<drawOffset>(0.15,0.00,0.10)</drawOffset>
+						<angleOffset>-60</angleOffset>
+					</south>
+					<west>
+						<drawOffset>(0.10,0.0,0.10)</drawOffset>
+						<angleOffset>60</angleOffset>
+					</west>
+				</weaponCarryDrawOffsets>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<!-- Scyther Blade -->
+	<ThingDef ParentName="VR_ConstructMeleeWeapon_SuperHeavy">
+		<defName>VR_Construct_ColossusAxe</defName>
+		<label>colossus axe</label>
+		<description>colossus axe</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/ColossusAxe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>3.0</drawSize>
+		</graphicData>
+		<uiIconScale>0.35</uiIconScale>
+		<statBases>
+			<WorkToMake>14000</WorkToMake>
+			<Mass>50</Mass>
+		</statBases>
+		<weaponTags>
+			<li>VR_Construct_ColossusAxe</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Demolish</li>
+				</capacities>
+				<power>32</power>
+				<armorPenetration>0.50</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+	</ThingDef>
+
+</Defs>

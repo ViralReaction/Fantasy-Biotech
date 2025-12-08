@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DamageDef>
+		<defName>VR_ColossusSmash</defName>
+		<label>colossus smash</label>
+		<canInterruptJobs>true</canInterruptJobs>
+		<makesBlood>true</makesBlood>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<soundExplosion>ThumpCannon_Impact</soundExplosion>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<deathMessage>{0} has been killed by a colossus smash.</deathMessage>
+		<hediff>Shredded</hediff>
+		<armorCategory>Blunt</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>40</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<buildingDamageFactorImpassable>5</buildingDamageFactorImpassable>
+		<buildingDamageFactorPassable>5</buildingDamageFactorPassable>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<explosionCellFleck>DustPuffThick</explosionCellFleck>
+		<explosionColorCenter>(0.87, 0.66, 0.47)</explosionColorCenter>
+		<explosionColorEdge>(0.95, 0.69, 0.45)</explosionColorEdge>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+	</DamageDef>
+
+</Defs>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseProjectileNeolithic">
+        <defName>VR_ColossusSmashProj</defName>
+        <label>colossus smash</label>
+        <graphicData>
+            <texPath>Things/Projectile/VR_Invisible</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>VR_ColossusSmash</damageDef>
+            <explosionRadius>2.5</explosionRadius>
+            <screenShakeFactor>2</screenShakeFactor>
+            <explosionEffect>VR_ColossusSmashEffect</explosionEffect>
+            <speed>30</speed>
+        </projectile>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>VR_ColossusSmashMoteInner</defName>
+        <graphicData>
+            <texPath>Things/Mote/SteamColossusSmashMoteInner</texPath>
+            <shaderType>Mote</shaderType>
+            <drawSize>3</drawSize>
+        </graphicData>
+        <altitudeLayer>MoteLow</altitudeLayer>
+        <drawOffscreen>true</drawOffscreen>
+        <mote>
+            <fadeInTime>0.1</fadeInTime>
+            <solidTime>1</solidTime>
+            <fadeOutTime>2</fadeOutTime>
+        </mote>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>VR_ColossusSmashTarget</defName>
+        <thingClass>MoteAttached</thingClass>
+        <altitudeLayer>MoteLow</altitudeLayer>
+        <drawOffscreen>true</drawOffscreen>
+        <mote>
+            <fadeInTime>2</fadeInTime>
+            <solidTime>0.1</solidTime>
+            <fadeOutTime>1.5</fadeOutTime>
+            <needsMaintenance>true</needsMaintenance>
+        </mote>
+        <graphicData>
+            <graphicClass>Graphic_MotePulse</graphicClass>
+            <texPath>Things/Mote/SteamGearTargetArray</texPath>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>6</drawSize>
+        </graphicData>
+    </ThingDef>
+
+</Defs>

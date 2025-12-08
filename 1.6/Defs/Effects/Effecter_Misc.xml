@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <EffecterDef>
+        <defName>VR_ColossusSmashEffect</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>VR_ColossusSmashMoteInner</moteDef>
+                <scale>2~2</scale>
+            </li>
+        </children>
+    </EffecterDef>
+
+</Defs>

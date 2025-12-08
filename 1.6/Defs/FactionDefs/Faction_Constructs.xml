@@ -62,6 +62,7 @@
 					<!-- <Mech_Centurion MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Centurion> -->
 					<VR_Construct_ScarabQueen>1</VR_Construct_ScarabQueen>
 					<VR_Construct_Apocriton>1</VR_Construct_Apocriton>
+					<VR_Construct_Colossus_Melee>1</VR_Construct_Colossus_Melee>
 				</options>
 			</li>
 			<li>
@@ -112,7 +113,7 @@
 					<VR_Construct_Sphere_Melee>10</VR_Construct_Sphere_Melee>
 					<VR_Construct_Sphere_Range>10</VR_Construct_Sphere_Range>
 					<VR_Construct_Centurion_Burner>10</VR_Construct_Centurion_Burner>
-					<Mech_Termite_Breach>1</Mech_Termite_Breach>
+					<VR_Construct_Colossus_Melee>1</VR_Construct_Colossus_Melee>
 					<VR_Construct_Militor>20</VR_Construct_Militor>
 				</options>
 			</li>
