@@ -43,7 +43,7 @@
 		<label>mech gestator</label>
 		<description>A tank of mechanite-rich fluid with support tubes for feeding in materials and nutrients. Mechanitors can use it to produce new mechanoids or to resurrect dead mechanoids. This basic type of mech gestator is only capable of generating light-weight mechs.\n\nThe process uses harsh chemicals which are stored in toxic wastepacks. Haulers must remove the wastepacks from time to time.</description>
 		<graphicData>
-			<texPath>Things/Building/Production/MechGestatorStandard</texPath>
+			<texPath>Things/Building/Production/MechGestatorStandard_Steam</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(5.6,4)</drawSize>
 			<shadowData>
@@ -104,13 +104,13 @@
 				<li>(0, 0, 0.45)</li>
 			</formingMechPerRotationOffset>
 			<mechGestatorCylinderGraphic>
-				<texPath>Things/Building/Production/MechGestatorStandardGlass</texPath>
+				<texPath>Things/Building/Production/MechGestatorStandardGlass_Steam</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
 				<drawSize>(5.6,4)</drawSize>
 				<shaderType>Transparent</shaderType>
 			</mechGestatorCylinderGraphic>
 			<mechGestatorTopGraphic>
-				<texPath>Things/Building/Production/MechGestatorStandardTop</texPath>
+				<texPath>Things/Building/Production/MechGestatorStandardTop_Steam</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
 				<drawSize>(5.6,4)</drawSize>
 			</mechGestatorTopGraphic>
