@@ -7,10 +7,10 @@
 		<description>You long knew that true greatness could not be achieved alone. Yet people proved fickle and untrustworthy, so you turned instead to the faithful service of your crafted constructs—your tireless hands, loyal guardians, and steadfast companions. As your influence grew, so too did the fear of those around you. It soon became clear you had to flee the grasp of suspicious folk.\n\nNow you have journeyed to this sparsely settled area, bringing a few of your metalbound creations with you. Here, at last, you have the freedom and space to pursue the heights of your art.\n\nNote: Because your starting character lacks many essential skills, this scenario is considered difficult.</description>
 		<scenario>
 			<summary>One artificer and a few servant constructs.</summary>
-			<!-- <playerFaction> -->
-				<!-- <def>PlayerFaction</def> -->
-				<!-- <factionDef>PlayerTribe</factionDef> -->
-			<!-- </playerFaction> -->
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>VR_ArtificerStart</factionDef>
+			</playerFaction>
 			<parts>
 
 				<!-- Game start dialog -->
