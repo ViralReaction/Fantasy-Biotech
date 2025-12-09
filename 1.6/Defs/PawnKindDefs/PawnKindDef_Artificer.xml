@@ -58,4 +58,47 @@
 		</disallowedTraitsWithDegree>
 	</PawnKindDef>
 
+	<PawnKindDef Name="TribalBase">
+		<defName>VR_RuinExplorer</defName>
+		<label>explorer</label>
+		<race>Human</race>
+		<combatPower>85</combatPower>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Scientist</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<defaultFactionDef>PlayerColony</defaultFactionDef>
+		<chemicalAddictionChance>0.08</chemicalAddictionChance>
+		<apparelMoney>0~2500</apparelMoney>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>Apparel_Jacket</li>
+			<li>Apparel_BasicShirt</li>
+			<li>Apparel_Pants</li>
+		</apparelRequired>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponMoney>300~900</weaponMoney>
+		<weaponTags>
+			<li>LongSword</li>
+		</weaponTags>
+		<forceWeaponQuality>Masterwork</forceWeaponQuality>
+		<weaponStuffOverride>Steel</weaponStuffOverride>
+		<techHediffsMoney>1000~2000</techHediffsMoney>
+		<combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+		<initialWillRange>0</initialWillRange>
+		<initialResistanceRange>0~1</initialResistanceRange>
+		<fixedInventory>
+			<VR_ArtificerImplant>1</VR_ArtificerImplant>
+		</fixedInventory>
+	</PawnKindDef>
+
 </Defs>

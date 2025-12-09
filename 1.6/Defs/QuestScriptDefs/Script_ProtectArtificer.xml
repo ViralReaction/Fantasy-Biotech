@@ -24,7 +24,7 @@
         <li>QuestHospitalityCommon</li>
       </include>
       <rulesStrings>
-        <li>questDescription->[asker_nameFull], an artificer has sent a missive. [asker_possessive] guards were killed in an ambush. [asker_pronoun] escaped, but is now being followed by (*Threat)a reclamation squad(/Threat).\n\n[asker_nameDef] wants to join your colony.</li>
+        <li>questDescription->[asker_nameFull], an explorer has sent a missive. [asker_possessive] has acquired a rare artificer implant during a ruins dig and their guards were killed in an ambush. [asker_pronoun] escaped, but is now being followed by (*Threat)a reclamation squad(/Threat).\n\n[asker_nameDef] wants to join your colony.</li>
       </rulesStrings>
     </questDescriptionRules>
 
@@ -35,7 +35,7 @@
 
         <!-- Generate Asker -->
         <li Class="QuestNode_GeneratePawn">
-          <kindDef>VR_Artificer</kindDef>
+          <kindDef>VR_RuinExplorer</kindDef>
           <storeAs>asker</storeAs>
           <faction>Player</faction>
           <allowPregnant>false</allowPregnant>
@@ -48,7 +48,7 @@
 
         <li Class="QuestNode_Set">
           <name>raidPoints</name>
-          <value>$points</value>
+          <value>150</value>
         </li>
 
         <li Class="QuestNode_Set">
@@ -61,6 +61,7 @@
           <name>raidDelayTicks</name>
           <value>$(roundToTicksRough(randInt(1800, 2400)))</value>
         </li>
+
         <li Class="QuestNode_Delay">
           <delayTicks>$raidDelayTicks</delayTicks>
           <node Class="QuestNode_SubScript">
@@ -78,9 +79,6 @@
             </parms>
           </node>
         </li>
-
-
-
       </nodes>
     </root>
   </QuestScriptDef>
