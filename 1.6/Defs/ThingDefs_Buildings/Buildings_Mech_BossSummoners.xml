@@ -143,7 +143,7 @@
 		<graphicData>
 			<texPath>Things/Building/Misc/CommsConsole_Steam/CommsConsole_Steam</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(3,3)</drawSize>
+			<drawSize>(5,3)</drawSize>
 			<shadowData>
 				<volume>(1.1, 0.75, 1.1</volume>
 			</shadowData>
@@ -160,7 +160,7 @@
 			<WorkToBuild>2200</WorkToBuild>
 			<Flammability>0.6</Flammability>
 		</statBases>
-		<size>(3,3)</size>
+		<size>(3,2)</size>
 		<building>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
