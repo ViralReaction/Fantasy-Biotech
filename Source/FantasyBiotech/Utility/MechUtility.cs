@@ -48,18 +48,20 @@ namespace FantasyBiotech
         public static Faction ConstructFaction()
         {
             if (_cachedConstructFaction != null) return _cachedConstructFaction;
-
-            // ReSharper disable once TooWideLocalVariableScope
-            Faction findFaction;
             for (int i = 0; i < Find.FactionManager.AllFactionsListForReading.Count; i++)
             {
-                findFaction = Find.FactionManager.AllFactionsListForReading[i];
+                Faction findFaction = Find.FactionManager.AllFactionsListForReading[i];
                 if (findFaction.def != FantasyBiotechDefOf.VR_Construct) continue;
                 _cachedConstructFaction = findFaction;
                 return _cachedConstructFaction;
             }
 
             return Faction.OfMechanoids;
+        }
+
+        public static void ClearFactionCache()
+        {
+            _cachedConstructFaction = null;
         }
 
         public static bool IsArtificer(Pawn pawn)

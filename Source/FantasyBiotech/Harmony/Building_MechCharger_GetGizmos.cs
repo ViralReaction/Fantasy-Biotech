@@ -1,26 +1,16 @@
 ﻿using HarmonyLib;
-using RimWorld;
-using System.Collections.Generic;
-using Verse;
+
+using Verse.Profile;
 
 namespace FantasyBiotech
 {
-    [HarmonyPatch(typeof(Building_MechCharger), nameof(Building_MechCharger.GetGizmos))]
-    public static class Building_MechCharger_GetGizmos
+    [HarmonyPatch(typeof(MemoryUtility), nameof(MemoryUtility.ClearAllMapsAndWorld))]
+    public static class MemoryUtility_ClearAllMapsAndWorld
     {
-        public static bool Prefix(Building_MechCharger __instance, ref IEnumerable<Gizmo> __result)
+        public static void Postfix()
         {
-            if (__instance is not Building_MechCharger_Steam) return true;
-            __result = SteamChargerGizmo(__instance);
-            return false;
+            MechUtility.ClearFactionCache();
         }
 
-        private static IEnumerable<Gizmo> SteamChargerGizmo(Building_MechCharger __instance)
-        {
-            foreach (Gizmo gizmo in __instance.GetGizmos())
-            {
-                yield return gizmo;
-            }
-        }
     }
 }

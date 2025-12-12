@@ -48,6 +48,11 @@
     <Compile Include="FantasyBiotech\Dialogs\Dialog_CreateGenepack.cs" />
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
     <Compile Include="FantasyBiotech\Harmony\MechanitorUtility_ShouldBeMechanitor.cs" />
+    <Compile Include="FantasyBiotech\Harmony\MemoryUtility_ClearAllMapsAndWorld.cs" />
+    <Compile Include="FantasyBiotech\Harmony\SymbolResolver_AncientAltar_Transpiler.cs" />
+    <Compile Include="FantasyBiotech\Harmony\SymbolResolver_Interior_AncientTemple_Transpiler.cs" />
+    <Compile Include="FantasyBiotech\Harmony\SymbolResolver_Interior_SleepingMechanoids_Transpiler.cs" />
+    <Compile Include="FantasyBiotech\Harmony\SymbolResolver_RandomMechanoidGroup_Transpiler.cs" />
     <Compile Include="FantasyBiotech\Harmony\WorldFactionsUIUtility_DoWindowContents.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_OperateOnPawn.cs" />
     <Compile Include="FantasyBiotech\ModOption\MenuController.cs" />
