@@ -556,7 +556,7 @@
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_BandNode">
-				<hediff>BandNode</hediff>
+				<hediff>VR_ConstructBandNode</hediff>
 				<untunedEffect>BandNodeUntuned</untunedEffect>
 				<tuningEffect>BandNodeTuning</tuningEffect>
 				<tunedEffect>BandNodeTuned</tunedEffect>

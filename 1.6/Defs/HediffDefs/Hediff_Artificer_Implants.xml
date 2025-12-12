@@ -258,4 +258,13 @@
 		</stages>
 	</HediffDef>
 
+	<!-- Band node -->
+	<HediffDef>
+		<defName>VR_ConstructBandNode</defName>
+		<hediffClass>FantasyBiotech.Hediff_ConstructBandNode</hediffClass>
+		<label>construct band node (tuned)</label>
+		<description>This artificer's bandwidth is being increased thanks to the influence of a band node structure.</description>
+		<isBad>false</isBad>
+	</HediffDef>
+
 </Defs>

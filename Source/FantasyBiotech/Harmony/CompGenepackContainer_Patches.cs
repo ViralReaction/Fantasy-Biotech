@@ -22,37 +22,20 @@ namespace FantasyBiotech
         public static bool Prefix(CompGenepackContainer __instance, ref bool __result)
         {
             Thing thing = __instance.parent;
-            Log.Message($"[GenepackCheck] Checking fuel for: {thing}");
-
             if (!DictionaryUtility.cachedRefuelComps.TryGetValue(thing, out CompRefuelable comp))
             {
-                Log.Message($"[GenepackCheck] CompRefuelable not cached for {thing}, attempting to retrieve.");
                 comp = thing.TryGetComp<CompRefuelable>();
                 DictionaryUtility.cachedRefuelComps[thing] = comp;
-
-                if (comp != null)
-                    Log.Message($"[GenepackCheck] Retrieved and cached CompRefuelable: {comp}");
-                else
-                    Log.Message($"[GenepackCheck] No CompRefuelable found on {thing}");
             }
-            else
-            {
-                Log.Message($"[GenepackCheck] Using cached CompRefuelable for {thing}");
-            }
-
             if (comp == null)
             {
-                Log.Message($"[GenepackCheck] No CompRefuelable, skipping override.");
-                return true;
+                return true; // fallback to vanilla PowerOn
             }
-
             __result = comp.HasFuel;
-            Log.Message($"[GenepackCheck] CompRefuelable.HasFuel = {__result} for {thing}");
             return false;
         }
-
-
     }
+
     [HarmonyPatch(typeof(CompGenepackContainer), nameof(CompGenepackContainer.PostDestroy))]
     public static class CompGenepackContainer_PostDestroy
     {

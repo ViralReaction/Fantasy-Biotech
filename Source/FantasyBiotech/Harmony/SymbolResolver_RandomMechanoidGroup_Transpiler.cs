@@ -23,7 +23,6 @@ namespace FantasyBiotech
             MethodInfo target = AccessTools.PropertyGetter(typeof(Faction), nameof(Faction.OfMechanoids));
             MethodInfo newMethod = AccessTools.Method(typeof(MechUtility), nameof(MechUtility.ConstructFaction));
             bool foundInjection = false;
-            int injectionCount = 0;
 
             for (int i = 0; i < code.Count; i++)
             {
@@ -34,7 +33,6 @@ namespace FantasyBiotech
                     foundInjection = true;
                 }
             }
-            Log.Message(injectionCount);
             if (!foundInjection)
             {
                 Log.Error($"Fantasy Biotech :: Failed to find injection point in patch: {GenericUtility.GetClassName(MethodBase.GetCurrentMethod()?.DeclaringType)}");

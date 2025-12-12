@@ -18,6 +18,7 @@ namespace FantasyBiotech
         public static ResearchProjectDef VR_ArchiteGenetics;
         public static ResearchProjectDef VR_MasterArchiteGenetics;
         public static EffecterDef VR_Steam_Burst;
+        public static ThingDef VR_ConstructBandNode;
 
         static FantasyBiotechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FantasyBiotechDefOf));
     }
