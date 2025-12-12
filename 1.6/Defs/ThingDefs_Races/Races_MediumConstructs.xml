@@ -303,7 +303,7 @@
 			<li MayRequire="Ludeon.RimWorld.Biotech">
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Mechanoid/Ballista</texPath>
-					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Ballista</maskPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ConstructBallista</maskPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2.4</drawSize>

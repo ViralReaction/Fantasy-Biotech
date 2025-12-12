@@ -113,7 +113,7 @@
 			<li>
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Mechanoid/ApocritonSteam</texPath>
-					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Apocriton</maskPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ApocritonSteam</maskPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3</drawSize>
@@ -417,8 +417,8 @@
 			<li>
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Mechanoid/ConstructQueen</texPath>
-					<!-- <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/MechWarqueen</maskPath> -->
-					<!-- <shaderType>CutoutWithOverlay</shaderType> -->
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ConstructQueen</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3</drawSize>
 					<shadowData>
