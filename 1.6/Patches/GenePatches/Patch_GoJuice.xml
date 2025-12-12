@@ -84,6 +84,7 @@
 					<xpath>Defs/ThingDef[defName="GoJuice"]/recipeMaker/recipeUsers</xpath>
 					<value>
 						<li>FueledStove</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlchemyBench</li>
 					</value>
 				</li>
 
@@ -118,30 +119,17 @@
 
 				<!-- ThingDef GoJuice -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Flake"]/techLevel</xpath>
+					<xpath>Defs/ThingDef[defName="Flake" or defName="Yayo"]/techLevel</xpath>
 					<value>
 						<techLevel>Medieval</techLevel>
 					</value>
 				</li>
 
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="Flake"]/recipeMaker/recipeUsers</xpath>
+					<xpath>Defs/ThingDef[defName="Flake" or defName="Yayo"]/recipeMaker/recipeUsers</xpath>
 					<value>
 						<li>FueledStove</li>
-					</value>
-				</li>
-
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[defName="Yayo"]/techLevel</xpath>
-					<value>
-						<techLevel>Medieval</techLevel>
-					</value>
-				</li>
-
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="Yayo"]/recipeMaker/recipeUsers</xpath>
-					<value>
-						<li>FueledStove</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlchemyBench</li>
 					</value>
 				</li>
 
