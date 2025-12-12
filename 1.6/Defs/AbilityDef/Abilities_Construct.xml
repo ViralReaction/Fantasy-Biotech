@@ -6,7 +6,7 @@
 		<defName>VR_LongjumpConstruct</defName>
 		<label>construct longjump</label>
 		<description>Jump to a distant location using steam pistons to launch themselves.</description>
-		<iconPath>UI/Abilities/MechLongJump</iconPath>
+		<iconPath>UI/Abilities/ConstructLongJump</iconPath>
 		<cooldownTicksRange>480</cooldownTicksRange>
 		<jobDef>CastJump</jobDef>
 		<ai_IsOffensive>true</ai_IsOffensive>
