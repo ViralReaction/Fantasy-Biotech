@@ -8,6 +8,7 @@
 		<active Class="PatchOperationSequence">
 			<operations>
 
+				<!-- Go Juice Production -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/techLevel</xpath>
 					<value>
@@ -18,7 +19,21 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/prerequisites/li</xpath>
 					<value>
-						<li>PsychoidBrewing</li>
+						<li>PsychiteRefining</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/researchViewX</xpath>
+					<value>
+						<researchViewX>4.00</researchViewX>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/researchViewY</xpath>
+					<value>
+						<researchViewY>1.60</researchViewY>
 					</value>
 				</li>
 
@@ -71,6 +86,101 @@
 						<li>FueledStove</li>
 					</value>
 				</li>
+
+				<!-- Psychite Production -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]/prerequisites/li</xpath>
+					<value>
+						<li>PsychoidBrewing</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]/researchViewX</xpath>
+					<value>
+						<researchViewX>3.00</researchViewX>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]/researchViewY</xpath>
+					<value>
+						<researchViewY>1.60</researchViewY>
+					</value>
+				</li>
+
+				<!-- ThingDef GoJuice -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Flake"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Flake"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<li>FueledStove</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Yayo"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Yayo"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<li>FueledStove</li>
+					</value>
+				</li>
+
+				<!-- Move Around -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="WakeUpProduction"]/researchViewX</xpath>
+					<value>
+						<researchViewX>3.00</researchViewX>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="WakeUpProduction"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.30</researchViewY>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="PenoxycylineProduction"]/researchViewX</xpath>
+					<value>
+						<researchViewX>3.00</researchViewX>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="PenoxycylineProduction"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.90</researchViewY>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Neutroamine"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Things/Item/Resource/FantasyNeutro</texPath>
+					</value>
+				</li>
+
 
 			</operations>
 		</active>

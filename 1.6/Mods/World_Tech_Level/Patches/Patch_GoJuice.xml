@@ -18,6 +18,17 @@
 					</value>
 				</li>
 
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_ThingDefs"]/entries/li[contains(.,"Neutroamine")]</xpath>
+					<value>
+						<li>
+							<defName>Neutroamine</defName>
+							<techLevel>Medieval</techLevel>
+							<priority>-1</priority>
+						</li>
+					</value>
+				</li>
+
 			</operations>
 		</active>
 	</Operation>
