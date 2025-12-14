@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_AbilitySteamBurst.cs" />
+    <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_SteamSpray.cs" />
+    <Compile Include="FantasyBiotech\Comps\CompSteamSpray.cs" />
     <Compile Include="FantasyBiotech\Comps\CompTempControl_Steam.cs" />
     <Compile Include="FantasyBiotech\Comps\Comp_AbilitySteamBurst.cs" />
     <Compile Include="FantasyBiotech\Defs\BossGroupExtension.cs" />
@@ -49,6 +51,7 @@
     <Compile Include="FantasyBiotech\GenSteps\GenStep_CosntructCluster.cs" />
     <Compile Include="FantasyBiotech\GenSteps\SketchResolver\SketchResolver_ConstructCluster.cs" />
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
+    <Compile Include="FantasyBiotech\Harmony\CompOverseer_TryMakeFeral.cs" />
     <Compile Include="FantasyBiotech\Harmony\MechanitorUtility_ShouldBeMechanitor.cs" />
     <Compile Include="FantasyBiotech\Harmony\MemoryUtility_ClearAllMapsAndWorld.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_AncientAltar_Transpiler.cs" />

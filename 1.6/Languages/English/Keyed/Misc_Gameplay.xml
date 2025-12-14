@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+	<FantasyBiotech_LetterLabelConstructsFeral>Construct(s) gone feral</FantasyBiotech_LetterLabelConstructsFeral>
+	<FantasyBiotech_LetterConstructsFeral>Some constructs(s) which were wandering without an overseer have linked with ancient planet-wide mech control signals. They have joined {0} and become hostile, and appear to be trying to fight their way off the map.\n\nFeral constructs cannot be resurrected at a gestator when killed.\n\nThese constructs are involved:\n\n{1}</FantasyBiotech_LetterConstructsFeral>
+
 	<Fantasy_AlertGenebankUnfueled>Gene bank needs fuel</Fantasy_AlertGenebankUnfueled>
 	<Fantasy_AlertGenebankUnfueledDesc>A gene bank is unfueled, so the genepacks inside it are slowly deteriorating. Refuel the gene bank to prevent the genepacks from deteriorating.\n\nOnce the gene bank is fueled, it will slowly reverse the deterioration of the genepacks inside it.</Fantasy_AlertGenebankUnfueledDesc>
 	

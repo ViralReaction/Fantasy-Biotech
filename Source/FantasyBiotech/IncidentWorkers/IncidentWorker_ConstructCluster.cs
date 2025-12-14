@@ -30,7 +30,7 @@ namespace FantasyBiotech
                 return false;
             }
 
-            IEnumerable<Thing> targets = from t in MechClusterUtility.SpawnCluster(center, map, sketch, dropInPods: true, canAssaultColony: true, parms.questTag)
+            IEnumerable<Thing> targets = from t in ConstructClusterGenerator.SpawnCluster(center, map, sketch, dropInPods: false, canAssaultColony: true, parms.questTag)
                                          where t.def != ThingDefOf.Wall && t.def != ThingDefOf.Barricade
                                          select t;
             SendStandardLetter(parms, new LookTargets(targets));

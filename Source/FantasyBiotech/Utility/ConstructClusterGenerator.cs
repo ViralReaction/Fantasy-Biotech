@@ -11,7 +11,7 @@ namespace FantasyBiotech
 {
 	public static class ConstructClusterGenerator
 	{
-		public const string MechClusterMemberTag = "ConstructClusterMember";
+		private const string MechClusterMemberTag = "ConstructClusterMember";
 
 		public const string MechClusterMemberGoodTag = "MechClusterMemberGood";
 
@@ -19,46 +19,45 @@ namespace FantasyBiotech
 
 		public const string MechClusterActivatorTag = "MechClusterActivator";
 
-		public const string MechClusterCombatThreatTag = "ConstructClusterCombatThreat";
+		private const string MechClusterCombatThreatTag = "ConstructClusterCombatThreat";
 
 		public const string MechClusterProblemCauserTag = "MechClusterProblemCauser";
 
-		public const float MaxPoints = 10000f;
+		private const float MaxPoints = 10000f;
 
-		public static readonly SimpleCurve PointsToPawnsChanceCurve = new SimpleCurve
-		{
-			new CurvePoint(400f, 0.75f)
-		};
+		public static readonly SimpleCurve PointsToPawnsChanceCurve = [new CurvePoint(400f, 0.75f)];
 
-		public static readonly SimpleCurve PawnPointsRandomPercentOfTotalCurve = new SimpleCurve
-		{
+		public static readonly SimpleCurve PawnPointsRandomPercentOfTotalCurve =
+		[
 			new CurvePoint(0.2f, 0f),
 			new CurvePoint(0.5f, 1f),
 			new CurvePoint(0.8f, 0f)
-		};
+		];
 
 		private static readonly FloatRange SizeRandomFactorRange = new FloatRange(0.8f, 2f);
 
-		private static readonly SimpleCurve PointsToSizeCurve = new SimpleCurve
-		{
+		private static readonly SimpleCurve PointsToSizeCurve =
+		[
 			new CurvePoint(400f, 7f),
 			new CurvePoint(1000f, 10f),
 			new CurvePoint(2000f, 20f),
 			new CurvePoint(5000f, 25f)
-		};
-
-		private static readonly SimpleCurve ProblemCauserCountCurve = new SimpleCurve
-		{
-			new CurvePoint(400f, 0.5f),
-			new CurvePoint(800f, 0.9f),
-			new CurvePoint(1200f, 0.95f)
-		};
+		];
 
 		private static readonly SimpleCurve WallsChanceCurve = new SimpleCurve
 		{
 			new CurvePoint(400f, 0.35f),
 			new CurvePoint(1000f, 0.5f)
 		};
+
+		private static readonly SimpleCurve PointsToLiftCountCurve =
+		[
+			new CurvePoint(0f,    1f),
+			new CurvePoint(2000f,  2f),
+			new CurvePoint(4000f, 3f),
+			new CurvePoint(5000f, 4f),
+			new CurvePoint(8000f, 6f)
+		];
 
 		private const float ActivatorCountdownChance = 0.5f;
 
@@ -70,22 +69,6 @@ namespace FantasyBiotech
 			new CurvePoint(1800f, 2f),
 			new CurvePoint(3000f, 3f),
 			new CurvePoint(5000f, 4f)
-		};
-
-		private static readonly SimpleCurve GoodBuildingChanceCurve = new SimpleCurve
-		{
-			new CurvePoint(400f, 0.5f)
-		};
-
-		private static readonly SimpleCurve GoodBuildingMaxCountCurve = new SimpleCurve
-		{
-			new CurvePoint(400f, 1f),
-			new CurvePoint(700f, 2f),
-			new CurvePoint(1000f, 3f),
-			new CurvePoint(1300f, 4f),
-			new CurvePoint(2000f, 5f),
-			new CurvePoint(3000f, 6f),
-			new CurvePoint(5000f, 7f)
 		};
 
 		private static readonly SimpleCurve LampBuildingMinCountCurve = new SimpleCurve
@@ -101,54 +84,28 @@ namespace FantasyBiotech
 			new CurvePoint(2000f, 6f)
 		};
 
-		private static readonly SimpleCurve BulletShieldChanceCurve = new SimpleCurve
-		{
-			new CurvePoint(400f, 0.1f),
-			new CurvePoint(1000f, 0.4f),
-			new CurvePoint(2200f, 0.5f)
-		};
-
-		private const float BulletShieldTotalPointsFactor = 0.85f;
-
-		private static readonly SimpleCurve BulletShieldMaxCountCurve = new SimpleCurve
-		{
-			new CurvePoint(400f, 1f),
-			new CurvePoint(3000f, 1.5f)
-		};
-
-		private const float MortarShieldTotalPointsFactor = 0.9f;
-
-		private static readonly SimpleCurve MortarShieldChanceCurve = new SimpleCurve
-		{
-			new CurvePoint(400f, 0.1f),
-			new CurvePoint(1000f, 0.4f),
-			new CurvePoint(2200f, 0.5f)
-		};
-
 		public static MechClusterSketch GenerateClusterSketch(float points, Map map, bool startDormant = true, bool forceNoConditionCauser = false)
 		{
 			if (!ModLister.CheckRoyalty("Mech cluster") || !ModsConfig.RoyaltyActive)
 			{
 				return new MechClusterSketch(new Sketch(), [], startDormant);
 			}
-			points = Mathf.Min(points, 10000f);
+			points = Mathf.Min(points, MaxPoints);
+
 			float num = points;
 			List<MechClusterSketch.Mech> list = null;
-			if (Rand.Chance(PointsToPawnsChanceCurve.Evaluate(points)))
+			List<PawnKindDef> source = DefDatabase<PawnKindDef>.AllDefsListForReading.Where(MechUtility.ConstructSuitableForCluster).ToList();
+			list = [];
+			float a = Rand.ByCurve(PawnPointsRandomPercentOfTotalCurve) * num;
+			float pawnPointsLeft;
+			a = (pawnPointsLeft = Mathf.Max(a, source.Min((x) => x.combatPower)));
+			while (pawnPointsLeft > 0f && source.Where((def) => def.combatPower <= pawnPointsLeft).TryRandomElement(out PawnKindDef result))
 			{
-				List<PawnKindDef> source = DefDatabase<PawnKindDef>.AllDefsListForReading.Where(MechUtility.ConstructSuitableForCluster).ToList();
-				list = new List<MechClusterSketch.Mech>();
-				float a = Rand.ByCurve(PawnPointsRandomPercentOfTotalCurve) * num;
-				float pawnPointsLeft;
-				a = (pawnPointsLeft = Mathf.Max(a, source.Min((PawnKindDef x) => x.combatPower)));
-				PawnKindDef result;
-				while (pawnPointsLeft > 0f && source.Where((PawnKindDef def) => def.combatPower <= pawnPointsLeft).TryRandomElement(out result))
-				{
-					pawnPointsLeft -= result.combatPower;
-					list.Add(new MechClusterSketch.Mech(result));
-				}
-				num -= a - pawnPointsLeft;
+				pawnPointsLeft -= result.combatPower;
+				list.Add(new MechClusterSketch.Mech(result));
 			}
+			num -= a - pawnPointsLeft;
+
 			Sketch buildingsSketch = SketchGen.Generate(FantasyBiotechDefOf.VR_ConstructCluster, new SketchResolveParams
 			{
 				points = num,
@@ -164,14 +121,14 @@ namespace FantasyBiotech
 				for (int i = 0; i < list.Count; i++)
 				{
 					MechClusterSketch.Mech pawn = list[i];
-					if (!buildingsSketch.OccupiedRect.Where(( c) => !buildingsSketch.ThingsAt(c).Any() && !pawnUsedSpots.Contains(c)).TryRandomElement(out IntVec3 result2))
+					if (!buildingsSketch.OccupiedRect.Where((c) => !buildingsSketch.ThingsAt(c).Any() && !pawnUsedSpots.Contains(c)).TryRandomElement(out IntVec3 result2))
 					{
 						CellRect cellRect = buildingsSketch.OccupiedRect;
 						do
 						{
 							cellRect = cellRect.ExpandedBy(1);
 						}
-						while (!cellRect.Where(( x) => !buildingsSketch.WouldCollide(pawn.kindDef.race, x, Rot4.North) && !pawnUsedSpots.Contains(x)).TryRandomElement(out result2));
+						while (!cellRect.Where((x) => !buildingsSketch.WouldCollide(pawn.kindDef.race, x, Rot4.North) && !pawnUsedSpots.Contains(x)).TryRandomElement(out result2));
 					}
 					pawnUsedSpots.Add(result2);
 					pawn.position = result2;
@@ -210,7 +167,7 @@ namespace FantasyBiotech
 				int num3 = GenMath.RoundRandom(PointsToSizeCurve.Evaluate(num) * SizeRandomFactorRange.RandomInRange);
 				if (parms.mechClusterForMap != null)
 				{
-					CellRect cellRect = LargestAreaFinder.FindLargestRect(parms.mechClusterForMap, (IntVec3 x) => !x.Impassable(parms.mechClusterForMap) && x.GetAffordances(parms.mechClusterForMap).Contains(TerrainAffordanceDefOf.Heavy), Mathf.Max(num2, num3));
+					CellRect cellRect = LargestAreaFinder.FindLargestRect(parms.mechClusterForMap, ( x) => !x.Impassable(parms.mechClusterForMap) && x.GetAffordances(parms.mechClusterForMap).Contains(TerrainAffordanceDefOf.Heavy), Mathf.Max(num2, num3));
 					num2 = Mathf.Min(num2, cellRect.Width);
 					num3 = Mathf.Min(num3, cellRect.Height);
 				}
@@ -226,13 +183,20 @@ namespace FantasyBiotech
 			}
 			List<ThingDef> buildingDefsForCluster = GetBuildingDefsForCluster(num, intVec, canBeDormant, value, parms.forceNoConditionCauser.GetValueOrDefault());
 			AddBuildingsToSketch(sketch, intVec, buildingDefsForCluster);
-			parms.sketch.MergeAt(sketch, default(IntVec3), Sketch.SpawnPosType.OccupiedCenter);
+			parms.sketch.MergeAt(sketch, default, Sketch.SpawnPosType.OccupiedCenter);
 		}
 
 		private static List<ThingDef> GetBuildingDefsForCluster(float points, IntVec2 size, bool canBeDormant, float? totalPoints, bool forceNoConditionCauser)
 		{
 			List<ThingDef> list = new List<ThingDef>();
 			List<ThingDef> source = DefDatabase<ThingDef>.AllDefsListForReading.Where((ThingDef def) => def.building?.buildingTags != null && def.building.buildingTags.Contains(MechClusterMemberTag) && (!totalPoints.HasValue || (float)def.building.minMechClusterPoints <= totalPoints)).ToList();
+			int liftCount = Mathf.FloorToInt(PointsToLiftCountCurve.Evaluate(points));
+			Log.Message(liftCount);
+			for (int i = 0; i < liftCount; i++)
+			{
+				list.Add(FantasyBiotechDefOf.VR_Construct_Lift);
+			}
+
 			// if (canBeDormant)
 			// {
 			// 	if (Rand.Chance(0.5f))
@@ -248,11 +212,9 @@ namespace FantasyBiotech
 			// 		}
 			// 	}
 			// }
-			int num4 = Rand.RangeInclusive(Mathf.FloorToInt(LampBuildingMinCountCurve.Evaluate(points)), Mathf.CeilToInt(LampBuildingMaxCountCurve.Evaluate(points)));
 			float pointsLeft = points;
-			ThingDef thingDef = source.Where((ThingDef x) => x.building.buildingTags.Contains(MechClusterCombatThreatTag)).MinBy((ThingDef x) => x.building.combatPower);
-			ThingDef result4;
-			for (pointsLeft = Mathf.Max(pointsLeft, thingDef.building.combatPower); pointsLeft > 0f && source.Where((ThingDef x) => x.building.combatPower <= pointsLeft && x.building.buildingTags.Contains(MechClusterCombatThreatTag)).TryRandomElement(out result4); pointsLeft -= result4.building.combatPower)
+			ThingDef thingDef = source.Where(( x) => x.building.buildingTags.Contains(MechClusterCombatThreatTag)).MinBy(( x) => x.building.combatPower);
+			for (pointsLeft = Mathf.Max(pointsLeft, thingDef.building.combatPower); pointsLeft > 0f && source.Where(( x) => x.building.combatPower <= pointsLeft && x.building.buildingTags.Contains(MechClusterCombatThreatTag)).TryRandomElement(out ThingDef result4); pointsLeft -= result4.building.combatPower)
 			{
 				list.Add(result4);
 			}
@@ -428,8 +390,9 @@ namespace FantasyBiotech
 		}
 		public static List<Thing> SpawnCluster(IntVec3 center, Map map, MechClusterSketch sketch, bool dropInPods = true, bool canAssaultColony = false, string questTag = null)
 		{
-			List<Thing> spawnedThings = new List<Thing>();
-			if (Faction.OfMechanoids == null)
+			List<Thing> spawnedThings = [];
+			Faction constructFaction = MechUtility.ConstructFaction();
+			if (constructFaction == null)
 			{
 				Log.Warning("Could not spawn mech cluster, no world mech faction found.");
 				return spawnedThings;
@@ -445,28 +408,24 @@ namespace FantasyBiotech
 				Thing thing = null;
 				foreach (Thing item2 in thingList)
 				{
-					if (item2.def.IsBlueprint)
-					{
-						thing = item2;
-						break;
-					}
+					if (!item2.def.IsBlueprint) continue;
+					thing = item2;
+					break;
 				}
 				thing?.Destroy();
 			}
-			Sketch.SpawnMode spawnMode = ((!dropInPods) ? Sketch.SpawnMode.Normal : Sketch.SpawnMode.TransportPod);
-			sketch.buildingsSketch.Spawn(map, center, Faction.OfMechanoids, Sketch.SpawnPosType.Unchanged, spawnMode, wipeIfCollides: false, forceTerrainAffordance: false, clearEdificeWhereFloor: false, spawnedThings, sketch.startDormant, buildRoofsInstantly: false, CanSpawnThing, delegate(IntVec3 spot, SketchEntity entity)
+			Sketch.SpawnMode spawnMode = !dropInPods ? Sketch.SpawnMode.Normal : Sketch.SpawnMode.TransportPod;
+			sketch.buildingsSketch.Spawn(map, center, constructFaction, Sketch.SpawnPosType.Unchanged, spawnMode, wipeIfCollides: false, forceTerrainAffordance: false, clearEdificeWhereFloor: false, spawnedThings, sketch.startDormant, buildRoofsInstantly: false, CanSpawnThing, delegate(IntVec3 spot, SketchEntity entity)
 			{
 				if (entity is SketchThing sketchThing && sketchThing.def != ThingDefOf.Wall && sketchThing.def != ThingDefOf.Barricade)
 				{
-					entity.SpawnNear(spot, map, 12f, Faction.OfMechanoids, spawnMode, wipeIfCollides: false, forceTerrainAffordance: false, spawnedThings, sketch.startDormant, CanSpawnThing);
+					entity.SpawnNear(spot, map, 12f, constructFaction, spawnMode, wipeIfCollides: false, forceTerrainAffordance: false, spawnedThings, sketch.startDormant, CanSpawnThing);
 				}
 			});
 			float defendRadius = Mathf.Sqrt(sketch.buildingsSketch.OccupiedSize.x * sketch.buildingsSketch.OccupiedSize.x + sketch.buildingsSketch.OccupiedSize.z * sketch.buildingsSketch.OccupiedSize.z) / 2f + 6f;
-			LordJob_MechanoidDefendBase lordJob_MechanoidDefendBase = null;
-			lordJob_MechanoidDefendBase = ((!sketch.startDormant) ? ((LordJob_MechanoidDefendBase)new LordJob_MechanoidsDefend(spawnedThings, Faction.OfMechanoids, defendRadius, center, canAssaultColony, isMechCluster: true)) : ((LordJob_MechanoidDefendBase)new LordJob_SleepThenMechanoidsDefend(spawnedThings, Faction.OfMechanoids, defendRadius, center, canAssaultColony, isMechCluster: true)));
-			Lord lord = LordMaker.MakeNewLord(Faction.OfMechanoids, lordJob_MechanoidDefendBase, map);
+			LordJob_MechanoidDefendBase lordJob_MechanoidDefendBase  = !sketch.startDormant ? new LordJob_MechanoidsDefend(spawnedThings, constructFaction, defendRadius, center, canAssaultColony, isMechCluster: true) : new LordJob_SleepThenMechanoidsDefend(spawnedThings, constructFaction, defendRadius, center, canAssaultColony, isMechCluster: true);
+			Lord lord = LordMaker.MakeNewLord(constructFaction, lordJob_MechanoidDefendBase, map);
 			QuestUtility.AddQuestTag(lord, questTag);
-			bool flag = Rand.Chance(0.6f);
 			float randomInRange = MechClusterUtility.InitiationDelay.RandomInRange;
 			int num = (int)(MechClusterUtility.MechAssemblerInitialDelayDays.RandomInRange * 60000f);
 			for (int i = 0; i < spawnedThings.Count; i++)
@@ -477,7 +436,7 @@ namespace FantasyBiotech
 				{
 					lordJob_MechanoidDefendBase.AddThingToNotifyOnDefeat(thing2);
 				}
-				if (flag)
+				if (Rand.Chance(0.6f))
 				{
 					CompInitiatable compInitiatable = thing2.TryGetComp<CompInitiatable>();
 					if (compInitiatable != null)
@@ -500,7 +459,7 @@ namespace FantasyBiotech
 					{
 						continue;
 					}
-					Pawn pawn = PawnGenerator.GeneratePawn(pawn2.kindDef, Faction.OfMechanoids);
+					Pawn pawn = PawnGenerator.GeneratePawn(pawn2.kindDef, constructFaction);
 					CompCanBeDormant compCanBeDormant = pawn.TryGetComp<CompCanBeDormant>();
 					if (compCanBeDormant != null)
 					{
@@ -515,20 +474,7 @@ namespace FantasyBiotech
 					}
 					lord.AddPawn(pawn);
 					spawnedThings.Add(pawn);
-					if (dropInPods)
-					{
-						ActiveTransporterInfo activeTransporterInfo = new ActiveTransporterInfo();
-						activeTransporterInfo.innerContainer.TryAdd(pawn, 1);
-						activeTransporterInfo.openDelay = 60;
-						activeTransporterInfo.leaveSlag = false;
-						activeTransporterInfo.despawnPodBeforeSpawningThing = true;
-						activeTransporterInfo.spawnWipeMode = WipeMode.Vanish;
-						DropPodUtility.MakeDropPodAt(result, map, activeTransporterInfo, Faction.OfMechanoids);
-					}
-					else
-					{
-						GenSpawn.Spawn(pawn, result, map);
-					}
+					GenSpawn.Spawn(pawn, result, map);
 				}
 			}
 			foreach (Thing item3 in spawnedThings)

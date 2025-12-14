@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_Construct_Lift</defName>
+		<label>great steam lift</label>
+		<description>A steam-powered lift used by forges to deliver constructs into battle.</description>
+		<thingClass>Building</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Misc/SteamConstructLift</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4, 4)</drawSize>
+		</graphicData>
+		<receivesSignals>true</receivesSignals>
+		<drawHighlight>true</drawHighlight>
+		<drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+		<altitudeLayer>Building</altitudeLayer>
+		<stealable>false</stealable>
+		<rotatable>true</rotatable>
+		<size>(4,4)</size>
+		<statBases>
+			<MaxHitPoints>2500</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>10000</Mass>
+			<Beauty>-1000</Beauty>
+		</statBases>
+		<damageMultipliers>
+			<li>
+				<damageDef>Flame</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+		</damageMultipliers>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="FantasyBiotech.CompProperties_SteamSpray"/>
+		</comps>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.5</fillPercent>
+		<hasTooltip>true</hasTooltip>
+		<killedLeavings>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</killedLeavings>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<uiIconScale>0.95</uiIconScale>
+	</ThingDef>
+
+</Defs>

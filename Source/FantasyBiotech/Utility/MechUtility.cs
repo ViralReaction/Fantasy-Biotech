@@ -106,5 +106,7 @@ namespace FantasyBiotech
             return pawn.health.hediffSet.HasHediff(FantasyBiotechDefOf.VR_ArtificerImplant);
         }
 
+
+
     }
 }
