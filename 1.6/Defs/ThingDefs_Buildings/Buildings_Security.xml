@@ -97,6 +97,7 @@
 		<graphicData>
 			<texPath>Things/Building/Security/TurretSteam_Top</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
 		</graphicData>
 		<statBases>
 			<AccuracyTouch>0.28</AccuracyTouch>
