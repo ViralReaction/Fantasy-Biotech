@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <SketchResolverDef>
+        <defName>VR_ConstructCluster</defName>
+        <isRoot>true</isRoot>
+        <resolver Class="FantasyBiotech.SketchResolver_ConstructCluster" />
+    </SketchResolverDef>
+
+    <SitePartDef Name="SitePart_ConstructCluster">
+        <defName>VR_ConstructCluster</defName>
+        <label>construct cluster</label>
+        <description>A construct combat cluster.</description>
+        <workerClass>SitePartWorker_MechCluster</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Sites/MechCluster</expandingIconTexture>
+        <arrivedLetter>There is a cluster of hostile constructs and their combat support structures in this area.\n\nThe cluster can include artillery, turrets, combat mechanoids, and other support and defense structures.</arrivedLetter>
+        <arrivedLetterDef>NegativeEvent</arrivedLetterDef>
+        <wantsThreatPoints>true</wantsThreatPoints>
+        <minThreatPoints>400</minThreatPoints>
+        <tags>
+            <li>MineralScannerPreciousLumpThreat</li>
+            <li>ItemStashQuestThreat</li>
+            <li>DownedRefugeeQuestThreat</li>
+            <li>QuestActiveThreatDefense</li>
+            <li>QuestActiveThreatDefenseNoHidden</li>
+            <li>MechCluster</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef Name="GenStep_ConstructCluster">
+        <defName>VR_ConstructCluster</defName>
+        <linkWithSite>VR_ConstructCluster</linkWithSite>
+        <order>1600</order>
+        <genStep Class="FantasyBiotech.GenStep_ConstructCluster" />
+    </GenStepDef>
+
+</Defs>

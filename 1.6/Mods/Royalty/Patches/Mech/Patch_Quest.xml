@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/QuestScriptDef[defName="BuildMonumentWorker"]/root/nodes/li[@Class="QuestNode_IsTrue"][value="$punishmentOnDestroy"]/node/nodes/li[inSignal="monumentMarker.MonumentDestroyed"]/node/nodes/li[@Class="QuestNode_SetAndRestore"]/node/node/nodes</xpath>
+        <value>
+            <li Class="QuestNode_Subscript"><def>VR_Util_ConstructCluster</def></li>
+        </value>
+    </Operation>
+
+</Patch>

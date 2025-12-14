@@ -26,4 +26,18 @@
         </root>
     </QuestScriptDef>
 
+    <QuestScriptDef>
+        <defName>VR_Util_ConstructCluster</defName>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>threatDescription->a construct cluster will land at [map_definite] containing:\n\n[allThreats]</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="FantasyBiotech.QuestNode_SpawnConstructCluster" />
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
 </Defs>

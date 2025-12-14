@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_Turret_SteamBallista</defName>
+		<label>auto steam ballista</label>
+		<description>A self-powered turret mounted with a ballista. It cannot sense targets at very short ranges.</description>
+		<thingClass>Building_TurretGun</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Security/TurretSteamLarge_Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2, 2)</drawSize>
+			<drawOffset>(0,0,-0.16)</drawOffset>
+			<damageData>
+				<rect>(0.3,0.3,1.4,1.4)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(1.5,0.35,1.4)</volume>
+				<offset>(0,0,-0.05)</offset>
+			</shadowData>
+		</graphicData>
+		<receivesSignals>true</receivesSignals>
+		<drawHighlight>true</drawHighlight>
+		<drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+		<altitudeLayer>Building</altitudeLayer>
+		<stealable>false</stealable>
+		<rotatable>true</rotatable>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>100</Mass>
+			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+			<Beauty>-20</Beauty>
+		</statBases>
+		<damageMultipliers>
+			<li>
+				<damageDef>Flame</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+		</damageMultipliers>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<wickTicks>240</wickTicks>
+				<explosiveRadius>5.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+			</li>
+			<li Class="CompProperties_CanBeDormant">
+				<compClass>CompMechanoid</compClass>
+			</li>
+			<li Class="CompProperties_WakeUpDormant">
+				<wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+			</li>
+			<li Class="CompProperties_Stunnable">
+				<affectedDamageDefs>
+					<li>Stun</li>
+					<li>EMP</li>
+				</affectedDamageDefs>
+				<adaptableDamageDefs>
+					<li>EMP</li>
+				</adaptableDamageDefs>
+			</li>
+			<li Class="CompProperties_AmbientSound">
+				<sound>MechTurretBig_Call</sound>
+			</li>
+		</comps>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.5</fillPercent>
+		<hasTooltip>true</hasTooltip>
+		<killedLeavings>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</killedLeavings>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<building>
+			<combatPower>150</combatPower>
+			<buildingTags>
+				<li>ConstructClusterMember</li>
+				<li>ConstructClusterCombatThreat</li>
+			</buildingTags>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>VR_Gun_SteamBallista</turretGunDef>
+			<turretBurstCooldownTime>5.5</turretBurstCooldownTime>
+			<turretTopDrawSize>1.75</turretTopDrawSize>
+			<turretTopOffset>(0, 0.05)</turretTopOffset>
+		</building>
+		<uiIconScale>0.95</uiIconScale>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>VR_Gun_SteamBallista</defName>
+		<label>ballista</label>
+		<description>A self-loading ballista designed to attach to a turret.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/TurretSteam_Top</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.28</AccuracyTouch>
+			<AccuracyShort>0.72</AccuracyShort>
+			<AccuracyMedium>0.66</AccuracyMedium>
+			<AccuracyLong>0.5</AccuracyLong>
+			<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>40</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>VR_Bullet_ConstructGun_HeavyBowGun</defaultProjectile>
+				<warmupTime>1.25</warmupTime>
+				<minRange>3.9</minRange>
+				<range>45.9</range>
+				<ticksBetweenBurstShots>17</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_Autocannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>12</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+</Defs>

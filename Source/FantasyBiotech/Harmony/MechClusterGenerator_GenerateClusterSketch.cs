@@ -38,5 +38,4 @@ namespace FantasyBiotech
             return code;
         }
     }
-
 }

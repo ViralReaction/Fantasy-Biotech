@@ -24,7 +24,6 @@ namespace FantasyBiotech
                 __result = false;
                 return false;
             }
-
             if (def.GetModExtension<ConstructExtension>()?.isConstruct ?? false)
             {
                 __result = true;

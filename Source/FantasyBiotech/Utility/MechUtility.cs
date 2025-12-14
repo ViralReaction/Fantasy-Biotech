@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
+using UnityEngine;
 using Verse.AI;
 using Verse;
 
@@ -39,10 +41,45 @@ namespace FantasyBiotech
         
         public static bool ConstructSuitableForCluster(PawnKindDef def)
         {
+
             if (!def.RaceProps.IsMechanoid || def.isGoodBreacher || !def.isFighter || !def.allowInMechClusters) return false;
             if (ModsConfig.BiotechActive && Find.BossgroupManager.ReservedByBossgroup(def)) return false;
-            return def.GetModExtension<ConstructExtension>()?.isConstruct != false;
+
+            bool? extension = def.GetModExtension<ConstructExtension>()?.isConstruct;
+            if (extension == null || extension == false)
+            {
+	            return false;
+            }
+            return true;
         }
+
+        private static List<ThingDef> GetBuildingDefsForCluster(float points, IntVec2 size, bool canBeDormant, float? totalPoints, bool forceNoConditionCauser)
+	{
+		List<ThingDef> list = [];
+		List<ThingDef> source = DefDatabase<ThingDef>.AllDefsListForReading.Where((ThingDef def) => def.building?.buildingTags != null && def.building.buildingTags.Contains("ConstructClusterMember") && (!totalPoints.HasValue || (float)def.building.minMechClusterPoints <= totalPoints)).ToList();
+		if (canBeDormant)
+		{
+			if (Rand.Chance(0.5f))
+			{
+				list.Add(ThingDefOf.ActivatorCountdown);
+			}
+			if (Rand.Chance(0.5f))
+			{
+				int num2 = GenMath.RoundRandom(MechClusterGenerator.ActivatorProximitysCountCurve.Evaluate(points));
+				for (int j = 0; j < num2; j++)
+				{
+					list.Add(ThingDefOf.ActivatorProximity);
+				}
+			}
+		}
+		float pointsLeft = points;
+		ThingDef thingDef = source.Where(( x) => x.building.buildingTags.Contains("ConstructClusterCombatThreat")).MinBy(( x) => x.building.combatPower);
+		for (pointsLeft = Mathf.Max(pointsLeft, thingDef.building.combatPower); pointsLeft > 0f && source.Where(( x) => x.building.combatPower <= pointsLeft && x.building.buildingTags.Contains("ConstructClusterCombatThreat")).TryRandomElement(out ThingDef result4); pointsLeft -= result4.building.combatPower)
+		{
+			list.Add(result4);
+		}
+		return list;
+	}
         
         private static Faction _cachedConstructFaction;
         public static Faction ConstructFaction()

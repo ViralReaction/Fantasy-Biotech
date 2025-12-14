@@ -64,7 +64,7 @@
 				<capacities>
 					<li>Demolish</li>
 				</capacities>
-				<power>32</power>
+				<power>45</power>
 				<armorPenetration>0.50</armorPenetration>
 				<cooldownTime>2</cooldownTime>
 			</li>

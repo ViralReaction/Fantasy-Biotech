@@ -46,6 +46,8 @@
     <Compile Include="FantasyBiotech\Comps\Comp_AbilitySteamBurst.cs" />
     <Compile Include="FantasyBiotech\Defs\BossGroupExtension.cs" />
     <Compile Include="FantasyBiotech\Dialogs\Dialog_CreateGenepack.cs" />
+    <Compile Include="FantasyBiotech\GenSteps\GenStep_CosntructCluster.cs" />
+    <Compile Include="FantasyBiotech\GenSteps\SketchResolver\SketchResolver_ConstructCluster.cs" />
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
     <Compile Include="FantasyBiotech\Harmony\MechanitorUtility_ShouldBeMechanitor.cs" />
     <Compile Include="FantasyBiotech\Harmony\MemoryUtility_ClearAllMapsAndWorld.cs" />
@@ -55,13 +57,16 @@
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_RandomMechanoidGroup_Transpiler.cs" />
     <Compile Include="FantasyBiotech\Harmony\WorldFactionsUIUtility_DoWindowContents.cs" />
     <Compile Include="FantasyBiotech\HediffDefs\Hediff_ConstructBandNode.cs" />
+    <Compile Include="FantasyBiotech\IncidentWorkers\IncidentWorker_ConstructCluster.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_OperateOnPawn.cs" />
     <Compile Include="FantasyBiotech\ModOption\MenuController.cs" />
     <Compile Include="FantasyBiotech\ModOption\MenuSettings.cs" />
     <Compile Include="FantasyBiotech\ModOption\PatchOperation_ToggleSettings.cs" />
     <Compile Include="FantasyBiotech\QuestNodes\QuestNode_RaidTest.cs" />
     <Compile Include="FantasyBiotech\QuestNodes\QuestNode_Sanguophage.cs" />
+    <Compile Include="FantasyBiotech\QuestNodes\QuestNode_SpawnConstructCluster.cs" />
     <Compile Include="FantasyBiotech\QuestNodes\QuestNode_StartingMechWalkIn.cs" />
+    <Compile Include="FantasyBiotech\QuestNodes\QuestParts\QuestPart_ConstructCluster.cs" />
     <Compile Include="FantasyBiotech\QuestNode_Root_Bossgroup_Construct.cs" />
     <Compile Include="FantasyBiotech\Alert_GeneRackUnfueled.cs" />
     <Compile Include="FantasyBiotech\ComplexThreats\FileName.cs" />
@@ -109,6 +114,7 @@
     <Compile Include="FantasyBiotech\ThingClasses\Building_MechCharger_Steam.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_ConstructGestator.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_TonalCoreScanner.cs" />
+    <Compile Include="FantasyBiotech\Utility\ConstructClusterGenerator.cs" />
     <Compile Include="FantasyBiotech\Utility\DictionaryUtility.cs" />
     <Compile Include="FantasyBiotech\Utility\GenericUtility.cs" />
     <Compile Include="FantasyBiotech\Utility\RadialUtility.cs" />
