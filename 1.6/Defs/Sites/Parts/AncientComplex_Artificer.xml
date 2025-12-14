@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <SitePartDef>
+        <defName>VR_AncientComplex_Artificer</defName>
+        <label>ancient artificer complex</label>
+        <description>An ancient complex containing the corpse of an artificer. You can try to penetrate this dangerous structure to extract the artificer's implant for your own use.</description>
+        <workerClass>SitePartWorker_AncientComplex</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientMechanitorComplex</expandingIconTexture>
+        <approachOrderString>Investigate {0}</approachOrderString>
+        <approachingReportString>Investigating {0}.</approachingReportString>
+        <considerEnteringAsAttack>false</considerEnteringAsAttack>
+        <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+        <wantsThreatPoints>true</wantsThreatPoints>
+        <gravShipsCanLandOn>true</gravShipsCanLandOn>
+        <tags>
+            <li>VR_AncientComplex_Artificer</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>VR_AncientComplex_Artificer</defName>
+        <linkWithSite>VR_AncientComplex_Artificer</linkWithSite>
+        <order>470</order>
+        <genStep Class="GenStep_AncientComplex_Mechanitor" />
+    </GenStepDef>
+
+</Defs>

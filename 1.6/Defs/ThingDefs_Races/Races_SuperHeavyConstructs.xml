@@ -54,17 +54,17 @@
 			<soundAmbience>Pawn_Mech_Apocriton_Ambience</soundAmbience>
 			<detritusLeavings>
 				<li>
-					<def>ChunkMechanoidSlag</def>
+					<def>VR_ChunkConstructSlag</def>
 					<texOverrideIndex>15</texOverrideIndex>
 					<spawnChance>0.1</spawnChance>
 				</li>
 				<li>
-					<def>ChunkMechanoidSlag</def>
+					<def>VR_ChunkConstructSlag</def>
 					<texOverrideIndex>8</texOverrideIndex>
 					<spawnChance>0.1</spawnChance>
 				</li>
 				<li>
-					<def>ChunkMechanoidSlag</def>
+					<def>VR_ChunkConstructSlag</def>
 					<texOverrideIndex>13</texOverrideIndex>
 					<spawnChance>0.1</spawnChance>
 				</li>
@@ -152,17 +152,17 @@
 			</lifeStageAges>
 			<detritusLeavings>
 				<li>
-					<def>ChunkMechanoidSlag</def>
+					<def>VR_ChunkConstructSlag</def>
 					<texOverrideIndex>3</texOverrideIndex>
 					<spawnChance>0.75</spawnChance>
 				</li>
 				<li>
-					<def>ChunkMechanoidSlag</def>
+					<def>VR_ChunkConstructSlag</def>
 					<texOverrideIndex>17</texOverrideIndex>
 					<spawnChance>0.75</spawnChance>
 				</li>
 				<li>
-					<def>ChunkMechanoidSlag</def>
+					<def>VR_ChunkConstructSlag</def>
 					<texOverrideIndex>1</texOverrideIndex>
 					<spawnChance>0.75</spawnChance>
 				</li>
@@ -321,17 +321,17 @@
 			<dutyBoss>Warqueen</dutyBoss>
 			<detritusLeavings>
 				<li>
-					<def>ChunkMechanoidSlag</def>
+					<def>VR_ChunkConstructSlag</def>
 					<texOverrideIndex>13</texOverrideIndex>
 					<spawnChance>0.75</spawnChance>
 				</li>
 				<li>
-					<def>ChunkMechanoidSlag</def>
+					<def>VR_ChunkConstructSlag</def>
 					<texOverrideIndex>3</texOverrideIndex>
 					<spawnChance>0.75</spawnChance>
 				</li>
 				<li>
-					<def>ChunkMechanoidSlag</def>
+					<def>VR_ChunkConstructSlag</def>
 					<texOverrideIndex>0</texOverrideIndex>
 					<spawnChance>0.75</spawnChance>
 				</li>

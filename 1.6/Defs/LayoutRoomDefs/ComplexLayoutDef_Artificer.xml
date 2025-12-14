@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ComplexLayoutDef>
+        <defName>VR_AncientComplex_Artificer_Loot</defName>
+        <workerClass>FantasyBiotech.LayoutWorkerComplex_Artificer</workerClass>
+        <roomRewardCrateFactor>0</roomRewardCrateFactor>
+        <minRoomWidth>7</minRoomWidth>
+        <minRoomHeight>7</minRoomHeight>
+        <clearDoorFaction>false</clearDoorFaction>
+        <corridorDef>ComplexCorridor</corridorDef>
+        <canDisconnectRooms>false</canDisconnectRooms>
+        <areaPrunePercent>0.1</areaPrunePercent>
+        <roomDefs>
+            <VR_AncientRechargeRoom>
+                <weight>1</weight>
+            </VR_AncientRechargeRoom>
+            <VR_AncientMechGestatorRoom>
+                <weight>1</weight>
+            </VR_AncientMechGestatorRoom>
+            <VR_AncientMechGeneratorRoom>
+                <weight>1</weight>
+            </VR_AncientMechGeneratorRoom>
+            <VR_AncientBandNodeRoom>
+                <weight>2</weight>
+                <countRange>0~2</countRange>
+            </VR_AncientBandNodeRoom>
+        </roomDefs>
+        <threats>
+            <SleepingMechanoids />
+            <MechDrop />
+            <VR_BarrelBomb>
+                <maxPerRoom>1</maxPerRoom>
+                <selectionWeight>3</selectionWeight>
+            </VR_BarrelBomb>
+            <RaidTerminal MayRequire="Ludeon.RimWorld.Ideology">
+                <maxPerComplex>1</maxPerComplex>
+                <chancePerComplex>0.5</chancePerComplex>
+            </RaidTerminal>
+        </threats>
+    </ComplexLayoutDef>
+
+</Defs>

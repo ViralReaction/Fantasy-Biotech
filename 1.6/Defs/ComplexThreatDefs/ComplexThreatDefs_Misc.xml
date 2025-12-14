@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ComplexThreatDef ParentName="DelayedThreat">
+		<defName>VR_BarrelBomb</defName>
+		<workerClass>FantasyBiotech.ComplexThreatWorker_BarrelBomb</workerClass>
+		<postSpawnPassiveThreatFactor>0.1</postSpawnPassiveThreatFactor>
+		<spawnInOtherRoomChance>0.5</spawnInOtherRoomChance>
+	</ComplexThreatDef>
+
+</Defs>

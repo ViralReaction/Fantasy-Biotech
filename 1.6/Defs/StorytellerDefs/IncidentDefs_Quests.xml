@@ -2,10 +2,24 @@
 <Defs>
 
     <IncidentDef ParentName="GiveQuestBase">
-        <defName>GiveQuest_Intro_Artificer</defName>
+        <defName>VR_GiveQuest_Intro_Artificer</defName>
         <label>artificer</label>
         <questScriptDef>VR_ArtificerProtect</questScriptDef>
         <baseChance>0</baseChance> <!-- given by a special storyteller comp -->
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>VR_GiveQuest_AncientComplex_Artificer</defName>
+        <category>GiveQuest</category>
+        <label>ancient artificer complex</label>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <letterLabel>ancient artificer complex</letterLabel>
+        <questScriptDef>VR_OpportunitySite_AncientComplex_Artificer</questScriptDef>
+        <workerClass>IncidentWorker_GiveQuest</workerClass>
+        <baseChance>0</baseChance>
+        <requireColonistsPresent>True</requireColonistsPresent>
     </IncidentDef>
 
 </Defs>

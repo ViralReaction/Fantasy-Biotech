@@ -21,6 +21,9 @@ namespace FantasyBiotech
         public static ThingDef VR_ConstructBandNode;
         public static SketchResolverDef VR_ConstructCluster;
         public static ThingDef VR_Construct_Lift;
+        public static LayoutDef VR_AncientComplex_Artificer_Loot;
+
+        public static ThingDef VR_AncientBarrelBomb;
 
         static FantasyBiotechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FantasyBiotechDefOf));
     }

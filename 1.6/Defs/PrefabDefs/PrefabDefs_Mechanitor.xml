@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <PrefabDef>
+        <defName>VR_AncientLargeMechGestator</defName>
+        <size>(4,3)</size>
+        <things>
+            <AncientLargeMechGestator>
+                <position>(1, 0, 1)</position>
+            </AncientLargeMechGestator>
+        </things>
+    </PrefabDef>
+
+    <PrefabDef>
+        <defName>VR_AncientMechGestator_Cluster</defName>
+        <rotations>North</rotations>
+        <size>(8,4)</size>
+        <things>
+            <AncientMechGestator>
+                <positions>
+                    <li>(1, 0, 2)</li>
+                    <li>(5, 0, 2)</li>
+                </positions>
+                <relativeRotation>Opposite</relativeRotation>
+            </AncientMechGestator>
+        </things>
+    </PrefabDef>
+
+    <PrefabDef>
+        <defName>VR_AncientBandNode_Cluster</defName>
+        <rotations>North</rotations>
+        <size>(5,4)</size>
+        <things>
+            <VR_AncientBandNode>
+                <chance>0.75</chance>
+                <positions>
+                    <li>(0, 0, 0)</li>
+                    <li>(3, 0, 0)</li>
+                    <li>(0, 0, 2)</li>
+                    <li>(3, 0, 2)</li>
+                </positions>
+            </VR_AncientBandNode>
+        </things>
+    </PrefabDef>
+
+    <PrefabDef>
+        <defName>VR_AncientBasicRecharger_Edge</defName>
+        <edgeOnly>true</edgeOnly>
+        <size>(3,1)</size>
+        <things>
+            <AncientBasicRecharger>
+                <position>(1, 0, 0)</position>
+                <relativeRotation>Opposite</relativeRotation>
+            </AncientBasicRecharger>
+        </things>
+    </PrefabDef>
+
+    <PrefabDef>
+        <defName>VR_AncientStandardRecharger</defName>
+        <size>(3,2)</size>
+        <things>
+            <AncientStandardRecharger>
+                <position>(1, 0, 0)</position>
+            </AncientStandardRecharger>
+        </things>
+    </PrefabDef>
+
+    <PrefabDef>
+        <defName>VR_AncientGenerator_SmallCluster</defName>
+        <size>(5,3)</size>
+        <things>
+            <VR_AncientSteamGenerator>
+                <positions>
+                    <li>(0, 0, 1)</li>
+                    <li>(3, 0, 1)</li>
+                </positions>
+            </VR_AncientSteamGenerator>
+            <VR_AncientSteamTank>
+                <rects>
+                    <li>(2,0,2,2)</li>
+                    <li>(4,0,4,0)</li>
+                </rects>
+            </VR_AncientSteamTank>
+        </things>
+    </PrefabDef>
+
+    <PrefabDef>
+        <defName>VR_AncientBarrel_Wooden_Cluster</defName>
+        <size>(3,2)</size>
+        <things>
+            <VR_AncientBarrel_Wooden>
+                <chance>0.75</chance>
+                <positions>
+                    <li>(0, 0, 0)</li>
+                    <li>(1, 0, 0)</li>
+                    <li>(2, 0, 0)</li>
+                    <li>(0, 0, 1)</li>
+                    <li>(1, 0, 1)</li>
+                    <li>(2, 0, 1)</li>
+                </positions>
+            </VR_AncientBarrel_Wooden>
+        </things>
+    </PrefabDef>
+
+    <PrefabDef>
+        <defName>VR_AncientLamp_Steam</defName>
+        <size>(1,1)</size>
+        <things>
+            <VR_AncientLamp_Steam>
+                <position>(0, 0, 0)</position>
+            </VR_AncientLamp_Steam>
+        </things>
+    </PrefabDef>
+
+</Defs>
