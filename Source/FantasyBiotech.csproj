@@ -60,6 +60,7 @@
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_RandomMechanoidGroup_Transpiler.cs" />
     <Compile Include="FantasyBiotech\Harmony\WorldFactionsUIUtility_DoWindowContents.cs" />
     <Compile Include="FantasyBiotech\HediffDefs\Hediff_ConstructBandNode.cs" />
+    <Compile Include="FantasyBiotech\HediffDefs\Hediff_ConstructLink.cs" />
     <Compile Include="FantasyBiotech\IncidentWorkers\IncidentWorker_ConstructCluster.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_OperateOnPawn.cs" />
     <Compile Include="FantasyBiotech\ModOption\MenuController.cs" />
