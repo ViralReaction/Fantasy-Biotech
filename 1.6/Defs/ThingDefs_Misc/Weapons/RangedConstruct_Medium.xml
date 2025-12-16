@@ -74,23 +74,6 @@
 		</modExtensions>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseBullet">
-		<defName>VR_Bullet_ConstructGun_Crossbow</defName>
-		<label>crossbow bolt</label>
-		<graphicData>
-			<texPath>Things/Projectile/Dwemer_CrossbowBolt</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-			<drawSize>1.5</drawSize>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>30</damageAmountBase>
-			<stoppingPower>1.5</stoppingPower>
-			<speed>120</speed>
-		</projectile>
-	</ThingDef>
-
 	<!-- Medium Flamer -->
 	<ThingDef ParentName="VR_MediumConstructGun">
 		<defName>VR_ConstructGun_Flamer</defName>
@@ -214,27 +197,6 @@
 						<drawOffset>(0.30,0.0,0.00)</drawOffset>
 					</west>
 				</weaponDraftedDrawOffsets>
-			</li>
-		</modExtensions>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
-		<defName>VR_Bullet_LightingGunProjectile</defName>
-		<label>lightning projectile</label>
-		<thingClass>FantasyBiotech.Projectile_Bouncing</thingClass>
-		<graphicData>
-			<texPath>Projectile/Lightning</texPath>
-			<graphicClass>Graphic_Flicker</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Beam</damageDef>
-			<damageAmountBase>10</damageAmountBase>
-			<speed>60</speed>
-		</projectile>
-		<modExtensions>
-			<li Class="FantasyBiotech.BounceProjectileExtension">
-				<bounceCount>3</bounceCount>
-				<bounceRadius>5</bounceRadius>
 			</li>
 		</modExtensions>
 	</ThingDef>

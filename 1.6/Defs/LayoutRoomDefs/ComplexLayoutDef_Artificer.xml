@@ -28,7 +28,7 @@
         </roomDefs>
         <threats>
             <SleepingMechanoids />
-            <MechDrop />
+            <VR_ConstructGreatLift />
             <VR_BarrelBomb>
                 <maxPerRoom>1</maxPerRoom>
                 <selectionWeight>3</selectionWeight>

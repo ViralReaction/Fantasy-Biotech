@@ -430,26 +430,4 @@
 		<controlGroupPortraitZoom>0.7</controlGroupPortraitZoom>
 	</PawnKindDef>
 
-	<ThingDef ParentName="BaseBullet">
-		<defName>VR_Bullet_TeslaChestProjectile</defName>
-		<label>lightning projectile</label>
-		<thingClass>FantasyBiotech.Projectile_Bouncing</thingClass>
-		<graphicData>
-			<texPath>Projectile/Lightning</texPath>
-			<graphicClass>Graphic_Flicker</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Beam</damageDef>
-			<damageAmountBase>15</damageAmountBase>
-			<speed>60</speed>
-		</projectile>
-		<modExtensions>
-			<li Class="FantasyBiotech.BounceProjectileExtension">
-				<bounceCount>6</bounceCount>
-				<bounceRadius>10</bounceRadius>
-				<doubleTarget>true</doubleTarget>
-			</li>
-		</modExtensions>
-	</ThingDef>
-
 </Defs>

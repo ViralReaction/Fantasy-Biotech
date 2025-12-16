@@ -13,10 +13,10 @@
         <countPerHundredCells>5</countPerHundredCells>
         <minMaxRange>1~1</minMaxRange>
       </VR_AncientStandardRecharger>
-      <AncientLargeMechGestator>
+      <VR_AncientLargeMechGestator>
         <countPerHundredCells>5</countPerHundredCells>
         <minMaxRange>1~1</minMaxRange>
-      </AncientLargeMechGestator>
+      </VR_AncientLargeMechGestator>
       <VR_AncientLamp_Steam>
         <countPerHundredCells>5</countPerHundredCells>
         <minMaxRange>0~1</minMaxRange>
@@ -39,14 +39,14 @@
     <defName>VR_AncientMechGestatorRoom</defName>
     <canMergeWithAdjacentRoom>true</canMergeWithAdjacentRoom>
     <prefabs>
-      <AncientMechGestator_Cluster>
+      <VR_AncientMechGestator_Cluster>
         <countPerHundredCells>5</countPerHundredCells>
         <minMaxRange>1~5</minMaxRange>
-      </AncientMechGestator_Cluster>
-      <AncientLargeMechGestator>
+      </VR_AncientMechGestator_Cluster>
+      <VR_AncientLargeMechGestator>
         <countPerHundredCells>5</countPerHundredCells>
         <minMaxRange>1~5</minMaxRange>
-      </AncientLargeMechGestator>
+      </VR_AncientLargeMechGestator>
       <VR_AncientLamp_Steam>
         <countPerHundredCells>5</countPerHundredCells>
         <minMaxRange>0~1</minMaxRange>
@@ -103,10 +103,10 @@
         <countPerTenEdgeCells>3</countPerTenEdgeCells>
         <minMaxRange>2~6</minMaxRange>
       </AncientDisplayBank_Edge>
-      <AncientBandNode_Cluster>
+      <VR_AncientBandNode_Cluster>
         <countPerHundredCells>10</countPerHundredCells>
         <minMaxRange>5~15</minMaxRange>
-      </AncientBandNode_Cluster>
+      </VR_AncientBandNode_Cluster>
     </prefabs>
     <floorTypes>
       <li>AncientConcrete</li>
@@ -119,6 +119,12 @@
         <groupDistRange>3~5</groupDistRange>
         <minGroups>1</minGroups>
       </VR_ChunkConstructSlag>
+      <VR_AncientPipe_Steam>
+        <groupsPerHundredCells>2~4</groupsPerHundredCells>
+        <itemsPerGroup>8~10</itemsPerGroup>
+        <groupDistRange>3~5</groupDistRange>
+        <minGroups>1</minGroups>
+      </VR_AncientPipe_Steam>
     </scatter>
   </LayoutRoomDef>
 

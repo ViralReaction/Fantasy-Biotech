@@ -2,12 +2,12 @@
 <Defs>
 
     <ThingDef ParentName="AncientMechBuildingBase">
-        <defName>AncientBasicRecharger</defName>
+        <defName>VR_AncientBasicRecharger_Steam</defName>
         <label>ancient basic recharger</label>
         <description>An ancient basic recharger. Valuable parts are missing, and everything else is degraded to uselessness.</description>
         <rotatable>true</rotatable>
         <graphicData>
-            <texPath>Things/Building/Ruins/AncientBasicRecharger</texPath>
+            <texPath>Things/Building/Ruins/BasicRecharger_Ruined/BasicRecharger_Ruined</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(2.9,1.25)</drawSize>
             <shadowData>
@@ -21,12 +21,33 @@
     </ThingDef>
 
     <ThingDef ParentName="AncientMechBuildingBase">
-        <defName>AncientMechGestator</defName>
+        <defName>VR_AncientStandardRecharger_Steam</defName>
+        <label>ancient standard recharger</label>
+        <description>An ancient standard recharger. Valuable parts are missing, and everything else is degraded to uselessness.</description>
+        <graphicData>
+            <texPath>Things/Building/Ruins/StandardRecharger_Ruined/StandardRecharger_Ruined</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3.8,2.8)</drawSize>
+            <shadowData>
+                <volume>(2.8, 0.5, 1.8)</volume>
+            </shadowData>
+        </graphicData>
+        <size>(3,2)</size>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+        </statBases>
+        <killedLeavings>
+            <ChunkSlagSteel>1</ChunkSlagSteel>
+        </killedLeavings>
+    </ThingDef>
+
+    <ThingDef ParentName="AncientMechBuildingBase">
+        <defName>VR_AncientConstructGestator</defName>
         <label>ancient mech gestator</label>
         <description>An ancient mech gestator. Valuable parts are missing, and everything else is degraded to uselessness.</description>
         <rotatable>true</rotatable>
         <graphicData>
-            <texPath>Things/Building/Ruins/AncientMechGestator</texPath>
+            <texPath>Things/Building/Ruins/ConstructGestatorStandard_Ruined/ConstructGestatorStandard_Ruined</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(6,4)</drawSize>
             <shadowData>
@@ -46,23 +67,26 @@
     </ThingDef>
 
     <ThingDef ParentName="AncientMechBuildingBase">
-        <defName>AncientStandardRecharger</defName>
-        <label>ancient standard recharger</label>
-        <description>An ancient standard recharger. Valuable parts are missing, and everything else is degraded to uselessness.</description>
+        <defName>VR_AncientLargeConstructGestator</defName>
+        <label>ancient large construct gestator</label>
+        <description>An ancient large construct gestator. Valuable parts are missing, and everything else is degraded to uselessness.</description>
         <graphicData>
-            <texPath>Things/Building/Ruins/AncientStandardRecharger</texPath>
+            <texPath>Things/Building/Ruins/ConstructGestatorLarge_Ruined/ConstructGestatorLarge_Ruined</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(3.8,2.8)</drawSize>
+            <drawSize>(5.7, 4.275)</drawSize>
             <shadowData>
-                <volume>(2.8, 0.5, 1.8)</volume>
+                <volume>(4, 1, 2.9)</volume>
             </shadowData>
         </graphicData>
-        <size>(3,2)</size>
+        <size>(4,3)</size>
         <statBases>
-            <MaxHitPoints>500</MaxHitPoints>
+            <MaxHitPoints>1000</MaxHitPoints>
         </statBases>
+        <building>
+            <deconstructible>false</deconstructible>
+        </building>
         <killedLeavings>
-            <ChunkSlagSteel>1</ChunkSlagSteel>
+            <ChunkSlagSteel>3</ChunkSlagSteel>
         </killedLeavings>
     </ThingDef>
 
@@ -147,30 +171,6 @@
         </building>
     </ThingDef>
 
-    <ThingDef ParentName="AncientMechBuildingBase">
-        <defName>AncientLargeMechGestator</defName>
-        <label>ancient large mech gestator</label>
-        <description>An ancient large mech gestator. Valuable parts are missing, and everything else is degraded to uselessness.</description>
-        <graphicData>
-            <texPath>Things/Building/Ruins/AncientLargeMechGestator</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(5.7, 4.275)</drawSize>
-            <shadowData>
-                <volume>(4, 1, 2.9)</volume>
-            </shadowData>
-        </graphicData>
-        <size>(4,3)</size>
-        <statBases>
-            <MaxHitPoints>1000</MaxHitPoints>
-        </statBases>
-        <building>
-            <deconstructible>false</deconstructible>
-        </building>
-        <killedLeavings>
-            <ChunkSlagSteel>3</ChunkSlagSteel>
-        </killedLeavings>
-    </ThingDef>
-
     <ThingDef ParentName="BuildingBase">
         <defName>VR_AncientBarrel_Wooden</defName>
         <label>ancient barrel</label>
@@ -217,6 +217,7 @@
         <graphicData>
             <graphicClass>Graphic_Multi</graphicClass>
             <texPath>Things/Building/Furniture/WallLight_Steam/WallLight_Steam</texPath>
+            <drawSize>(2,2)</drawSize>
         </graphicData>
         <comps>
             <li Class="CompProperties_Glower">
@@ -252,6 +253,27 @@
         </statBases>
         <killedLeavings>
             <ChunkSlagSteel>1</ChunkSlagSteel>
+        </killedLeavings>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>VR_AncientPipe_Steam</defName>
+        <label>ancient steam pipe</label>
+        <description>An ancient steam pipe. Completely corroded to point ofuselessness.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/SteamPipes_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <linkType>Basic</linkType>
+            <linkFlags>
+                <li>Custom7</li>
+            </linkFlags>
+        </graphicData>
+        <size>(1,1)</size>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+        </statBases>
+        <killedLeavings>
+            <Steel>1</Steel>
         </killedLeavings>
     </ThingDef>
 

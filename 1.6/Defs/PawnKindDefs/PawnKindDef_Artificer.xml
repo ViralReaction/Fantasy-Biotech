@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<PawnKindDef Name="MechanitorBase">
+	<PawnKindDef Name="VR_ArtificerBase">
 		<defName>VR_Artificer</defName>
 		<label>artificer</label>
 		<race>Human</race>
@@ -56,6 +56,15 @@
 			<PsychicSensitivity>-1</PsychicSensitivity>
 			<PsychicSensitivity>-2</PsychicSensitivity>
 		</disallowedTraitsWithDegree>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="VR_ArtificerBase">
+		<defName>VR_Artificer_Basic</defName>
+		<apparelMoney>0~1000</apparelMoney>
+		<apparelRequired Inherit="False" />
+		<techHediffsTags Inherit="False" />
+		<forcedTraits Inherit="False" />
+		<defaultFactionDef Inherit="False" />
 	</PawnKindDef>
 
 	<PawnKindDef Name="TribalBase">

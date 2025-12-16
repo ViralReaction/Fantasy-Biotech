@@ -4,4 +4,10 @@
 	<FantasyBiotech_MessagePawnKilledRipscanner>{PAWN_nameDef}'s body dissolved as their essence was transferred by the {BUILDING}</FantasyBiotech_MessagePawnKilledRipscanner>
 	<FantasyBiotech_MessageSubcoreSoftscannerCompleted>Harmonic sampling completed for {PAWN_nameDef}.</FantasyBiotech_MessageSubcoreSoftscannerCompleted>
 
+	<FantasyBiotech_MessageArtificerCasketOpened>{0} was a artificer. You can remove {0_possessive} {1_label} and use it on a colonist.</FantasyBiotech_MessageArtificerCasketOpened>
+	<FantasyBiotech_LetterLabelArtificerCasketOpened>{PAWN_nameDef}'s implant available</FantasyBiotech_LetterLabelArtificerCasketOpened>
+	<FantasyBiotech_LetterArtificerCasketOpened>You have found the corpse of an ancient artificer!\n\nExtract {PAWN_possessive} implant by selecting a colonist and right-clicking the corpse.</FantasyBiotech_LetterArtificerCasketOpened>
+	<FantasyBiotech_LetterLabelArtificerCasketFound>Artificer casket found</FantasyBiotech_LetterLabelArtificerCasketFound>
+	<FantasyBiotech_LetterArtificerCasketFound>You have discovered a artificer's sarcophagus!\n\nOpen it to find them inside.</FantasyBiotech_LetterArtificerCasketFound>
+
 </LanguageData>

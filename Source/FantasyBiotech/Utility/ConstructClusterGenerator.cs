@@ -191,7 +191,6 @@ namespace FantasyBiotech
 			List<ThingDef> list = new List<ThingDef>();
 			List<ThingDef> source = DefDatabase<ThingDef>.AllDefsListForReading.Where((ThingDef def) => def.building?.buildingTags != null && def.building.buildingTags.Contains(MechClusterMemberTag) && (!totalPoints.HasValue || (float)def.building.minMechClusterPoints <= totalPoints)).ToList();
 			int liftCount = Mathf.FloorToInt(PointsToLiftCountCurve.Evaluate(points));
-			Log.Message(liftCount);
 			for (int i = 0; i < liftCount; i++)
 			{
 				list.Add(FantasyBiotechDefOf.VR_Construct_Lift);

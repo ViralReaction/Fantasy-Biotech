@@ -318,22 +318,7 @@
 		<techHediffsMoney>9999~9999</techHediffsMoney>
 	</PawnKindDef>
 
-	<ThingDef ParentName="BaseBullet">
-		<defName>VR_Construct_BallistaShot</defName>
-		<label>ballistae shot</label>
-		<graphicData>
-			<texPath>Things/Projectile/Dwemer_BallistaBolt</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.3</drawSize>
-		</graphicData>
-		<projectile>
-			 <damageDef>Bullet</damageDef>
-			 <damageAmountBase>15</damageAmountBase>
-			 <armorPenetrationBase>0.35</armorPenetrationBase>
-			 <stoppingPower>1.5</stoppingPower>
-			 <speed>90</speed>
-		</projectile>
-	</ThingDef>
+
 	
 	<!-- Scorcher Equivalent -->
 	<ThingDef ParentName="VR_LancerConstructWalker">

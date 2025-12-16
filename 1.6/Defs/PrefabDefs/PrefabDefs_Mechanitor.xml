@@ -5,9 +5,9 @@
         <defName>VR_AncientLargeMechGestator</defName>
         <size>(4,3)</size>
         <things>
-            <AncientLargeMechGestator>
+            <VR_AncientLargeConstructGestator>
                 <position>(1, 0, 1)</position>
-            </AncientLargeMechGestator>
+            </VR_AncientLargeConstructGestator>
         </things>
     </PrefabDef>
 
@@ -16,13 +16,13 @@
         <rotations>North</rotations>
         <size>(8,4)</size>
         <things>
-            <AncientMechGestator>
+            <VR_AncientConstructGestator>
                 <positions>
                     <li>(1, 0, 2)</li>
                     <li>(5, 0, 2)</li>
                 </positions>
                 <relativeRotation>Opposite</relativeRotation>
-            </AncientMechGestator>
+            </VR_AncientConstructGestator>
         </things>
     </PrefabDef>
 
@@ -48,10 +48,10 @@
         <edgeOnly>true</edgeOnly>
         <size>(3,1)</size>
         <things>
-            <AncientBasicRecharger>
+            <VR_AncientBasicRecharger_Steam>
                 <position>(1, 0, 0)</position>
                 <relativeRotation>Opposite</relativeRotation>
-            </AncientBasicRecharger>
+            </VR_AncientBasicRecharger_Steam>
         </things>
     </PrefabDef>
 
@@ -59,9 +59,9 @@
         <defName>VR_AncientStandardRecharger</defName>
         <size>(3,2)</size>
         <things>
-            <AncientStandardRecharger>
+            <VR_AncientStandardRecharger_Steam>
                 <position>(1, 0, 0)</position>
-            </AncientStandardRecharger>
+            </VR_AncientStandardRecharger_Steam>
         </things>
     </PrefabDef>
 
@@ -104,6 +104,16 @@
 
     <PrefabDef>
         <defName>VR_AncientLamp_Steam</defName>
+        <size>(1,1)</size>
+        <things>
+            <VR_AncientLamp_Steam>
+                <position>(0, 0, 0)</position>
+            </VR_AncientLamp_Steam>
+        </things>
+    </PrefabDef>
+
+    <PrefabDef>
+        <defName>VR_AncientPipe_Steam</defName>
         <size>(1,1)</size>
         <things>
             <VR_AncientLamp_Steam>

@@ -51,7 +51,7 @@
 		<label>construct slag chunk</label>
 		<description>The remains of a smashed construct. While useless in its current form, it can be smelted to recover steel.</description>
 		<graphicData>
-			<texPath>Things/Building/Ruins/ConstructSlag</texPath>
+			<texPath>Things/Building/Ruins/ConstructDetritus</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
 		</graphicData>
 		<saveCompressible>false</saveCompressible>

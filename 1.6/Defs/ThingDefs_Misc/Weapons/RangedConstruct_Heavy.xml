@@ -40,23 +40,6 @@
 		</verbs>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseBullet">
-		<defName>VR_Bullet_ConstructGun_HeavyCrossbow</defName>
-		<label>heavy crossbow bolt</label>
-		<graphicData>
-			<texPath>Things/Projectile/Dwemer_CrossbowBolt</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-			<drawSize>1.5</drawSize>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>30</damageAmountBase>
-			<stoppingPower>1.5</stoppingPower>
-			<speed>120</speed>
-		</projectile>
-	</ThingDef>
-
 	<ThingDef ParentName="VR_MediumConstructGun">
 		<defName>VR_ConstructGun_HeavyFlamer</defName>
 		<label>heavy flame cannon</label>

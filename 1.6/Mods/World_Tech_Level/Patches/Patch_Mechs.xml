@@ -32,4 +32,22 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_IncidentDefs"]/entries</xpath>
+		<value>
+			<li>
+				<defName>VR_GiveQuest_Intro_Artificer</defName>
+				<techLevel>Medieval</techLevel>
+			</li>
+			<li>
+				<defName>VR_GiveQuest_AncientComplex_Artificer</defName>
+				<techLevel>Medieval</techLevel>
+			</li>
+			<li>
+				<defName>VR_ConstructCluster</defName>
+				<techLevel>Medieval</techLevel>
+			</li>
+		</value>
+	</Operation>
+
 </Patch>

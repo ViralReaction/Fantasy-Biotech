@@ -85,20 +85,4 @@
 		</verbs>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_VR_MiniBlunderbuss</defName>
-		<label>blunderbuss blast</label>
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_MiniShotgun</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>10</damageAmountBase>
-			<stoppingPower>2.5</stoppingPower>
-			<armorPenetrationBase>0.12</armorPenetrationBase>
-			<speed>55</speed>
-		</projectile>
-	</ThingDef>
-
 </Defs>

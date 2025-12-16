@@ -41,6 +41,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantasyBiotech\ComplexThreats\ComplexThreatWorker_ConstructAmbush.cs" />
     <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_AbilitySteamBurst.cs" />
     <Compile Include="FantasyBiotech\Comps\CompProperties\CompProperties_SteamSpray.cs" />
     <Compile Include="FantasyBiotech\Comps\CompSteamSpray.cs" />

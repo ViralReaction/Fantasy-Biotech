@@ -23,7 +23,11 @@ namespace FantasyBiotech
         public static ThingDef VR_Construct_Lift;
         public static LayoutDef VR_AncientComplex_Artificer_Loot;
 
+        public static ThingDef VR_ArtificerSarcophagus;
+
         public static ThingDef VR_AncientBarrelBomb;
+
+        public static PawnKindDef VR_Artificer_Basic;
 
         static FantasyBiotechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FantasyBiotechDefOf));
     }

@@ -9,4 +9,12 @@
 		<spawnInOtherRoomChance>0.5</spawnInOtherRoomChance>
 	</ComplexThreatDef>
 
+	<ComplexThreatDef ParentName="DelayedThreat">
+		<defName>VR_ConstructGreatLift</defName>
+		<workerClass>FantasyBiotech.ComplexThreatWorker_ConstructAmbush</workerClass>
+		<signalActionAmbushType>Mechanoids</signalActionAmbushType>
+		<spawnAroundComplex>true</spawnAroundComplex>
+		<useDropPods>false</useDropPods>
+	</ComplexThreatDef>
+
 </Defs>

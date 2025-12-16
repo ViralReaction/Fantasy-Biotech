@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <ThingDef ParentName="AncientCryptosleepCasket">
+    <defName>VR_ArtificerSarcophagus</defName>
+    <label>ancient artficer sargophagus pod</label>
+    <thingClass>Building_AncientCryptosleepPod</thingClass>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <description>A single-use sarcophagus for preserving one person in a state of suspended animation.</description>
+    <graphicData>
+      <texPath>Things/Building/Ruins/ArtificerSarcophagus/ArtificerSarcophagus</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <building>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+    </building>
+    <researchPrerequisites Inherit="False" />
+    <hasInteractionCell>false</hasInteractionCell>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+    </statBases>
+    <designationCategory Inherit="False" />
+    <costList Inherit="False" />
+    <comps Inherit="False" />
+  </ThingDef>
+
   <ThingDef ParentName="BuildingBase">
     <defName>VR_AncientBarrelBomb</defName>
     <label>ancient unstable barrel bomb</label>

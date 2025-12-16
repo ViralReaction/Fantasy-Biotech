@@ -65,9 +65,9 @@ namespace FantasyBiotech
 			{
 				if (CanPlaceCasketAt(item))
 				{
-					casket = (Building_AncientCryptosleepPod)GenSpawn.Spawn(ThingDefOf.AncientCryptosleepPod, item, map);
+					casket = (Building_AncientCryptosleepPod)GenSpawn.Spawn(FantasyBiotechDefOf.VR_ArtificerSarcophagus, item, map);
 					casket.openedSignal = "MechanitorCasketOpened" + Find.UniqueIDsManager.GetNextSignalTagID();
-					Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Mechanitor_Basic, Faction.OfAncients, PawnGenerationContext.NonPlayer, null, forceGenerateNewPawn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false,
+					Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(FantasyBiotechDefOf.VR_Artificer_Basic, Faction.OfAncients, PawnGenerationContext.NonPlayer, null, forceGenerateNewPawn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false,
 					                                                                 certainlyBeenInCryptosleep: true, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null, forceNoIdeo: false, forceNoBackstory: false, forbidAnyTitle: false, forceDead: true));
 					pawn.Corpse.Age = RandomMechanitorCorpseAge.RandomInRange;
 					pawn.relations.hidePawnRelations = true;
@@ -75,15 +75,15 @@ namespace FantasyBiotech
 					casket.TryAcceptThing(pawn.Corpse, allowSpecialEffects: false);
 					SignalAction_Message obj = (SignalAction_Message)ThingMaker.MakeThing(ThingDefOf.SignalAction_Message);
 					obj.signalTag = casket.openedSignal;
-					obj.message = "MessageMechanitorCasketOpened".Translate(pawn, HediffDefOf.MechlinkImplant);
+					obj.message = "FantasyBiotech_MessageArtificerCasketOpened".Translate(pawn, FantasyBiotechDefOf.VR_ArtificerImplant);
 					obj.messageType = MessageTypeDefOf.PositiveEvent;
 					obj.lookTargets = pawn.Corpse;
 					GenSpawn.Spawn(obj, item, map);
 					SignalAction_Letter obj2 = (SignalAction_Letter)ThingMaker.MakeThing(ThingDefOf.SignalAction_Letter);
 					obj2.signalTag = casket.openedSignal;
 					obj2.letterDef = LetterDefOf.NeutralEvent;
-					obj2.letterLabelKey = "LetterLabelMechanitorCasketOpened";
-					obj2.letterMessageKey = "LetterMechanitorCasketOpened";
+					obj2.letterLabelKey = "FantasyBiotech_LetterLabelArtificerCasketOpened";
+					obj2.letterMessageKey = "FantasyBiotech_LetterArtificerCasketOpened";
 					obj2.fixedPawnReference = pawn;
 					obj2.lookTargets = pawn.Corpse;
 					GenSpawn.Spawn(obj2, item, map);
@@ -97,8 +97,8 @@ namespace FantasyBiotech
 					SignalAction_Letter obj4 = (SignalAction_Letter)ThingMaker.MakeThing(ThingDefOf.SignalAction_Letter);
 					obj4.signalTag = triggerUnfogged.signalTag;
 					obj4.letterDef = LetterDefOf.NeutralEvent;
-					obj4.letterLabelKey = "LetterLabelMechanitorCasketFound";
-					obj4.letterMessageKey = "LetterMechanitorCasketFound";
+					obj4.letterLabelKey = "FantasyBiotech_LetterLabelArtificerCasketFound";
+					obj4.letterMessageKey = "FantasyBiotech_LetterArtificerCasketFound";
 					GenSpawn.Spawn(obj4, item, map);
 					ScatterDebrisUtility.ScatterFilthAroundThing(casket, map, ThingDefOf.Filth_MachineBits);
 					return true;
