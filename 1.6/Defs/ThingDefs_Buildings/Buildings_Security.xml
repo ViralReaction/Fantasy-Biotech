@@ -117,7 +117,7 @@
 				<minRange>3.9</minRange>
 				<range>45.9</range>
 				<ticksBetweenBurstShots>17</ticksBetweenBurstShots>
-				<burstShotCount>1</burstShotCount>
+				<burstShotCount>2</burstShotCount>
 				<soundCast>Shot_Autocannon</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>12</muzzleFlashScale>
