@@ -19,7 +19,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\1.6\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <ErrorReport>none</ErrorReport>
@@ -28,7 +28,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\1.6\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -36,8 +36,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PipeSystem">
-      <HintPath>..\..\VanillaExpandedFramework\1.6\Assemblies\PipeSystem.dll</HintPath>
-	  <Private>false</Private>
+      <HintPath>..\..\..\VanillaExpandedFramework\1.6\Assemblies\PipeSystem.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
