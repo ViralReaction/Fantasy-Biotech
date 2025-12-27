@@ -36,7 +36,7 @@
 		<weaponStuffOverride>Steel</weaponStuffOverride>
 		<techHediffsMoney>1000~2000</techHediffsMoney>
 		<techHediffsRequired>
-			<li>VR_ArtificerImplant_Hediff</li>
+			<li>VR_ArtificerImplant</li>
 		</techHediffsRequired>
 		<combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
 		<combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>

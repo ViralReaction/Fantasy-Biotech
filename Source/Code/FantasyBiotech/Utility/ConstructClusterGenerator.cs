@@ -193,7 +193,7 @@ namespace FantasyBiotech
 			int liftCount = Mathf.FloorToInt(PointsToLiftCountCurve.Evaluate(points));
 			for (int i = 0; i < liftCount; i++)
 			{
-				list.Add(FantasyBiotechDefOf.VR_Construct_Lift);
+				list.Add(FantasyBiotechThingDefOf.VR_Construct_Lift);
 			}
 
 			// if (canBeDormant)

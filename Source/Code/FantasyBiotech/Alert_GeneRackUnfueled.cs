@@ -29,7 +29,7 @@ namespace FantasyBiotech
             List<Map> maps = Find.Maps;
             for (int i = 0; i < maps.Count; i++)
             {
-                foreach (Building building in maps[i].listerBuildings.AllBuildingsColonistOfDef(FantasyBiotechDefOf.VR_GeneRack))
+                foreach (Building building in maps[i].listerBuildings.AllBuildingsColonistOfDef(FantasyBiotechThingDefOf.VR_GeneRack))
                 {
                     CompGenepackContainer compGenepackContainer = building.TryGetComp<CompGenepackContainer>();
                     CompRefuelable refuelable = building.TryGetComp<CompRefuelable>();

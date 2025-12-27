@@ -57,7 +57,7 @@ namespace FantasyBiotech
             List<Map> maps = Find.Maps;
             for (int i = 0; i < maps.Count; i++)
             {
-                foreach (Building item in maps[i].listerBuildings.AllBuildingsColonistOfDef(FantasyBiotechDefOf.VR_ConstructBandNode))
+                foreach (Building item in maps[i].listerBuildings.AllBuildingsColonistOfDef(FantasyBiotechThingDefOf.VR_ConstructBandNode))
                 {
                     if (item.TryGetComp<CompBandNode>().tunedTo == pawn && item.TryGetComp<CompPowerTrader>().PowerOn)
                     {

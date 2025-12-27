@@ -49,6 +49,7 @@
     <Compile Include="FantasyBiotech\Comps\CompTempControl_Steam.cs" />
     <Compile Include="FantasyBiotech\Comps\Comp_AbilitySteamBurst.cs" />
     <Compile Include="FantasyBiotech\Defs\BossGroupExtension.cs" />
+    <Compile Include="FantasyBiotech\Defs\FantasyBiotechThingDefOf.cs" />
     <Compile Include="FantasyBiotech\Dialogs\Dialog_CreateGenepack.cs" />
     <Compile Include="FantasyBiotech\GenSteps\GenStep_CosntructCluster.cs" />
     <Compile Include="FantasyBiotech\GenSteps\SketchResolver\SketchResolver_ConstructCluster.cs" />

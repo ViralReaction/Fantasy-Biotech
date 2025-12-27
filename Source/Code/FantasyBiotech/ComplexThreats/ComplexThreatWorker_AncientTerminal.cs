@@ -15,15 +15,15 @@ namespace FantasyBiotech
 			if (!ModsConfig.IdeologyActive) return false;
 			if (base.CanResolveInt(parms) && TryFindRandomEnemyFaction(parms, out Faction _))
 			{
-				return ComplexUtility.TryFindRandomSpawnCell(FantasyBiotechDefOf.VR_AncientEnemyTerminal, parms.room, parms.map, out IntVec3 spawnPosition);
+				return ComplexUtility.TryFindRandomSpawnCell(FantasyBiotechThingDefOf.VR_AncientEnemyTerminal, parms.room, parms.map, out IntVec3 spawnPosition);
 			}
 			return false;
 		}
 
 		public override void ResolveInt(ComplexResolveParams parms, ref float threatPointsUsed, List<Thing> outSpawnedThings)
 		{
-			ComplexUtility.TryFindRandomSpawnCell(FantasyBiotechDefOf.VR_AncientEnemyTerminal, parms.room, parms.map, out IntVec3 spawnPosition);
-			Thing thing = GenSpawn.Spawn(FantasyBiotechDefOf.VR_AncientEnemyTerminal, spawnPosition, parms.map);
+			ComplexUtility.TryFindRandomSpawnCell(FantasyBiotechThingDefOf.VR_AncientEnemyTerminal, parms.room, parms.map, out IntVec3 spawnPosition);
+			Thing thing = GenSpawn.Spawn(FantasyBiotechThingDefOf.VR_AncientEnemyTerminal, spawnPosition, parms.map);
 			TryFindRandomEnemyFaction(parms, out Faction faction);
 			float num = Mathf.Max(parms.points, faction.def.MinPointsToGeneratePawnGroup(PawnGroupKindDefOf.Combat) * 1.05f);
 			IncidentParms incidentParms = new IncidentParms

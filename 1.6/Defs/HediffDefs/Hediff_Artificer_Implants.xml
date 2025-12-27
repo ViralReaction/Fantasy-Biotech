@@ -64,7 +64,7 @@
 				<compClass>CompUsableImplant</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Implant sublink</useLabel>
-				<userMustHaveHediff>VR_ArtificerImplant_Hediff</userMustHaveHediff>
+				<userMustHaveHediff>VR_ArtificerImplant</userMustHaveHediff>
 			</li>
 			<li Class="CompProperties_UseEffectInstallImplant">
 				<hediffDef>VR_Artificer_ControlSublinkImplant</hediffDef>
@@ -92,7 +92,7 @@
 				<compClass>CompUsableImplant</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Implant high sublink</useLabel>
-				<userMustHaveHediff>VR_ArtificerImplant_Hediff</userMustHaveHediff>
+				<userMustHaveHediff>VR_ArtificerImplant</userMustHaveHediff>
 			</li>
 			<li Class="CompProperties_UseEffectInstallImplant">
 				<hediffDef>VR_Artificer_ControlSublinkImplant</hediffDef>
@@ -190,7 +190,7 @@
 				<compClass>CompUsableImplant</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Implant {0_label}</useLabel>
-				<userMustHaveHediff>VR_ArtificerImplant_Hediff</userMustHaveHediff>
+				<userMustHaveHediff>VR_ArtificerImplant</userMustHaveHediff>
 			</li>
 			<li Class="CompProperties_UseEffectInstallImplant">
 				<hediffDef>VR_Artificer_MechFormfeederImplant</hediffDef>

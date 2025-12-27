@@ -10,7 +10,7 @@ namespace FantasyBiotech.FantasyBiotech.Harmony
         {
             if (!__result)
             {
-                __result = pawn.Faction.IsPlayerSafe() && pawn.health.hediffSet.HasHediff(FantasyBiotechDefOf.VR_ArtificerImplant_Hediff);
+                __result = pawn.Faction.IsPlayerSafe() && pawn.health.hediffSet.HasHediff(FantasyBiotechDefOf.VR_ArtificerImplant);
             }
             return __result;
 

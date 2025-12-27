@@ -28,7 +28,7 @@ namespace FantasyBiotech
     {
         public static bool Prefix(ref bool __result, Building_GeneAssembler  __instance)
         {
-            if (__instance.def != FantasyBiotechDefOf.VR_GraftForge)  return true;
+            if (__instance.def != FantasyBiotechThingDefOf.VR_GraftForge)  return true;
             __result = true;
             return false;
         }

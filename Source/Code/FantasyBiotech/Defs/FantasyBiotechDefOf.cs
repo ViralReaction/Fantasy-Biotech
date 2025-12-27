@@ -8,31 +8,16 @@ namespace FantasyBiotech
     public static class FantasyBiotechDefOf
     {
         [UsedImplicitly] public static FactionDef VR_Construct;
-        public static ThingDef VR_GeneRack;
-        public static HediffDef VR_ArtificerImplant_Hediff;
-        public static ThingDef VR_ArtificerImplant;
+        public static HediffDef VR_ArtificerImplant;
         public static EffecterDef ButcherFlesh;
         public static SoundDef Recipe_ButcherCorpseFlesh;
         public static JobDef VR_ExtractGeneOnPawn;
-        public static ThingDef VR_GeneRemover;
-        public static ThingDef VR_GraftForge;
         public static ResearchProjectDef VR_ArchiteGenetics;
         public static ResearchProjectDef VR_MasterArchiteGenetics;
         public static EffecterDef VR_Steam_Burst;
-        public static ThingDef VR_ConstructBandNode;
         public static SketchResolverDef VR_ConstructCluster;
-        public static ThingDef VR_Construct_Lift;
         public static LayoutDef VR_AncientComplex_Artificer_Loot;
-
-        public static ThingDef VR_ArtificerSarcophagus;
-
-        public static ThingDef VR_AncientBarrelBomb;
-
         public static PawnKindDef VR_Artificer_Basic;
-
-        [MayRequireIdeology]
-        public static ThingDef VR_AncientEnemyTerminal;
-
         static FantasyBiotechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FantasyBiotechDefOf));
     }
 

@@ -7,7 +7,7 @@ namespace FantasyBiotech
 {
     public class WorkGiver_ExtractGeneOnPawn : WorkGiver_Scanner
     {
-        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForDef(FantasyBiotechDefOf.VR_GeneRemover);
+        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForDef(FantasyBiotechThingDefOf.VR_GeneRemover);
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             if (t is not Building_GeneRemover geneRemover)

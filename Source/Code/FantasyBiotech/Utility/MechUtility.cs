@@ -125,7 +125,7 @@ namespace FantasyBiotech
 
         public static bool IsArtificer(Pawn pawn)
         {
-            return pawn.health.hediffSet.HasHediff(FantasyBiotechDefOf.VR_ArtificerImplant_Hediff);
+            return pawn.health.hediffSet.HasHediff(FantasyBiotechDefOf.VR_ArtificerImplant);
         }
 
         public static bool AnyArtificerImplantInMap()
@@ -133,7 +133,7 @@ namespace FantasyBiotech
 	        List<Map> maps = Find.Maps;
 	        for (int i = 0; i < maps.Count; i++)
 	        {
-		        if (maps[i].listerThings.ThingsOfDef(FantasyBiotechDefOf.VR_ArtificerImplant).Count > 0)
+		        if (maps[i].listerThings.ThingsOfDef(FantasyBiotechThingDefOf.VR_ArtificerImplant).Count > 0)
 		        {
 			        return true;
 		        }

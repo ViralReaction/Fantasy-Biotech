@@ -73,7 +73,7 @@ namespace FantasyBiotech
 			{
 				if (CanPlaceCasketAt(item))
 				{
-					casket = (Building_AncientCryptosleepPod)GenSpawn.Spawn(FantasyBiotechDefOf.VR_ArtificerSarcophagus, item, map);
+					casket = (Building_AncientCryptosleepPod)GenSpawn.Spawn(FantasyBiotechThingDefOf.VR_ArtificerSarcophagus, item, map);
 					casket.openedSignal = "MechanitorCasketOpened" + Find.UniqueIDsManager.GetNextSignalTagID();
 					Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(FantasyBiotechDefOf.VR_Artificer_Basic, Faction.OfAncients, PawnGenerationContext.NonPlayer, null, forceGenerateNewPawn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false,
 					                                                                 certainlyBeenInCryptosleep: true, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null, forceNoIdeo: false, forceNoBackstory: false, forbidAnyTitle: false, forceDead: true));
@@ -83,7 +83,7 @@ namespace FantasyBiotech
 					casket.TryAcceptThing(pawn.Corpse, allowSpecialEffects: false);
 					SignalAction_Message obj = (SignalAction_Message)ThingMaker.MakeThing(ThingDefOf.SignalAction_Message);
 					obj.signalTag = casket.openedSignal;
-					obj.message = "FantasyBiotech_MessageArtificerCasketOpened".Translate(pawn, FantasyBiotechDefOf.VR_ArtificerImplant_Hediff);
+					obj.message = "FantasyBiotech_MessageArtificerCasketOpened".Translate(pawn, FantasyBiotechDefOf.VR_ArtificerImplant);
 					obj.messageType = MessageTypeDefOf.PositiveEvent;
 					obj.lookTargets = pawn.Corpse;
 					GenSpawn.Spawn(obj, item, map);

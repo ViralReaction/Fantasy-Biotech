@@ -20,15 +20,15 @@ namespace FantasyBiotech
         {
             if (base.CanResolveInt(parms))
             {
-                return ComplexUtility.TryFindRandomSpawnCell(FantasyBiotechDefOf.VR_AncientBarrelBomb, parms.room, parms.map, out IntVec3 _);
+                return ComplexUtility.TryFindRandomSpawnCell(FantasyBiotechThingDefOf.VR_AncientBarrelBomb, parms.room, parms.map, out IntVec3 _);
             }
             return false;
         }
 
         public override void ResolveInt(ComplexResolveParams parms, ref float threatPointsUsed, List<Thing> outSpawnedThings)
         {
-            ComplexUtility.TryFindRandomSpawnCell(FantasyBiotechDefOf.VR_AncientBarrelBomb, parms.room, parms.map, out IntVec3 spawnPosition);
-            Thing thing = GenSpawn.Spawn(FantasyBiotechDefOf.VR_AncientBarrelBomb, spawnPosition, parms.map);
+            ComplexUtility.TryFindRandomSpawnCell(FantasyBiotechThingDefOf.VR_AncientBarrelBomb, parms.room, parms.map, out IntVec3 spawnPosition);
+            Thing thing = GenSpawn.Spawn(FantasyBiotechThingDefOf.VR_AncientBarrelBomb, spawnPosition, parms.map);
             SignalAction_StartWick signalAction_StartWick = (SignalAction_StartWick)ThingMaker.MakeThing(ThingDefOf.SignalAction_StartWick);
             signalAction_StartWick.thingWithWick = thing;
             signalAction_StartWick.signalTag = parms.triggerSignal;
