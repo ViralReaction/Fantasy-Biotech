@@ -6,5 +6,10 @@
     <driverClass>FantasyBiotech.JobDriver_OperateOnPawn</driverClass>
     <reportString>operating on TargetB.</reportString>
   </JobDef>
+  
+  <JobDef>
+    <defName>VR_RemoveImplant</defName>
+    <driverClass>FantasyBiotech.JobDriver_RemoveImplant</driverClass>
+  </JobDef>
 
 </Defs>

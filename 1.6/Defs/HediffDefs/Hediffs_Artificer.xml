@@ -64,6 +64,14 @@
 				</statOffsets>
 			</li>
 		</stages>
+		<comps>
+			<li Class="HediffCompProperties_LetterOnDeath">
+			  <letterDef>NeutralEvent</letterDef>
+			  <letterLabel>Reusable {HEDIFF_label} available</letterLabel>
+			  <letterText>{PAWN} has died with a {HEDIFF_label} installed. This can be removed and installed by someone else.</letterText>
+			  <onlyIfNoMechanitorDied>true</onlyIfNoMechanitorDied>
+			</li>
+      </comps>
 	</HediffDef>
 
 </Defs>

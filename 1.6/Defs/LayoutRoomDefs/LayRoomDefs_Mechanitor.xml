@@ -126,10 +126,16 @@
   
   <LayoutRoomDef>
     <defName>VR_ComplexCorridor</defName>
-    <roomContentsWorkerType>RoomContents_ComplexCorridor</roomContentsWorkerType>
+    <roomContentsWorkerType>FantasyBiotech.RoomContents_ComplexCorridor</roomContentsWorkerType>
 	<floorTypes>
       <li>VR_AncientTile</li>
     </floorTypes>
+	<modExtensions>
+		<li Class="FantasyBiotech.RoomContentExtension" MayRequire="dankpyon.medieval.overhaul">
+			<shelfThing>DankPyon_RuinedShelfEmpty</shelfThing>
+			<shelfStuff>WoodLog</shelfStuff>
+		</li>
+	</modExtensions>
   </LayoutRoomDef>
 
 

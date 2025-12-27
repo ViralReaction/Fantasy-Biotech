@@ -12,6 +12,7 @@ namespace FantasyBiotech
         public static EffecterDef ButcherFlesh;
         public static SoundDef Recipe_ButcherCorpseFlesh;
         public static JobDef VR_ExtractGeneOnPawn;
+        public static JobDef VR_RemoveImplant;
         public static ResearchProjectDef VR_ArchiteGenetics;
         public static ResearchProjectDef VR_MasterArchiteGenetics;
         public static EffecterDef VR_Steam_Burst;

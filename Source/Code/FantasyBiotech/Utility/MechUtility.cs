@@ -58,7 +58,7 @@ namespace FantasyBiotech
 	        {
 		        return def.GetModExtension<ConstructExtension>()?.isConstruct is true;
 	        }
-	        return true;
+	        return false;
 
         }
 
