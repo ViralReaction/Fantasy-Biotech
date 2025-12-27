@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>VR_AncientTile</defName>
+    <label>ancient tile</label>
+    <description>Ancient tile flooring.</description>
+    <statBases>
+      <MarketValue>0</MarketValue>
+      <Beauty>-1</Beauty>
+      <CleaningTimeFactor>0.8</CleaningTimeFactor>
+    </statBases>
+    <renderPrecedence>70</renderPrecedence>
+    <texturePath>Terrain/Surfaces/TileStone</texturePath>
+    <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
+    <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionFloorSmooth</pollutionOverlayTexturePath>
+    <color>(132,135,132)</color>
+    <isPaintable>true</isPaintable>
+    <edgeType>Hard</edgeType>
+    <designationCategory Inherit="False" IsNull="True" />
+  </TerrainDef>
+
+</Defs>

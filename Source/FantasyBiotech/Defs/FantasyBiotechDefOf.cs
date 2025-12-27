@@ -9,7 +9,8 @@ namespace FantasyBiotech
     {
         [UsedImplicitly] public static FactionDef VR_Construct;
         public static ThingDef VR_GeneRack;
-        public static HediffDef VR_ArtificerImplant;
+        public static HediffDef VR_ArtificerImplant_Hediff;
+        public static ThingDef VR_ArtificerImplant;
         public static EffecterDef ButcherFlesh;
         public static SoundDef Recipe_ButcherCorpseFlesh;
         public static JobDef VR_ExtractGeneOnPawn;
@@ -28,6 +29,9 @@ namespace FantasyBiotech
         public static ThingDef VR_AncientBarrelBomb;
 
         public static PawnKindDef VR_Artificer_Basic;
+
+        [MayRequireIdeology]
+        public static ThingDef VR_AncientEnemyTerminal;
 
         static FantasyBiotechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FantasyBiotechDefOf));
     }

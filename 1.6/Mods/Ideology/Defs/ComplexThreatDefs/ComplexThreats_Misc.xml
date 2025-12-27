@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ComplexThreatDef>
+    <defName>VR_RaidTerminal</defName>
+    <workerClass>FantasyBiotech.ComplexThreatWorker_AncientTerminal</workerClass>
+  </ComplexThreatDef>
+  
+  <ThingDef ParentName="AncientTerminal">
+    <defName>VR_AncientEnemyTerminal</defName>
+    <label>ancient enemy terminal</label>
+    <description>An ancient computer terminal. It can be activated to call nearby enemies.</description>
+    <graphicData>
+      <texPath>Things/Building/Ruins/AncientSteamTerminal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps Inherit="False">
+      <li Class="CompProperties_Hackable">
+        <defence>200</defence>
+        <effectHacking>HackingTerminal</effectHacking>
+        <notHackedInspectString>Activate to call nearby enemies.</notHackedInspectString>
+        <autohackWarningString>Activating this {0} will alert enemies and cause them to attack.</autohackWarningString>
+      </li>
+      <li Class="CompProperties_ThrownFleckEmitter">
+        <fleck>TerminalScreenLensFlare</fleck>
+        <offsetMin>(-0.3,0,0.35)</offsetMin>
+        <offsetMax>(0.3,0,0.35)</offsetMax>
+        <emissionInterval>90</emissionInterval>
+        <scale>1~1.1</scale>
+        <colorA>(214,46,31,255)</colorA>
+        <colorB>(214,46,31,255)</colorB>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(214,46,31,0)</glowColor>
+      </li>
+    </comps>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+
+</Defs>

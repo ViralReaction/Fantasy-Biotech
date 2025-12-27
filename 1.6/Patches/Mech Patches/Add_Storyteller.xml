@@ -6,7 +6,7 @@
         <value>
             <li Class="FantasyBiotech.StorytellerCompProperties_SingleOnceFixed">
                 <fireAfterDaysPassed>15</fireAfterDaysPassed>
-                <incident MayRequire="Ludeon.RimWorld.Biotech">VR_GiveQuest_Intro_Artificer</incident>
+                <incident>VR_GiveQuest_Intro_Artificer</incident>
                 <skipIfOnExtremeBiome>true</skipIfOnExtremeBiome>
                 <minColonistCount>3</minColonistCount>
                 <allowedTargetTags>
@@ -16,6 +16,22 @@
                     <li>Ludeon.RimWorld.Biotech</li>
                 </enableIfAnyModActive>
             </li>
+			<!-- Mechanitor ancient complex -->
+			<li Class="FantasyBiotech.StorytellerCompProperties_ArtificerComplexQuest">
+			<incident>VR_GiveQuest_AncientComplex_Artificer</incident>
+				<mtbDays>60</mtbDays>
+				<existingArtificerOrImplantMTBFactor>4</existingArtificerOrImplantMTBFactor>
+				<minSpacingDays>60</minSpacingDays>
+				<allowedTargetTags>
+				  <li>Map_PlayerHome</li>
+				</allowedTargetTags>
+				<enableIfAnyModActive>
+				  <li>Ludeon.RimWorld.Biotech</li>
+				</enableIfAnyModActive>
+				<blockedByQueuedOrActiveQuests>
+				  <li>VR_OpportunitySite_AncientComplex_Artificer</li>
+				</blockedByQueuedOrActiveQuests>
+			</li>
         </value>
     </Operation>
 

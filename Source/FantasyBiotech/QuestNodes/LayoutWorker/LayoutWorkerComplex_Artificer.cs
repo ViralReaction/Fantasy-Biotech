@@ -46,7 +46,7 @@ namespace FantasyBiotech
 			}
 			if (!flag)
 			{
-				Log.Error("Failed to place mechanitor in ancient mechanitor complex.");
+				Log.Error("Failed to place artificer in ancient artificer complex.");
 			}
 			tmpAllRoomRects.Clear();
 			float OrderRoomsBy(CellRect r)
@@ -56,6 +56,14 @@ namespace FantasyBiotech
 					return 0f;
 				}
 				return r.CenterCell.DistanceTo(bounds.CenterCell);
+			}
+		}
+
+		public override void PostSpawnStructure(List<LayoutRoom> rooms, Map map, List<Thing> allSpawnedThings)
+		{
+			if (ModsConfig.IdeologyActive)
+			{
+				SpawnRoomRewards(rooms, map, allSpawnedThings);
 			}
 		}
 
@@ -75,7 +83,7 @@ namespace FantasyBiotech
 					casket.TryAcceptThing(pawn.Corpse, allowSpecialEffects: false);
 					SignalAction_Message obj = (SignalAction_Message)ThingMaker.MakeThing(ThingDefOf.SignalAction_Message);
 					obj.signalTag = casket.openedSignal;
-					obj.message = "FantasyBiotech_MessageArtificerCasketOpened".Translate(pawn, FantasyBiotechDefOf.VR_ArtificerImplant);
+					obj.message = "FantasyBiotech_MessageArtificerCasketOpened".Translate(pawn, FantasyBiotechDefOf.VR_ArtificerImplant_Hediff);
 					obj.messageType = MessageTypeDefOf.PositiveEvent;
 					obj.lookTargets = pawn.Corpse;
 					GenSpawn.Spawn(obj, item, map);

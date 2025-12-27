@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <QuestScriptDef Name="AncientArtificerComplexBase">
+  <QuestScriptDef Name="VR_AncientArtificerComplexBase">
     <defName>VR_OpportunitySite_AncientComplex_Artificer</defName>
     <rootSelectionWeight>0</rootSelectionWeight>
     <rootMinPoints>350</rootMinPoints>

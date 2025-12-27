@@ -44,13 +44,22 @@ namespace FantasyBiotech
 
             if (!def.RaceProps.IsMechanoid || def.isGoodBreacher || !def.isFighter || !def.allowInMechClusters) return false;
             if (ModsConfig.BiotechActive && Find.BossgroupManager.ReservedByBossgroup(def)) return false;
-
             bool? extension = def.GetModExtension<ConstructExtension>()?.isConstruct;
             if (extension == null || extension == false)
             {
 	            return false;
             }
             return true;
+        }
+
+        public static bool ConstructSuitableForComplex(PawnKindDef def)
+        {
+	        if (def.RaceProps.IsMechanoid && !def.isGoodBreacher && def.isFighter && def.allowInMechClusters)
+	        {
+		        return def.GetModExtension<ConstructExtension>()?.isConstruct is true;
+	        }
+	        return true;
+
         }
 
         private static List<ThingDef> GetBuildingDefsForCluster(float points, IntVec2 size, bool canBeDormant, float? totalPoints, bool forceNoConditionCauser)
@@ -101,11 +110,36 @@ namespace FantasyBiotech
             _cachedConstructFaction = null;
         }
 
-        public static bool IsArtificer(Pawn pawn)
+        public static bool AnyArtificerInPlayerFaction()
         {
-            return pawn.health.hediffSet.HasHediff(FantasyBiotechDefOf.VR_ArtificerImplant);
+	        foreach (Pawn allMaps_FreeColonist in PawnsFinder.AllMaps_FreeColonists)
+	        {
+		        if (IsArtificer(allMaps_FreeColonist))
+		        {
+			        return true;
+		        }
+	        }
+	        return false;
         }
 
+
+        public static bool IsArtificer(Pawn pawn)
+        {
+            return pawn.health.hediffSet.HasHediff(FantasyBiotechDefOf.VR_ArtificerImplant_Hediff);
+        }
+
+        public static bool AnyArtificerImplantInMap()
+        {
+	        List<Map> maps = Find.Maps;
+	        for (int i = 0; i < maps.Count; i++)
+	        {
+		        if (maps[i].listerThings.ThingsOfDef(FantasyBiotechDefOf.VR_ArtificerImplant).Count > 0)
+		        {
+			        return true;
+		        }
+	        }
+	        return false;
+        }
 
 
     }

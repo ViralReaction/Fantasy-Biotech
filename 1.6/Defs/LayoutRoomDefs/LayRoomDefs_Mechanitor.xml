@@ -23,7 +23,7 @@
       </VR_AncientLamp_Steam>
     </prefabs>
     <floorTypes>
-      <li>AncientTile</li>
+      <li>VR_AncientTile</li>
     </floorTypes>
     <scatter>
       <VR_ChunkConstructSlag>
@@ -53,7 +53,7 @@
       </VR_AncientLamp_Steam>
     </prefabs>
     <floorTypes>
-      <li>AncientTile</li>
+      <li>VR_AncientTile</li>
     </floorTypes>
     <scatter>
       <VR_ChunkConstructSlag>
@@ -82,7 +82,7 @@
       </VR_AncientLamp_Steam>
     </prefabs>
     <floorTypes>
-      <li>AncientConcrete</li>
+      <li>VR_AncientTile</li>
     </floorTypes>
     <scatter>
       <Filth_OilSmear>
@@ -99,19 +99,15 @@
     <minSingleRectWidth>10</minSingleRectWidth>
     <minSingleRectHeight>10</minSingleRectHeight>
     <prefabs>
-      <AncientDisplayBank_Edge>
-        <countPerTenEdgeCells>3</countPerTenEdgeCells>
-        <minMaxRange>2~6</minMaxRange>
-      </AncientDisplayBank_Edge>
       <VR_AncientBandNode_Cluster>
         <countPerHundredCells>10</countPerHundredCells>
         <minMaxRange>5~15</minMaxRange>
       </VR_AncientBandNode_Cluster>
     </prefabs>
     <floorTypes>
-      <li>AncientConcrete</li>
+      <li>VR_AncientTile</li>
     </floorTypes>
-    <edgeTerrain>AncientTile</edgeTerrain>
+    <edgeTerrain>VR_AncientTile</edgeTerrain>
     <scatter>
       <VR_ChunkConstructSlag>
         <groupsPerHundredCells>2~4</groupsPerHundredCells>
@@ -127,5 +123,14 @@
       </VR_AncientPipe_Steam>
     </scatter>
   </LayoutRoomDef>
+  
+  <LayoutRoomDef>
+    <defName>VR_ComplexCorridor</defName>
+    <roomContentsWorkerType>RoomContents_ComplexCorridor</roomContentsWorkerType>
+	<floorTypes>
+      <li>VR_AncientTile</li>
+    </floorTypes>
+  </LayoutRoomDef>
+
 
 </Defs>

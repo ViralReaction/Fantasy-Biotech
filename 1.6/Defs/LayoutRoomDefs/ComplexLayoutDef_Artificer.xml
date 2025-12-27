@@ -8,7 +8,7 @@
         <minRoomWidth>7</minRoomWidth>
         <minRoomHeight>7</minRoomHeight>
         <clearDoorFaction>false</clearDoorFaction>
-        <corridorDef>ComplexCorridor</corridorDef>
+        <corridorDef>VR_ComplexCorridor</corridorDef>
         <canDisconnectRooms>false</canDisconnectRooms>
         <areaPrunePercent>0.1</areaPrunePercent>
         <roomDefs>
@@ -27,17 +27,19 @@
             </VR_AncientBandNodeRoom>
         </roomDefs>
         <threats>
-            <SleepingMechanoids />
+            <VR_SleepingConstructs />
             <VR_ConstructGreatLift />
             <VR_BarrelBomb>
                 <maxPerRoom>1</maxPerRoom>
                 <selectionWeight>3</selectionWeight>
             </VR_BarrelBomb>
-            <RaidTerminal MayRequire="Ludeon.RimWorld.Ideology">
+            <VR_RaidTerminal MayRequire="Ludeon.RimWorld.Ideology">
                 <maxPerComplex>1</maxPerComplex>
                 <chancePerComplex>0.5</chancePerComplex>
-            </RaidTerminal>
+            </VR_RaidTerminal>
         </threats>
+		<wallDef>Wall</wallDef>
+		<doorDef>Door</doorDef>
     </ComplexLayoutDef>
 
 </Defs>

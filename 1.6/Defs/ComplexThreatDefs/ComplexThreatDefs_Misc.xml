@@ -16,5 +16,11 @@
 		<spawnAroundComplex>true</spawnAroundComplex>
 		<useDropPods>false</useDropPods>
 	</ComplexThreatDef>
+	
+	<ComplexThreatDef Name="VR_SleepingConstructs" ParentName="SleepingThreat">
+		<defName>VR_SleepingConstructs</defName>
+		<workerClass>FantasyBiotech.ComplexThreatWorker_SleepingCosntructs</workerClass>
+		<faction>VR_Construct</faction>
+	</ComplexThreatDef>
 
 </Defs>
