@@ -16,6 +16,8 @@ namespace FantasyBiotech
         public static ResearchProjectDef VR_ArchiteGenetics;
         public static ResearchProjectDef VR_MasterArchiteGenetics;
         public static EffecterDef VR_Steam_Burst;
+        public static EffecterDef VR_Vat_Bubbles_Right;
+        public static EffecterDef VR_Vat_Bubbles_Left;
         public static SketchResolverDef VR_ConstructCluster;
         public static LayoutDef VR_AncientComplex_Artificer_Loot;
         public static PawnKindDef VR_Artificer_Basic;

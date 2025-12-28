@@ -20,6 +20,7 @@ namespace FantasyBiotech
         private bool medievalSanguophageFaction = true;
 
         private bool medievalGoJuice = true;
+        private bool medievalGrowthVat = true;
 
         #endregion
 
@@ -45,6 +46,7 @@ namespace FantasyBiotech
             Scribe_Values.Look(ref medievalVampireScenario, "medievalVampireScenario", true);
             Scribe_Values.Look(ref medievalSanguophageFaction, "medievalSanguophageFaction", true);
             Scribe_Values.Look(ref medievalGoJuice, "medievalGoJuice", true);
+            Scribe_Values.Look(ref medievalGrowthVat, "medievalGrowthVat", true);
 
         }
 
@@ -74,6 +76,7 @@ namespace FantasyBiotech
         {
             list.Label("FantasyBiotech_Settings_HeaderGenetics".Translate());
             list.Gap();
+            list.CheckboxLabeled("FantasyBiotech_Settings_MedievalGrowthVat_Replace_Title".Translate(), ref medievalGrowthVat, "FantasyBiotech_Settings_MedievalGrowthVat_Replace_Desc".Translate());
             list.CheckboxLabeled("FantasyBiotech_Settings_MedievalGoJuice_Replace_Title".Translate(), ref medievalGoJuice, "FantasyBiotech_Settings_MedievalGoJuice_Replace_Desc".Translate());
             //list.CheckboxLabeled("FantasyBiotech_Settings_Mech_Replace_Title".Translate(), ref replaceMechanoids, "FantasyBiotech_Settings_Mech_Replace_Desc".Translate());
         }
@@ -145,7 +148,8 @@ namespace FantasyBiotech
 
         private void ResetToDefault_Genetics()
         {
-            medievalVampireScenario = true;
+            medievalGrowthVat = true;
+            medievalGoJuice = true;
         }
 
         private void ResetToDefault_Vampires()

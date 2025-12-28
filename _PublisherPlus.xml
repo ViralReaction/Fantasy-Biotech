@@ -3,6 +3,10 @@
   <Excluded>
     <exclude>.git</exclude>
     <exclude>.vs</exclude>
+    <exclude>About\Ingame.png</exclude>
+    <exclude>About\ingame2.png</exclude>
+    <exclude>About\ingame3.png</exclude>
+    <exclude>About\ingame4.png</exclude>
     <exclude>Source</exclude>
   </Excluded>
 </Configuration>

@@ -56,10 +56,10 @@
     <Compile Include="FantasyBiotech\GenSteps\GenStep_CosntructCluster.cs" />
     <Compile Include="FantasyBiotech\GenSteps\RoomContents_ComplexCorridor.cs" />
     <Compile Include="FantasyBiotech\GenSteps\SketchResolver\SketchResolver_ConstructCluster.cs" />
+    <Compile Include="FantasyBiotech\Harmony\Building_GrowthVat_PowerOn.cs" />
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
     <Compile Include="FantasyBiotech\Harmony\CompOverseer_TryMakeFeral.cs" />
     <Compile Include="FantasyBiotech\Harmony\MechanitorUtility_ShouldBeMechanitor.cs" />
-    <Compile Include="FantasyBiotech\Harmony\MemoryUtility_ClearAllMapsAndWorld.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_AncientAltar_Transpiler.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_Interior_AncientTemple_Transpiler.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_Interior_SleepingMechanoids_Transpiler.cs" />
@@ -96,7 +96,7 @@
     <Compile Include="FantasyBiotech\Defs\ResearchTechLevelOverride.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_PowerOn.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_GeneAssembler_Tick_Patch.cs" />
-    <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_GetGizmos.cs" />
+    <Compile Include="FantasyBiotech\Harmony\MemoryUtility_ClearAllMapsAndWorld.cs" />
     <Compile Include="FantasyBiotech\Harmony\Compatibility\WorldTechLevel.cs" />
     <Compile Include="FantasyBiotech\Harmony\CompGenepackContainer_Patches.cs" />
     <Compile Include="FantasyBiotech\Harmony\Building_MechCharger_CanPawnChargeCurrently.cs" />
@@ -125,6 +125,7 @@
     <Compile Include="FantasyBiotech\ThingClasses\Building_CommsConsole_Steam.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_GeneMaker.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_GeneRemover.cs" />
+    <Compile Include="FantasyBiotech\ThingClasses\Building_GrowthBarrel.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_SteamGenerator.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_MechCharger_Steam.cs" />
     <Compile Include="FantasyBiotech\ThingClasses\Building_ConstructGestator.cs" />

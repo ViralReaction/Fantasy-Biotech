@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+		<settings>
+			<li>medievalGrowthVat</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="GrowthVat"]</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+						<costStuffCount>75</costStuffCount>
+						<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+				</li>
+	
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="GrowthVat"]/thingClass</xpath>
+					<value>
+						<thingClass>FantasyBiotech.Building_GrowthBarrel</thingClass>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="GrowthVat"]/graphicData</xpath>
+					<value>
+						<graphicData>
+							<texPath>Things/Building/Misc/GrowthBarrel/GrowthBarrelEmpty</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawRotated>false</drawRotated>
+							<drawSize>(2,2)</drawSize>
+							<shadowData>
+								<volume>(0.85, 0.3, 1.7)</volume>
+							</shadowData>
+						</graphicData>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="GrowthVat"]/size</xpath>
+					<value>
+						<size>(2,2)</size>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="GrowthVat"]/comps/li[@Class="CompProperties_Power"]</xpath>
+				</li>
+	
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="GrowthVat"]/comps/li[@Class="CompProperties_Flickable"]</xpath>
+				</li>
+	
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="GrowthVat"]/costList/ComponentIndustrial</xpath>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="HumanOvum"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Things/Other/HumanOvumFantasy</texPath>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="HumanEmbryo"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Things/Other/HumanEmbryoFantasy</texPath>
+					</value>
+				</li>
+
+			</operations>
+		</active>
+	</Operation>
+
+</Patch>

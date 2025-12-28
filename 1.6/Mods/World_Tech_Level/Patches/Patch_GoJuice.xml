@@ -33,4 +33,35 @@
 		</active>
 	</Operation>
 
+	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+		<settings>
+			<li>medievalGrowthVat</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_ThingDefs"]/entries/li[contains(.,"HumanOvum")]</xpath>
+					<value>
+						<li>
+							<defName>HumanOvum</defName>
+							<techLevel>Medieval</techLevel>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_ThingDefs"]/entries/li[contains(.,"HumanEmbryo")]</xpath>
+					<value>
+						<li>
+							<defName>HumanEmbryo</defName>
+							<techLevel>Medieval</techLevel>
+						</li>
+					</value>
+				</li>
+
+			</operations>
+		</active>
+	</Operation>
+
 </Patch>

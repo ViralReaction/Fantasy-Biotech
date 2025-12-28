@@ -1,43 +1,80 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <EffecterDef>
-        <defName>VR_ColossusSmashEffect</defName>
-        <children>
-            <li>
-                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-                <moteDef>VR_ColossusSmashMoteInner</moteDef>
-                <scale>2~2</scale>
-            </li>
-        </children>
-    </EffecterDef>
+	<EffecterDef>
+		<defName>VR_ColossusSmashEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<moteDef>VR_ColossusSmashMoteInner</moteDef>
+				<scale>2~2</scale>
+			</li>
+		</children>
+	</EffecterDef>
 
-    <EffecterDef>
-        <defName>VR_Steam_Burst</defName>
-        <children>
-            <li>
-                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-                <positionRadius>0.15</positionRadius>
-                <fleckDef>VR_SteamBlast</fleckDef>
-                <chancePerTick>1</chancePerTick>
-                <speed>9.5</speed>
-                <scale>0.8~1.2</scale>
-                <angle>0~360</angle>
-                <positionLerpFactor>0.85</positionLerpFactor>
-                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
-            </li>
-            <li>
-                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-                <positionRadius>0.1</positionRadius>
-                <fleckDef>VR_SteamSpew_Base</fleckDef>
-                <chancePerTick>1</chancePerTick>
-                <speed>0.6</speed>
-                <scale>0.8</scale>
-                <angle>0~360</angle>
-                <positionLerpFactor>0.75</positionLerpFactor>
-                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
-            </li>
-        </children>
-    </EffecterDef>
+	<EffecterDef>
+		<defName>VR_Steam_Burst</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.15</positionRadius>
+				<fleckDef>VR_SteamBlast</fleckDef>
+				<chancePerTick>1</chancePerTick>
+				<speed>9.5</speed>
+				<scale>0.8~1.2</scale>
+				<angle>0~360</angle>
+				<positionLerpFactor>0.85</positionLerpFactor>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>VR_SteamSpew_Base</fleckDef>
+				<chancePerTick>1</chancePerTick>
+				<speed>0.6</speed>
+				<scale>0.8</scale>
+				<angle>0~360</angle>
+				<positionLerpFactor>0.75</positionLerpFactor>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<EffecterDef>
+		<defName>VR_Vat_Bubbles_Right</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<positionDimensions>(0.20, 0, 0.05)</positionDimensions>
+				<positionOffset>(-0.15, 0, 0)</positionOffset>
+				<ticksBetweenMotes>10</ticksBetweenMotes>
+				<fleckDef>VR_Fleck_VatBubble</fleckDef>
+				<burstCount>1~2</burstCount>
+				<speed>0.5</speed>
+				<angle>0</angle>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	
+	<EffecterDef>
+		<defName>VR_Vat_Bubbles_Left</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<positionDimensions>(0.20, 0, 0.05)</positionDimensions>
+				<positionOffset>(-0.8, 0, 0)</positionOffset>
+				<ticksBetweenMotes>10</ticksBetweenMotes>
+				<fleckDef>VR_Fleck_VatBubble</fleckDef>
+				<burstCount>1~2</burstCount>
+				<speed>0.5</speed>
+				<angle>0</angle>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+		</children>
+	</EffecterDef>
 
 </Defs>
