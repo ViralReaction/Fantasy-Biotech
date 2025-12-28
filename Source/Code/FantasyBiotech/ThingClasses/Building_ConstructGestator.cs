@@ -88,6 +88,7 @@ namespace FantasyBiotech
                     yield return item;
                 }
             }
+            if (!DebugSettings.ShowDevGizmos) yield break;
             Bill_Autonomous billAutonomous = ActiveBill;
             if (billAutonomous is { State: FormingState.Forming })
             {
@@ -108,8 +109,6 @@ namespace FantasyBiotech
                     defaultLabel = "DEV: Complete cycle"
                 };
             }
-
-            if (!DebugSettings.ShowDevGizmos) yield break;
             if (ActiveMechBill == null || ActiveMechBill.State == 0 || ActiveMechBill.State == FormingState.Formed) yield break;
             Command_Action commandAction2 = new Command_Action
             {
