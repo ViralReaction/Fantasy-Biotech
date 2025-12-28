@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<!-- Steam Sword -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Construct_SteamSword_Heavy"]/statBases</xpath>
+		<value>
+			<Bulk>24</Bulk>
+			<MeleeCounterParryBonus>0.70</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Construct_SteamSword_Heavy"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.30</MeleeCritChance>
+				<MeleeParryChance>1.20</MeleeParryChance>
+				<MeleeDodgeChance>0.50</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Construct_SteamSword_Heavy"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>1.69</cooldownTime>
+					<chanceFactor>0.05</chanceFactor>
+					<armorPenetrationBlunt>0.8</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.98</cooldownTime>
+					<chanceFactor>0.50</chanceFactor>
+					<armorPenetrationBlunt>9</armorPenetrationBlunt>
+					<armorPenetrationSharp>18</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>edge</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>36</power>
+					<cooldownTime>2.86</cooldownTime>
+					<chanceFactor>0.45</chanceFactor>
+					<armorPenetrationSharp>2.16</armorPenetrationSharp>
+					<armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<!-- Steam Hammer -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Construct_SteamHammer_Heavy"]/statBases</xpath>
+		<value>
+			<Bulk>30</Bulk>
+			<MeleeCounterParryBonus>0.54</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Construct_SteamHammer_Heavy"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>2.1</MeleeCritChance>
+				<MeleeParryChance>0.50</MeleeParryChance>
+				<MeleeDodgeChance>0.30</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Construct_SteamHammer_Heavy"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>shaft</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.59</cooldownTime>
+					<chanceFactor>0.05</chanceFactor>
+					<armorPenetrationBlunt>0.625</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Shaft</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>3</cooldownTime>
+					<chanceFactor>0.95</chanceFactor>
+					<armorPenetrationBlunt>24</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<!-- Steam Lance -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Construct_StakeDriver_Heavy"]/statBases</xpath>
+		<value>
+			<Bulk>18</Bulk>
+			<MeleeCounterParryBonus>0.70</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Construct_StakeDriver_Heavy"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.30</MeleeCritChance>
+				<MeleeParryChance>1.20</MeleeParryChance>
+				<MeleeDodgeChance>0.50</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Construct_StakeDriver_Heavy"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>1.69</cooldownTime>
+					<chanceFactor>0.05</chanceFactor>
+					<armorPenetrationBlunt>4</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.98</cooldownTime>
+					<armorPenetrationBlunt>20</armorPenetrationBlunt>
+					<armorPenetrationSharp>40</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+</Patch>

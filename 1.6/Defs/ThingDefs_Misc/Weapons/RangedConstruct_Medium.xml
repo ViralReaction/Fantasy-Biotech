@@ -47,8 +47,7 @@
 				<defaultProjectile>VR_Bullet_ConstructGun_Crossbow</defaultProjectile>
 				<warmupTime>1.7</warmupTime>
 				<range>29.9</range>
-				<soundCast>ChargeLance_Fire</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<soundCast>Bow_Large</soundCast>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -113,17 +112,6 @@
 				<meleeArmorPenetrationBase>0.2</meleeArmorPenetrationBase>
 			</li>
 		</verbs>
-		<tools>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2.6</cooldownTime>
-			</li>
-		</tools>
 		<equippedDistanceOffset>-0.14</equippedDistanceOffset>
 		<modExtensions>
 			<li Class="VEF.Things.ThingDefExtension">

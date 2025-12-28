@@ -10,6 +10,7 @@
 			<depth>Outside</depth>
 			<groups>
 				<li>Torso</li>
+				<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 			</groups>
 			<parts>
 				<li>
@@ -22,6 +23,7 @@
 							<coverage>0.80</coverage>
 							<groups>
 								<li>HeadAttackTool</li>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 							</groups>
 							<parts>
 								<li>
@@ -51,8 +53,14 @@
 							<def>SmallMechanicalFoot</def>
 							<customLabel>left front foot</customLabel>
 							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
 						</li>
 					</parts>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 				</li>
 				<li>
 					<def>SmallMechanicalLeg</def>
@@ -64,8 +72,14 @@
 							<def>SmallMechanicalFoot</def>
 							<customLabel>right front foot</customLabel>
 							<coverage>0.10</coverage>
+							<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 						</li>
 					</parts>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 				</li>
 				<li>
 					<def>SmallMechanicalLeg</def>
@@ -77,8 +91,14 @@
 							<def>SmallMechanicalFoot</def>
 							<customLabel>left middle foot</customLabel>
 							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
 						</li>
 					</parts>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 				</li>
 				<li>
 					<def>SmallMechanicalLeg</def>
@@ -90,8 +110,14 @@
 							<def>SmallMechanicalFoot</def>
 							<customLabel>right middle foot</customLabel>
 							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
 						</li>
 					</parts>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 				</li>
 				<li>
 					<def>SmallMechanicalLeg</def>
@@ -103,8 +129,14 @@
 							<def>SmallMechanicalFoot</def>
 							<customLabel>left rear foot</customLabel>
 							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
 						</li>
 					</parts>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 				</li>
 				<li>
 					<def>SmallMechanicalLeg</def>
@@ -116,8 +148,14 @@
 							<def>SmallMechanicalFoot</def>
 							<customLabel>right rear foot</customLabel>
 							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
 						</li>
 					</parts>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 				</li>
 				<li>
 					<def>VR_TonalCore</def>
@@ -142,6 +180,7 @@
 			<depth>Outside</depth>
 			<groups>
 				<li>Torso</li>
+				<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 			</groups>
 			<parts>
 				<li>
@@ -154,6 +193,7 @@
 							<coverage>0.80</coverage>
 							<groups>
 								<li>HeadAttackTool</li>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 							</groups>
 							<parts>
 								<li>
@@ -172,11 +212,17 @@
 							</parts>
 						</li>
 					</parts>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 				</li>
 				<li>
 					<def>VR_ConstructSphere_Small</def>
 					<coverage>0.4</coverage>
 					<height>Bottom</height>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 				</li>
 				<li>
 					<def>VR_TonalCore</def>
@@ -199,17 +245,25 @@
 			<def>VR_ConstructTorso</def>
 			<height>Middle</height>
 			<depth>Outside</depth>
+			<groups>
+				<li>Torso</li>
+				<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+			</groups>
 			<parts>
 				<li>
 					<def>MechanicalNeck</def>
 					<coverage>0.10</coverage>
 					<height>Top</height>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 					<parts>
 						<li>
 							<def>MechanicalHead</def>
 							<coverage>0.80</coverage>
 							<groups>
 								<li>HeadAttackTool</li>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 							</groups>
 							<parts>
 								<li>
@@ -245,11 +299,17 @@
 					<def>MechanicalShoulder</def>
 					<customLabel>left shoulder</customLabel>
 					<coverage>0.17</coverage>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 					<parts>
 						<li>
 							<def>MechanicalArm</def>
 							<customLabel>left arm</customLabel>
 							<coverage>0.85</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
 							<parts>
 								<li>
 									<def>MechanicalHand</def>
@@ -263,6 +323,7 @@
 											<coverage>0.15</coverage>
 											<groups>
 												<li>LeftHand</li>
+												<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 											</groups>
 										</li>
 										<li>
@@ -272,6 +333,7 @@
 											<groups>
 												<li>LeftHand</li>
 												<li>MiddleFingers</li>
+												<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 											</groups>
 										</li>
 										<li>
@@ -280,6 +342,7 @@
 											<coverage>0.15</coverage>
 											<groups>
 												<li>LeftHand</li>
+												<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 											</groups>
 										</li>
 										<li>
@@ -288,6 +351,7 @@
 											<coverage>0.15</coverage>
 											<groups>
 												<li>LeftHand</li>
+												<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 											</groups>
 										</li>
 									</parts>
@@ -300,17 +364,26 @@
 					<def>MechanicalShoulder</def>
 					<customLabel>right shoulder</customLabel>
 					<coverage>0.17</coverage>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 					<parts>
 						<li>
 							<def>MechanicalArm</def>
 							<customLabel>right arm</customLabel>
 							<coverage>0.85</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
 							<parts>
 								<li>
 									<def>MechanicalHand</def>
 									<customLabel>right hand</customLabel>
 									<coverage>0.2</coverage>
 									<height>Bottom</height>
+									<groups>
+										<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+									</groups>
 									<parts>
 										<li>
 											<def>MechanicalFinger</def>
@@ -318,6 +391,7 @@
 											<coverage>0.15</coverage>
 											<groups>
 												<li>RightHand</li>
+												<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 											</groups>
 										</li>
 										<li>
@@ -327,6 +401,7 @@
 											<groups>
 												<li>RightHand</li>
 												<li>MiddleFingers</li>
+												<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 											</groups>
 										</li>
 										<li>
@@ -335,6 +410,7 @@
 											<coverage>0.15</coverage>
 											<groups>
 												<li>RightHand</li>
+												<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 											</groups>
 										</li>
 										<li>
@@ -343,6 +419,7 @@
 											<coverage>0.15</coverage>
 											<groups>
 												<li>RightHand</li>
+												<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 											</groups>
 										</li>
 									</parts>
@@ -355,6 +432,9 @@
 					<def>VR_ConstructSphere</def>
 					<coverage>0.4</coverage>
 					<height>Bottom</height>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 				</li>
 				<li>
 					<def>VR_TonalCore</def>
@@ -384,6 +464,7 @@
 			<depth>Outside</depth>
 			<groups>
 				<li>Torso</li>
+				<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 			</groups>
 			<parts>
 				<li>
@@ -391,6 +472,7 @@
 					<coverage>0.1</coverage>
 					<groups>
 						<li>HeadAttackTool</li>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
 					</groups>
 					<parts>
 						<li>
@@ -427,6 +509,9 @@
 				<li>
 					<def>MechanicalWarqueenBodySecondRing</def>
 					<coverage>0.75</coverage>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
 					<parts>
 						<li>
 							<def>VR_TonalCore</def>
@@ -436,10 +521,16 @@
 						<li>
 							<def>MechanicalWarqueenBodyThirdRing</def>
 							<coverage>0.8</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
 							<parts>
 								<li>
 									<def>MechanicalWarqueenBodyFourthRing</def>
 									<coverage>0.7</coverage>
+									<groups>
+										<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+									</groups>
 									<parts>
 										<li>
 											<def>MechanicalWarqueenBodyFifthRing</def>

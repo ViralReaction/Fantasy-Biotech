@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="VR_Turret_SteamBallista" or defName="VR_Turret_SteamTesla"]/comps/li[@Class="CompProperties_Stunnable"]/affectedDamageDefs/li[.="Stun"]</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Turret_SteamBallista"]/thingClass</xpath>
+		<value>
+			<thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Turret_SteamBallista" or defName="VR_Turret_SteamBallista"]/statBases</xpath>
+		<value>
+			<AimingAccuracy>0.75</AimingAccuracy>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Turret_SteamBallista" or defName="VR_Turret_SteamTesla"]/statBases/ShootingAccuracyTurret</xpath>
+		<value>
+			<ShootingAccuracyTurret>0.80</ShootingAccuracyTurret>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="VR_Turret_SteamBallista" or defName="VR_Turret_SteamTesla"]/comps/li[@Class="CompProperties_Explosive"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Turret_SteamBallista" or defName="VR_Turret_SteamTesla"]/fillPercent</xpath>
+		<value>
+			<fillPercent>0.85</fillPercent>
+		</value>
+	</Operation>
+
+</Patch>

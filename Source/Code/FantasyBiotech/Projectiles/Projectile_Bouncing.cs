@@ -16,11 +16,11 @@ namespace FantasyBiotech
         {
             base.Impact(hitThing, blockedByShield);
             _props ??= def.GetModExtension<BounceProjectileExtension>();
-            if (launcher is not Pawn caster)
-            {
-                Log.Error("Fantasy Biotech :: Chain Lighting : Launcher is not a Pawn.");
-                return;
-            }
+            // if (launcher is not Pawn caster)
+            // {
+            //     Log.Error("Fantasy Biotech :: Chain Lighting : Launcher is not a Pawn.");
+            //     return;
+            // }
             IntVec3 strikePos = hitThing?.Position ?? Position;
             if (hitThing == null) return;
             if (!_props.doubleTarget)
@@ -28,12 +28,12 @@ namespace FantasyBiotech
                 _hitThings.Add(hitThing);
             }
             if (_numBounces >= _props.bounceCount) return;
-            if (!TryFindNextTarget(strikePos, caster, out Pawn nextTarget))
+            if (!TryFindNextTarget(strikePos, launcher, out Pawn nextTarget))
                 return;
             FireAt(nextTarget, hitThing);
         }
 
-        private bool TryFindNextTarget(IntVec3 originCell, Pawn caster, out Pawn target)
+        private bool TryFindNextTarget(IntVec3 originCell, Thing caster, out Pawn target)
         {
             target = null;
             foreach (Pawn pawn in RadialUtility.GetPawnsInRadius(originCell, caster.Map, _props.bounceRadius))

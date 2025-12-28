@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Base Mech Thing -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="VR_BaseConstruct"]/statBases</xpath>
+		<value>
+			<SmokeSensitivity>0</SmokeSensitivity>
+			<NightVisionEfficiency>0.80</NightVisionEfficiency>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="VR_BaseConstruct"]/statBases/ArmorRating_Heat</xpath>
+		<value>
+			<ArmorRating_Heat>0.00</ArmorRating_Heat>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[@Name="VR_BaseConstruct"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[@Name="VR_BaseConstruct"]</xpath>
+			<value>
+				<comps />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="VR_BaseConstruct"]/comps</xpath>
+		<value>
+			<li>
+				<compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li>
+				<compClass>CombatExtended.CompAmmoGiver</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_MechAmmo">
+				<gizmoIconSetMagCount>UI/Buttons/SetMagCount</gizmoIconSetMagCount>
+				<gizmoIconTakeAmmoNow>UI/Buttons/TakeAmmoNow</gizmoIconTakeAmmoNow>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[@Name="VR_BaseConstruct"]</xpath>
+		<value>
+			<li Class="CombatExtended.PartialArmorExt">
+				<stats>
+					<li>
+						<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+						<parts>
+							<li>SightSensor</li>
+							<li>VR_BrassOcular</li>
+						</parts>
+					</li>
+					<li>
+						<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+						<parts>
+							<li>VR_BrassOcular</li>
+							<li>VR_HarmonicListener</li>
+						</parts>
+					</li>
+				</stats>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

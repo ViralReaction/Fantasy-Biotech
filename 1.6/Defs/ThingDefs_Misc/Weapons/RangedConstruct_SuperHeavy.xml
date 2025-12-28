@@ -103,24 +103,13 @@
 				</beamLineFleckChanceCurve>
 			</li>
 		</verbs>
-		<tools>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2.6</cooldownTime>
-			</li>
-		</tools>
 	</ThingDef>
 
 	<!-- Ranged -->
 	<ThingDef ParentName="VR_SuperHeavyConstructGun">
 		<defName>VR_ConstructGun_HeavyBowGun</defName>
 		<label>heavy bow gun</label>
-		<description>A steam-charged amalgmation of crossbow and siege device. Can launch explosive rounds over walls.</description>
+		<description>A steam-charged amalgmation of crossbow and siege device.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/HeavyBowGun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -147,9 +136,7 @@
 				<range>44.9</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>4</burstShotCount>
-				<soundCast>ChargeLance_Fire</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+				<soundCast>Bow_Large</soundCast>
 			</li>
 		</verbs>
 	</ThingDef>

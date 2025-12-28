@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========== Tools ========== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="VR_MediumConstructGun"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>barrel</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>2.0</cooldownTime>
+					<armorPenetrationBlunt>3.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>VR_ConstructGun_Crossbow</defName>
+		<statBases>
+			<Bulk>12.00</Bulk>
+			<SwayFactor>1.0</SwayFactor>
+			<ShotSpread>0.20</ShotSpread>
+			<SightsEfficiency>1</SightsEfficiency>
+			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>2.42</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Projectile_CrossbowBolt_Steel_Steam</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<range>27</range>
+			<soundCast>Bow_Large</soundCast>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>1</magazineSize>
+			<reloadTime>3.5</reloadTime>
+			<ammoSet>AmmoSet_CrossbowBolt_Steam</ammoSet>
+			<AmmoGenPerMagOverride>4</AmmoGenPerMagOverride>
+		</AmmoUser>
+		<FireModes>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+			<li>CE_AI_BROOM</li>
+			<li>NoSwitch</li>
+		</weaponTags>
+	</Operation>
+
+</Patch>

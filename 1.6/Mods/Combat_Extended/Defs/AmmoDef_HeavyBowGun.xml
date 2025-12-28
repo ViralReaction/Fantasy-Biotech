@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_HeavyBowGun_Steam</defName>
+        <label>javelins</label>
+        <ammoTypes>
+            <Pila>Bullet_HeavyBowGun_Steam</Pila>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
+    <!-- Projectile -->
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BasePilumProjectile">
+        <defName>Bullet_HeavyBowGun_Steam</defName>
+        <label>bolt</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>45</damageAmountBase>
+            <speed>60</speed>
+            <armorPenetrationBlunt>141.12</armorPenetrationBlunt>
+            <armorPenetrationSharp>13</armorPenetrationSharp>
+            <preExplosionSpawnChance>0.4</preExplosionSpawnChance>
+            <preExplosionSpawnThingDef>Pila</preExplosionSpawnThingDef>
+        </projectile>
+        <modExtensions>
+            <li Class="ProjectileImpactFX.EffectProjectileExtension">
+				<AutoAssign>false</AutoAssign>
+				<CreateTerrainEffects>true</CreateTerrainEffects>
+				<StuckProjectileFleckDef>Fleck_CELandedJavelin</StuckProjectileFleckDef>
+				<StuckProjectileFleckSize>0.85</StuckProjectileFleckSize>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

@@ -9,6 +9,7 @@
 		<li IfModActive="ludeon.rimworld.ideology">1.6/Mods/Ideology</li>
 		<li IfModActive="vanillaracesexpanded.sanguophage">1.6/Mods/VRE_Sanguophage</li>
 		<li IfModActive="m00nl1ght.worldtechlevel">1.6/Mods/World_Tech_Level</li>
+		<li IfModActive="ceteam.combatextended">1.6/Mods/Combat_Extended</li>
 	</v1.6>
 
 </loadFolders>

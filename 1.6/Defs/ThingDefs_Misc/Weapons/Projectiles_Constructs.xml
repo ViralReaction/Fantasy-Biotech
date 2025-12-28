@@ -121,7 +121,7 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Beam</damageDef>
-			<damageAmountBase>15</damageAmountBase>
+			<damageAmountBase>10</damageAmountBase>
 			<speed>60</speed>
 		</projectile>
 		<modExtensions>
@@ -142,7 +142,7 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Beam</damageDef>
-			<damageAmountBase>15</damageAmountBase>
+			<damageAmountBase>10</damageAmountBase>
 			<speed>60</speed>
 		</projectile>
 		<modExtensions>

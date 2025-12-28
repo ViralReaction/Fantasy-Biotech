@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<!-- Airwire & Array Headset  -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificerMonocle" or defName="VR_Apparel_ArtificerGoggles"]/statBases</xpath>
+		<value>
+			<Bulk>1</Bulk>
+			<WornBulk>1</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificerMonocle" or defName="VR_Apparel_ArtificerGoggles"]/apparel/layers</xpath>
+		<value>
+			<layers>
+				<li>StrappedHead</li>
+			</layers>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificerGoggles"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets Inherit="False">
+				<MechBandwidth>9</MechBandwidth>
+				<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0</VacuumResistance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificerGoggles"]/apparel</xpath>
+		<value>
+			<layers Inherit="False">
+				<li>StrappedHead</li>
+			</layers>
+		</value>
+	</Operation>
+	
+	<!-- Mechanitor Helmet Base -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificeLordHelmet"]/statBases/MaxHitPoints</xpath>
+		<value>
+			<WorkToMake>15750</WorkToMake>
+			<MaxHitPoints>210</MaxHitPoints>
+			<Mass>3.0</Mass>
+			<Flammability>0.25</Flammability>
+			<Bulk>4</Bulk>
+			<WornBulk>1</WornBulk>
+			<EquipDelay>2</EquipDelay>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificeLordHelmet"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+			<ArmorRating_Sharp>6</ArmorRating_Sharp>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificeLordHelmet"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>12</ArmorRating_Blunt>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificeLordHelmet"]/equippedStatOffsets/ShootingAccuracyPawn</xpath>
+		<value>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<SmokeSensitivity>-1</SmokeSensitivity>
+			<AimingAccuracy>-0.25</AimingAccuracy>
+			<ShootingAccuracyPawn>-1.25</ShootingAccuracyPawn>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificeLordHelmet"]/costList/Plasteel</xpath>
+		<value>
+			<Plasteel>80</Plasteel>
+			<DevilstrandCloth>15</DevilstrandCloth>
+		</value>
+	</Operation>
+	
+	<!-- Gas Mask  -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificerRespirator"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>8000</WorkToMake>
+				<MaxHitPoints>100</MaxHitPoints>
+				<Mass>0.5</Mass>
+				<Bulk>3</Bulk>
+				<WornBulk>1</WornBulk>
+				<EquipDelay>0.5</EquipDelay>
+				<ArmorRating_Sharp>0.01</ArmorRating_Sharp> <!-- A little bit of armor to prevent triggering a warning when shot. -->
+				<ArmorRating_Blunt>0.01</ArmorRating_Blunt>						
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificerRespirator"]/equippedStatOffsets</xpath>
+		<value>
+			<SmokeSensitivity>-1</SmokeSensitivity>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificerRespirator"]</xpath>
+		<value>
+			<li Class="CombatExtended.ApparelHediffExtension">
+				<hediff>WearingGasMask</hediff>
+			</li>
+			<li Class="CombatExtended.ApparelDefExtension">
+				<isSoftArmor>true</isSoftArmor>
+			</li>
+			<li Class="CombatExtended.ApperalRenderingExtension">
+				<HideHair>false</HideHair>
+				<HideBeard>true</HideBeard>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificerRespirator"]/apparel/layers</xpath>
+		<value>
+			<layers>
+				<li>StrappedHead</li>
+			</layers>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="VR_Apparel_ArtificerRespirator"]/apparel/tags</xpath>
+			<value>
+				<li>GasMask</li>
+			</value>
+	</Operation>
+
+</Patch>

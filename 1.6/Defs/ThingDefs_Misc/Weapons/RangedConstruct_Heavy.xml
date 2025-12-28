@@ -4,7 +4,7 @@
 	<!-- Ranged -->
 	<ThingDef ParentName="VR_MediumConstructGun">
 		<defName>VR_ConstructGun_HeavyCrossbow</defName>
-		<label>steam crossbow</label>
+		<label>heavy steam crossbow</label>
 		<description>A large mechanical crossbow with a steam-charged catapult.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/SteamDoubleCrossbow</texPath>
@@ -33,8 +33,7 @@
 				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
 				<burstShotCount>2</burstShotCount>
 				<range>29.9</range>
-				<soundCast>ChargeLance_Fire</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<soundCast>Bow_Large</soundCast>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -78,17 +77,6 @@
 				<meleeArmorPenetrationBase>0.2</meleeArmorPenetrationBase>
 			</li>
 		</verbs>
-		<tools>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2.6</cooldownTime>
-			</li>
-		</tools>
 	</ThingDef>
 
 </Defs>

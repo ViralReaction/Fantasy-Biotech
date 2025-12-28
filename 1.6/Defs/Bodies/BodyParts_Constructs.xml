@@ -74,6 +74,7 @@
 		<bleedRate>0</bleedRate>
 		<tags>
 			<li>SightSource</li>
+			<li MayRequire="ceteam.combatextended">OutsideSquishy</li>
 		</tags>
 	</BodyPartDef>
 	
@@ -89,6 +90,7 @@
 		<bleedRate>0</bleedRate>
 		<tags>
 			<li>HearingSource</li>
+			<li MayRequire="ceteam.combatextended">OutsideSquishy</li>
 		</tags>
 	</BodyPartDef>
 
