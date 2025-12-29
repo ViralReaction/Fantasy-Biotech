@@ -18,6 +18,7 @@ namespace FantasyBiotech
         private bool renameSanguophage = true;
         private bool medievalVampireScenario = true;
         private bool medievalSanguophageFaction = true;
+        private bool medievalHemogenTextures = true;
 
         private bool medievalGoJuice = true;
         public bool medievalGrowthVat = true;
@@ -41,10 +42,13 @@ namespace FantasyBiotech
         {
             base.ExposeData();
             Scribe_Values.Look(ref replaceMechanoids, "replaceMechanoids", true);
+
             Scribe_Values.Look(ref basicDeathrestCasket, "basicDeathrestCasket", true);
             Scribe_Values.Look(ref renameSanguophage, "renameSanguophage", true);
             Scribe_Values.Look(ref medievalVampireScenario, "medievalVampireScenario", true);
             Scribe_Values.Look(ref medievalSanguophageFaction, "medievalSanguophageFaction", true);
+            Scribe_Values.Look(ref medievalHemogenTextures, "medievalHemogenTextures", true);
+
             Scribe_Values.Look(ref medievalGoJuice, "medievalGoJuice", true);
             Scribe_Values.Look(ref medievalGrowthVat, "medievalGrowthVat", true);
 
@@ -88,6 +92,7 @@ namespace FantasyBiotech
             list.CheckboxLabeled("FantasyBiotech_Settings_RenameSanguophage_Replace_Title".Translate(), ref renameSanguophage, "FantasyBiotech_Settings_RenameSanguophage_Replace_Desc".Translate());
             list.CheckboxLabeled("FantasyBiotech_Settings_MedievalVampireScenario_Replace_Title".Translate(), ref medievalVampireScenario, "FantasyBiotech_Settings_MedievalVampireScenario_Replace_Desc".Translate());
             list.CheckboxLabeled("FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Title".Translate(), ref medievalSanguophageFaction, "FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Desc".Translate());
+            list.CheckboxLabeled("FantasyBiotech_Settings_MedievalHemogenTexture_Replace_Title".Translate(), ref medievalHemogenTextures, "FantasyBiotech_Settings_MedievalHemogenTexture_Replace_Desc".Translate());
 
 
         }
@@ -158,6 +163,7 @@ namespace FantasyBiotech
             renameSanguophage = true;
             medievalVampireScenario = true;
             medievalSanguophageFaction = true;
+            medievalHemogenTextures = true;
         }
 
         #endregion

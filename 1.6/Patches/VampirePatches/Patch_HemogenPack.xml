@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="HemogenPack"]/graphicData/texPath</xpath>
-        <match Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="HemogenPack"]/graphicData/texPath</xpath>
-            <value>
-                <texPath>Things/Item/Resource/FantasyHemogenPack</texPath>
-            </value>
-        </match>
+	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+        <settings>
+            <li>medievalHemogenTextures</li>
+        </settings>
+        <inactive Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="HemogenPack"]/graphicData/texPath</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="HemogenPack"]/graphicData/texPath</xpath>
+						<value>
+							<texPath>Things/Item/Resource/FantasyHemogenPack</texPath>
+						</value>
+					</match>
+				</li>
+
+            </operations>
+        </inactive>
     </Operation>
 
     <Operation Class="PatchOperationConditional">
