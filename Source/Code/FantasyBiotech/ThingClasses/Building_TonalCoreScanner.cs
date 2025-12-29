@@ -146,7 +146,7 @@ namespace FantasyBiotech
                 {
                     Apparel apparel = pawn.apparel.WornApparel[i];
                     if (apparel == null) continue;
-                    pawn.apparel.TryDrop(apparel,out _, pawn.Position, false);
+                    pawn.apparel.TryDrop(apparel,out _, Position, false);
                 }
             }
             if (pawn.equipment != null)
@@ -155,12 +155,12 @@ namespace FantasyBiotech
                 {
                     ThingWithComps thing = pawn.equipment.AllEquipmentListForReading[i];
                     if (thing == null) continue;
-                    pawn.equipment.TryDropEquipment(thing, out _, pawn.Position, false);
+                    pawn.equipment.TryDropEquipment(thing, out _, Position, false);
                 }
             }
             if (pawn.inventory != null)
             {
-                pawn.inventory.DropAllNearPawn(pawn.Position, false);
+                pawn.inventory.DropAllNearPawn(Position, false);
             }
         }
 
