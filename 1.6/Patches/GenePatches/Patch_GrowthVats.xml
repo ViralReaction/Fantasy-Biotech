@@ -74,6 +74,67 @@
 						<texPath>Things/Other/HumanEmbryoFantasy</texPath>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="FertilityProcedures" or defName="GrowthVats"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+						<tab>VR_BiotechResearchTab</tab>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="FertilityProcedures"]/prerequisites</xpath>
+					<value>
+						<prerequisites>
+							<li>VR_BasicGenetics</li>
+						</prerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GrowthVats"]/prerequisites</xpath>
+					<value>
+						<prerequisites>
+							<li>FertilityProcedures</li>
+						</prerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="FertilityProcedures"]/researchViewX</xpath>
+					<value>
+						 <researchViewX>1.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="FertilityProcedures"]/researchViewY</xpath>
+					<value>
+						 <researchViewY>1.90</researchViewY>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GrowthVats"]/researchViewX</xpath>
+					<value>
+						<researchViewX>2.00</researchViewX>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="GrowthVats"]/researchViewY</xpath>
+					<value>
+						 <researchViewY>1.90</researchViewY>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ResearchProjectDef[defName="GrowthVats"]/requiredResearchBuilding[.="HiTechResearchBench"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ResearchProjectDef[defName="GrowthVats"]/requiredResearchBuilding[.="HiTechResearchBench"]</xpath>
+					</match>
+				</li>
 
 			</operations>
 		</active>

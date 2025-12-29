@@ -20,7 +20,7 @@ namespace FantasyBiotech
         private bool medievalSanguophageFaction = true;
 
         private bool medievalGoJuice = true;
-        private bool medievalGrowthVat = true;
+        public bool medievalGrowthVat = true;
 
         #endregion
 
