@@ -131,8 +131,9 @@ namespace FantasyBiotech
             dinfo.SetIgnoreInstantKillProtection(ignore: true);
             dinfo.SetAllowDamagePropagation(val: false);
             occupant.forceNoDeathNotification = true;
-            occupant.Destroy();
+            occupant.Destroy(DestroyMode.Vanish);
             occupant.forceNoDeathNotification = false;
+            Find.ColonistBar.MarkColonistsDirty();
             ThoughtUtility.GiveThoughtsForPawnExecuted(occupant, null, PawnExecutionKind.Ripscanned);
             Messages.Message("FantasyBiotech_MessagePawnKilledRipscanner".Translate(occupant.Named("PAWN"), def.label.Named("BUILDING")), occupant, MessageTypeDefOf.NegativeHealthEvent);
         }
