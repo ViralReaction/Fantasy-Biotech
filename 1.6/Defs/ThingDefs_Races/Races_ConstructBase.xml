@@ -117,6 +117,7 @@
 					<soundCall>Pawn_Mech_Scyther_Call</soundCall>
 				</li>
 			</lifeStageAges>
+			<mechWeightClass>Medium</mechWeightClass>
 		</race>
 		<butcherProducts>
 			<Steel>15</Steel>

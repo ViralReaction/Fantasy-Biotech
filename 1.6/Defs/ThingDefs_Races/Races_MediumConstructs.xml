@@ -321,7 +321,7 @@
 
 	
 	<!-- Scorcher Equivalent -->
-	<ThingDef ParentName="VR_LancerConstructWalker">
+	<ThingDef ParentName="VR_SphereBase">
 		<defName>VR_Construct_Scorcher</defName>
 		<label>scorcher</label>
 		<description>Smaller combat construct that is well equipped with a short range flamer.</description>
@@ -358,7 +358,7 @@
 	</PawnKindDef>
 	
 	<!-- Tesseron Equivalent -->
-	<ThingDef ParentName="VR_LancerConstructWalker">
+	<ThingDef ParentName="VR_SphereBase">
 		<defName>VR_Construct_Tesseron</defName>
 		<label>tesseron</label>
 		<description>Smaller combat construct that carries an experimental miniaturized version of the lightning gun seen in bigger constructs.</description>
