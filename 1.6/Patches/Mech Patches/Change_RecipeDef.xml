@@ -42,5 +42,12 @@
 			<jobString>Smashing construct.</jobString>
 		</value>
 	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="ExtractMetalFromSlag"]/ingredients/li/filter/thingDefs</xpath>
+		<value>
+			<li>VR_ChunkConstructSlag</li>
+		</value>
+	</Operation>
 
 </Patch>

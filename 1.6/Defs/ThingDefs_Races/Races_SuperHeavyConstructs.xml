@@ -55,17 +55,14 @@
 			<detritusLeavings>
 				<li>
 					<def>VR_ChunkConstructSlag</def>
-					<texOverrideIndex>15</texOverrideIndex>
 					<spawnChance>0.1</spawnChance>
 				</li>
 				<li>
 					<def>VR_ChunkConstructSlag</def>
-					<texOverrideIndex>8</texOverrideIndex>
 					<spawnChance>0.1</spawnChance>
 				</li>
 				<li>
 					<def>VR_ChunkConstructSlag</def>
-					<texOverrideIndex>13</texOverrideIndex>
 					<spawnChance>0.1</spawnChance>
 				</li>
 			</detritusLeavings>

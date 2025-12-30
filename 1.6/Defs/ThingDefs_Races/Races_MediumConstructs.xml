@@ -46,13 +46,11 @@
 			<soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
 			<detritusLeavings>
 				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>18</texOverrideIndex>
+					<def>VR_ChunkConstructSlag</def>
 					<spawnChance>0.1</spawnChance>
 				</li>
 				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>15</texOverrideIndex>
+					<def>VR_ChunkConstructSlag</def>
 					<spawnChance>0.1</spawnChance>
 				</li>
 			</detritusLeavings>
@@ -275,18 +273,15 @@
 			</lifeStageAges>
 			<detritusLeavings>
 				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>11</texOverrideIndex>
+					<def>VR_ChunkConstructSlag</def>
 					<spawnChance>0.1</spawnChance>
 				</li>
 				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>16</texOverrideIndex>
+					<def>VR_ChunkConstructSlag</def>
 					<spawnChance>0.1</spawnChance>
 				</li>
 				<li>
-					<def>ChunkMechanoidSlag</def>
-					<texOverrideIndex>1</texOverrideIndex>
+					<def>VR_ChunkConstructSlag</def>
 					<spawnChance>0.1</spawnChance>
 				</li>
 			</detritusLeavings>
