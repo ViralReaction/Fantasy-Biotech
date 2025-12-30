@@ -382,6 +382,14 @@
 					</filter>
 					<count>50</count>
 				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Uranium</li>
+						</thingDefs>
+					</filter>
+					<count>15</count>
+				</li>
 			</subcoreScannerFixedIngredients>
 		</building>
 		<designationCategory>VR_Artifice</designationCategory>
@@ -463,7 +471,7 @@
 		<researchPrerequisites>
 			<li>VR_HighConstructTech</li>
 		</researchPrerequisites>
-		<building>
+		<building Inherit="False">
 			<subcoreScannerOutputDef>VR_TonalCoreHigh</subcoreScannerOutputDef>
 			<subcoreScannerStartEffect>SubcoreRipscanner_Start</subcoreScannerStartEffect>
 			<destroyBrain>true</destroyBrain>
@@ -474,10 +482,18 @@
 				<li>
 					<filter>
 						<thingDefs>
-							<li>Steel</li>
+							<li>Plasteel</li>
 						</thingDefs>
 					</filter>
-					<count>50</count>
+					<count>20</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Uranium</li>
+						</thingDefs>
+					</filter>
+					<count>20</count>
 				</li>
 			</subcoreScannerFixedIngredients>
 		</building>
