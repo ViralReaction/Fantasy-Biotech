@@ -64,5 +64,19 @@
 		</requiredCapacities>
 		<canBeDoneByMechs>false</canBeDoneByMechs>
 	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>VR_CarryToGeneExtractor</defName>
+		<label>carry to gene extractor</label>
+		<giverClass>FantasyBiotech.WorkGiver_CarryToGeneRemover</giverClass>
+		<workType>Hauling</workType>
+		<verb>extract genes</verb>
+		<gerund>extracting genes from</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByMechs>false</canBeDoneByMechs>
+	</WorkGiverDef>
 
 </Defs>
