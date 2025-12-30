@@ -3,6 +3,9 @@
   <Excluded>
     <exclude>.git</exclude>
     <exclude>.vs</exclude>
+    <exclude>1.6\Assemblies\KCSG.dll</exclude>
+    <exclude>1.6\Assemblies\PipeSystem.dll</exclude>
+    <exclude>1.6\Assemblies\VEF.dll</exclude>
     <exclude>About\Ingame.png</exclude>
     <exclude>About\ingame2.png</exclude>
     <exclude>About\ingame3.png</exclude>
