@@ -100,6 +100,7 @@
 		<race>
 			<mechEnabledWorkTypes>
 				<li>Construction</li>
+				<li>Mining</li>
 			</mechEnabledWorkTypes>
 			<lifeStageAges>
 				<li>
