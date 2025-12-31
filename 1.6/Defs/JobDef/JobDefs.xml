@@ -11,5 +11,19 @@
     <defName>VR_RemoveImplant</defName>
     <driverClass>FantasyBiotech.JobDriver_RemoveImplant</driverClass>
   </JobDef>
+  
+  <JobDef>
+    <defName>VR_MilkConstruct</defName>
+    <driverClass>FantasyBiotech.JobDriver_Milk</driverClass>
+    <reportString>milking TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+  <JobDef>
+    <defName>VR_ShearConstruct</defName>
+    <driverClass>FantasyBiotech.JobDriver_Shear</driverClass>
+    <reportString>shearing TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
 
 </Defs>

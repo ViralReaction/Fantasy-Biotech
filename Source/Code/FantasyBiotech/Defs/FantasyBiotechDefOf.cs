@@ -21,6 +21,9 @@ namespace FantasyBiotech
         public static SketchResolverDef VR_ConstructCluster;
         public static LayoutDef VR_AncientComplex_Artificer_Loot;
         public static PawnKindDef VR_Artificer_Basic;
+        public static JobDef VR_MilkConstruct;
+        public static JobDef VR_ShearConstruct;
+
         static FantasyBiotechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(FantasyBiotechDefOf));
     }
 

@@ -51,6 +51,7 @@
     <Compile Include="FantasyBiotech\Defs\BossGroupExtension.cs" />
     <Compile Include="FantasyBiotech\Defs\FantasyBiotechThingDefOf.cs" />
     <Compile Include="FantasyBiotech\Defs\RoomContentExtension.cs" />
+    <Compile Include="FantasyBiotech\Defs\WorkGiverExtension.cs" />
     <Compile Include="FantasyBiotech\Dialogs\Dialog_CreateGenepack.cs" />
     <Compile Include="FantasyBiotech\FloatMenuProvider\FloatMenuOptionProvider_RemoveImplant.cs" />
     <Compile Include="FantasyBiotech\GenSteps\GenStep_CosntructCluster.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
     <Compile Include="FantasyBiotech\Harmony\CompOverseer_TryMakeFeral.cs" />
     <Compile Include="FantasyBiotech\Harmony\MechanitorUtility_ShouldBeMechanitor.cs" />
+    <Compile Include="FantasyBiotech\Harmony\PawnWorkSettings_CacheWorkGiversInOrder.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_AncientAltar_Transpiler.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_Interior_AncientTemple_Transpiler.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_Interior_SleepingMechanoids_Transpiler.cs" />
@@ -68,8 +70,11 @@
     <Compile Include="FantasyBiotech\HediffDefs\Hediff_ConstructBandNode.cs" />
     <Compile Include="FantasyBiotech\HediffDefs\Hediff_ConstructLink.cs" />
     <Compile Include="FantasyBiotech\IncidentWorkers\IncidentWorker_ConstructCluster.cs" />
+    <Compile Include="FantasyBiotech\Jobs\JobDriver_GatherAnimalBodyResourcesByConstruct.cs" />
+    <Compile Include="FantasyBiotech\Jobs\JobDriver_Milk.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_OperateOnPawn.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_RemoveImplant.cs" />
+    <Compile Include="FantasyBiotech\Jobs\JobDriver_Shear.cs" />
     <Compile Include="FantasyBiotech\ModOption\MenuController.cs" />
     <Compile Include="FantasyBiotech\ModOption\MenuSettings.cs" />
     <Compile Include="FantasyBiotech\ModOption\PatchOperation_ToggleSettings.cs" />
@@ -141,6 +146,8 @@
     <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_CreateXenogerm.cs" />
     <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_DoGestate_Construct.cs" />
     <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_ExtractGeneOnPawn.cs" />
+    <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_Milk.cs" />
+    <Compile Include="FantasyBiotech\WorkGivers\WorkGiver_Shear.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

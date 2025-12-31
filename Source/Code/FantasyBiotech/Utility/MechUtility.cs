@@ -11,10 +11,10 @@ namespace FantasyBiotech
     public static class MechUtility
     {
 
-        public static Building_MechCharger GetClosestCharger(Pawn carrier, Pawn mech, bool forced)
+        public static Building_MechCharger_Steam GetClosestCharger(Pawn carrier, Pawn mech, bool forced)
         {
             Danger danger = forced ? Danger.Deadly : Danger.Some;
-            Building_MechCharger closestCharger = null;
+            Building_MechCharger_Steam closestCharger = null;
             float closestDist = float.MaxValue;
 
             List<Building_MechCharger_Steam> potentialChargers = mech.Map.GetComponent<RechargerMapComponent>()?.allChargers;

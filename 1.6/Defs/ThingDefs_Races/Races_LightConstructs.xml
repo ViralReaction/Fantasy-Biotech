@@ -147,7 +147,7 @@
 	<ThingDef ParentName="VR_LightConstruct">
 		<defName>VR_Construct_Agrihand</defName>
 		<label>agrihand</label>
-		<description>A small construct designed to sow and harvest crops. While it is better suited to labor than combat, it can fight with built-in cutting blades if necessary.</description>
+		<description>A small construct designed to sow and harvest crops, along with milking and shearing animals. While it is better suited to labor than combat, it can fight with built-in cutting blades if necessary.</description>
 		<tools>
 			<li>
 				<label>right blade</label>
@@ -167,12 +167,15 @@
 		</statBases>
 		<race>
 			<body>Mech_Agrihand</body>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
 			<mechEnabledWorkTypes>
+				<li>VR_ConstructHandling</li>
 				<li>PlantCutting</li>
 				<li>Growing</li>
 			</mechEnabledWorkTypes>
 			<mechWorkTypePriorities>
 				<PlantCutting>2</PlantCutting>
+				<VR_ConstructHandling>3</VR_ConstructHandling>
 			</mechWorkTypePriorities>
 			<lifeStageAges>
 				<li>
@@ -184,6 +187,14 @@
 				</li>
 			</lifeStageAges>
 		</race>
+		<modExtensions>
+			<li Class="FantasyBiotech.WorkGiverExtension">
+				<workGivers>
+					<li>VR_ConstructMilk</li>
+					<li>VR_ConstructShear</li>
+				</workGivers>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 	<PawnKindDef ParentName="VR_NonCombatLightConstructKind">

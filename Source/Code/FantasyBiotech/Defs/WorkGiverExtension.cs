@@ -4,9 +4,8 @@ using Verse;
 
 namespace FantasyBiotech
 {
-    public class ConstructExtension : DefModExtension
+    public class WorkGiverExtension : DefModExtension
     {
-        public bool isConstruct = false;
-
+        public List<WorkGiverDef> workGivers = [];
     }
 }

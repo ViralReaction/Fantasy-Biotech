@@ -78,5 +78,31 @@
 		</requiredCapacities>
 		<canBeDoneByMechs>false</canBeDoneByMechs>
 	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>VR_ConstructMilk</defName>
+		<label>milk animals</label>
+		<giverClass>FantasyBiotech.WorkGiver_MilkConstruct</giverClass>
+		<workType>VR_ConstructHandling</workType>
+		<verb>milk</verb>
+		<gerund>milking</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>VR_ConstructShear</defName>
+		<label>shear animals</label>
+		<giverClass>FantasyBiotech.WorkGiver_ShearConstruct</giverClass>
+		<workType>VR_ConstructHandling</workType>
+		<verb>shear</verb>
+		<gerund>shearing</gerund>
+		<priorityInType>85</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
 
 </Defs>
