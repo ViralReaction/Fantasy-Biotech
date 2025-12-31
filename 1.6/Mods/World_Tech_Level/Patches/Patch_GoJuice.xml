@@ -59,6 +59,26 @@
 						</li>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_PreceptDefs"]/entries/li[contains(.,"GrowthVat_Essential")]</xpath>
+					<value>
+						<li>
+							<defName>GrowthVat_Essential</defName>
+							<techLevel>Medieval</techLevel>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/WorldTechLevel.TechLevelConfigDef[defName="WTL_PreceptDefs"]/entries/li[contains(.,"GrowthVat_Prohibited")]</xpath>
+					<value>
+						<li>
+							<defName>GrowthVat_Essential</defName>
+							<techLevel>Medieval</techLevel>
+						</li>
+					</value>
+				</li>
 
 			</operations>
 		</active>
