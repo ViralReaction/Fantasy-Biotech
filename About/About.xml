@@ -7,7 +7,7 @@
 	</supportedVersions>
 	<description>A fantasy reimagining of Biotech</description>
 	<modIconPath IgnoreIfNoMatchingField="True">UI/FantasyBiotech_Logo</modIconPath>
-	<modVersion  IgnoreIfNoMatchingField="True">1.6.0.4</modVersion>
+	<modVersion  IgnoreIfNoMatchingField="True">1.6.0.5</modVersion>
 	<packageId>vr.fantasy.biotech</packageId>
 	<modDependencies>
 		<li>

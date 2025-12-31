@@ -49,5 +49,12 @@
 			<li>VR_ChunkConstructSlag</li>
 		</value>
 	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="ExtractMetalFromSlag"]/fixedIngredientFilter/thingDefs</xpath>
+		<value>
+			<li>VR_ChunkConstructSlag</li>
+		</value>
+	</Operation>
 
 </Patch>
