@@ -447,7 +447,7 @@ namespace FantasyBiotech
 				{
 					lord.AddBuilding(b);
 				}
-				thing2.SetFaction(Faction.OfMechanoids);
+				thing2.SetFaction(MechUtility.ConstructFaction());
 			}
 			if (!sketch.pawns.NullOrEmpty())
 			{
