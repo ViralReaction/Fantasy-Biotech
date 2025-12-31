@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="ArmorSmithableBase">
+	<ThingDef ParentName="ArmorSmithableBase" Name="VR_Apparel_ArtificerBase" Abstract="True">
+		<possessionCount>1</possessionCount>
+		 <thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<techLevel>Medieval</techLevel>
+	</ThingDef>
+
+	<ThingDef ParentName="VR_Apparel_ArtificerBase">
 		<defName>VR_Apparel_ArtificerSuit_Basic</defName>
 		<label>artificer suit</label>
 		<description>An armor suit packed with artificer-assistance gear. This suit amplifies a artificer's bandwidth, but is somewhat less protective than dedicated heavy armor.</description>
@@ -59,6 +67,7 @@
 			</tags>
 			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerArmour/ArtificerArmour</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<tradeability>Sellable</tradeability>
 		<tradeTags Inherit="False">
@@ -67,10 +76,11 @@
 		<colorGenerator Class="ColorGenerator_StandardApparel"/>
 	</ThingDef>
 	
-	<ThingDef ParentName="ArmorSmithableBase">
+	<ThingDef ParentName="VR_Apparel_ArtificerBase">
 		<defName>VR_Apparel_ArtificerSuit_Lord</defName>
 		<label>artificelord suit</label>
 		<description>An armor suit packed with artificer-assistance gear. This suit amplifies a artificer's bandwidth, but is somewhat less protective than dedicated heavy armor.</description>
+		<possessionCount>1</possessionCount>
 		<recipeMaker>
 			<researchPrerequisite>VR_UltraConstructTech</researchPrerequisite>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
@@ -125,6 +135,7 @@
 			</tags>
 			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArtificerLordArmour/ArtificerLordArmour</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<tradeability>Sellable</tradeability>
 		<tradeTags Inherit="False">
