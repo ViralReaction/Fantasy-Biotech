@@ -8,16 +8,16 @@
 		<gerundLabel>handling</gerundLabel>
 		<description>Tame, train, harvest resources from and slaughter animals.</description>
 		<verb>Handle</verb>
-		<naturalPriority>1050</naturalPriority>
+		<naturalPriority>0</naturalPriority>
 		<relevantSkills>
 			<li>Animals</li>
 		</relevantSkills>
 		<workTags>
-			<li>Animals</li>
-			<li>Commoner</li>
-			<li>AllWork</li>
+			<li>None</li>
 		</workTags>
-		<visible>true</visible>
+		<naturalPriority>0</naturalPriority>
+		<visible>false</visible>
+		<alwaysStartActive>false</alwaysStartActive>
 	</WorkTypeDef>
 
 </Defs>

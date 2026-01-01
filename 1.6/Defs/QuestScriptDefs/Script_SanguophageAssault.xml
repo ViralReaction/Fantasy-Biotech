@@ -31,7 +31,7 @@
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->TESTSTESYou have intercepted a distress signal! A hostile shuttle carrying a sanguophage master and [thrallCount] thralls is having trouble with its engines. You can use signals to draw it down to a crash near [map_definite].\n\nOnce the ship has crashed, you can fight the sanguophage and [sanguophage_possessive] minions. If you can capture the master, you can force [sanguophage_objective] to turn one of your colonists into a sanguophage.\n\n[sanguophageInfo]</li>
+        <li>questDescription->You have intercepted a distress signal! A hostile shuttle carrying a sanguophage master and [thrallCount] thralls is having trouble with its engines. You can use signals to draw it down to a crash near [map_definite].\n\nOnce the ship has crashed, you can fight the sanguophage and [vampire_possessive] minions. If you can capture the master, you can force [vampire_objective] to turn one of your colonists into a sanguophage.\n\n[sanguophageInfo]</li>
 
         <li>sanguophageInfo->(*Gray)About sanguophages: Sanguophages are ageless, deathless super-humans powered by archotech-created archites in the bloodstream. They are beautiful and extremely intelligent. They can heal any injury, and never suffer from disease or poison. In combat, they can launch deadly spines and heal injured friends. The price is that sanguophages must consume hemogen derived from human blood to survive, and they must periodically deathrest for long periods. They're easily destroyed by fire, and slowed down by UV light.(/Gray)</li>
       </rulesStrings>
@@ -45,7 +45,7 @@
         <li>reinforcementsArrivedLetterText->Thralls are arriving in drop pods to reinforce the crashed sanguophage.</li>
 
         <li>assaultBeginLetterLabel->Assault begun</li>
-        <li>assaultBeginLetterText->The hostile sanguophage master and [sanguophage_possessive] thralls have initiated an assault on the colony!</li>
+        <li>assaultBeginLetterText->The hostile sanguophage master and [vampire_possessive] thralls have initiated an assault on the colony!</li>
       </rulesStrings>
     </questContentRules>
     <root Class="FantasyBiotech.QuestNode_Root_SanguophageAssault" />

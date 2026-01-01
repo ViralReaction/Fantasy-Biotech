@@ -72,9 +72,6 @@ namespace FantasyBiotech
 			}
 			slate.Set("thrallCount", num);
 			slate.Set("initialPawns", initialPawns);
-			Thing thing = ThingMaker.MakeThing(ThingDefOf.ShuttleCrashed_Exitable);
-			quest.SetFaction(Gen.YieldSingle(thing), faction);
-
 			quest.End(QuestEndOutcome.Fail, 0, null, inSignal);
 			int reinforcementsCount = Mathf.RoundToInt(PointsToReinforcementsCountCurve.Evaluate(x));
 			if (reinforcementsCount > 0)
@@ -93,30 +90,20 @@ namespace FantasyBiotech
 				quest.BiocodeWeapons(reinforcements);
 			}
 
+			QuestPart_PawnsArrive questPart_PawnsArrive = new QuestPart_PawnsArrive();
+			questPart_PawnsArrive.pawns.AddRange(initialPawns);
+			questPart_PawnsArrive.arrivalMode = PawnsArrivalModeDefOf.EdgeWalkInGroups;
+			questPart_PawnsArrive.mapParent = map.Parent;
+			questPart_PawnsArrive.inSignal = raidArrivedSignal;
+			questPart_PawnsArrive.sendStandardLetter = false;
+			questPart_PawnsArrive.addPawnsToLookTargets = false;
+			quest.AddPart(questPart_PawnsArrive);
 			quest.Delay(180, delegate
 			{
 				quest.Letter(LetterDefOf.NegativeEvent, null, null, null, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, initialPawns, filterDeadPawnsFromLookTargets: false, "[sanguophageShuttleCrashedLetterText]", null, "[sanguophageShuttleCrashedLetterLabel]");
-				QuestPart_PawnsArrive questPart_PawnsArrive = new QuestPart_PawnsArrive();
-				questPart_PawnsArrive.pawns.AddRange(initialPawns);
-				questPart_PawnsArrive.arrivalMode = PawnsArrivalModeDefOf.EdgeWalkIn;
-				questPart_PawnsArrive.mapParent = map.Parent;
-				questPart_PawnsArrive.inSignal = raidArrivedSignal;
-				questPart_PawnsArrive.sendStandardLetter = false;
-				questPart_PawnsArrive.addPawnsToLookTargets = false;
-				quest.AddPart(questPart_PawnsArrive);
-
-
-
-
-				//quest.DefendPoint(map.Parent, vampire, shuttleCrashPosition, initialPawns, faction, null, null, 5f);
-				quest.Delay(5000, delegate
-				{
-					quest.SignalPass(null, null, attackedSignal);
-				}).debugLabel = "Assault delay";
-				quest.AnySignal(new string[2]
-				{
-					attackedSignal, defendTimeoutSignal
-				}, null, Gen.YieldSingle(beginAssaultSignal));
+				quest.DefendPoint(map.Parent, vampire, initialPawns[0].Position, initialPawns, faction, null, null, 5f);
+				quest.Delay(5000, delegate { quest.SignalPass(null, null, attackedSignal); }).debugLabel = "Assault delay";
+				quest.AnySignal(new string[2] { attackedSignal, defendTimeoutSignal }, null, Gen.YieldSingle(beginAssaultSignal));
 				quest.SignalPassActivable(delegate
 				{
 					quest.AnyPawnInCombatShape(initialPawns, delegate
@@ -144,7 +131,7 @@ namespace FantasyBiotech
 				{
 					QuestGen_End.End(quest, QuestEndOutcome.Success);
 				}).debugLabel = "End delay";
-			}, null, null, null, reactivatable: false, null, null, isQuestTimeout: false, null, null, null, tickHistorically: false, QuestPart.SignalListenMode.OngoingOnly, waitUntilPlayerHasHomeMap: true).debugLabel = "Arrival delay";
+			}, null, null, raidArrivedSignal, reactivatable: false, null, null, isQuestTimeout: false, null, null, null, tickHistorically: false, QuestPart.SignalListenMode.OngoingOnly, waitUntilPlayerHasHomeMap: true).debugLabel = "Arrival delay";
 		}
 
 		public override bool TestRunInt(Slate slate)
