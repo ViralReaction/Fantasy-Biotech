@@ -402,3 +402,4 @@ FodyWeavers.xsd
 1.6/Assemblies/KCSG.dll
 1.6/Assemblies/VEF.dll
 1.6/Assemblies/PipeSystem.dll
+*.dds
