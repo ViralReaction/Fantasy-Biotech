@@ -12,7 +12,7 @@
 		<description>Create xenogerms which can be implanted in a person to genetically modify them. Extract genepacks from living people using a gene extractor so you can reimplant their genes into someone else.</description>
 		<baseCost>1000</baseCost>
 		<researchViewX>0.00</researchViewX>
-		<researchViewY>1.00</researchViewY>
+		<researchViewY>1.30</researchViewY>
 		<prerequisites>
 			<li>PsychoidBrewing</li>
 		</prerequisites>
@@ -37,7 +37,7 @@
 		<description>Build mutagenic furnaces, which allow a graft forge to create xenogerms of higher genetic complexity.</description>
 		<baseCost>1250</baseCost>
 		<researchViewX>1.00</researchViewX>
-		<researchViewY>1.00</researchViewY>
+		<researchViewY>1.30</researchViewY>
 		<prerequisites>
 			<li>VR_BasicGenetics</li>
 		</prerequisites>
@@ -62,7 +62,7 @@
 		<description>Allows a graft forge to use up to two archite capsules to create seemingly impossible genes. Archite genes and archite capsules can be obtained from traders.</description>
 		<baseCost>1500</baseCost>
 		<researchViewX>2.00</researchViewX>
-		<researchViewY>1.00</researchViewY>
+		<researchViewY>1.30</researchViewY>
 		<prerequisites>
 			<li>VR_AdvancedGenetics</li>
 		</prerequisites>
@@ -87,9 +87,9 @@
 		<description>Allows a graft forge to use unlimited amount of archite capsules to create seemingly impossible genes. Archite genes and archite capsules can be obtained from traders.</description>
 		<baseCost>2000</baseCost>
 		<researchViewX>3.00</researchViewX>
-		<researchViewY>1.00</researchViewY>
+		<researchViewY>1.30</researchViewY>
 		<prerequisites>
-			<li>VR_AdvancedGenetics</li>
+			<li>VR_ArchiteGenetics</li>
 		</prerequisites>
 		<heldByFactionCategoryTags Inherit="False"/>
 		<generalRules>
