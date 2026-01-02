@@ -185,7 +185,6 @@
 				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_Usable">
 				<useJob>TriggerObject</useJob>
 				<useLabel>Summon colossus threat</useLabel>
@@ -265,7 +264,6 @@
 				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
 		</comps>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<pathCost>14</pathCost>

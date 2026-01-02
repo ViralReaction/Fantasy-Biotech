@@ -64,7 +64,6 @@
 				<glowRadius>3</glowRadius>
 				<glowColor>(255,150,100,0)</glowColor>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
 		</comps>
 		<designationCategory>Temperature</designationCategory>
 		<designationHotKey>Misc2</designationHotKey>
