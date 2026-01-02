@@ -286,5 +286,100 @@
 			<li>VR_LongjumpConstruct</li>
 		</abilities>
 	</PawnKindDef>
+	
+	<!-- Fabricor -->
+	<ThingDef ParentName="VR_LightConstruct">
+		<defName>VR_Construct_Assembler</defName>
+		<label>assembler</label>
+		<description>A small work construct designed to craft all manner of manufactured objects.</description>
+		<statBases>
+			<FoodPoisonChance>0.001</FoodPoisonChance>
+		</statBases>
+		<race>
+			<mechEnabledWorkTypes>
+				<li>Crafting</li>
+				<li>Smithing</li>
+				<li>Tailoring</li>
+				<li>Cooking</li>
+				<li>Research</li>
+			</mechEnabledWorkTypes>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Fabricor_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Fabricor_Death</soundDeath>
+					<soundCall>Pawn_Mech_Fabricor_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_NonCombatLightConstructKind">
+		<defName>VR_Construct_Assembler</defName>
+		<label>assembler</label>
+		<race>VR_Construct_Assembler</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/ConstructFabricor</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ConstructFabricor</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.1</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	
+	<!-- Paramedic -->
+	<ThingDef ParentName="VR_LightConstruct">
+		<defName>VR_Construct_Mender</defName>
+		<label>mender</label>
+		<description>A small construct designed for non-violent emergency situation management and medical care. The mender can rescue the wounded, fight fires, treat the sick, and even perform surgery when a more-qualified human is not available. Its built-in jump launcher allows it to jump into, and out of, emergency situations.</description>
+		<statBases>
+			<MoveSpeed>3.8</MoveSpeed>
+		</statBases>
+		<race>
+			<mechEnabledWorkTypes>
+				<li>Doctor</li>
+				<li>Firefighter</li>
+			</mechEnabledWorkTypes>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Paramedic_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Paramedic_Death</soundDeath>
+					<soundCall>Pawn_Mech_Paramedic_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+  
+	<PawnKindDef ParentName="VR_LightConstructKind">
+		<defName>VR_Construct_Mender</defName>
+		<label>mender</label>
+		<race>VR_Construct_Mender</race>
+		<allowInMechClusters>false</allowInMechClusters>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/ConstructParamedic</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ConstructParamedic</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<abilities>
+			<li>LongjumpMechLauncher</li>
+		</abilities>
+	</PawnKindDef>
 
 </Defs>

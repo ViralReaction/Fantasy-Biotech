@@ -80,5 +80,67 @@
 			<ThingDef>VR_Construct_Agrihand</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
+	
+	<RecipeDef ParentName="LightMechanoidRecipe">
+		<defName>VR_MakeConstruct_Assembler</defName>
+		<label>gestate assembler</label>
+		<description>Gestate an assembler construct.</description>
+		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SubcoreHigh</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<VR_Construct_Assembler>1</VR_Construct_Assembler>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Assembler</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="VR_LightConstructRecipe">
+		<defName>VR_MakeConstruct_Mender</defName>
+		<label>gestate mender</label>
+		<description>Gestate a mender construct.</description>
+		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VR_TonalCoreHigh</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<VR_Construct_Mender>1</VR_Construct_Mender>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Mender</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
 
 </Defs>
