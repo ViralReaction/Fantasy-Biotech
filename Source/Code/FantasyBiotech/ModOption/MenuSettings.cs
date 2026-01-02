@@ -23,6 +23,8 @@ namespace FantasyBiotech
         private bool medievalGoJuice = true;
         public bool medievalGrowthVat = true;
 
+        public bool replaceTradeShipIncident = true;
+
         #endregion
 
         private readonly Dictionary<int, float> _cachedTabHeights = [];
@@ -52,6 +54,8 @@ namespace FantasyBiotech
             Scribe_Values.Look(ref medievalGoJuice, "medievalGoJuice", true);
             Scribe_Values.Look(ref medievalGrowthVat, "medievalGrowthVat", true);
 
+            Scribe_Values.Look(ref replaceTradeShipIncident, "replaceTradeShipIncident", true);
+
         }
 
         public void DoWindowContents(Listing_Standard list)
@@ -66,6 +70,9 @@ namespace FantasyBiotech
                     break;
                 case 2:
                     DoSettingsWindowContents_Vampires(list);
+                    break;
+                case 3:
+                    DoSettingsWindowContents_Misc(list);
                     break;
             }
         }
@@ -93,8 +100,13 @@ namespace FantasyBiotech
             list.CheckboxLabeled("FantasyBiotech_Settings_MedievalVampireScenario_Replace_Title".Translate(), ref medievalVampireScenario, "FantasyBiotech_Settings_MedievalVampireScenario_Replace_Desc".Translate());
             list.CheckboxLabeled("FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Title".Translate(), ref medievalSanguophageFaction, "FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Desc".Translate());
             list.CheckboxLabeled("FantasyBiotech_Settings_MedievalHemogenTexture_Replace_Title".Translate(), ref medievalHemogenTextures, "FantasyBiotech_Settings_MedievalHemogenTexture_Replace_Desc".Translate());
+        }
 
-
+        private void DoSettingsWindowContents_Misc(Listing_Standard list)
+        {
+            list.Label("FantasyBiotech_Settings_HeaderMisc".Translate());
+            list.Gap();
+            list.CheckboxLabeled("FantasyBiotech_Settings_TradeShip_Replace_Title".Translate(), ref replaceTradeShipIncident, "FantasyBiotech_Settings_TradeShip_Replace_Desc".Translate());
         }
 
         public float GetOrCalculateHeightForTab(int tabIndex, float width)
@@ -114,6 +126,9 @@ namespace FantasyBiotech
                         break;
                     case 2:
                         DoSettingsWindowContents_Vampires(measuringList);
+                        break;
+                    case 3:
+                        DoSettingsWindowContents_Misc(measuringList);
                         break;
                 }
                 measuringList.End();
@@ -142,6 +157,9 @@ namespace FantasyBiotech
                 case 2:
                     ResetToDefault_Vampires();
                     break;
+                case 3:
+                    ResetToDefault_Misc();
+                    break;
             }
             _dirtyTabs.Add(MenuController.SelectedTab);
         }
@@ -164,6 +182,11 @@ namespace FantasyBiotech
             medievalVampireScenario = true;
             medievalSanguophageFaction = true;
             medievalHemogenTextures = true;
+        }
+
+        private void ResetToDefault_Misc()
+        {
+            replaceTradeShipIncident = true;
         }
 
         #endregion

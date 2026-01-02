@@ -60,7 +60,6 @@
 				<compClass>FantasyBiotech.CompTempControl_Steam</compClass>
 				<energyPerSecond>21</energyPerSecond>
 			</li>
-			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Glower">
 				<glowRadius>3</glowRadius>
 				<glowColor>(255,150,100,0)</glowColor>
@@ -148,9 +147,6 @@
 		<thingCategories>
 			<li>BuildingsFurniture</li>
 		</thingCategories>
-		<comps>
-			<li Class="CompProperties_Flickable"/>
-		</comps>
 		<statBases>
 			<WorkToBuild>300</WorkToBuild>
 		</statBases>

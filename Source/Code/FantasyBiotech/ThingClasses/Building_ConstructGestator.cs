@@ -10,7 +10,7 @@ namespace FantasyBiotech
 {
     public class Building_ConstructGestator : Building_MechGestator
     {
-        private new CompResourceTrader Power => this.TryGetComp<CompResourceTrader>();
+        private new CompResourceTrader_Steam Power => this.TryGetComp<CompResourceTrader_Steam>();
         private new bool PoweredOn => Power.ResourceOn;
         public override void Tick()
         {

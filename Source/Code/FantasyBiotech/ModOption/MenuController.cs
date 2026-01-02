@@ -41,6 +41,7 @@ namespace FantasyBiotech
                 "FantasyBiotech_Settings_HeaderConstructs".Translate(),
                 "FantasyBiotech_Settings_HeaderGenetics".Translate(),
                 "FantasyBiotech_Settings_HeaderVampires".Translate(),
+                "MiscRecordsCategory".Translate(),
             ];
             s_tabs = [];
             for (int i = 0; i < s_tabNames.Length; i++)

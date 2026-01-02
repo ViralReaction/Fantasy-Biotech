@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+        <settings>
+            <li>replaceTradeShipIncident</li>
+        </settings>
+        <active Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/IncidentDef[defName="OrbitalTraderArrival"]/workerClass</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/IncidentDef[defName="OrbitalTraderArrival"]/workerClass</xpath>
+						<value>
+							<workerClass>FantasyBiotech.IncidentWorker_TradeMessage</workerClass>
+						</value>
+                    </match>
+                </li>
+				
+				<li Class="PatchOperationConditional">
+                    <xpath>Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/label</xpath>
+                    <match Class="PatchOperationReplace">
+                       <xpath>Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/label</xpath>
+						<value>
+							<label>slaver</label>
+						</value>
+                    </match>
+                </li>
+
+            </operations>
+        </active>
+    </Operation>
+
+</Patch>

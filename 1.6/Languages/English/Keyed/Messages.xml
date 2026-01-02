@@ -9,5 +9,7 @@
 	<FantasyBiotech_LetterArtificerCasketOpened>You have found the corpse of an ancient artificer!\n\nExtract {PAWN_possessive} implant by selecting a colonist and right-clicking the corpse.</FantasyBiotech_LetterArtificerCasketOpened>
 	<FantasyBiotech_LetterLabelArtificerCasketFound>Artificer casket found</FantasyBiotech_LetterLabelArtificerCasketFound>
 	<FantasyBiotech_LetterArtificerCasketFound>You have discovered a artificer's sarcophagus!\n\nOpen it to find them inside.</FantasyBiotech_LetterArtificerCasketFound>
+	
+	<FantasyBiotech_MessageShipHasLeftCommsRange>{0} has stopped transmitting.</FantasyBiotech_MessageShipHasLeftCommsRange>
 
 </LanguageData>

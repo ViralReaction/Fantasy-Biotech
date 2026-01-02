@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<FantasyBiotech_TraderArrival>Receiving harmonic messages for trade.\n\nThe sender is known as {0}. They are a {1}.\n\n{2}</FantasyBiotech_TraderArrival>
+	<FantasyBiotech_TraderArrivalFromFaction>The sender seems to affiliated with {FACTION_name}.</FantasyBiotech_TraderArrivalFromFaction>
+	<FantasyBiotech_TraderArrivalNoFaction>The sender is not affiliated with any faction.</FantasyBiotech_TraderArrivalNoFaction>
+
+</LanguageData>

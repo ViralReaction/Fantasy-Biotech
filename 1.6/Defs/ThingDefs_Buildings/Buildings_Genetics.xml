@@ -302,7 +302,6 @@
 				<compClass>CompHeatPusherPowered</compClass>
 				<heatPerSecond>2</heatPerSecond>
 			</li>
-			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_InspectString">
 				<compClass>CompInspectStringGeneProcessor</compClass>
 				<inspectString>Gene complexity increase</inspectString>

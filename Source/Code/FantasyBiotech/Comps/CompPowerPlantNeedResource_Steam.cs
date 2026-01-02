@@ -7,7 +7,7 @@ namespace FantasyBiotech
     {
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            compResourceTraders = parent.GetComps<CompResourceTrader>().ToList<CompResourceTrader>();
+            compResourceTraders = parent.GetComps<CompResourceTrader>().ToList();
             base.PostSpawnSetup(respawningAfterLoad);
         }
 

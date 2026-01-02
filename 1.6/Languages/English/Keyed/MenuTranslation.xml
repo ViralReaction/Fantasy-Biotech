@@ -7,6 +7,7 @@
     <FantasyBiotech_Settings_HeaderConstructs>Constructs</FantasyBiotech_Settings_HeaderConstructs>
     <FantasyBiotech_Settings_HeaderGenetics>Genetics</FantasyBiotech_Settings_HeaderGenetics>
     <FantasyBiotech_Settings_HeaderVampires>Vampires</FantasyBiotech_Settings_HeaderVampires>
+	<FantasyBiotech_Settings_HeaderMisc>Misc</FantasyBiotech_Settings_HeaderMisc>
 
     <!-- Options -->
     <!-- Mech Options -->
@@ -32,6 +33,10 @@
 
     <FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Title>Make Sanguophage Faction Medieval</FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Title>
     <FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Desc>Makes the Sanguophage Faction Medieval</FantasyBiotech_Settings_MedievalSanguophageFaction_Replace_Desc>
+	
+	<!-- Sanguophage Options -->
+    <FantasyBiotech_Settings_TradeShip_Replace_Title>Reword Trade Ship Incident</FantasyBiotech_Settings_TradeShip_Replace_Title>
+    <FantasyBiotech_Settings_TradeShip_Replace_Desc>Makes the trade ship incident more fantasy and inline with new trade beacon</FantasyBiotech_Settings_TradeShip_Replace_Desc>
 
     <!-- Reset to Default -->
     <FantasyBiotech_ResetDefault>Reset to Default</FantasyBiotech_ResetDefault>

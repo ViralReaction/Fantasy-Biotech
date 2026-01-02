@@ -26,5 +26,57 @@
 			</rulesStrings>
 		</generalRules>
 	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>VR_CommsConsole</defName>
+		<label>comms console</label>
+		<description>Allows for communication over large distances.</description>
+		<techLevel>Medieval</techLevel>
+		<tab>VR_BiotechResearchTab</tab>
+		<baseCost>400</baseCost>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>0.50</researchViewY>
+		<prerequisites>
+			<li>VR_SteamPower</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->comms console</li>
+
+				<li>subject_story->learned to encode messages into rhythmic pressure pulses</li>
+				<li>subject_story->constructed resonant speaking chambers</li>
+				<li>subject_story->decoded distant messages carried by returning harmonic vibrations</li>
+
+				<li>subject_gerund->calibrated harmonics for clear transmission</li>
+
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>VR_TradeDisplacement</defName>
+		<label>trade displacement</label>
+		<description>Allows for the trading of goods through harmonic displacement.</description>
+		<techLevel>Medieval</techLevel>
+		<tab>VR_BiotechResearchTab</tab>
+		<baseCost>1200</baseCost>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.70</researchViewY>
+		<prerequisites>
+			<li>VR_CommsConsole</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->trade displacement</li>
+
+				<li>subject_story->discovered that goods could be shifted through harmonic phase alignment</li>
+				<li>subject_story->learned to stabilize matter during displacement</li>
+				<li>subject_story->prevented catastrophic loss by binding mass to return frequencies</li>
+
+				<li>subject_gerund->aligned trade signals through harmonic anchors</li>
+
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
 
 </Defs>

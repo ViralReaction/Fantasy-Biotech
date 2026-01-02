@@ -9,18 +9,17 @@ namespace FantasyBiotech
 {
     public class Building_CommsConsole_Steam : Building_CommsConsole
     {
-        private CompResourceTrader Power;
+        private CompResourceTrader_Steam Power;
         private bool CanUseCommsNow_Steam => Power == null || Power.ResourceOn;
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            Power = this.TryGetComp<CompResourceTrader>();
+            Power = this.TryGetComp<CompResourceTrader_Steam>();
             if (CanUseCommsNow_Steam)
             {
-                LongEventHandler.ExecuteWhenFinished(AnnounceTradeShips);
+                LongEventHandler.ExecuteWhenFinished(AnnounceTradeMessages);
             }
-
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn myPawn)
@@ -65,6 +64,23 @@ namespace FantasyBiotech
             if (CanUseCommsNow_Steam) return null;
             Log.Error(myPawn?.ToString() + " could not use comm console for unknown reason.");
             return new FloatMenuOption("Cannot use now", null);
+        }
+
+        private void AnnounceTradeMessages()
+        {
+            List<PassingShip> ships = Map.passingShipManager.passingShips;
+            for (int i = 0; i < ships.Count; i++)
+            {
+                if (ships[i] is not TradeShip { WasAnnounced: false } ship) continue;
+                TaggedString baseLetterText = "FantasyBiotech_TraderArrival".Translate(ship.name, ship.def.label, (ship.Faction == null) ? "FantasyBiotech_TraderArrivalNoFaction".Translate() : "FantasyBiotech_TraderArrivalFromFaction".Translate(ship.Faction.Named("FACTION")));
+                IncidentParms incidentParms = new IncidentParms
+                {
+                    target = Map,
+                    traderKind = ship.TraderKind
+                };
+                IncidentWorker.SendIncidentLetter(ship.def.LabelCap, baseLetterText, LetterDefOf.PositiveEvent, incidentParms, LookTargets.Invalid, null);
+                ship.WasAnnounced = true;
+            }
         }
     }
 }

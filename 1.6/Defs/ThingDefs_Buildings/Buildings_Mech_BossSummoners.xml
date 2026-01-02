@@ -137,13 +137,13 @@
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>VR_ConstructBandDish</defName>
-		<label>construct band dish</label>
+		<label>harmonic comms dish</label>
 		<description>Allows radio contact with other factions and orbital traders.</description>
 		<thingClass>FantasyBiotech.Building_CommsConsole_Steam</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Misc/CommsConsole_Steam/CommsConsole_Steam</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(5,3)</drawSize>
+			<drawSize>(5,4)</drawSize>
 			<shadowData>
 				<volume>(1.1, 0.75, 1.1</volume>
 			</shadowData>
@@ -164,11 +164,10 @@
 		<building>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
-		<designationCategory>VR_Artifice</designationCategory>
+		<designationCategory>Misc</designationCategory>
 		<costList>
 			<Steel>120</Steel>
-			<Uranium>15</Uranium>
-			<VR_TonalCoreBasic>2</VR_TonalCoreBasic>
+			<Uranium>40</Uranium>
 		</costList>
 		<defaultPlacingRot>South</defaultPlacingRot>
 		<interactionCellOffset>(0,0,2)</interactionCellOffset>
@@ -186,7 +185,6 @@
 				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_Usable">
 				<useJob>TriggerObject</useJob>
@@ -213,10 +211,76 @@
 			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
 		</placeWorkers>
 		<researchPrerequisites>
-			<li>VR_BasicConstructTech</li>
+			<li>VR_CommsConsole</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 		<tickerType>Normal</tickerType>
 	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_Steam_TradeBeacon</defName>
+		<label>trade beacon</label>
+		<description>Required for tonal displacement trading. You can only sell goods if they're near an trade beacon. Can be placed indoors.</description>
+		<thingClass>Building_OrbitalTradeBeacon</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/DropBeacon_Steam</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.2, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToBuild>800</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<Mass>5</Mass>
+		</statBases>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<fillPercent>0.15</fillPercent>
+		<costList>
+			<Steel>40</Steel>
+			<Uranium>10</Uranium>
+		</costList>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+		</building>
+		<comps>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+				<compClass>FantasyBiotech.CompResourceTrader_Steam</compClass>
+				<pipeNet>VR_SteamNet</pipeNet>
+				<consumptionPerTick>3</consumptionPerTick>
+			</li>
+			<li Class="CompProperties_Power">
+				<transmitsPower>false</transmitsPower>
+				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
+				<basePowerConsumption>-1000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<pathCost>14</pathCost>
+		<designationCategory>Misc</designationCategory>
+		<uiOrder>2100</uiOrder>
+		<rotatable>false</rotatable>
+		<placeWorkers>
+			<li>PlaceWorker_ShowTradeBeaconRadius</li>
+		</placeWorkers>
+		<designationHotKey>Misc2</designationHotKey>
+		<researchPrerequisites>
+			<li>VR_TradeDisplacement</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	
 
 </Defs>

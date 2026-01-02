@@ -67,7 +67,6 @@
 				<drawAssignmentOverlay>false</drawAssignmentOverlay>
 				<compClass>CompAssignableToPawn_DeathrestCasket</compClass>
 			</li>
-			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_DeathrestBindable">
 				<stackLimit>1</stackLimit>
 				<countsTowardsBuildingLimit>false</countsTowardsBuildingLimit>

@@ -61,6 +61,7 @@
     <Compile Include="FantasyBiotech\Harmony\CallBossgroupUtility_BossgroupEverCallable.cs" />
     <Compile Include="FantasyBiotech\Harmony\CompOverseer_TryMakeFeral.cs" />
     <Compile Include="FantasyBiotech\Harmony\MechanitorUtility_ShouldBeMechanitor.cs" />
+    <Compile Include="FantasyBiotech\Harmony\PassingShip_Depart.cs" />
     <Compile Include="FantasyBiotech\Harmony\PawnWorkSettings_CacheWorkGiversInOrder.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_AncientAltar_Transpiler.cs" />
     <Compile Include="FantasyBiotech\Harmony\SymbolResolver_Interior_AncientTemple_Transpiler.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="FantasyBiotech\HediffDefs\Hediff_ConstructBandNode.cs" />
     <Compile Include="FantasyBiotech\HediffDefs\Hediff_ConstructLink.cs" />
     <Compile Include="FantasyBiotech\IncidentWorkers\IncidentWorker_ConstructCluster.cs" />
+    <Compile Include="FantasyBiotech\IncidentWorkers\IncidentWorker_TradeMessage.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_GatherAnimalBodyResourcesByConstruct.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_Milk.cs" />
     <Compile Include="FantasyBiotech\Jobs\JobDriver_OperateOnPawn.cs" />

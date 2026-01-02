@@ -32,9 +32,6 @@
 		<placeWorkers>
 			<li>PlaceWorker_MechGestatorTop</li>
 		</placeWorkers>
-		<comps>
-			<li Class="CompProperties_Flickable"/>
-		</comps>
 		<techLevel>Medieval</techLevel>
 	</ThingDef>
 
@@ -347,7 +344,6 @@
 				<compClass>FantasyBiotech.CompPowerPlantNeedResource_Steam</compClass>
 				<basePowerConsumption>-1000</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Flickable"/>
 		</comps>
 		<techLevel>Medieval</techLevel>
 		<placeWorkers>
@@ -402,9 +398,6 @@
 			<Mass>25</Mass>
 			<Flammability>0.5</Flammability>
 		</statBases>
-		<comps>
-			<li Class="CompProperties_Flickable"/>
-		</comps>
 		<tickerType>Normal</tickerType>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<techLevel>Medieval</techLevel>
@@ -655,7 +648,6 @@
 		        <hediff>MechBoost</hediff>
 		        <activeSound>MechBooster_Working</activeSound>
 		      </li>
-			<li Class="CompProperties_Flickable"/>
 	    </comps>
 	    <placeWorkers>
 		    <li>PlaceWorker_ShowCauseHediffAoE</li>
