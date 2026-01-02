@@ -4,7 +4,7 @@
 	<!-- Scyther Equivalent -->
 	<ThingDef ParentName="VR_HeavyConstruct" Name="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion</defName>
-		<label>centurion (melee)</label>
+		<label>sentinel (melee)</label>
 		<description>A larger combat mech designed as a shock trooper. They are known to extremely dangerous for even the most well equipped adventurer.</description>
 		<tools>
 			<li>
@@ -53,7 +53,7 @@
 
 	<PawnKindDef Name="VR_HeavyConstructKind_CenturionMeleeBase" ParentName="VR_HeavyConstructKind">
 		<defName>VR_Construct_Centurion</defName>
-		<label>centurion (melee)</label>
+		<label>sentinel (melee)</label>
 		<race>VR_Construct_Centurion</race>
 		<combatPower>250</combatPower>
 		<lifeStages>
@@ -87,7 +87,7 @@
 
 	<PawnKindDef ParentName="VR_HeavyConstructKind_CenturionMeleeBase">
 		<defName>VR_Construct_Centurion_Sword</defName>
-		<label>centurion (sword)</label>
+		<label>sentinel (sword)</label>
 		<race>VR_Construct_Centurion_Sword</race>
 		<weaponTags Inherit="False">
 			<li>VR_Construct_SteamSword_Heavy</li>
@@ -100,7 +100,7 @@
 
 	<PawnKindDef ParentName="VR_HeavyConstructKind_CenturionMeleeBase">
 		<defName>VR_Construct_Centurion_Hammer</defName>
-		<label>centurion (hammer)</label>
+		<label>sentinel (hammer)</label>
 		<race>VR_Construct_Centurion_Hammer</race>
 		<weaponTags Inherit="False">
 			<li>VR_Construct_SteamHammer_Heavy</li>
@@ -113,7 +113,7 @@
 
 	<PawnKindDef ParentName="VR_HeavyConstructKind_CenturionMeleeBase">
 		<defName>VR_Construct_Centurion_StakeDriver</defName>
-		<label>centurion (stakedriver)</label>
+		<label>sentinel (stakedriver)</label>
 		<race>VR_Construct_Centurion_StakeDriver</race>
 		<weaponTags Inherit="False">
 			<li>VR_Construct_StakeDriver_Heavy</li>
@@ -122,12 +122,12 @@
 
 	<ThingDef ParentName="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion_Burner</defName>
-		<label>centurion (burner)</label>
+		<label>sentinel (burner)</label>
 	</ThingDef>
 
 	<PawnKindDef ParentName="VR_HeavyConstructKind">
 		<defName>VR_Construct_Centurion_Burner</defName>
-		<label>centurion (burner)</label>
+		<label>sentinel (burner)</label>
 		<race>VR_Construct_Centurion_Burner</race>
 		<combatPower>300</combatPower>
 		<lifeStages>
@@ -154,12 +154,12 @@
 
 	<ThingDef ParentName="VR_Construct_Centurion">
 		<defName>VR_Construct_Centurion_Shooter</defName>
-		<label>centurion (ranged)</label>
+		<label>sentinel (ranged)</label>
 	</ThingDef>
 
 	<PawnKindDef ParentName="VR_HeavyConstructKind">
 		<defName>VR_Construct_Centurion_Shooter</defName>
-		<label>centurion (ranged)</label>
+		<label>sentinel (ranged)</label>
 		<race>VR_Construct_Centurion_Shooter</race>
 		<combatPower>250</combatPower>
 		<lifeStages>

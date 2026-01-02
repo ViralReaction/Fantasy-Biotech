@@ -24,7 +24,7 @@
 	<!-- Apocriton -->
 	<ThingDef ParentName="VR_BaseConstructWalker">
 		<defName>VR_Construct_Apocriton</defName>
-		<label>apocriton</label>
+		<label>overseer</label>
 		<description>A large construct commander designed to coordinate and motivate other automatons during long extermination campaigns. combat mech designed as a shock trooper. Its most obvious power is its ability to resurrect recently-damaged constructs by restructuring their tonal signature.</description>
 		<statBases>
 			<MarketValue>1600</MarketValue>
@@ -100,7 +100,7 @@
 
 	<PawnKindDef ParentName="VR_BaseConstructKind">
 		<defName>VR_Construct_Apocriton</defName>
-		<label>apocriton</label>
+		<label>overseer</label>
 		<race>VR_Construct_Apocriton</race>
 		<combatPower>600</combatPower>
 		<maxPerGroup>3</maxPerGroup>
@@ -403,8 +403,8 @@
 
 	<PawnKindDef Name="VR_ConstructQueenKind" ParentName="VR_HeavyConstructKind">
 		<defName>VR_Construct_ScarabQueen</defName>
-		<label>war queen</label>
-		<labelPlural>war queens</labelPlural>
+		<label>scarab queen</label>
+		<labelPlural>scarab queens</labelPlural>
 		<race>VR_Construct_ScarabQueen</race>
 		<combatPower>600</combatPower>
 		<maxPerGroup>3</maxPerGroup>

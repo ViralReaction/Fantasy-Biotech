@@ -109,7 +109,7 @@
 				</bossApparel>
 			</li>
 		</waves>
-		<leaderDescription>The {LEADERKIND_label} is equipped with a concrete-melting hellsphere cannon. It is slow to charge, but when it fires it will annihilate anything in the blast circle.</leaderDescription>
+		<leaderDescription>The {LEADERKIND_label} is equipped with a granite-melting tonal incinerator. It is slow to charge, but when it fires it will annihilate anythign along the firing path.</leaderDescription>
 		<rewardDef>VR_PowerchipBasic</rewardDef>
 	</BossgroupDef>
 

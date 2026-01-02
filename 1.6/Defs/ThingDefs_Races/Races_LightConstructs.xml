@@ -4,8 +4,8 @@
 	<!-- Militor -->
 	<ThingDef ParentName="VR_LightSphereConstruct">
 		<defName>VR_Construct_Militor</defName>
-		<label>militor</label>
-		<description>A small combat mechanoid armed with a low-power mini-shotgun. Roughly four feet tall, militors lack the power, range, and toughness of more senior combat mechs. However, it is cheap to gestate and maintain, and so is often used as a rear guard or swarm attacker.\n\nIn war, mech armies are known to send militors into urban ruins to hunt down survivors after breaking the human defenses. For this reason, they are considered by some to be the most cruel of all mechanoid patterns.</description>
+		<label>vanguard</label>
+		<description>A small combat construct armed with a handgonne. Roughly four feet tall, militors lack the power, range, and toughness of more senior combat constructs. However, it is cheap to gestate and maintain, and so is often used as a rear guard or swarm attacker.\n\nIn war, constructs armies are known to send vanguards into town ruins to hunt down survivors after breaking the human defenses. For this reason, they are considered by some to be the most cruel of all construct patterns.</description>
 		<statBases>
 			<MoveSpeed>3.8</MoveSpeed>
 		</statBases>
@@ -24,7 +24,7 @@
 
 	<PawnKindDef ParentName="VR_LightConstructKind">
 		<defName>VR_Construct_Militor</defName>
-		<label>militor</label>
+		<label>vanguard</label>
 		<race>VR_Construct_Militor</race>
 		<combatPower>45</combatPower>
 		<lifeStages>
@@ -50,7 +50,7 @@
 	<!-- Lifter -->
 	<ThingDef ParentName="VR_LightConstruct">
 		<defName>VR_Construct_Lifter</defName>
-		<label>lifter</label>
+		<label>transport spider</label>
 		<description>A small construct designed for hauling. Lacking a ranged weapon, it can make only weak melee attacks.</description>
 		<statBases>
 			<MoveSpeed>2.8</MoveSpeed>
@@ -74,7 +74,7 @@
 
 	<PawnKindDef ParentName="VR_NonCombatLightConstructKind">
 		<defName>VR_Construct_Lifter</defName>
-		<label>lifter</label>
+		<label>transport spider</label>
 		<race>VR_Construct_Lifter</race>
 		<lifeStages>
 			<li>
@@ -92,7 +92,7 @@
 	<!-- Constructoid -->
 	<ThingDef ParentName="VR_LightConstruct">
 		<defName>VR_Construct_Constructoid</defName>
-		<label>constructoid</label>
+		<label>construction spider</label>
 		<description>A small construct designed to perform construction tasks. It can perform blunt melee attacks if necessary.</description>
 		<statBases>
 			<ConstructionSpeed>0.5</ConstructionSpeed>
@@ -146,7 +146,7 @@
 	<!-- Agrihand -->
 	<ThingDef ParentName="VR_LightConstruct">
 		<defName>VR_Construct_Agrihand</defName>
-		<label>agrihand</label>
+		<label>farmhand spider</label>
 		<description>A small construct designed to sow and harvest crops, along with milking and shearing animals. While it is better suited to labor than combat, it can fight with built-in cutting blades if necessary.</description>
 		<tools>
 			<li>
@@ -199,7 +199,7 @@
 
 	<PawnKindDef ParentName="VR_NonCombatLightConstructKind">
 		<defName>VR_Construct_Agrihand</defName>
-		<label>agrihand</label>
+		<label>farmhand spider</label>
 		<race>VR_Construct_Agrihand</race>
 		<lifeStages>
 			<li>

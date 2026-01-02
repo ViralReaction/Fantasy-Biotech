@@ -111,7 +111,7 @@
 				</bossApparel>
 			</li>
 		</waves>
-		<leaderDescription>The {LEADERKIND_label} has a built-in mech gestator and is capable of deploying war urchin combat mechs.</leaderDescription>
+		<leaderDescription>The {LEADERKIND_label} has a built-in construct gestator and is capable of deploying scarab combat constructs.</leaderDescription>
 		<rewardDef>VR_PowerchipStandard</rewardDef>
 	</BossgroupDef>
 

@@ -122,7 +122,7 @@
 				</bossApparel>
 			</li>
 		</waves>
-		<leaderDescription>The {LEADERKIND_label} is a psychically-present mechanoid commander who can resurrect recently-killed mechs and jump long distances. It carries a long-range toxic needle gun.</leaderDescription>
+		<leaderDescription>The {LEADERKIND_label} is a psychically-present construct commander who can resurrect recently-killed constructs and jump long distances. It carries a heavy bow gun.</leaderDescription>
 		<rewardDef>VR_PowerchipAdvanced</rewardDef>
 	</BossgroupDef>
 
