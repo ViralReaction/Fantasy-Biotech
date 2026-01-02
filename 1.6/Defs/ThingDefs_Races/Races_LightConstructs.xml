@@ -4,8 +4,8 @@
 	<!-- Militor -->
 	<ThingDef ParentName="VR_LightSphereConstruct">
 		<defName>VR_Construct_Militor</defName>
-		<label>vanguard</label>
-		<description>A small combat construct armed with a handgonne. Roughly four feet tall, militors lack the power, range, and toughness of more senior combat constructs. However, it is cheap to gestate and maintain, and so is often used as a rear guard or swarm attacker.\n\nIn war, constructs armies are known to send vanguards into town ruins to hunt down survivors after breaking the human defenses. For this reason, they are considered by some to be the most cruel of all construct patterns.</description>
+		<label>vanguard (shooter)</label>
+		<description>A small combat construct armed with a handgonne. Roughly four feet tall, vanguards lack the power, range, and toughness of more senior combat constructs. However, it is cheap to gestate and maintain, and so is often used as a rear guard or swarm attacker.\n\nIn war, constructs armies are known to send vanguards into town ruins to hunt down survivors after breaking the human defenses. For this reason, they are considered by some to be the most cruel of all construct patterns.</description>
 		<statBases>
 			<MoveSpeed>3.8</MoveSpeed>
 		</statBases>
@@ -44,6 +44,51 @@
 		</lifeStages>
 		<weaponTags>
 			<li>ConstructGunShortRange</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<ThingDef ParentName="VR_LightSphereConstruct">
+		<defName>VR_Construct_Militor_Melee</defName>
+		<label>vanguard (melee)</label>
+		<description>A small combat construct armed with a baton. Roughly four feet tall, vanguards lack the power, range, and toughness of more senior combat constructs. However, it is cheap to gestate and maintain, and so is often used as a rear guard or swarm attacker.\n\nIn war, constructs armies are known to send vanguards into town ruins to hunt down survivors after breaking the human defenses. For this reason, they are considered by some to be the most cruel of all construct patterns.</description>
+		<statBases>
+			<MoveSpeed>3.8</MoveSpeed>
+		</statBases>
+		<race>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+					<soundCall>Pawn_Mech_Militor_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="VR_LightConstructKind">
+		<defName>VR_Construct_Militor_Melee</defName>
+		<label>vanguard (melee)</label>
+		<race>VR_Construct_Militor_Melee</race>
+		<combatPower>45</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/ConstructMilitor</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/ConstructMilitor</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>VR_Construct_SteamBaton</li>
 		</weaponTags>
 	</PawnKindDef>
 

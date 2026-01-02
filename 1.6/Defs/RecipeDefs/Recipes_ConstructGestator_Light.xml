@@ -12,7 +12,9 @@
 	</RecipeDef>
 
 	<RecipeDef Name="VR_LightConstructRecipe" ParentName="VR_BaseConstructRecipe" Abstract="True">
-		<researchPrerequisite>VR_BasicConstructTech</researchPrerequisite>
+		<researchPrerequisites>
+			<li>VR_BasicConstructTech</li>
+		</researchPrerequisites>
 		<ingredients>
 			<li>
 				<filter>
@@ -35,13 +37,46 @@
 
 	<RecipeDef ParentName="VR_LightConstructRecipe">
 		<defName>VR_MakeConstruct_Militor</defName>
-		<label>gestate militor</label>
-		<description>Gestate a militor construct.</description>
+		<label>gestate vanguard (shooter)</label>
+		<description>Gestate a vanguard construct.</description>
+		<researchPrerequisites Inherit="False">
+			<li>VR_BasicConstructTech</li>
+		</researchPrerequisites>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>65</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VR_TonalCoreBasic</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
 		<products>
 			<VR_Construct_Militor>1</VR_Construct_Militor>
 		</products>
 		<descriptionHyperlinks>
 			<ThingDef>VR_Construct_Militor</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_LightConstructRecipe">
+		<defName>VR_MakeConstruct_Militor_Melee</defName>
+		<label>gestate vanguard (melee)</label>
+		<description>Gestate a vanguard construct.</description>
+		<products>
+			<VR_Construct_Militor_Melee>1</VR_Construct_Militor_Melee>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Militor_Melee</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 
@@ -80,12 +115,11 @@
 			<ThingDef>VR_Construct_Agrihand</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
-	
-	<RecipeDef ParentName="LightMechanoidRecipe">
-		<defName>VR_MakeConstruct_Assembler</defName>
-		<label>gestate assembler</label>
-		<description>Gestate an assembler construct.</description>
-		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
+
+	<RecipeDef Name="VR_LightConstructRecipe_HighTech" ParentName="VR_LightConstructRecipe" Abstract="True">
+		<researchPrerequisites Inherit="False">
+			<li>VR_HighConstructTech</li>
+		</researchPrerequisites>
 		<ingredients Inherit="False">
 			<li>
 				<filter>
@@ -104,6 +138,12 @@
 				<count>1</count>
 			</li>
 		</ingredients>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VR_LightConstructRecipe_HighTech">
+		<defName>VR_MakeConstruct_Assembler</defName>
+		<label>gestate assembler</label>
+		<description>Gestate an assembler construct.</description>
 		<products>
 			<VR_Construct_Assembler>1</VR_Construct_Assembler>
 		</products>
@@ -111,30 +151,11 @@
 			<ThingDef>VR_Construct_Assembler</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
-	
-	<RecipeDef ParentName="VR_LightConstructRecipe">
+
+	<RecipeDef ParentName="VR_LightConstructRecipe_HighTech">
 		<defName>VR_MakeConstruct_Mender</defName>
 		<label>gestate mender</label>
 		<description>Gestate a mender construct.</description>
-		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
-		<ingredients Inherit="False">
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>100</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>VR_TonalCoreHigh</li>
-					</thingDefs>
-				</filter>
-				<count>1</count>
-			</li>
-		</ingredients>
 		<products>
 			<VR_Construct_Mender>1</VR_Construct_Mender>
 		</products>

@@ -43,6 +43,7 @@
 				<li>Corpse_VR_Construct_Constructoid</li>
 				<li>Corpse_VR_Construct_Agrihand</li>
 				<li>Corpse_VR_Construct_Militor</li>
+				<li>Corpse_VR_Construct_Militor_Melee</li>
 				<li>Corpse_VR_Construct_Mender</li>
 				<li>Corpse_VR_Construct_Assembler</li>
 			</thingDefs>

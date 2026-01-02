@@ -46,7 +46,7 @@
 
 	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
 		<defName>VR_Construct_Sphere_Melee_Sword</defName>
-		<label>gestate melee sphere (sword)</label>
+		<label>gestate sphere (sword)</label>
 		<products>
 			<VR_Construct_Sphere_Melee_Sword>1</VR_Construct_Sphere_Melee_Sword>
 		</products>
@@ -57,7 +57,7 @@
 
 	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
 		<defName>VR_Construct_Sphere_Melee_Hammer</defName>
-		<label>gestate melee sphere (hammer)</label>
+		<label>gestate sphere (hammer)</label>
 		<products>
 			<VR_Construct_Sphere_Melee_Hammer>1</VR_Construct_Sphere_Melee_Hammer>
 		</products>
@@ -67,7 +67,7 @@
 	</RecipeDef>
 	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
 		<defName>VR_Construct_Sphere_Melee_Lance</defName>
-		<label>gestate melee sphere (lance)</label>
+		<label>gestate sphere (lance)</label>
 		<products>
 			<VR_Construct_Sphere_Melee_Lance>1</VR_Construct_Sphere_Melee_Lance>
 		</products>
@@ -78,7 +78,7 @@
 
 	<RecipeDef ParentName="VR_MediumConstructRecipe">
 		<defName>VR_Construct_Sphere_Range</defName>
-		<label>gestate ranged sphere</label>
+		<label>gestate sphere (ranged)</label>
 		<description>Gestate a ranged sphere construct.</description>
 		<ingredients Inherit="False">
 			<li>
@@ -162,8 +162,8 @@
 
 	<RecipeDef ParentName="VR_MediumConstructRecipe">
 		<defName>VR_Construct_Scorcher</defName>
-		<label>gestate scorcher</label>
-		<description>Gestate a scorcher construct.</description>
+		<label>gestate sphere (scorcher)</label>
+		<description>Gestate a sphere (scorcher) construct.</description>
 		<ingredients Inherit="False">
 			<li>
 				<filter>
@@ -200,8 +200,8 @@
 
 	<RecipeDef ParentName="VR_MediumConstructRecipe">
 		<defName>VR_Construct_Tesseron</defName>
-		<label>gestate tesseron</label>
-		<description>Gestate a tesseron construct.</description>
+		<label>gestate sphere (tesla)</label>
+		<description>Gestate a sphere (tesla) construct.</description>
 		<ingredients Inherit="False">
 			<li>
 				<filter>

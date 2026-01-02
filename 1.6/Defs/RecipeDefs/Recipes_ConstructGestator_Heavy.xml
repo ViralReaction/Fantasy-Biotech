@@ -6,8 +6,10 @@
 	</RecipeDef>
 
 	<RecipeDef Name="VR_Construct_Centurion_RecipeBase" ParentName="VR_HeavyConstructRecipe" Abstract="True">
-		<description>Gestate a centurion construct.</description>
-		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
+		<description>Gestate a sentinel construct.</description>
+		<researchPrerequisites Inherit="False">
+			<li>VR_HighConstructTech</li>
+		</researchPrerequisites>
 		<ingredients Inherit="False">
 			<li>
 				<filter>
@@ -44,9 +46,9 @@
 		</ingredients>
 	</RecipeDef>
 
-	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
+	<RecipeDef ParentName="VR_Construct_Centurion_RecipeBase">
 		<defName>VR_Construct_Centurion_Melee_Sword</defName>
-		<label>gestate melee centurion (sword)</label>
+		<label>gestate sentinel (sword)</label>
 		<products>
 			<VR_Construct_Centurion_Sword>1</VR_Construct_Centurion_Sword>
 		</products>
@@ -55,9 +57,9 @@
 		</descriptionHyperlinks>
 	</RecipeDef>
 
-	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
+	<RecipeDef ParentName="VR_Construct_Centurion_RecipeBase">
 		<defName>VR_Construct_Centurion_Melee_Hammer</defName>
-		<label>gestate melee centurion (hammer)</label>
+		<label>gestate sentinel (hammer)</label>
 		<products>
 			<VR_Construct_Centurion_Hammer>1</VR_Construct_Centurion_Hammer>
 		</products>
@@ -65,9 +67,9 @@
 			<ThingDef>VR_Construct_Centurion_Hammer</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
-	<RecipeDef ParentName="VR_Construct_Sphere_Melee_RecipeBase">
+	<RecipeDef ParentName="VR_Construct_Centurion_RecipeBase">
 		<defName>VR_Construct_Centurion_Melee_StakeDriver</defName>
-		<label>gestate melee centurion (stakedriver)</label>
+		<label>gestate sentinel (stakedriver)</label>
 		<products>
 			<VR_Construct_Centurion_StakeDriver>1</VR_Construct_Centurion_StakeDriver>
 		</products>
@@ -76,11 +78,10 @@
 		</descriptionHyperlinks>
 	</RecipeDef>
 	
-	<RecipeDef ParentName="VR_HeavyConstructRecipe">
+	<RecipeDef ParentName="VR_Construct_Centurion_RecipeBase">
 		<defName>VR_Construct_Centurion_Burner</defName>
-		<label>gestate centurion (burner)</label>
-		<description>Gestate a centurion (burner) construct.</description>
-		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
+		<label>gestate sentinel (burner)</label>
+		<description>Gestate a sentinel (burner) construct.</description>
 		<ingredients Inherit="False">
 			<li>
 				<filter>
@@ -123,11 +124,10 @@
 		</descriptionHyperlinks>
 	</RecipeDef>
 	
-	<RecipeDef ParentName="VR_HeavyConstructRecipe">
+	<RecipeDef ParentName="VR_Construct_Centurion_RecipeBase">
 		<defName>VR_Construct_Centurion_Shooter</defName>
-		<label>gestate centurion (shooter)</label>
-		<description>Gestate a centurion (shooter) constructs.</description>
-		<researchPrerequisite>VR_HighConstructTech</researchPrerequisite>
+		<label>gestate sentinel (shooter)</label>
+		<description>Gestate a sentinel (shooter) constructs.</description>
 		<ingredients Inherit="False">
 			<li>
 				<filter>
