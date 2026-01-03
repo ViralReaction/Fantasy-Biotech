@@ -114,10 +114,6 @@
 				<spillEachTicks>600</spillEachTicks>
 				<startAtHitPointsPercent>0.333</startAtHitPointsPercent>
 				<amountToDraw>1</amountToDraw>
-				<filthMaxSpawnRadius>1</filthMaxSpawnRadius>
-				<chooseFilthFrom>
-					<li>Filth_Blood</li>
-				</chooseFilthFrom>
 			</li>
 		</comps>
 		<placeWorkers>
@@ -191,10 +187,6 @@
 				<spillEachTicks>1200</spillEachTicks>
 				<startAtHitPointsPercent>0.333</startAtHitPointsPercent>
 				<amountToDraw>1</amountToDraw>
-				<filthMaxSpawnRadius>1</filthMaxSpawnRadius>
-				<chooseFilthFrom>
-					<li>Filth_Blood</li>
-				</chooseFilthFrom>
 			</li>
 		</comps>
 		<placeWorkers>
