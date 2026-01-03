@@ -241,7 +241,7 @@
 				<pipeNet>VR_SteamNet</pipeNet>
 			</li>
 			<li Class="CompProperties_Flickable">
-				<commandTexture>Things/Item/Resource/SteamPower</commandTexture>
+				<commandTexture>UI/Gizmos/SteamValveIcon</commandTexture>
 				<commandLabelKey>FantasyBiotech_Valve</commandLabelKey>
 				<commandDescKey>FantasyBiotech_ValveDesc</commandDescKey>
 			</li>
@@ -255,6 +255,7 @@
 		<researchPrerequisites>
 			<li>VR_SteamPower</li>
 		</researchPrerequisites>
+		<uiOrder>3</uiOrder>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
