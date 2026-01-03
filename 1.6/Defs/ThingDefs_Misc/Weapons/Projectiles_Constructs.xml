@@ -99,9 +99,13 @@
 			<graphicClass>Graphic_Flicker</graphicClass>
 		</graphicData>
 		<projectile>
-			<damageDef>Beam</damageDef>
+			<damageDef>VR_Lightning</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<speed>60</speed>
+			<extraDamages>
+				<def>EMP</def>
+				<amount>5</amount>
+			</extraDamages>
 		</projectile>
 		<modExtensions>
 			<li Class="FantasyBiotech.BounceProjectileExtension">
@@ -120,9 +124,13 @@
 			<graphicClass>Graphic_Flicker</graphicClass>
 		</graphicData>
 		<projectile>
-			<damageDef>Beam</damageDef>
+			<damageDef>VR_Lightning</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<speed>60</speed>
+			<extraDamages>
+				<def>EMP</def>
+				<amount>5</amount>
+			</extraDamages>
 		</projectile>
 		<modExtensions>
 			<li Class="FantasyBiotech.BounceProjectileExtension">
@@ -141,9 +149,13 @@
 			<graphicClass>Graphic_Flicker</graphicClass>
 		</graphicData>
 		<projectile>
-			<damageDef>Beam</damageDef>
+			<damageDef>VR_Lightning</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<speed>60</speed>
+			<extraDamages>
+				<def>EMP</def>
+				<amount>5</amount>
+			</extraDamages>
 		</projectile>
 		<modExtensions>
 			<li Class="FantasyBiotech.BounceProjectileExtension">

@@ -25,5 +25,24 @@
 		<explosionColorEdge>(0.95, 0.69, 0.45)</explosionColorEdge>
 		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
 	</DamageDef>
+	
+	<DamageDef Name="VR_Lightning">
+		<defName>VR_Lightning</defName>
+		<label>lightning</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been shocked to death.</deathMessage>
+		 <hediff>Burn</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Bullet</impactSoundType>
+		<armorCategory>Heat</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<defaultDamage>10</defaultDamage>
+		<defaultArmorPenetration>0.5</defaultArmorPenetration>
+		<buildingDamageFactorImpassable>0.4</buildingDamageFactorImpassable>
+		<buildingDamageFactorPassable>0.2</buildingDamageFactorPassable>
+	</DamageDef>
 
 </Defs>
