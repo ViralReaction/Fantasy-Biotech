@@ -58,8 +58,10 @@
 					<VR_Construct_Ballistae>10</VR_Construct_Ballistae>
 					<VR_Construct_Sphere_Range>10</VR_Construct_Sphere_Range>
 					<VR_Construct_Centurion_Burner>10</VR_Construct_Centurion_Burner>
-					<VR_Construct_Militor>20</VR_Construct_Militor>
+					<VR_Construct_Militor>15</VR_Construct_Militor>
+					<VR_Construct_Militor_Melee>5</VR_Construct_Militor_Melee>
 					<!-- <Mech_Centurion MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Centurion> -->
+					<VR_Construct_Centurion>2</VR_Construct_Centurion>
 					<VR_Construct_ScarabQueen>1</VR_Construct_ScarabQueen>
 					<VR_Construct_Apocriton>1</VR_Construct_Apocriton>
 					<VR_Construct_Colossus_Melee>1</VR_Construct_Colossus_Melee>
@@ -74,7 +76,8 @@
 					<VR_Construct_Sphere_Range>10</VR_Construct_Sphere_Range>
 					<VR_Construct_Scorcher>5</VR_Construct_Scorcher>
 					<VR_Construct_Tesseron>5</VR_Construct_Tesseron>
-					<!-- <Mech_Legionary MayRequire="Ludeon.RimWorld.Biotech">2</Mech_Legionary> -->
+					<VR_Construct_Centurion_Shooter>3</VR_Construct_Centurion_Shooter>
+					<VR_Construct_Centurion_Burner>2</VR_Construct_Centurion_Burner>
 					<VR_Construct_Colossus>1</VR_Construct_Colossus>
 				</options>
 			</li>
@@ -84,6 +87,8 @@
 				<commonality>70</commonality>
 				<options>
 					<VR_Construct_Sphere_Melee>10</VR_Construct_Sphere_Melee>
+					<VR_Construct_Militor_Melee>5</VR_Construct_Militor_Melee>
+					<VR_Construct_Centurion>1</VR_Construct_Centurion>
 				</options>
 			</li>
 			<li>
@@ -101,7 +106,8 @@
 				<kindDef>Combat</kindDef>
 				<commonality>30</commonality>
 				<options>
-					<VR_Construct_Militor>10</VR_Construct_Militor>
+					<VR_Construct_Militor>20</VR_Construct_Militor>
+					<VR_Construct_Militor_Melee>5</VR_Construct_Militor_Melee>
 				</options>
 			</li>
 			<li>
@@ -112,6 +118,7 @@
 					<VR_Construct_Ballistae>10</VR_Construct_Ballistae>
 					<VR_Construct_Sphere_Melee>10</VR_Construct_Sphere_Melee>
 					<VR_Construct_Sphere_Range>10</VR_Construct_Sphere_Range>
+					<VR_Construct_Centurion>5</VR_Construct_Centurion>
 					<VR_Construct_Centurion_Burner>10</VR_Construct_Centurion_Burner>
 					<VR_Construct_Colossus_Melee>1</VR_Construct_Colossus_Melee>
 					<VR_Construct_Militor>20</VR_Construct_Militor>
