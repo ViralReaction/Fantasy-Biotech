@@ -103,8 +103,10 @@
 			<damageAmountBase>10</damageAmountBase>
 			<speed>60</speed>
 			<extraDamages>
-				<def>EMP</def>
-				<amount>5</amount>
+				<li>
+					<def>EMP</def>
+					<amount>5</amount>
+				</li>
 			</extraDamages>
 		</projectile>
 		<modExtensions>
@@ -128,8 +130,10 @@
 			<damageAmountBase>10</damageAmountBase>
 			<speed>60</speed>
 			<extraDamages>
-				<def>EMP</def>
-				<amount>5</amount>
+				<li>
+					<def>EMP</def>
+					<amount>5</amount>
+				</li>
 			</extraDamages>
 		</projectile>
 		<modExtensions>
@@ -153,8 +157,10 @@
 			<damageAmountBase>10</damageAmountBase>
 			<speed>60</speed>
 			<extraDamages>
-				<def>EMP</def>
-				<amount>5</amount>
+				<li>
+					<def>EMP</def>
+					<amount>5</amount>
+				</li>
 			</extraDamages>
 		</projectile>
 		<modExtensions>
