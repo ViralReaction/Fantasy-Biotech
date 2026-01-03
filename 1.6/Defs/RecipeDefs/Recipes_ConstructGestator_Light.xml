@@ -82,8 +82,8 @@
 
 	<RecipeDef ParentName="VR_LightConstructRecipe">
 		<defName>VR_MakeConstruct_Lifter</defName>
-		<label>gestate lifter</label>
-		<description>Gestate a lifter construct.</description>
+		<label>gestate transport spider</label>
+		<description>Gestate a transport spider construct.</description>
 		<products>
 			<VR_Construct_Lifter>1</VR_Construct_Lifter>
 		</products>
@@ -94,8 +94,8 @@
 
 	<RecipeDef ParentName="VR_LightConstructRecipe">
 		<defName>VR_MakeConstruct_Constructoid</defName>
-		<label>gestate constructoid</label>
-		<description>Gestate a constructoid construct.</description>
+		<label>gestate construction spider</label>
+		<description>Gestate a construction spider construct.</description>
 		<products>
 			<VR_Construct_Constructoid>1</VR_Construct_Constructoid>
 		</products>
@@ -106,8 +106,8 @@
 
 	<RecipeDef ParentName="VR_LightConstructRecipe">
 		<defName>VR_MakeConstruct_Agrihand</defName>
-		<label>gestate agrihand</label>
-		<description>Gestate an agrihand construct.</description>
+		<label>gestate farming spider</label>
+		<description>Gestate a farming spider construct.</description>
 		<products>
 			<VR_Construct_Agrihand>1</VR_Construct_Agrihand>
 		</products>

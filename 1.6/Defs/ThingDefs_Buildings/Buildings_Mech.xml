@@ -52,10 +52,13 @@
 		<interactionCellOffset>(1,0,2)</interactionCellOffset>
 		<recipes>
 			<li>VR_MakeConstruct_Militor</li>
+			<li>VR_MakeConstruct_Militor_Melee</li>
 			<li>VR_MakeConstruct_Lifter</li>
 			<li>VR_MakeConstruct_Constructoid</li>
 			<li>VR_MakeConstruct_Agrihand</li>
 			<li>VR_ResurrectLightConstruct</li>
+			<li>VR_MakeConstruct_Assembler</li>
+			<li>VR_MakeConstruct_Mender</li>
 		</recipes>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
