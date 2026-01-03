@@ -171,7 +171,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>80</count>
+				<count>75</count>
 			</li>
 			<li>
 				<filter>
@@ -179,7 +179,15 @@
 						<li>Plasteel</li>
 					</thingDefs>
 				</filter>
-				<count>32</count>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -206,10 +214,18 @@
 			<li>
 				<filter>
 					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
 						<li>Plasteel</li>
 					</thingDefs>
 				</filter>
-				<count>110</count>
+				<count>80</count>
 			</li>
 			<li>
 				<filter>
@@ -217,7 +233,7 @@
 						<li>Uranium</li>
 					</thingDefs>
 				</filter>
-				<count>28</count>
+				<count>40</count>
 			</li>
 			<li>
 				<filter>
