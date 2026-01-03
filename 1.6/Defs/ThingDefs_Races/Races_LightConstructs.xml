@@ -173,7 +173,7 @@
 
 	<PawnKindDef ParentName="VR_NonCombatLightConstructKind">
 		<defName>VR_Construct_Constructoid</defName>
-		<label>constructoid</label>
+		<label>construct spider</label>
 		<race>VR_Construct_Constructoid</race>
 		<lifeStages>
 			<li>
