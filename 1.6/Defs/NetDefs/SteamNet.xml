@@ -210,7 +210,7 @@
 		<defName>VR_SteamValve</defName>
 		<label>steam valve</label>
 		<description>Switches steam flow on/off.</description>
-		<thingClass>PipeSystem.Building_Pipe</thingClass>
+		<thingClass>PipeSystem.Building_PipeValve</thingClass>
 		<category>Building</category>
 		<graphicData>
 			<texPath>Things/Building/Power/SteamValve</texPath>
