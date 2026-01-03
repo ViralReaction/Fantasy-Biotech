@@ -132,7 +132,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SubcoreHigh</li>
+						<li>VR_TonalCoreHigh</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
