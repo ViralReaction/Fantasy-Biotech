@@ -60,6 +60,7 @@
 		</linkToRefuelables>
 		<noLinkedGraphicDefs>
 			<li>VRSteam_WallLamp</li>
+			<li>VR_SteamValve</li>
 		</noLinkedGraphicDefs>
 	</PipeSystem.PipeNetDef>
 
@@ -106,6 +107,7 @@
 		</costList>
 		<comps>
 			<li Class="PipeSystem.CompProperties_Resource">
+				<compClass>FantasyBiotech.CompResource_Steam</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
 			</li>
 			<li Class="PipeSystem.CompProperties_SpillWhenDamaged">
@@ -182,6 +184,7 @@
 		</costList>
 		<comps>
 			<li Class="PipeSystem.CompProperties_Resource">
+				<compClass>FantasyBiotech.CompResource_Steam</compClass>
 				<pipeNet>VR_SteamNet</pipeNet>
 			</li>
 			<li Class="PipeSystem.CompProperties_SpillWhenDamaged">
@@ -209,6 +212,57 @@
 			<li>VR_SteamPower</li>
 		</researchPrerequisites>
 		<uiOrder>2</uiOrder>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VR_SteamValve</defName>
+		<label>steam valve</label>
+		<description>Switches steam flow on/off.</description>
+		<thingClass>PipeSystem.Building_Pipe</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Power/SteamValve</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<allowWireConnection>false</allowWireConnection>
+		</building>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToBuild>200</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<costList>
+			<Steel>5</Steel>
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_PipeValve">
+				<pipeNet>VR_SteamNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable">
+				<commandTexture>Things/Item/Resource/SteamPower</commandTexture>
+				<commandLabelKey>FantasyBiotech_Valve</commandLabelKey>
+				<commandDescKey>FantasyBiotech_ValveDesc</commandDescKey>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<tickerType>Normal</tickerType>
+		<designationCategory>VR_Artifice</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>VR_SteamPower</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">

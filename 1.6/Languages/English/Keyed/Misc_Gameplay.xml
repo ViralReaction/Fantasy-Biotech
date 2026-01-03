@@ -12,5 +12,8 @@
 	<FantasyBiotech_SteamNetExcess>Excess: {0} SPU ({1} SPUd Stored)</FantasyBiotech_SteamNetExcess>
 	<FantasyBiotech_PipeSystem_NotConnected>Not enough steam in network.</FantasyBiotech_PipeSystem_NotConnected>
 	<FantasyBiotech_SteamCharger_CurrentlyCharging>Currently charging {0}</FantasyBiotech_SteamCharger_CurrentlyCharging>
+	
+	<FantasyBiotech_Valve>Switches steam flow on/off.</FantasyBiotech_Valve>
+	<FantasyBiotech_ValveDesc>Switches steam flow on/off. A pawn will come open/close the valve.</FantasyBiotech_ValveDesc>
 
 </LanguageData>
