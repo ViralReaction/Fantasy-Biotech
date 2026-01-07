@@ -76,7 +76,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VR_Cooler_Steam</defName>
 		<label>steam fan</label>
-		<description>A traditional unpowered cooler that works by water evaporation. Must be regularly replenished with wood. Not efficient enough to refrigerate food.</description>
+		<description>A rudimentary fan powered by a steam turbine. Must be connected to a steam network for it to work. Not efficient enough to refrigerate food.</description>
 		<category>Building</category>
 		<graphicData>
 			<texPath>Things/Building/Misc/TempControl/Steam_cooler</texPath>
