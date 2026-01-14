@@ -1,14 +1,16 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using PipeSystem;
+using RimWorld;
+using Verse;
 
 namespace FantasyBiotech
 {
     public class CompPowerPlantNeedResource_Steam : CompPowerPlantNeedResource
     {
-        public override void PostSpawnSetup(bool respawningAfterLoad)
+        // To fix map swapping need to null out from CompPowerTrader
+        public override void PostSwapMap()
         {
-            compResourceTraders = parent.GetComps<CompResourceTrader>().ToList();
-            base.PostSpawnSetup(respawningAfterLoad);
         }
 
         public override float DesiredPowerOutput
