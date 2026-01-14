@@ -379,5 +379,46 @@
             </operations>
         </active>
     </Operation>
+	
+	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+		<settings>
+			<li>medievalHemogenTextures</li>
+		</settings>
+		<inactive Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_HemogenPack_Animal"]/graphicData/texPath</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VRE_HemogenPack_Animal"]/graphicData/texPath</xpath>
+						<value>
+							<texPath>Item/HemogenPacks/FantasyBiotech_HemogenAnimalPack</texPath>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_HemogenPack_Corpse"]/graphicData/texPath</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VRE_HemogenPack_Corpse"]/graphicData/texPath</xpath>
+						<value>
+							<texPath>Item/HemogenPacks/FantasyBiotech_HemogenCorpsePack</texPath>
+						</value>
+					</match>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VRE_HemogenPack_Sanguophage"]/graphicData/texPath</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VRE_HemogenPack_Sanguophage"]/graphicData/texPath</xpath>
+						<value>
+							<texPath>Item/HemogenPacks/FantasyBiotech_HemogenSanguophagePack</texPath>
+						</value>
+					</match>
+				</li>
+				
+			</operations>
+		</inactive>
+	</Operation>
 
 </Patch>

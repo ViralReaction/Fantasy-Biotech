@@ -2,13 +2,13 @@
 <Patch>
 
 	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
-        <settings>
-            <li>medievalHemogenTextures</li>
-        </settings>
-        <inactive Class="PatchOperationSequence">
-            <operations>
+		<settings>
+			<li>medievalHemogenTextures</li>
+		</settings>
+		<inactive Class="PatchOperationSequence">
+			<operations>
 
-                <li Class="PatchOperationConditional">
+				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThingDef[defName="HemogenPack"]/graphicData/texPath</xpath>
 					<match Class="PatchOperationReplace">
 						<xpath>Defs/ThingDef[defName="HemogenPack"]/graphicData/texPath</xpath>
@@ -17,29 +17,42 @@
 						</value>
 					</match>
 				</li>
+				
+			</operations>
+		</inactive>
+	</Operation>
+	
+	<Operation Class="FantasyBiotech.PatchOperation_ToggleSettings">
+		<settings>
+			<li>replaceVampires</li>
+		</settings>
+		<active Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="HemogenPack"]/label</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="HemogenPack"]/label</xpath>
+						<value>
+							<label>blood vial</label>
+						</value>
+					</match>
+				</li>
 
-            </operations>
-        </inactive>
-    </Operation>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="HemogenPack"]/description</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="HemogenPack"]/description</xpath>
+						<value>
+							<description>Blood stored in a specialized container that prevents spoilage. Vampires can consume it to restore their internal hemogen stores. It can be administered via an operation to reverse blood loss.</description>
+						</value>
+					</match>
+				</li>
+			
+			</operations>
+		</active>
+	</Operation>
 
-    <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="HemogenPack"]/label</xpath>
-        <match Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="HemogenPack"]/label</xpath>
-            <value>
-                <label>blood vial</label>
-            </value>
-        </match>
-    </Operation>
-
-    <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="HemogenPack"]/description</xpath>
-        <match Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="HemogenPack"]/description</xpath>
-            <value>
-                <description>Blood stored in a specialized container that prevents spoilage. Vampires can consume it to restore their internal hemogen stores. It can be administered via an operation to reverse blood loss.</description>
-            </value>
-        </match>
-    </Operation>
+   
 
 </Patch>

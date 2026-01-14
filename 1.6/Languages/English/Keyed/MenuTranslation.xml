@@ -37,6 +37,11 @@
 	<!-- Sanguophage Options -->
     <FantasyBiotech_Settings_TradeShip_Replace_Title>Reword Trade Ship Incident</FantasyBiotech_Settings_TradeShip_Replace_Title>
     <FantasyBiotech_Settings_TradeShip_Replace_Desc>Makes the trade ship incident more fantasy and inline with new trade beacon</FantasyBiotech_Settings_TradeShip_Replace_Desc>
+	
+	<FantasyBiotech_Settings_MedievalHemogenTexture_Replace_Title>Retexture Hemogen Packs</FantasyBiotech_Settings_MedievalHemogenTexture_Replace_Title>
+    <FantasyBiotech_Settings_MedievalHemogenTexture_Replace_Desc>Changes hemogen packs to have a vial texture</FantasyBiotech_Settings_MedievalHemogenTexture_Replace_Desc>
+	
+	
 
     <!-- Reset to Default -->
     <FantasyBiotech_ResetDefault>Reset to Default</FantasyBiotech_ResetDefault>
