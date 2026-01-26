@@ -384,7 +384,7 @@
 		<settings>
 			<li>medievalHemogenTextures</li>
 		</settings>
-		<inactive Class="PatchOperationSequence">
+		<active Class="PatchOperationSequence">
 			<operations>
 
 				<li Class="PatchOperationConditional">
@@ -418,7 +418,7 @@
 				</li>
 				
 			</operations>
-		</inactive>
+		</active>
 	</Operation>
 
 </Patch>

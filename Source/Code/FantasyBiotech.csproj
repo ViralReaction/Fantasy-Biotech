@@ -171,5 +171,571 @@
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\1.6\Assemblies\FantasyBiotech.dll">
+      <Link>1.6\Assemblies\FantasyBiotech.dll</Link>
+    </Content>
+    <Content Include="..\..\1.6\Assemblies\KCSG.dll">
+      <Link>1.6\Assemblies\KCSG.dll</Link>
+    </Content>
+    <Content Include="..\..\1.6\Assemblies\PipeSystem.dll">
+      <Link>1.6\Assemblies\PipeSystem.dll</Link>
+    </Content>
+    <Content Include="..\..\1.6\Assemblies\VEF.dll">
+      <Link>1.6\Assemblies\VEF.dll</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\AbilityDef\Abilities_Construct.xml">
+      <Link>1.6\Defs\AbilityDef\Abilities_Construct.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Bodies\Bodies_Construct.xml">
+      <Link>1.6\Defs\Bodies\Bodies_Construct.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Bodies\BodyParts_Constructs.xml">
+      <Link>1.6\Defs\Bodies\BodyParts_Constructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\BossGroups\Bossgroups_Apocriton.xml">
+      <Link>1.6\Defs\BossGroups\Bossgroups_Apocriton.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\BossGroups\Bossgroups_Base.xml">
+      <Link>1.6\Defs\BossGroups\Bossgroups_Base.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\BossGroups\Bossgroups_Colossus.xml">
+      <Link>1.6\Defs\BossGroups\Bossgroups_Colossus.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\BossGroups\Bossgroups_Scarab.xml">
+      <Link>1.6\Defs\BossGroups\Bossgroups_Scarab.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ComplexThreatDefs\ComplexThreatDefs_Misc.xml">
+      <Link>1.6\Defs\ComplexThreatDefs\ComplexThreatDefs_Misc.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\DamageDefs\DamageDefs_Constructs.xml">
+      <Link>1.6\Defs\DamageDefs\DamageDefs_Constructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Effects\Effecter_Misc.xml">
+      <Link>1.6\Defs\Effects\Effecter_Misc.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Effects\Flecks_Misc.xml">
+      <Link>1.6\Defs\Effects\Flecks_Misc.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Effects\Mote_Misc.xml">
+      <Link>1.6\Defs\Effects\Mote_Misc.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Effects\Mote_Visual.xml">
+      <Link>1.6\Defs\Effects\Mote_Visual.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Effects\Mote_Weapons.xml">
+      <Link>1.6\Defs\Effects\Mote_Weapons.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\FactionDefs\Faction_Constructs.xml">
+      <Link>1.6\Defs\FactionDefs\Faction_Constructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\FactionDefs\Faction_PlayerStarts.xml">
+      <Link>1.6\Defs\FactionDefs\Faction_PlayerStarts.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\HediffDefs\Hediffs_Artificer.xml">
+      <Link>1.6\Defs\HediffDefs\Hediffs_Artificer.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\HediffDefs\Hediffs_Various.xml">
+      <Link>1.6\Defs\HediffDefs\Hediffs_Various.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\HediffDefs\Hediff_Artificer_Implants.xml">
+      <Link>1.6\Defs\HediffDefs\Hediff_Artificer_Implants.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\JobDef\JobDefs.xml">
+      <Link>1.6\Defs\JobDef\JobDefs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\LayoutRoomDefs\ComplexLayoutDef_Artificer.xml">
+      <Link>1.6\Defs\LayoutRoomDefs\ComplexLayoutDef_Artificer.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\LayoutRoomDefs\LayRoomDefs_Mechanitor.xml">
+      <Link>1.6\Defs\LayoutRoomDefs\LayRoomDefs_Mechanitor.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Misc\DesignationCategory.xml">
+      <Link>1.6\Defs\Misc\DesignationCategory.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Misc\MVCF\MVCF_FantasyBiotech.xml">
+      <Link>1.6\Defs\Misc\MVCF\MVCF_FantasyBiotech.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\NetDefs\SteamNet.xml">
+      <Link>1.6\Defs\NetDefs\SteamNet.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\PawnKindDefs\PawnKindDef_Artificer.xml">
+      <Link>1.6\Defs\PawnKindDefs\PawnKindDef_Artificer.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\PrefabDefs\PrefabDefs_Mechanitor.xml">
+      <Link>1.6\Defs\PrefabDefs\PrefabDefs_Mechanitor.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\QuestScriptDefs\Script_ArtificerComplex.xml">
+      <Link>1.6\Defs\QuestScriptDefs\Script_ArtificerComplex.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\QuestScriptDefs\Script_Bossgroup.xml">
+      <Link>1.6\Defs\QuestScriptDefs\Script_Bossgroup.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\QuestScriptDefs\Script_ProtectArtificer.xml">
+      <Link>1.6\Defs\QuestScriptDefs\Script_ProtectArtificer.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\QuestScriptDefs\Script_SanguophageAssault.xml">
+      <Link>1.6\Defs\QuestScriptDefs\Script_SanguophageAssault.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\QuestScriptDefs\Script_StartingMech.xml">
+      <Link>1.6\Defs\QuestScriptDefs\Script_StartingMech.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\QuestScriptDefs\Script_Utilities.xml">
+      <Link>1.6\Defs\QuestScriptDefs\Script_Utilities.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\RecipeDefs\Recipes_ConstructGestator_Heavy.xml">
+      <Link>1.6\Defs\RecipeDefs\Recipes_ConstructGestator_Heavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\RecipeDefs\Recipes_ConstructGestator_Light.xml">
+      <Link>1.6\Defs\RecipeDefs\Recipes_ConstructGestator_Light.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\RecipeDefs\Recipes_ConstructGestator_Medium.xml">
+      <Link>1.6\Defs\RecipeDefs\Recipes_ConstructGestator_Medium.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\RecipeDefs\Recipes_ConstructGestator_SuperHeavy.xml">
+      <Link>1.6\Defs\RecipeDefs\Recipes_ConstructGestator_SuperHeavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\RecipeDefs\Recipes_ConstructResurrection.xml">
+      <Link>1.6\Defs\RecipeDefs\Recipes_ConstructResurrection.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ResearchProjectDef\ResearchProjectDefs.xml">
+      <Link>1.6\Defs\ResearchProjectDef\ResearchProjectDefs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ResearchProjectDef\ResearchProjectDefs_Constructs.xml">
+      <Link>1.6\Defs\ResearchProjectDef\ResearchProjectDefs_Constructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ResearchProjectDef\ResearchProjectDefs_Genetics.xml">
+      <Link>1.6\Defs\ResearchProjectDef\ResearchProjectDefs_Genetics.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ResearchProjectDef\ResearchTabsDefs.xml">
+      <Link>1.6\Defs\ResearchProjectDef\ResearchTabsDefs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\RulePacks\RulePack_Construct.xml">
+      <Link>1.6\Defs\RulePacks\RulePack_Construct.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ScenarioDef\ScenarioDef_Artificer.xml">
+      <Link>1.6\Defs\ScenarioDef\ScenarioDef_Artificer.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Sites\Parts\AncientComplex_Artificer.xml">
+      <Link>1.6\Defs\Sites\Parts\AncientComplex_Artificer.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\Sites\Parts\ConstructCluster.xml">
+      <Link>1.6\Defs\Sites\Parts\ConstructCluster.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\StorytellerDefs\IncidentDefs_Quests.xml">
+      <Link>1.6\Defs\StorytellerDefs\IncidentDefs_Quests.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\TerrainDef\Terrain_Special.xml">
+      <Link>1.6\Defs\TerrainDef\Terrain_Special.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_Deathrest.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_Deathrest.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_Genetics.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_Genetics.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_Mech.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_Mech.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_MechCharger.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_MechCharger.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_Mech_BossSummoners.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_Mech_BossSummoners.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_Misc.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_Misc.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_Ruins.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_Ruins.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_Ruins_Active.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_Ruins_Active.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_Security.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_Security.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Buildings\Buildings_Temperature.xml">
+      <Link>1.6\Defs\ThingDefs_Buildings\Buildings_Temperature.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Items\Items_ResourceChips.xml">
+      <Link>1.6\Defs\ThingDefs_Items\Items_ResourceChips.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Items\Items_Resource_Cores.xml">
+      <Link>1.6\Defs\ThingDefs_Items\Items_Resource_Cores.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Apparel_Armor.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Apparel_Armor.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Apparel_Headgear.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Apparel_Headgear.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Weapons\Projectiles_Constructs.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Weapons\Projectiles_Constructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Weapons\RangedConstruct_Heavy.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Weapons\RangedConstruct_Heavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Weapons\RangedConstruct_Light.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Weapons\RangedConstruct_Light.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Weapons\RangedConstruct_Medium.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Weapons\RangedConstruct_Medium.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Weapons\RangedConstruct_SuperHeavy.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Weapons\RangedConstruct_SuperHeavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Weapons\WeaponConstruct_Heavy.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Weapons\WeaponConstruct_Heavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Weapons\WeaponConstruct_Medium.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Weapons\WeaponConstruct_Medium.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Misc\Weapons\WeaponConstruct_SuperHeavy.xml">
+      <Link>1.6\Defs\ThingDefs_Misc\Weapons\WeaponConstruct_SuperHeavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Races\Races_ConstructBase.xml">
+      <Link>1.6\Defs\ThingDefs_Races\Races_ConstructBase.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Races\Races_HeavyConstructs.xml">
+      <Link>1.6\Defs\ThingDefs_Races\Races_HeavyConstructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Races\Races_LightConstructs.xml">
+      <Link>1.6\Defs\ThingDefs_Races\Races_LightConstructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Races\Races_MediumConstructs.xml">
+      <Link>1.6\Defs\ThingDefs_Races\Races_MediumConstructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThingDefs_Races\Races_SuperHeavyConstructs.xml">
+      <Link>1.6\Defs\ThingDefs_Races\Races_SuperHeavyConstructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\ThinkTreeDefs\SubTrees_Construct.xml">
+      <Link>1.6\Defs\ThinkTreeDefs\SubTrees_Construct.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\WorkDrivers\WorkGiverDefs.xml">
+      <Link>1.6\Defs\WorkDrivers\WorkGiverDefs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Defs\WorkTypeDefs\WorkGiverDefs.xml">
+      <Link>1.6\Defs\WorkTypeDefs\WorkGiverDefs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Languages\English\Keyed\Incidents.xml">
+      <Link>1.6\Languages\English\Keyed\Incidents.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Languages\English\Keyed\MenuTranslation.xml">
+      <Link>1.6\Languages\English\Keyed\MenuTranslation.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Languages\English\Keyed\Messages.xml">
+      <Link>1.6\Languages\English\Keyed\Messages.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Languages\English\Keyed\Misc_Gameplay.xml">
+      <Link>1.6\Languages\English\Keyed\Misc_Gameplay.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Defs\AmmoDef_HeavyBowGun.xml">
+      <Link>1.6\Mods\Combat_Extended\Defs\AmmoDef_HeavyBowGun.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Defs\AmmoDef_HeavySteamCrossbow.xml">
+      <Link>1.6\Mods\Combat_Extended\Defs\AmmoDef_HeavySteamCrossbow.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Defs\AmmoDef_MiniBlunder.xml">
+      <Link>1.6\Mods\Combat_Extended\Defs\AmmoDef_MiniBlunder.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Defs\AmmoDef_SteamCrossbow.xml">
+      <Link>1.6\Mods\Combat_Extended\Defs\AmmoDef_SteamCrossbow.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Buildings\Patch_Buildings_Security.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Buildings\Patch_Buildings_Security.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Patch_Apparel_Armor.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Patch_Apparel_Armor.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Patch_Apparel_Headgear.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Patch_Apparel_Headgear.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Melee_Heavy.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Melee_Heavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Melee_Medium.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Melee_Medium.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Melee_SuperHeavy.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Melee_SuperHeavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Heavy.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Heavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Light.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Light.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Medium.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Medium.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Superheavy.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Superheavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Turrets.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Misc\Weapons\Patch_Constructs_Weapons_Ranged_Turrets.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs_Heavy.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs_Heavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs_Light.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs_Light.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs_Medium.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs_Medium.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs_Superheavy.xml">
+      <Link>1.6\Mods\Combat_Extended\Patches\ThingDefs_Races\Patch_Constructs_Superheavy.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Ideology\Defs\ComplexThreatDefs\ComplexThreats_Misc.xml">
+      <Link>1.6\Mods\Ideology\Defs\ComplexThreatDefs\ComplexThreats_Misc.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Royalty\Defs\Incidents_Map_Misc.xml">
+      <Link>1.6\Mods\Royalty\Defs\Incidents_Map_Misc.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Royalty\Patches\Mech\Patch_Quest.xml">
+      <Link>1.6\Mods\Royalty\Patches\Mech\Patch_Quest.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\Royalty\Patches\Patch_Empire.xml">
+      <Link>1.6\Mods\Royalty\Patches\Patch_Empire.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Patches\Patch_Pipe.xml">
+      <Link>1.6\Mods\VRE_Sanguophage\Patches\Patch_Pipe.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Patches\VampirePatches\Patch_BuildingTextures.xml">
+      <Link>1.6\Mods\VRE_Sanguophage\Patches\VampirePatches\Patch_BuildingTextures.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Patches\VampirePatches\Patch_RenameSanguophage.xml">
+      <Link>1.6\Mods\VRE_Sanguophage\Patches\VampirePatches\Patch_RenameSanguophage.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Patches\VampirePatches\Patch_VRE.xml">
+      <Link>1.6\Mods\VRE_Sanguophage\Patches\VampirePatches\Patch_VRE.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_east.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_east.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_eastm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_eastm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_north.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_north.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_northm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_northm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_south.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_south.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_southm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyDraincasket\Draincasket_southm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemodynamicAccelerator\HemodynamicAccelerator.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemodynamicAccelerator\HemodynamicAccelerator.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_east.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_east.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_eastm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_eastm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_north.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_north.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_northm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_northm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_south.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_south.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_southm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyHemogenSolidifier\HemogenSolidifier_southm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyInvocationMatrix\FantasyInvocationMatrix.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyInvocationMatrix\FantasyInvocationMatrix.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyInvocationMatrix\FantasyInvocationMatrix_m.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyInvocationMatrix\FantasyInvocationMatrix_m.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyPsychofluidWell\PsychofluidWell.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyPsychofluidWell\PsychofluidWell.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyPsychofluidWell\PsychofluidWell_m.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasyPsychofluidWell\PsychofluidWell_m.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_east.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_east.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_eastm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_eastm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_north.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_north.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_northm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_northm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_south.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_south.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_southm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemogenAmplifier\SmallHemogenAmplifier_southm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_east.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_east.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_eastm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_eastm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_north.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_north.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_northm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_northm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_south.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_south.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_southm.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\FantasySmallHemopump\SmallHemopump_southm.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenDrain\VRE_HemogenDrain.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenDrain\VRE_HemogenDrain.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenDrain\VRE_HemogenDrain_m.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenDrain\VRE_HemogenDrain_m.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenTap\VRE_HemogenTap.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenTap\VRE_HemogenTap.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenTap\VRE_HemogenTap_m.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenTap\VRE_HemogenTap_m.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenVat\VRE_HemogenVat.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenVat\VRE_HemogenVat.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenVat\VRE_HemogenVat1.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenVat\VRE_HemogenVat1.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenVat\VRE_HemogenVat_Full.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenVat\VRE_HemogenVat_Full.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenVat\VRE_HemogenVat_Full_m.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Building\VRE_HemogenVat\VRE_HemogenVat_Full_m.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenAnimalPack\FantasyBiotech_HemogenAnimalPack_a.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenAnimalPack\FantasyBiotech_HemogenAnimalPack_a.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenAnimalPack\FantasyBiotech_HemogenAnimalPack_b.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenAnimalPack\FantasyBiotech_HemogenAnimalPack_b.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenAnimalPack\FantasyBiotech_HemogenAnimalPack_c.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenAnimalPack\FantasyBiotech_HemogenAnimalPack_c.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenCorpsePack\FantasyBiotech_HemogenCorpsePack_a.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenCorpsePack\FantasyBiotech_HemogenCorpsePack_a.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenCorpsePack\FantasyBiotech_HemogenCorpsePack_b.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenCorpsePack\FantasyBiotech_HemogenCorpsePack_b.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenCorpsePack\FantasyBiotech_HemogenCorpsePack_c.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenCorpsePack\FantasyBiotech_HemogenCorpsePack_c.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenSanguophagePack\FantasyBiotech_HemogenSanguophagePack_a.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenSanguophagePack\FantasyBiotech_HemogenSanguophagePack_a.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenSanguophagePack\FantasyBiotech_HemogenSanguophagePack_b.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenSanguophagePack\FantasyBiotech_HemogenSanguophagePack_b.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenSanguophagePack\FantasyBiotech_HemogenSanguophagePack_c.png">
+      <Link>1.6\Mods\VRE_Sanguophage\Textures\Item\HemogenPacks\HemogenSanguophagePack\FantasyBiotech_HemogenSanguophagePack_c.png</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\World_Tech_Level\Patches\Patch_GoJuice.xml">
+      <Link>1.6\Mods\World_Tech_Level\Patches\Patch_GoJuice.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Mods\World_Tech_Level\Patches\Patch_Mechs.xml">
+      <Link>1.6\Mods\World_Tech_Level\Patches\Patch_Mechs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Change_FactionDef_Mechanoid.xml">
+      <Link>1.6\Patches\Change_FactionDef_Mechanoid.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Change_MechanoidGroup_SymbolResolver.xml">
+      <Link>1.6\Patches\Change_MechanoidGroup_SymbolResolver.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\GenePatches\Patch_Genepacks.xml">
+      <Link>1.6\Patches\GenePatches\Patch_Genepacks.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\GenePatches\Patch_GoJuice.xml">
+      <Link>1.6\Patches\GenePatches\Patch_GoJuice.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\GenePatches\Patch_GrowthVats.xml">
+      <Link>1.6\Patches\GenePatches\Patch_GrowthVats.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Mech Patches\Add_Storyteller.xml">
+      <Link>1.6\Patches\Mech Patches\Add_Storyteller.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Mech Patches\Change_ComplexThreatDef.xml">
+      <Link>1.6\Patches\Mech Patches\Change_ComplexThreatDef.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Mech Patches\Change_PawnArrivalMode.xml">
+      <Link>1.6\Patches\Mech Patches\Change_PawnArrivalMode.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Mech Patches\Change_QuestScriptDef.xml">
+      <Link>1.6\Patches\Mech Patches\Change_QuestScriptDef.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Mech Patches\Change_RecipeDef.xml">
+      <Link>1.6\Patches\Mech Patches\Change_RecipeDef.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Mech Patches\Change_RecordDef.xml">
+      <Link>1.6\Patches\Mech Patches\Change_RecordDef.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Mech Patches\Change_RuleDefs.xml">
+      <Link>1.6\Patches\Mech Patches\Change_RuleDefs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Mech Patches\Change_SitePartDef_SleepingMechanoids.xml">
+      <Link>1.6\Patches\Mech Patches\Change_SitePartDef_SleepingMechanoids.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Mech Patches\Patch_Precepts_Mechanoid.xml">
+      <Link>1.6\Patches\Mech Patches\Patch_Precepts_Mechanoid.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Misc Patches\Option_ChangeTradeShipMessage.xml">
+      <Link>1.6\Patches\Misc Patches\Option_ChangeTradeShipMessage.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Patch_DesignationCategoryDef.xml">
+      <Link>1.6\Patches\Patch_DesignationCategoryDef.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\Patch_Worktypes.xml">
+      <Link>1.6\Patches\Patch_Worktypes.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\VampirePatches\Patch_BasicCasket.xml">
+      <Link>1.6\Patches\VampirePatches\Patch_BasicCasket.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\VampirePatches\Patch_Deathrest.xml">
+      <Link>1.6\Patches\VampirePatches\Patch_Deathrest.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\VampirePatches\Patch_DeathrestTextures.xml">
+      <Link>1.6\Patches\VampirePatches\Patch_DeathrestTextures.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\VampirePatches\Patch_HemogenPack.xml">
+      <Link>1.6\Patches\VampirePatches\Patch_HemogenPack.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\VampirePatches\Patch_RenameSanguophage.xml">
+      <Link>1.6\Patches\VampirePatches\Patch_RenameSanguophage.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\VampirePatches\Patch_ResearchProjectDefs.xml">
+      <Link>1.6\Patches\VampirePatches\Patch_ResearchProjectDefs.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\VampirePatches\Patch_SanguophageFactionTech.xml">
+      <Link>1.6\Patches\VampirePatches\Patch_SanguophageFactionTech.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\VampirePatches\Patch_TechLevel.xml">
+      <Link>1.6\Patches\VampirePatches\Patch_TechLevel.xml</Link>
+    </Content>
+    <Content Include="..\..\1.6\Patches\VampirePatches\Patch_VampireScenario.xml">
+      <Link>1.6\Patches\VampirePatches\Patch_VampireScenario.xml</Link>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
