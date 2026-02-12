@@ -67,7 +67,7 @@
 		<defaultFactionDef Inherit="False" />
 	</PawnKindDef>
 
-	<PawnKindDef Name="TribalBase">
+	<PawnKindDef ParentName="TribalBase">
 		<defName>VR_RuinExplorer</defName>
 		<label>explorer</label>
 		<race>Human</race>
