@@ -1,10 +1,12 @@
-﻿using Verse;
+﻿using System;
+using Verse;
 using PipeSystem;
 using System.Collections.Generic;
 using RimWorld;
 
 namespace FantasyBiotech
 {
+    [Obsolete]
     public class Building_SteamGenerator : Building
     {
 
@@ -21,26 +23,5 @@ namespace FantasyBiotech
             this._compRefuelable = this.GetComp<CompRefuelable>();
         }
 
-        public override void Tick()
-        {
-            base.Tick();
-            if (_compRefuelable == null) return;
-            if (_compRefuelable.HasFuel)
-            {
-                for (int i = 0; i < this._tradersCount; i++)
-                {
-                    this.BroadcastCompSignal(_traders[i].OnSignal);
-                }
-
-            }
-            else
-            {
-                for (int i = 0; i < this._tradersCount; i++)
-                {
-                    this.BroadcastCompSignal(_traders[i].OffSignal);
-                }
-            }
-
-        }
     }
 }
