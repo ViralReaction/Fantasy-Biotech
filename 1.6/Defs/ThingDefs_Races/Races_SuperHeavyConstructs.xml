@@ -132,7 +132,7 @@
 	<!-- Diabolus -->
 	<ThingDef Name="VR_ConstructColossus" ParentName="VR_SuperHeavyConstruct">
 		<defName>VR_Construct_Colossus</defName>
-		<label>colossus</label>
+		<label>colossus (ranged)</label>
 		<description>An ultra-heavy construct equipped with a tonal incinerator. Made for breaking lines of enemies, it can cause widespread panic as the ray emitted will detonate raw magika in the near vicinity.</description>
 		<race>
 			<body>VR_ConstructBipedal</body>
@@ -198,7 +198,7 @@
     
 	<PawnKindDef Name="VR_ConstructColossusKind" ParentName="VR_HeavyConstructKind">
 		<defName>VR_Construct_Colossus</defName>
-		<label>colossus</label>
+		<label>colossus (ranged)</label>
 		<race>VR_Construct_Colossus</race>
 		<combatPower>500</combatPower>
 		<maxPerGroup>3</maxPerGroup>
@@ -226,7 +226,7 @@
 	<!-- Melee Colossus -->
 	<ThingDef ParentName="VR_ConstructColossus">
 		<defName>VR_Construct_Colossus_Melee</defName>
-		<label>colossus</label>
+		<label>colossus (melee)</label>
 		<description>An ultra-heavy construct equipped with a colossal axe. Made for breaking lines of enemies, it can cause widespread panic as it can level a building in a single swipe.</description>
 		<comps>
 			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.AnimalBehaviours.CompProperties_Draftable">
@@ -278,7 +278,7 @@
 
 	<PawnKindDef ParentName="VR_ConstructColossusKind">
 		<defName>VR_Construct_Colossus_Melee</defName>
-		<label>colossus</label>
+		<label>colossus (melee)</label>
 		<race>VR_Construct_Colossus_Melee</race>
 		<combatPower>500</combatPower>
 		<maxPerGroup>3</maxPerGroup>
