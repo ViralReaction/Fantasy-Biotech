@@ -9,7 +9,63 @@
   
 	<RecipeDef ParentName="VR_SuperHeavyConstructRecipe">
 		<defName>VR_Construct_Colossus</defName>
-		<label>gestate colossus</label>
+		<label>gestate colossus (ranged)</label>
+		<description>Gestate a colossus construct.</description>
+		<gestationCycles>12</gestationCycles>
+		<researchPrerequisite Inherit="False">VR_HighConstructTech</researchPrerequisite>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>300</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>150</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>300</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VR_PowerchipBasic</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VR_TonalCoreHigh</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<VR_Construct_Colossus>1</VR_Construct_Colossus>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>VR_Construct_Colossus</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="VR_SuperHeavyConstructRecipe">
+		<defName>VR_Construct_Colossus_Melee</defName>
+		<label>gestate colossus (melee)</label>
 		<description>Gestate a colossus construct.</description>
 		<gestationCycles>12</gestationCycles>
 		<researchPrerequisite Inherit="False">VR_HighConstructTech</researchPrerequisite>
@@ -36,7 +92,7 @@
 						<li>Plasteel</li>
 					</thingDefs>
 				</filter>
-				<count>200</count>
+				<count>300</count>
 			</li>
 			<li>
 				<filter>
@@ -56,10 +112,10 @@
 			</li>
 		</ingredients>
 		<products>
-			<VR_Construct_Colossus>1</VR_Construct_Colossus>
+			<VR_Construct_Colossus_Melee>1</VR_Construct_Colossus_Melee>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>VR_Construct_Colossus</ThingDef>
+			<ThingDef>VR_Construct_Colossus_Melee</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 
