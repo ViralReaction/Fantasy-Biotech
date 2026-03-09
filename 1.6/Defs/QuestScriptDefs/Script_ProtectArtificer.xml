@@ -24,7 +24,7 @@
         <li>QuestHospitalityCommon</li>
       </include>
       <rulesStrings>
-        <li>questDescription->[asker_nameFull], an explorer has sent a missive. [asker_possessive] has acquired a rare artificer implant during a ruins dig and their guards were killed in an ambush. [asker_pronoun] escaped, but is now being followed by (*Threat)a reclamation squad(/Threat).\n\n[asker_nameDef] wants to join your colony.</li>
+        <li>questDescription->[asker_nameFull], an explorer has sent a missive. [asker_pronoun] has acquired a rare artificer implant during a ruins dig and their guards were killed in an ambush. They escaped, but is now being followed by (*Threat)a reclamation squad(/Threat).\n\n[asker_nameDef] wants to join your colony.</li>
       </rulesStrings>
     </questDescriptionRules>
 
