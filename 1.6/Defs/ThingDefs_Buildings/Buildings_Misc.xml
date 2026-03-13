@@ -34,13 +34,42 @@
 		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="FantasyBiotech.CompProperties_SteamSpray"/>
+			<li Class="CompProperties_SendSignalOnCountdown">
+				<signalTag>CompCanBeDormant.WakeUp</signalTag>
+				<countdownCurveTicks>
+					<points>
+						<li>(599, 0)</li>
+						<li>(600, 1)</li>
+						<li>(600000, 0.1)</li>
+						<li>(1200000, 0)</li>
+					</points>
+				</countdownCurveTicks>
+			</li>
+			<li Class="CompProperties_WakeUpDormant">
+				<wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+			</li>
+			<li Class="CompProperties_FleckEmitter">
+				<fleck>ActivatorCountdownFlash</fleck>
+				<emissionInterval>100</emissionInterval>
+				<soundOnEmission>ActivatorCountdown_Ambience</soundOnEmission>
+				<saveKeysPrefix>flash</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_MoteEmitter">
+				<mote>Mote_ActivatorCountdownGlow</mote>
+				<maintain>True</maintain>
+				<saveKeysPrefix>glow</saveKeysPrefix>
+			</li>
 		</comps>
 		<passability>PassThroughOnly</passability>
 		<pathCost>50</pathCost>
 		<fillPercent>0.5</fillPercent>
 		<hasTooltip>true</hasTooltip>
+		<building>
+			<deconstructible>false</deconstructible>
+			<claimable>false</claimable>
+		</building>
 		<killedLeavings>
-			<ChunkSlagSteel>1</ChunkSlagSteel>
+			<VR_ChunkConstructSlag>1</VR_ChunkConstructSlag>
 		</killedLeavings>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<uiIconScale>0.95</uiIconScale>

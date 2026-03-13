@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BodyDef>
+		<defName>VR_Construct_Tunneler</defName>
+		<label>heavy mech with drill</label>
+		<corePart>
+			<def>MechanicalThorax</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<parts>
+				<li>
+					<def>MechanicalThorax</def>
+					<customLabel>front assembly</customLabel>
+					<coverage>0.25</coverage>
+					<height>Middle</height>
+					<depth>Outside</depth>
+					<parts>
+						<!-- Sensors mounted directly on front hull -->
+						<li>
+							<def>VR_BrassOcular</def>
+							<customLabel>left sight sensor</customLabel>
+							<coverage>0.05</coverage>
+						</li>
+						<li>
+							<def>VR_BrassOcular</def>
+							<customLabel>right sight sensor</customLabel>
+							<coverage>0.05</coverage>
+						</li>
+						<li>
+							<def>VR_HarmonicListener</def>
+							<customLabel>left hearing sensor</customLabel>
+							<coverage>0.04</coverage>
+						</li>
+						<li>
+							<def>VR_HarmonicListener</def>
+							<customLabel>right hearing sensor</customLabel>
+							<coverage>0.04</coverage>
+						</li>
+						<li>
+							<def>SmellSensor</def>
+							<coverage>0.02</coverage>
+						</li>
+						<!-- The big drill -->
+						<li>
+							<def>VR_Construct_Tunneler_Drill</def>
+							<customLabel>siege drill</customLabel>
+							<coverage>0.75</coverage>
+							<height>Middle</height>
+							<groups>
+								<li>HeadAttackTool</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+
+				<!-- 6 legs -->
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>left front leg</customLabel>
+					<coverage>0.06</coverage>
+					<height>Bottom</height>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
+					<parts>
+						<li>
+							<def>MechanicalFoot</def>
+							<customLabel>left front foot</customLabel>
+							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>right front leg</customLabel>
+					<coverage>0.06</coverage>
+					<height>Bottom</height>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
+					<parts>
+						<li>
+							<def>MechanicalFoot</def>
+							<customLabel>right front foot</customLabel>
+							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>left middle leg</customLabel>
+					<coverage>0.06</coverage>
+					<height>Bottom</height>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
+					<parts>
+						<li>
+							<def>MechanicalFoot</def>
+							<customLabel>left middle foot</customLabel>
+							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>right middle leg</customLabel>
+					<coverage>0.06</coverage>
+					<height>Bottom</height>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
+					<parts>
+						<li>
+							<def>MechanicalFoot</def>
+							<customLabel>right middle foot</customLabel>
+							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>left rear leg</customLabel>
+					<coverage>0.06</coverage>
+					<height>Bottom</height>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
+					<parts>
+						<li>
+							<def>MechanicalFoot</def>
+							<customLabel>left rear foot</customLabel>
+							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>right rear leg</customLabel>
+					<coverage>0.06</coverage>
+					<height>Bottom</height>
+					<groups>
+						<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+					</groups>
+					<parts>
+						<li>
+							<def>MechanicalFoot</def>
+							<customLabel>right rear foot</customLabel>
+							<coverage>0.10</coverage>
+							<groups>
+								<li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+
+				<!-- Internals -->
+				<li>
+					<def>VR_TonalCore</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>VR_SteamCirculator</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>VR_SteamCirculator</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+
+				<li>
+					<def>VR_ClockworkBrain</def>
+					<coverage>0.08</coverage>
+					<depth>Inside</depth>
+				</li>
+
+			</parts>
+		</corePart>
+	</BodyDef>
+
+</Defs>

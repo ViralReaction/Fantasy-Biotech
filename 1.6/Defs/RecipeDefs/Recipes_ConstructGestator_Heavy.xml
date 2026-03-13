@@ -4,6 +4,53 @@
 	<RecipeDef Name="VR_HeavyConstructRecipe" ParentName="VR_BaseConstructRecipe" Abstract="True">
 		<gestationCycles>4</gestationCycles>
 	</RecipeDef>
+	
+	<RecipeDef ParentName="VR_HeavyConstructRecipe">
+		<defName>VR_Construct_Tunneler</defName>
+		<label>gestate delver</label>
+		<description>Gestate a delver construct.</description>
+		<researchPrerequisite>VR_StandardConstructTech</researchPrerequisite>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>150</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>36</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VR_TonalCoreRegular</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<Mech_Tunneler>1</Mech_Tunneler>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>Mech_Tunneler</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
 
 	<RecipeDef Name="VR_Construct_Centurion_RecipeBase" ParentName="VR_HeavyConstructRecipe" Abstract="True">
 		<description>Gestate a sentinel construct.</description>

@@ -121,5 +121,17 @@
 			<li>MovingLimbCore</li>
 		</tags>
 	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>VR_Construct_Tunneler_Drill</defName>
+		<label>drill</label>
+		<hitPoints>120</hitPoints>
+		<frostbiteVulnerability>5</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+	</BodyPartDef>
 
 </Defs>

@@ -121,6 +121,7 @@
 					<VR_Construct_Centurion>5</VR_Construct_Centurion>
 					<VR_Construct_Centurion_Burner>10</VR_Construct_Centurion_Burner>
 					<VR_Construct_Colossus_Melee>1</VR_Construct_Colossus_Melee>
+					<VR_Construct_Delver>1</VR_Construct_Delver>
 					<VR_Construct_Militor>20</VR_Construct_Militor>
 				</options>
 			</li>
