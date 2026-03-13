@@ -87,7 +87,7 @@
 			</li>
 		</tools>
 	</ThingDef>
-	
+
 	<ThingDef Name="VR_LightSphereConstruct" ParentName="VR_LightConstruct" Abstract="True">
 		<statBases>
 			<MoveSpeed>3.4</MoveSpeed>
@@ -171,7 +171,7 @@
 	<PawnKindDef Name="VR_NonCombatLightConstructKind" ParentName="VR_LightConstructKind" Abstract="True">
 		<isFighter>false</isFighter>
 	</PawnKindDef>
-	
+
 	<!-- Heavy/Superheavy Construct Base -->
 	<PawnKindDef Name="VR_HeavyConstructKind" ParentName="VR_BaseConstructKind" Abstract="True">
 		<combatPower>400</combatPower>

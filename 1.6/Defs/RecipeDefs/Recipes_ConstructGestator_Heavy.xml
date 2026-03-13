@@ -45,10 +45,10 @@
 			</li>
 		</ingredients>
 		<products>
-			<Mech_Tunneler>1</Mech_Tunneler>
+			<VR_Construct_Delver>1</VR_Construct_Delver>
 		</products>
 		<descriptionHyperlinks>
-			<ThingDef>Mech_Tunneler</ThingDef>
+			<ThingDef>VR_Construct_Delver</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
 

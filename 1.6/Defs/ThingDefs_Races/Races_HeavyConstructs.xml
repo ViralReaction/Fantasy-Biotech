@@ -265,8 +265,8 @@
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
-		<isGoodBreacher>true</isGoodBreacher>
-		<canBeSapper>true</canBeSapper>
+		<!-- <isGoodBreacher>true</isGoodBreacher> -->
+		<!-- <canBeSapper>true</canBeSapper> -->
 		<!-- <abilities> -->
 		<!-- <li>smokepopmech</li> -->
 		<!-- </abilities> -->

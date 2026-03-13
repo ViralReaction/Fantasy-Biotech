@@ -132,6 +132,9 @@
 		<solid>true</solid>
 		<alive>false</alive>
 		<bleedRate>0</bleedRate>
+		<tags>
+			<li>ManipulationLimbCore</li>
+		</tags>
 	</BodyPartDef>
 
 </Defs>
