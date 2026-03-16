@@ -116,6 +116,7 @@
 				<li>Corpse_VR_Construct_Centurion_StakeDriver</li>
 				<li>Corpse_VR_Construct_Centurion_Burner</li>
 				<li>Corpse_VR_Construct_Centurion_Shooter</li>
+				<li>Corpse_VR_Construct_Delver</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 	</RecipeDef>

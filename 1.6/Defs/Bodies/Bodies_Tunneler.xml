@@ -16,7 +16,6 @@
 					<height>Middle</height>
 					<depth>Outside</depth>
 					<parts>
-						<!-- Sensors mounted directly on front hull -->
 						<li>
 							<def>VR_BrassOcular</def>
 							<customLabel>left sight sensor</customLabel>
@@ -41,7 +40,6 @@
 							<def>SmellSensor</def>
 							<coverage>0.02</coverage>
 						</li>
-						<!-- The big drill -->
 						<li>
 							<def>VR_Construct_Tunneler_Drill</def>
 							<customLabel>siege drill</customLabel>
@@ -53,8 +51,6 @@
 						</li>
 					</parts>
 				</li>
-
-				<!-- 6 legs -->
 				<li>
 					<def>MechanicalLeg</def>
 					<customLabel>left front leg</customLabel>
@@ -169,8 +165,6 @@
 						</li>
 					</parts>
 				</li>
-
-				<!-- Internals -->
 				<li>
 					<def>VR_TonalCore</def>
 					<coverage>0.06</coverage>
@@ -186,13 +180,11 @@
 					<coverage>0.04</coverage>
 					<depth>Inside</depth>
 				</li>
-
 				<li>
 					<def>VR_ClockworkBrain</def>
 					<coverage>0.08</coverage>
 					<depth>Inside</depth>
 				</li>
-
 			</parts>
 		</corePart>
 	</BodyDef>
