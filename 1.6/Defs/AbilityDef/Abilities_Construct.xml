@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- Mech -->
-	<AbilityDef Name="LongJumpMech">
+	<AbilityDef ParentName="LongJumpMech">
 		<defName>VR_LongjumpConstruct</defName>
 		<label>construct longjump</label>
 		<description>Jump to a distant location using steam pistons to launch themselves.</description>
